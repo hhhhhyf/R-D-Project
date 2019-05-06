@@ -1,0 +1,2061 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="YuHuan_TrafficConstructionMISModelStoreContainer" CdmEntityContainer="YuHuan_TrafficConstructionMISEntities">
+    <EntitySetMapping Name="Gyxps">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Gyxp">
+        <MappingFragment StoreEntitySet="Gyxp">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="PileSite" ColumnName="PileSite" />
+          <ScalarProperty Name="DeviceCode" ColumnName="DeviceCode" />
+          <ScalarProperty Name="Flow" ColumnName="Flow" />
+          <ScalarProperty Name="Pressure" ColumnName="Pressure" />
+          <ScalarProperty Name="OperateTime" ColumnName="OperateTime" />
+          <ScalarProperty Name="UploadTime" ColumnName="UploadTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gyxp_Stat">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Gyxp_Stat">
+        <MappingFragment StoreEntitySet="Gyxp_Stat">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="PileSite" ColumnName="PileSite" />
+          <ScalarProperty Name="DeviceCode" ColumnName="DeviceCode" />
+          <ScalarProperty Name="Luo" ColumnName="Luo" />
+          <ScalarProperty Name="TotalTime" ColumnName="TotalTime" />
+          <ScalarProperty Name="TotalFlow" ColumnName="TotalFlow" />
+          <ScalarProperty Name="TotalDust" ColumnName="TotalDust" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="UploadTime" ColumnName="UploadTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Lab_Department">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_Lab_Department">
+        <MappingFragment StoreEntitySet="Tb_Lab_Department">
+          <ScalarProperty Name="geom" ColumnName="geom" />
+          <ScalarProperty Name="BiaoDuanName" ColumnName="BiaoDuanName" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="PlatformName" ColumnName="PlatformName" />
+          <ScalarProperty Name="DepartmentCode" ColumnName="DepartmentCode" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Lab_ProjectName">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_Lab_ProjectName">
+        <MappingFragment StoreEntitySet="Tb_Lab_ProjectName">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Lab_Test">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_Lab_Test">
+        <MappingFragment StoreEntitySet="Tb_Lab_Test">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="TestItemId" ColumnName="TestItemId" />
+          <ScalarProperty Name="TestNo" ColumnName="TestNo" />
+          <ScalarProperty Name="TestUser" ColumnName="TestUser" />
+          <ScalarProperty Name="TestDevice" ColumnName="TestDevice" />
+          <ScalarProperty Name="ReworkCount" ColumnName="ReworkCount" />
+          <ScalarProperty Name="TestTime" ColumnName="TestTime" />
+          <ScalarProperty Name="TestResult" ColumnName="TestResult" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Lab_TestItem">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_Lab_TestItem">
+        <MappingFragment StoreEntitySet="Tb_Lab_TestItem">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TestId" ColumnName="TestId" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemResult" ColumnName="ItemResult" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Login">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_Login">
+        <MappingFragment StoreEntitySet="Tb_Login">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserRight" ColumnName="UserRight" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Main_Menu">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_Main_Menu">
+        <MappingFragment StoreEntitySet="Tb_Main_Menu">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="UserRight" ColumnName="UserRight" />
+          <ScalarProperty Name="Target" ColumnName="Target" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_MixingPlant_Dosage">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_Dosage">
+        <MappingFragment StoreEntitySet="Tb_MixingPlant_Dosage">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DeviceFacId" ColumnName="DeviceFacId" />
+          <ScalarProperty Name="PieceId" ColumnName="PieceId" />
+          <ScalarProperty Name="MaterialId" ColumnName="MaterialId" />
+          <ScalarProperty Name="Water" ColumnName="Water" />
+          <ScalarProperty Name="RecAmnt" ColumnName="RecAmnt" />
+          <ScalarProperty Name="PlanAmnt" ColumnName="PlanAmnt" />
+          <ScalarProperty Name="FacAmnt" ColumnName="FacAmnt" />
+          <ScalarProperty Name="Deviation" ColumnName="Deviation" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_MixingPlant_Material">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_Material">
+        <MappingFragment StoreEntitySet="Tb_MixingPlant_Material">
+          <ScalarProperty Name="PError" ColumnName="PError" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DeviceFacId" ColumnName="DeviceFacId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_MixingPlant_Piece">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_Piece">
+        <MappingFragment StoreEntitySet="Tb_MixingPlant_Piece">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DeviceFacId" ColumnName="DeviceFacId" />
+          <ScalarProperty Name="BhzId" ColumnName="BhzId" />
+          <ScalarProperty Name="ProduceId" ColumnName="ProduceId" />
+          <ScalarProperty Name="Serial" ColumnName="Serial" />
+          <ScalarProperty Name="DatTim" ColumnName="DatTim" />
+          <ScalarProperty Name="BldTimStart" ColumnName="BldTimStart" />
+          <ScalarProperty Name="BldTimEnd" ColumnName="BldTimEnd" />
+          <ScalarProperty Name="BldTim" ColumnName="BldTim" />
+          <ScalarProperty Name="PieAmnt" ColumnName="PieAmnt" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="DosageClass" ColumnName="DosageClass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_MixingPlant_Produce">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_Produce">
+        <MappingFragment StoreEntitySet="Tb_MixingPlant_Produce">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DeviceFacId" ColumnName="DeviceFacId" />
+          <ScalarProperty Name="RecipeId" ColumnName="RecipeId" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="ConsPos" ColumnName="ConsPos" />
+          <ScalarProperty Name="PieCnt" ColumnName="PieCnt" />
+          <ScalarProperty Name="BetLev" ColumnName="BetLev" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_MixingPlant_Recipe">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_Recipe">
+        <MappingFragment StoreEntitySet="Tb_MixingPlant_Recipe">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DeviceFacId" ColumnName="DeviceFacId" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="BetLev" ColumnName="BetLev" />
+          <ScalarProperty Name="DatTim" ColumnName="DatTim" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_MixingPlant_RecipeList">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_RecipeList">
+        <MappingFragment StoreEntitySet="Tb_MixingPlant_RecipeList">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DeviceFacId" ColumnName="DeviceFacId" />
+          <ScalarProperty Name="RecipeId" ColumnName="RecipeId" />
+          <ScalarProperty Name="MaterialId" ColumnName="MaterialId" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_YaJiang_CurrentMonitor">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_YaJiang_CurrentMonitor">
+        <MappingFragment StoreEntitySet="Tb_YaJiang_CurrentMonitor">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DeviceNo" ColumnName="DeviceNo" />
+          <ScalarProperty Name="DotId" ColumnName="DotId" />
+          <ScalarProperty Name="ConnState" ColumnName="ConnState" />
+          <ScalarProperty Name="ZLState" ColumnName="ZLState" />
+          <ScalarProperty Name="KongEx" ColumnName="KongEx" />
+          <ScalarProperty Name="LiangType" ColumnName="LiangType" />
+          <ScalarProperty Name="liangstr" ColumnName="liangstr" />
+          <ScalarProperty Name="IType" ColumnName="IType" />
+          <ScalarProperty Name="ShuiQ" ColumnName="ShuiQ" />
+          <ScalarProperty Name="ShuiNiQ" ColumnName="ShuiNiQ" />
+          <ScalarProperty Name="additiveQ" ColumnName="additiveQ" />
+          <ScalarProperty Name="AllQ" ColumnName="AllQ" />
+          <ScalarProperty Name="JiaoBanTime" ColumnName="JiaoBanTime" />
+          <ScalarProperty Name="EntrSpeed" ColumnName="EntrSpeed" />
+          <ScalarProperty Name="ExitSpeed" ColumnName="ExitSpeed" />
+          <ScalarProperty Name="EntrPree" ColumnName="EntrPree" />
+          <ScalarProperty Name="ExitPree" ColumnName="ExitPree" />
+          <ScalarProperty Name="Keeptime" ColumnName="Keeptime" />
+          <ScalarProperty Name="TotalSize" ColumnName="TotalSize" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_YaJiang_Curve">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_YaJiang_Curve">
+        <MappingFragment StoreEntitySet="Tb_YaJiang_Curve">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DeviceNo" ColumnName="DeviceNo" />
+          <ScalarProperty Name="DotId" ColumnName="DotId" />
+          <ScalarProperty Name="Kong" ColumnName="Kong" />
+          <ScalarProperty Name="KongEx" ColumnName="KongEx" />
+          <ScalarProperty Name="Liang" ColumnName="Liang" />
+          <ScalarProperty Name="IDmx" ColumnName="IDmx" />
+          <ScalarProperty Name="DataAry" ColumnName="DataAry" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_YaJiang_Data">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_YaJiang_Data">
+        <MappingFragment StoreEntitySet="Tb_YaJiang_Data">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DeviceNo" ColumnName="DeviceNo" />
+          <ScalarProperty Name="LiangType" ColumnName="LiangType" />
+          <ScalarProperty Name="LiangStr" ColumnName="LiangStr" />
+          <ScalarProperty Name="KongEx" ColumnName="KongEx" />
+          <ScalarProperty Name="DotId" ColumnName="DotId" />
+          <ScalarProperty Name="ProjectNo" ColumnName="ProjectNo" />
+          <ScalarProperty Name="ZLTime" ColumnName="ZLTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="ZLNum" ColumnName="ZLNum" />
+          <ScalarProperty Name="Kong" ColumnName="Kong" />
+          <ScalarProperty Name="ZLType" ColumnName="ZLType" />
+          <ScalarProperty Name="IType" ColumnName="IType" />
+          <ScalarProperty Name="CycleTime" ColumnName="CycleTime" />
+          <ScalarProperty Name="ShuiQ" ColumnName="ShuiQ" />
+          <ScalarProperty Name="ShuiNiQ" ColumnName="ShuiNiQ" />
+          <ScalarProperty Name="AdditiveQ" ColumnName="AdditiveQ" />
+          <ScalarProperty Name="PressSX" ColumnName="PressSX" />
+          <ScalarProperty Name="PressXX" ColumnName="PressXX" />
+          <ScalarProperty Name="Keeptime" ColumnName="Keeptime" />
+          <ScalarProperty Name="ZhenKongPree" ColumnName="ZhenKongPree" />
+          <ScalarProperty Name="TotalSize" ColumnName="TotalSize" />
+          <ScalarProperty Name="EntrPree" ColumnName="EntrPree" />
+          <ScalarProperty Name="ExitPree" ColumnName="ExitPree" />
+          <ScalarProperty Name="EntrAvgSpeed" ColumnName="EntrAvgSpeed" />
+          <ScalarProperty Name="ExitMaxSpeed" ColumnName="ExitMaxSpeed" />
+          <ScalarProperty Name="JiaoBanTime" ColumnName="JiaoBanTime" />
+          <ScalarProperty Name="ShuiRatio" ColumnName="ShuiRatio" />
+          <ScalarProperty Name="JiangWendu" ColumnName="JiangWendu" />
+          <ScalarProperty Name="HJWendu" ColumnName="HJWendu" />
+          <ScalarProperty Name="LLShuiQ" ColumnName="LLShuiQ" />
+          <ScalarProperty Name="LLShuiNiQ" ColumnName="LLShuiNiQ" />
+          <ScalarProperty Name="LLAdditiveQ" ColumnName="LLAdditiveQ" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="MaojiangQK" ColumnName="MaojiangQK" />
+          <ScalarProperty Name="ZJFangXiang" ColumnName="ZJFangXiang" />
+          <ScalarProperty Name="JiangSize" ColumnName="JiangSize" />
+          <ScalarProperty Name="LiaoSize" ColumnName="LiaoSize" />
+          <ScalarProperty Name="ShuiSize" ColumnName="ShuiSize" />
+          <ScalarProperty Name="LLSize" ColumnName="LLSize" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_YaJiang_ProjectInfo">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_YaJiang_ProjectInfo">
+        <MappingFragment StoreEntitySet="Tb_YaJiang_ProjectInfo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DeviceNo" ColumnName="DeviceNo" />
+          <ScalarProperty Name="DotId" ColumnName="DotId" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="ShiGong" ColumnName="ShiGong" />
+          <ScalarProperty Name="JianLi" ColumnName="JianLi" />
+          <ScalarProperty Name="HunNingTu" ColumnName="HunNingTu" />
+          <ScalarProperty Name="ZiJianYiJian" ColumnName="ZiJianYiJian" />
+          <ScalarProperty Name="JianLiYiJian" ColumnName="JianLiYiJian" />
+          <ScalarProperty Name="JianLiRen" ColumnName="JianLiRen" />
+          <ScalarProperty Name="JiShuYuan" ColumnName="JiShuYuan" />
+          <ScalarProperty Name="ZhiJianRen" ColumnName="ZhiJianRen" />
+          <ScalarProperty Name="SubProject" ColumnName="SubProject" />
+          <ScalarProperty Name="ZJLiaoName" ColumnName="ZJLiaoName" />
+          <ScalarProperty Name="ZJFangXiang" ColumnName="ZJFangXiang" />
+          <ScalarProperty Name="ZJIniSpeed" ColumnName="ZJIniSpeed" />
+          <ScalarProperty Name="JiangWendu" ColumnName="JiangWendu" />
+          <ScalarProperty Name="HJWendu" ColumnName="HJWendu" />
+          <ScalarProperty Name="ZLDatetime" ColumnName="ZLDatetime" />
+          <ScalarProperty Name="SuHuaJiL" ColumnName="SuHuaJiL" />
+          <ScalarProperty Name="PengHuaJiL" ColumnName="PengHuaJiL" />
+          <ScalarProperty Name="ShuiNiYL" ColumnName="ShuiNiYL" />
+          <ScalarProperty Name="QinShuiLv" ColumnName="QinShuiLv" />
+          <ScalarProperty Name="JiLuRen" ColumnName="JiLuRen" />
+          <ScalarProperty Name="ZBJiShuYuan" ColumnName="ZBJiShuYuan" />
+          <ScalarProperty Name="ShuiWendu" ColumnName="ShuiWendu" />
+          <ScalarProperty Name="JiangSize" ColumnName="JiangSize" />
+          <ScalarProperty Name="LiaoSize" ColumnName="LiaoSize" />
+          <ScalarProperty Name="ShuiSize" ColumnName="ShuiSize" />
+          <ScalarProperty Name="ShuiNiMD" ColumnName="ShuiNiMD" />
+          <ScalarProperty Name="AdditiveMD" ColumnName="AdditiveMD" />
+          <ScalarProperty Name="LLSize" ColumnName="LLSize" />
+          <ScalarProperty Name="TotalSize" ColumnName="TotalSize" />
+          <ScalarProperty Name="AdditiveXH" ColumnName="AdditiveXH" />
+          <ScalarProperty Name="BengXH" ColumnName="BengXH" />
+          <ScalarProperty Name="ZhuangNo" ColumnName="ZhuangNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_ZhangLa_CurrentMonitor">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa_CurrentMonitor">
+        <MappingFragment StoreEntitySet="Tb_ZhangLa_CurrentMonitor">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DotId" ColumnName="DotId" />
+          <ScalarProperty Name="DeviceNo" ColumnName="DeviceNo" />
+          <ScalarProperty Name="ConnState" ColumnName="ConnState" />
+          <ScalarProperty Name="ZLState" ColumnName="ZLState" />
+          <ScalarProperty Name="KongEx" ColumnName="KongEx" />
+          <ScalarProperty Name="LiangType" ColumnName="LiangType" />
+          <ScalarProperty Name="liangstr" ColumnName="liangstr" />
+          <ScalarProperty Name="Per100Press" ColumnName="Per100Press" />
+          <ScalarProperty Name="InitPress" ColumnName="InitPress" />
+          <ScalarProperty Name="Gang1State" ColumnName="Gang1State" />
+          <ScalarProperty Name="Gang2State" ColumnName="Gang2State" />
+          <ScalarProperty Name="Gang3State" ColumnName="Gang3State" />
+          <ScalarProperty Name="Gang4State" ColumnName="Gang4State" />
+          <ScalarProperty Name="Gang1Press" ColumnName="Gang1Press" />
+          <ScalarProperty Name="Gang2Press" ColumnName="Gang2Press" />
+          <ScalarProperty Name="Gang3Press" ColumnName="Gang3Press" />
+          <ScalarProperty Name="Gang4Press" ColumnName="Gang4Press" />
+          <ScalarProperty Name="Gang1Extend" ColumnName="Gang1Extend" />
+          <ScalarProperty Name="Gang2Extend" ColumnName="Gang2Extend" />
+          <ScalarProperty Name="Gang3Extend" ColumnName="Gang3Extend" />
+          <ScalarProperty Name="Gang4Extend" ColumnName="Gang4Extend" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_ZhangLa_Curve">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa_Curve">
+        <MappingFragment StoreEntitySet="Tb_ZhangLa_Curve">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DeviceNo" ColumnName="DeviceNo" />
+          <ScalarProperty Name="DotId" ColumnName="DotId" />
+          <ScalarProperty Name="Kong" ColumnName="Kong" />
+          <ScalarProperty Name="KongEx" ColumnName="KongEx" />
+          <ScalarProperty Name="Liang" ColumnName="Liang" />
+          <ScalarProperty Name="IDmx" ColumnName="IDmx" />
+          <ScalarProperty Name="DataAry" ColumnName="DataAry" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_ZhangLa_Data">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa_Data">
+        <MappingFragment StoreEntitySet="Tb_ZhangLa_Data">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DeviceNo" ColumnName="DeviceNo" />
+          <ScalarProperty Name="LiangType" ColumnName="LiangType" />
+          <ScalarProperty Name="LiangStr" ColumnName="LiangStr" />
+          <ScalarProperty Name="KongNo" ColumnName="KongNo" />
+          <ScalarProperty Name="KongEx" ColumnName="KongEx" />
+          <ScalarProperty Name="ZhangLaCount" ColumnName="ZhangLaCount" />
+          <ScalarProperty Name="DotId" ColumnName="DotId" />
+          <ScalarProperty Name="ProjectNo" ColumnName="ProjectNo" />
+          <ScalarProperty Name="ZLTime" ColumnName="ZLTime" />
+          <ScalarProperty Name="ZLType" ColumnName="ZLType" />
+          <ScalarProperty Name="DanShu" ColumnName="DanShu" />
+          <ScalarProperty Name="ZLNum" ColumnName="ZLNum" />
+          <ScalarProperty Name="Kong" ColumnName="Kong" />
+          <ScalarProperty Name="Per100Press" ColumnName="Per100Press" />
+          <ScalarProperty Name="InitPress" ColumnName="InitPress" />
+          <ScalarProperty Name="Extend" ColumnName="Extend" />
+          <ScalarProperty Name="Elasticity" ColumnName="Elasticity" />
+          <ScalarProperty Name="Per10Extend1" ColumnName="Per10Extend1" />
+          <ScalarProperty Name="Per10Mpa1" ColumnName="Per10Mpa1" />
+          <ScalarProperty Name="Per20Extend1" ColumnName="Per20Extend1" />
+          <ScalarProperty Name="Per20Mpa1" ColumnName="Per20Mpa1" />
+          <ScalarProperty Name="Per50Extend1" ColumnName="Per50Extend1" />
+          <ScalarProperty Name="Per50Mpa1" ColumnName="Per50Mpa1" />
+          <ScalarProperty Name="Per100Extend1" ColumnName="Per100Extend1" />
+          <ScalarProperty Name="Per100Mpa1" ColumnName="Per100Mpa1" />
+          <ScalarProperty Name="FixedExtend1" ColumnName="FixedExtend1" />
+          <ScalarProperty Name="RealExtend1" ColumnName="RealExtend1" />
+          <ScalarProperty Name="Per10Extend2" ColumnName="Per10Extend2" />
+          <ScalarProperty Name="Per10Mpa2" ColumnName="Per10Mpa2" />
+          <ScalarProperty Name="Per20Extend2" ColumnName="Per20Extend2" />
+          <ScalarProperty Name="Per20Mpa2" ColumnName="Per20Mpa2" />
+          <ScalarProperty Name="Per50Extend2" ColumnName="Per50Extend2" />
+          <ScalarProperty Name="Per50Mpa2" ColumnName="Per50Mpa2" />
+          <ScalarProperty Name="Per100Extend2" ColumnName="Per100Extend2" />
+          <ScalarProperty Name="Per100Mpa2" ColumnName="Per100Mpa2" />
+          <ScalarProperty Name="FixedExtend2" ColumnName="FixedExtend2" />
+          <ScalarProperty Name="RealExtend2" ColumnName="RealExtend2" />
+          <ScalarProperty Name="Per10Extend3" ColumnName="Per10Extend3" />
+          <ScalarProperty Name="Per10Mpa3" ColumnName="Per10Mpa3" />
+          <ScalarProperty Name="Per20Extend3" ColumnName="Per20Extend3" />
+          <ScalarProperty Name="Per20Mpa3" ColumnName="Per20Mpa3" />
+          <ScalarProperty Name="Per50Extend3" ColumnName="Per50Extend3" />
+          <ScalarProperty Name="Per50Mpa3" ColumnName="Per50Mpa3" />
+          <ScalarProperty Name="Per100Extend3" ColumnName="Per100Extend3" />
+          <ScalarProperty Name="Per100Mpa3" ColumnName="Per100Mpa3" />
+          <ScalarProperty Name="FixedExtend3" ColumnName="FixedExtend3" />
+          <ScalarProperty Name="RealExtend3" ColumnName="RealExtend3" />
+          <ScalarProperty Name="Per10Extend4" ColumnName="Per10Extend4" />
+          <ScalarProperty Name="Per10Mpa4" ColumnName="Per10Mpa4" />
+          <ScalarProperty Name="Per20Extend4" ColumnName="Per20Extend4" />
+          <ScalarProperty Name="Per20Mpa4" ColumnName="Per20Mpa4" />
+          <ScalarProperty Name="Per50Extend4" ColumnName="Per50Extend4" />
+          <ScalarProperty Name="Per50Mpa4" ColumnName="Per50Mpa4" />
+          <ScalarProperty Name="Per100Extend4" ColumnName="Per100Extend4" />
+          <ScalarProperty Name="Per100Mpa4" ColumnName="Per100Mpa4" />
+          <ScalarProperty Name="FixedExtend4" ColumnName="FixedExtend4" />
+          <ScalarProperty Name="RealExtend4" ColumnName="RealExtend4" />
+          <ScalarProperty Name="Extend2" ColumnName="Extend2" />
+          <ScalarProperty Name="Elasticity2" ColumnName="Elasticity2" />
+          <ScalarProperty Name="Extend3" ColumnName="Extend3" />
+          <ScalarProperty Name="Elasticity3" ColumnName="Elasticity3" />
+          <ScalarProperty Name="Extend4" ColumnName="Extend4" />
+          <ScalarProperty Name="Elasticity4" ColumnName="Elasticity4" />
+          <ScalarProperty Name="HuiSuoL" ColumnName="HuiSuoL" />
+          <ScalarProperty Name="ExtendError1" ColumnName="ExtendError1" />
+          <ScalarProperty Name="ExtendError2" ColumnName="ExtendError2" />
+          <ScalarProperty Name="ExtendError3" ColumnName="ExtendError3" />
+          <ScalarProperty Name="ExtendError4" ColumnName="ExtendError4" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="ChaoZhFlag" ColumnName="ChaoZhFlag" />
+          <ScalarProperty Name="ChaoZhPer" ColumnName="ChaoZhPer" />
+          <ScalarProperty Name="ChaoZhExtend1" ColumnName="ChaoZhExtend1" />
+          <ScalarProperty Name="ChaoZhMpa1" ColumnName="ChaoZhMpa1" />
+          <ScalarProperty Name="ChaoZhExtend2" ColumnName="ChaoZhExtend2" />
+          <ScalarProperty Name="ChaoZhMpa2" ColumnName="ChaoZhMpa2" />
+          <ScalarProperty Name="ChaoZhExtend3" ColumnName="ChaoZhExtend3" />
+          <ScalarProperty Name="ChaoZhMpa3" ColumnName="ChaoZhMpa3" />
+          <ScalarProperty Name="ChaoZhExtend4" ColumnName="ChaoZhExtend4" />
+          <ScalarProperty Name="ChaoZhMpa4" ColumnName="ChaoZhMpa4" />
+          <ScalarProperty Name="BaoYaTime1" ColumnName="BaoYaTime1" />
+          <ScalarProperty Name="BaoYaTime2" ColumnName="BaoYaTime2" />
+          <ScalarProperty Name="BaoYaTime3" ColumnName="BaoYaTime3" />
+          <ScalarProperty Name="BaoYaTime4" ColumnName="BaoYaTime4" />
+          <ScalarProperty Name="Per10JiaPian1" ColumnName="Per10JiaPian1" />
+          <ScalarProperty Name="Per20JiaPian1" ColumnName="Per20JiaPian1" />
+          <ScalarProperty Name="Per50JiaPian1" ColumnName="Per50JiaPian1" />
+          <ScalarProperty Name="Per100JiaPian1" ColumnName="Per100JiaPian1" />
+          <ScalarProperty Name="Per10JiaPian2" ColumnName="Per10JiaPian2" />
+          <ScalarProperty Name="Per20JiaPian2" ColumnName="Per20JiaPian2" />
+          <ScalarProperty Name="Per50JiaPian2" ColumnName="Per50JiaPian2" />
+          <ScalarProperty Name="Per100JiaPian2" ColumnName="Per100JiaPian2" />
+          <ScalarProperty Name="Per10JiaPian3" ColumnName="Per10JiaPian3" />
+          <ScalarProperty Name="Per20JiaPian3" ColumnName="Per20JiaPian3" />
+          <ScalarProperty Name="Per50JiaPian3" ColumnName="Per50JiaPian3" />
+          <ScalarProperty Name="Per100JiaPian3" ColumnName="Per100JiaPian3" />
+          <ScalarProperty Name="Per10JiaPian4" ColumnName="Per10JiaPian4" />
+          <ScalarProperty Name="Per20JiaPian4" ColumnName="Per20JiaPian4" />
+          <ScalarProperty Name="Per50JiaPian4" ColumnName="Per50JiaPian4" />
+          <ScalarProperty Name="Per100JiaPian4" ColumnName="Per100JiaPian4" />
+          <ScalarProperty Name="ZHMianJi1" ColumnName="ZHMianJi1" />
+          <ScalarProperty Name="ZHMoZu1" ColumnName="ZHMoZu1" />
+          <ScalarProperty Name="ZHMianJi2" ColumnName="ZHMianJi2" />
+          <ScalarProperty Name="ZHMoZu2" ColumnName="ZHMoZu2" />
+          <ScalarProperty Name="ZHMianJi3" ColumnName="ZHMianJi3" />
+          <ScalarProperty Name="ZHMoZu3" ColumnName="ZHMoZu3" />
+          <ScalarProperty Name="ZHMianJi4" ColumnName="ZHMianJi4" />
+          <ScalarProperty Name="ZHMoZu4" ColumnName="ZHMoZu4" />
+          <ScalarProperty Name="WorkLen" ColumnName="WorkLen" />
+          <ScalarProperty Name="Gang1Flag" ColumnName="Gang1Flag" />
+          <ScalarProperty Name="Gang2Flag" ColumnName="Gang2Flag" />
+          <ScalarProperty Name="Gang3Flag" ColumnName="Gang3Flag" />
+          <ScalarProperty Name="Gang4Flag" ColumnName="Gang4Flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_ZhangLa_ProjectInfo">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa_ProjectInfo">
+        <MappingFragment StoreEntitySet="Tb_ZhangLa_ProjectInfo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DeviceNo" ColumnName="DeviceNo" />
+          <ScalarProperty Name="DotId" ColumnName="DotId" />
+          <ScalarProperty Name="ShiGong" ColumnName="ShiGong" />
+          <ScalarProperty Name="JianLi" ColumnName="JianLi" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="HunNingTu" ColumnName="HunNingTu" />
+          <ScalarProperty Name="GangJiaoXian" ColumnName="GangJiaoXian" />
+          <ScalarProperty Name="ZhangLaStyle" ColumnName="ZhangLaStyle" />
+          <ScalarProperty Name="JiaoZhuDate" ColumnName="JiaoZhuDate" />
+          <ScalarProperty Name="YouBiao" ColumnName="YouBiao" />
+          <ScalarProperty Name="QianJinDing" ColumnName="QianJinDing" />
+          <ScalarProperty Name="JianLiYiJian" ColumnName="JianLiYiJian" />
+          <ScalarProperty Name="ZLFuZeRen" ColumnName="ZLFuZeRen" />
+          <ScalarProperty Name="JianCe" ColumnName="JianCe" />
+          <ScalarProperty Name="JSFuZeRen" ColumnName="JSFuZeRen" />
+          <ScalarProperty Name="JiLu" ColumnName="JiLu" />
+          <ScalarProperty Name="FuHe" ColumnName="FuHe" />
+          <ScalarProperty Name="SubProject" ColumnName="SubProject" />
+          <ScalarProperty Name="GouJianNo" ColumnName="GouJianNo" />
+          <ScalarProperty Name="ZLBH" ColumnName="ZLBH" />
+          <ScalarProperty Name="liangLen" ColumnName="liangLen" />
+          <ScalarProperty Name="KongDaoNum" ColumnName="KongDaoNum" />
+          <ScalarProperty Name="DeviceVender" ColumnName="DeviceVender" />
+          <ScalarProperty Name="DeviceZhuBH" ColumnName="DeviceZhuBH" />
+          <ScalarProperty Name="DeviceFuBH" ColumnName="DeviceFuBH" />
+          <ScalarProperty Name="BiaoDingRQ" ColumnName="BiaoDingRQ" />
+          <ScalarProperty Name="QianJinDing1" ColumnName="QianJinDing1" />
+          <ScalarProperty Name="QianJinDing2" ColumnName="QianJinDing2" />
+          <ScalarProperty Name="BiaoDingRQ1" ColumnName="BiaoDingRQ1" />
+          <ScalarProperty Name="BiaoDingRQ2" ColumnName="BiaoDingRQ2" />
+          <ScalarProperty Name="ShiYongCS1" ColumnName="ShiYongCS1" />
+          <ScalarProperty Name="ShiYongCS2" ColumnName="ShiYongCS2" />
+          <ScalarProperty Name="GangJiaoXianJh" ColumnName="GangJiaoXianJh" />
+          <ScalarProperty Name="GangJiaoXianQD" ColumnName="GangJiaoXianQD" />
+          <ScalarProperty Name="GangJiaoXianZJ" ColumnName="GangJiaoXianZJ" />
+          <ScalarProperty Name="GangJiaoXianTX" ColumnName="GangJiaoXianTX" />
+          <ScalarProperty Name="YuZhiLiangChang" ColumnName="YuZhiLiangChang" />
+          <ScalarProperty Name="ShiKuaiBH" ColumnName="ShiKuaiBH" />
+          <ScalarProperty Name="ShiKuaiQD" ColumnName="ShiKuaiQD" />
+          <ScalarProperty Name="ZhangLaQD" ColumnName="ZhangLaQD" />
+          <ScalarProperty Name="GJXKZYL" ColumnName="GJXKZYL" />
+          <ScalarProperty Name="HJWendu" ColumnName="HJWendu" />
+          <ScalarProperty Name="MaoVender" ColumnName="MaoVender" />
+          <ScalarProperty Name="MaoXH" ColumnName="MaoXH" />
+          <ScalarProperty Name="QiGongdu" ColumnName="QiGongdu" />
+          <ScalarProperty Name="HuaSiQK" ColumnName="HuaSiQK" />
+          <ScalarProperty Name="ChuLiQK" ColumnName="ChuLiQK" />
+          <ScalarProperty Name="ZhuangNo" ColumnName="ZhuangNo" />
+          <ScalarProperty Name="GJLIngQi" ColumnName="GJLIngQi" />
+          <ScalarProperty Name="DuanSiLv" ColumnName="DuanSiLv" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Envionment_Data">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Envionment_Data">
+        <MappingFragment StoreEntitySet="Envionment_Data">
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="UploadTime" ColumnName="UploadTime" />
+          <ScalarProperty Name="Humidity" ColumnName="Humidity" />
+          <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+          <ScalarProperty Name="DeviceCode" ColumnName="DeviceCode" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Envionment_DeviceProject">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Envionment_DeviceProject">
+        <MappingFragment StoreEntitySet="Envionment_DeviceProject">
+          <ScalarProperty Name="geom" ColumnName="geom" />
+          <ScalarProperty Name="DeviceName" ColumnName="DeviceName" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="DeviceCode" ColumnName="DeviceCode" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Envionment_ProjectInfo">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Envionment_ProjectInfo">
+        <MappingFragment StoreEntitySet="Envionment_ProjectInfo">
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="JianLi" ColumnName="JianLi" />
+          <ScalarProperty Name="BiaoDuan" ColumnName="BiaoDuan" />
+          <ScalarProperty Name="ConstructionDepartment" ColumnName="ConstructionDepartment" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_MixingPlant_Device">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_Device">
+        <MappingFragment StoreEntitySet="Tb_MixingPlant_Device">
+          <ScalarProperty Name="ShowName" ColumnName="ShowName" />
+          <ScalarProperty Name="geom" ColumnName="geom" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="Factorycode" ColumnName="Factorycode" />
+          <ScalarProperty Name="ProjectCode" ColumnName="ProjectCode" />
+          <ScalarProperty Name="BiaoDuanName" ColumnName="BiaoDuanName" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="PlatformName" ColumnName="PlatformName" />
+          <ScalarProperty Name="DeviceCode" ColumnName="DeviceCode" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DeviceFacId" ColumnName="DeviceFacId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_YaJiang_Project">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_YaJiang_Project">
+        <MappingFragment StoreEntitySet="Tb_YaJiang_Project">
+          <ScalarProperty Name="DotId" ColumnName="DotId" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_ZhangLa_Project">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa_Project">
+        <MappingFragment StoreEntitySet="Tb_ZhangLa_Project">
+          <ScalarProperty Name="DotId" ColumnName="DotId" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Flow_Page">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_Flow_Page">
+        <MappingFragment StoreEntitySet="Tb_Flow_Page">
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="PageName" ColumnName="PageName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Flow_Statistics">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_Flow_Statistics">
+        <MappingFragment StoreEntitySet="Tb_Flow_Statistics">
+          <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
+          <ScalarProperty Name="PageId" ColumnName="PageId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Flow_Visit">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_Flow_Visit">
+        <MappingFragment StoreEntitySet="Tb_Flow_Visit">
+          <ScalarProperty Name="VisitTime" ColumnName="VisitTime" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="PageId" ColumnName="PageId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_Lab_GJLS">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_Lab_GJLS">
+        <MappingFragment StoreEntitySet="Access_Lab_GJLS">
+          <ScalarProperty Name="ExpFacility" ColumnName="ExpFacility" />
+          <ScalarProperty Name="DeleteCount" ColumnName="DeleteCount" />
+          <ScalarProperty Name="SaveCount" ColumnName="SaveCount" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="TestDate" ColumnName="TestDate" />
+          <ScalarProperty Name="Tester" ColumnName="Tester" />
+          <ScalarProperty Name="Shape" ColumnName="Shape" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_Lab_GJLSParm">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_Lab_GJLSParm">
+        <MappingFragment StoreEntitySet="Access_Lab_GJLSParm">
+          <ScalarProperty Name="ParamValue" ColumnName="ParamValue" />
+          <ScalarProperty Name="ParamName" ColumnName="ParamName" />
+          <ScalarProperty Name="TestID" ColumnName="TestID" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_Lab_GJLSResult">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_Lab_GJLSResult">
+        <MappingFragment StoreEntitySet="Access_Lab_GJLSResult">
+          <ScalarProperty Name="Curvedata" ColumnName="Curvedata" />
+          <ScalarProperty Name="MaxLoad" ColumnName="MaxLoad" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="TestDate" ColumnName="TestDate" />
+          <ScalarProperty Name="Tester" ColumnName="Tester" />
+          <ScalarProperty Name="Shape" ColumnName="Shape" />
+          <ScalarProperty Name="ShunXu" ColumnName="ShunXu" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_Lab_HNTKY">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_Lab_HNTKY">
+        <MappingFragment StoreEntitySet="Access_Lab_HNTKY">
+          <ScalarProperty Name="ExpFacility" ColumnName="ExpFacility" />
+          <ScalarProperty Name="SelectGroNum" ColumnName="SelectGroNum" />
+          <ScalarProperty Name="SpecialShape" ColumnName="SpecialShape" />
+          <ScalarProperty Name="ExpCop" ColumnName="ExpCop" />
+          <ScalarProperty Name="ExpDate" ColumnName="ExpDate" />
+          <ScalarProperty Name="ExpMan" ColumnName="ExpMan" />
+          <ScalarProperty Name="GroMPa" ColumnName="GroMPa" />
+          <ScalarProperty Name="GroKN" ColumnName="GroKN" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="GroNum" ColumnName="GroNum" />
+          <ScalarProperty Name="LingQi" ColumnName="LingQi" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_Lab_HNTKYParm">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_Lab_HNTKYParm">
+        <MappingFragment StoreEntitySet="Access_Lab_HNTKYParm">
+          <ScalarProperty Name="SelectGroNum" ColumnName="SelectGroNum" />
+          <ScalarProperty Name="YanShi" ColumnName="YanShi" />
+          <ScalarProperty Name="LoadType" ColumnName="LoadType" />
+          <ScalarProperty Name="GroNum" ColumnName="GroNum" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="XiShu" ColumnName="XiShu" />
+          <ScalarProperty Name="GuiGe" ColumnName="GuiGe" />
+          <ScalarProperty Name="LingQi" ColumnName="LingQi" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_Lab_HNTKYResult">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_Lab_HNTKYResult">
+        <MappingFragment StoreEntitySet="Access_Lab_HNTKYResult">
+          <ScalarProperty Name="CurveData" ColumnName="CurveData" />
+          <ScalarProperty Name="XiShu" ColumnName="XiShu" />
+          <ScalarProperty Name="DiameterAv" ColumnName="DiameterAv" />
+          <ScalarProperty Name="HeiAv" ColumnName="HeiAv" />
+          <ScalarProperty Name="WidAv" ColumnName="WidAv" />
+          <ScalarProperty Name="LenAv" ColumnName="LenAv" />
+          <ScalarProperty Name="ShunXu" ColumnName="ShunXu" />
+          <ScalarProperty Name="OneKN" ColumnName="OneKN" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="LingQI" ColumnName="LingQI" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_Lab_SNKY">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_Lab_SNKY">
+        <MappingFragment StoreEntitySet="Access_Lab_SNKY">
+          <ScalarProperty Name="ExpFacility" ColumnName="ExpFacility" />
+          <ScalarProperty Name="SelectGroNum" ColumnName="SelectGroNum" />
+          <ScalarProperty Name="ExpCop" ColumnName="ExpCop" />
+          <ScalarProperty Name="ExpDate" ColumnName="ExpDate" />
+          <ScalarProperty Name="ExpMan" ColumnName="ExpMan" />
+          <ScalarProperty Name="GroMPa" ColumnName="GroMPa" />
+          <ScalarProperty Name="GroKN" ColumnName="GroKN" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="GroNum" ColumnName="GroNum" />
+          <ScalarProperty Name="LingQi" ColumnName="LingQi" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_Lab_SNKYParm">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_Lab_SNKYParm">
+        <MappingFragment StoreEntitySet="Access_Lab_SNKYParm">
+          <ScalarProperty Name="ShuiNiBiaoHao" ColumnName="ShuiNiBiaoHao" />
+          <ScalarProperty Name="SelectGroNum" ColumnName="SelectGroNum" />
+          <ScalarProperty Name="YanShi" ColumnName="YanShi" />
+          <ScalarProperty Name="LoadType" ColumnName="LoadType" />
+          <ScalarProperty Name="GroNum" ColumnName="GroNum" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="GuiGe" ColumnName="GuiGe" />
+          <ScalarProperty Name="LingQi" ColumnName="LingQi" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_Lab_SNKYResult">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_Lab_SNKYResult">
+        <MappingFragment StoreEntitySet="Access_Lab_SNKYResult">
+          <ScalarProperty Name="Curvedata" ColumnName="Curvedata" />
+          <ScalarProperty Name="WidAv" ColumnName="WidAv" />
+          <ScalarProperty Name="LenAv" ColumnName="LenAv" />
+          <ScalarProperty Name="ShunXu" ColumnName="ShunXu" />
+          <ScalarProperty Name="OneKN" ColumnName="OneKN" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="LingQI" ColumnName="LingQI" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_Lab_SNKZ">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_Lab_SNKZ">
+        <MappingFragment StoreEntitySet="Access_Lab_SNKZ">
+          <ScalarProperty Name="ExpFacility" ColumnName="ExpFacility" />
+          <ScalarProperty Name="SelectGroNum" ColumnName="SelectGroNum" />
+          <ScalarProperty Name="ExpCop" ColumnName="ExpCop" />
+          <ScalarProperty Name="ExpDate" ColumnName="ExpDate" />
+          <ScalarProperty Name="ExpMan" ColumnName="ExpMan" />
+          <ScalarProperty Name="GroMPa" ColumnName="GroMPa" />
+          <ScalarProperty Name="GroKN" ColumnName="GroKN" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="GroNum" ColumnName="GroNum" />
+          <ScalarProperty Name="LingQi" ColumnName="LingQi" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_Lab_SNKZParm">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_Lab_SNKZParm">
+        <MappingFragment StoreEntitySet="Access_Lab_SNKZParm">
+          <ScalarProperty Name="ShuiNiBiaoHao" ColumnName="ShuiNiBiaoHao" />
+          <ScalarProperty Name="SelectGroNum" ColumnName="SelectGroNum" />
+          <ScalarProperty Name="YanShi" ColumnName="YanShi" />
+          <ScalarProperty Name="LoadType" ColumnName="LoadType" />
+          <ScalarProperty Name="GroNum" ColumnName="GroNum" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="GuiGe" ColumnName="GuiGe" />
+          <ScalarProperty Name="LingQi" ColumnName="LingQi" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_Lab_SNKZResult">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_Lab_SNKZResult">
+        <MappingFragment StoreEntitySet="Access_Lab_SNKZResult">
+          <ScalarProperty Name="Curvedata" ColumnName="Curvedata" />
+          <ScalarProperty Name="HeiAv" ColumnName="HeiAv" />
+          <ScalarProperty Name="LenAv" ColumnName="LenAv" />
+          <ScalarProperty Name="ShunXu" ColumnName="ShunXu" />
+          <ScalarProperty Name="OneKN" ColumnName="OneKN" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="LingQI" ColumnName="LingQI" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZT_WL_SB_MixingPlant">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZT_WL_SB_MixingPlant">
+        <MappingFragment StoreEntitySet="Access_LZT_WL_SB_MixingPlant">
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="MixLast" ColumnName="MixLast" />
+          <ScalarProperty Name="BetLev" ColumnName="BetLev" />
+          <ScalarProperty Name="PieCnt" ColumnName="PieCnt" />
+          <ScalarProperty Name="ConsPos" ColumnName="ConsPos" />
+          <ScalarProperty Name="ProjName" ColumnName="ProjName" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZT_WL_SB_MixingPlant_Dosage">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZT_WL_SB_MixingPlant_Dosage">
+        <MappingFragment StoreEntitySet="Access_LZT_WL_SB_MixingPlant_Dosage">
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="FactAmnt" ColumnName="FactAmnt" />
+          <ScalarProperty Name="PlanAmnt" ColumnName="PlanAmnt" />
+          <ScalarProperty Name="RecAmnt" ColumnName="RecAmnt" />
+          <ScalarProperty Name="WatFull" ColumnName="WatFull" />
+          <ScalarProperty Name="Material" ColumnName="Material" />
+          <ScalarProperty Name="MaterID" ColumnName="MaterID" />
+          <ScalarProperty Name="Piece" ColumnName="Piece" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZT_WL_SB_MixingPlant_Piece">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZT_WL_SB_MixingPlant_Piece">
+        <MappingFragment StoreEntitySet="Access_LZT_WL_SB_MixingPlant_Piece">
+          <ScalarProperty Name="PieAmnt" ColumnName="PieAmnt" />
+          <ScalarProperty Name="BldTim" ColumnName="BldTim" />
+          <ScalarProperty Name="StartTim" ColumnName="StartTim" />
+          <ScalarProperty Name="Serial" ColumnName="Serial" />
+          <ScalarProperty Name="Produce" ColumnName="Produce" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZT_WL_SB_MixingPlant_Produce">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZT_WL_SB_MixingPlant_Produce">
+        <MappingFragment StoreEntitySet="Access_LZT_WL_SB_MixingPlant_Produce">
+          <ScalarProperty Name="Driver" ColumnName="Driver" />
+          <ScalarProperty Name="Vehicle" ColumnName="Vehicle" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="MixLast" ColumnName="MixLast" />
+          <ScalarProperty Name="BetLev" ColumnName="BetLev" />
+          <ScalarProperty Name="PieCnt" ColumnName="PieCnt" />
+          <ScalarProperty Name="ConsPos" ColumnName="ConsPos" />
+          <ScalarProperty Name="ProjName" ColumnName="ProjName" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTEBLab_SNKY">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTEBLab_SNKY">
+        <MappingFragment StoreEntitySet="Access_LZTEBLab_SNKY">
+          <ScalarProperty Name="ExpFacility" ColumnName="ExpFacility" />
+          <ScalarProperty Name="SelectGroNum" ColumnName="SelectGroNum" />
+          <ScalarProperty Name="ExpCop" ColumnName="ExpCop" />
+          <ScalarProperty Name="ExpDate" ColumnName="ExpDate" />
+          <ScalarProperty Name="ExpMan" ColumnName="ExpMan" />
+          <ScalarProperty Name="GroMPa" ColumnName="GroMPa" />
+          <ScalarProperty Name="GroKN" ColumnName="GroKN" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="GroNum" ColumnName="GroNum" />
+          <ScalarProperty Name="LingQi" ColumnName="LingQi" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTEBLab_SNKYParm">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTEBLab_SNKYParm">
+        <MappingFragment StoreEntitySet="Access_LZTEBLab_SNKYParm">
+          <ScalarProperty Name="ShiYanDanWei" ColumnName="ShiYanDanWei" />
+          <ScalarProperty Name="XianChangZhuangHao" ColumnName="XianChangZhuangHao" />
+          <ScalarProperty Name="WeiTuiDanWei" ColumnName="WeiTuiDanWei" />
+          <ScalarProperty Name="HeTongHao" ColumnName="HeTongHao" />
+          <ScalarProperty Name="JianLi" ColumnName="JianLi" />
+          <ScalarProperty Name="ShuiNiBiaoHao" ColumnName="ShuiNiBiaoHao" />
+          <ScalarProperty Name="SelectGroNum" ColumnName="SelectGroNum" />
+          <ScalarProperty Name="YanShi" ColumnName="YanShi" />
+          <ScalarProperty Name="LoadType" ColumnName="LoadType" />
+          <ScalarProperty Name="GroNum" ColumnName="GroNum" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="GuiGe" ColumnName="GuiGe" />
+          <ScalarProperty Name="LingQi" ColumnName="LingQi" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTEBLab_SNKYResult">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTEBLab_SNKYResult">
+        <MappingFragment StoreEntitySet="Access_LZTEBLab_SNKYResult">
+          <ScalarProperty Name="CurveData" ColumnName="CurveData" />
+          <ScalarProperty Name="WidAv" ColumnName="WidAv" />
+          <ScalarProperty Name="LenAv" ColumnName="LenAv" />
+          <ScalarProperty Name="ShunXu" ColumnName="ShunXu" />
+          <ScalarProperty Name="OneKN" ColumnName="OneKN" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="LingQI" ColumnName="LingQI" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTEBLab_SNKZ">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTEBLab_SNKZ">
+        <MappingFragment StoreEntitySet="Access_LZTEBLab_SNKZ">
+          <ScalarProperty Name="ExpFacility" ColumnName="ExpFacility" />
+          <ScalarProperty Name="SelectGroNum" ColumnName="SelectGroNum" />
+          <ScalarProperty Name="ExpCop" ColumnName="ExpCop" />
+          <ScalarProperty Name="ExpDate" ColumnName="ExpDate" />
+          <ScalarProperty Name="ExpMan" ColumnName="ExpMan" />
+          <ScalarProperty Name="GroMPa" ColumnName="GroMPa" />
+          <ScalarProperty Name="GroKN" ColumnName="GroKN" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="GroNum" ColumnName="GroNum" />
+          <ScalarProperty Name="LingQi" ColumnName="LingQi" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTEBLab_SNKZParm">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTEBLab_SNKZParm">
+        <MappingFragment StoreEntitySet="Access_LZTEBLab_SNKZParm">
+          <ScalarProperty Name="ShuiNiBiaoHao" ColumnName="ShuiNiBiaoHao" />
+          <ScalarProperty Name="SelectGroNum" ColumnName="SelectGroNum" />
+          <ScalarProperty Name="YanShi" ColumnName="YanShi" />
+          <ScalarProperty Name="LoadType" ColumnName="LoadType" />
+          <ScalarProperty Name="GroNum" ColumnName="GroNum" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="GuiGe" ColumnName="GuiGe" />
+          <ScalarProperty Name="LingQi" ColumnName="LingQi" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTEBLab_SNKZResult">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTEBLab_SNKZResult">
+        <MappingFragment StoreEntitySet="Access_LZTEBLab_SNKZResult">
+          <ScalarProperty Name="CurveData" ColumnName="CurveData" />
+          <ScalarProperty Name="HeiAv" ColumnName="HeiAv" />
+          <ScalarProperty Name="LenAv" ColumnName="LenAv" />
+          <ScalarProperty Name="ShunXu" ColumnName="ShunXu" />
+          <ScalarProperty Name="OneKN" ColumnName="OneKN" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="LingQI" ColumnName="LingQI" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTJL2Lab_SNKY">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTJL2Lab_SNKY">
+        <MappingFragment StoreEntitySet="Access_LZTJL2Lab_SNKY">
+          <ScalarProperty Name="ExpFacility" ColumnName="ExpFacility" />
+          <ScalarProperty Name="SelectGroNum" ColumnName="SelectGroNum" />
+          <ScalarProperty Name="ExpCop" ColumnName="ExpCop" />
+          <ScalarProperty Name="ExpDate" ColumnName="ExpDate" />
+          <ScalarProperty Name="ExpMan" ColumnName="ExpMan" />
+          <ScalarProperty Name="GroMPa" ColumnName="GroMPa" />
+          <ScalarProperty Name="GroKN" ColumnName="GroKN" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="GroNum" ColumnName="GroNum" />
+          <ScalarProperty Name="LingQi" ColumnName="LingQi" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTJL2Lab_SNKYParm">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTJL2Lab_SNKYParm">
+        <MappingFragment StoreEntitySet="Access_LZTJL2Lab_SNKYParm">
+          <ScalarProperty Name="ShiYanDanWei" ColumnName="ShiYanDanWei" />
+          <ScalarProperty Name="XianChangZhuangHao" ColumnName="XianChangZhuangHao" />
+          <ScalarProperty Name="WeiTuiDanWei" ColumnName="WeiTuiDanWei" />
+          <ScalarProperty Name="HeTongHao" ColumnName="HeTongHao" />
+          <ScalarProperty Name="JianLi" ColumnName="JianLi" />
+          <ScalarProperty Name="ShuiNiBiaoHao" ColumnName="ShuiNiBiaoHao" />
+          <ScalarProperty Name="SelectGroNum" ColumnName="SelectGroNum" />
+          <ScalarProperty Name="YanShi" ColumnName="YanShi" />
+          <ScalarProperty Name="LoadType" ColumnName="LoadType" />
+          <ScalarProperty Name="GroNum" ColumnName="GroNum" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="GuiGe" ColumnName="GuiGe" />
+          <ScalarProperty Name="LingQi" ColumnName="LingQi" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTJL2Lab_SNKYResult">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTJL2Lab_SNKYResult">
+        <MappingFragment StoreEntitySet="Access_LZTJL2Lab_SNKYResult">
+          <ScalarProperty Name="CurveData" ColumnName="CurveData" />
+          <ScalarProperty Name="WidAv" ColumnName="WidAv" />
+          <ScalarProperty Name="LenAv" ColumnName="LenAv" />
+          <ScalarProperty Name="ShunXu" ColumnName="ShunXu" />
+          <ScalarProperty Name="OneKN" ColumnName="OneKN" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="LingQI" ColumnName="LingQI" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTJL2Lab_SNKZ">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTJL2Lab_SNKZ">
+        <MappingFragment StoreEntitySet="Access_LZTJL2Lab_SNKZ">
+          <ScalarProperty Name="ExpFacility" ColumnName="ExpFacility" />
+          <ScalarProperty Name="SelectGroNum" ColumnName="SelectGroNum" />
+          <ScalarProperty Name="ExpCop" ColumnName="ExpCop" />
+          <ScalarProperty Name="ExpDate" ColumnName="ExpDate" />
+          <ScalarProperty Name="ExpMan" ColumnName="ExpMan" />
+          <ScalarProperty Name="GroMPa" ColumnName="GroMPa" />
+          <ScalarProperty Name="GroKN" ColumnName="GroKN" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="GroNum" ColumnName="GroNum" />
+          <ScalarProperty Name="LingQi" ColumnName="LingQi" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTJL2Lab_SNKZParm">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTJL2Lab_SNKZParm">
+        <MappingFragment StoreEntitySet="Access_LZTJL2Lab_SNKZParm">
+          <ScalarProperty Name="ShuiNiBiaoHao" ColumnName="ShuiNiBiaoHao" />
+          <ScalarProperty Name="SelectGroNum" ColumnName="SelectGroNum" />
+          <ScalarProperty Name="YanShi" ColumnName="YanShi" />
+          <ScalarProperty Name="LoadType" ColumnName="LoadType" />
+          <ScalarProperty Name="GroNum" ColumnName="GroNum" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="GuiGe" ColumnName="GuiGe" />
+          <ScalarProperty Name="LingQi" ColumnName="LingQi" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTJL2Lab_SNKZResult">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTJL2Lab_SNKZResult">
+        <MappingFragment StoreEntitySet="Access_LZTJL2Lab_SNKZResult">
+          <ScalarProperty Name="CurveData" ColumnName="CurveData" />
+          <ScalarProperty Name="HeiAv" ColumnName="HeiAv" />
+          <ScalarProperty Name="LenAv" ColumnName="LenAv" />
+          <ScalarProperty Name="ShunXu" ColumnName="ShunXu" />
+          <ScalarProperty Name="OneKN" ColumnName="OneKN" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="LingQI" ColumnName="LingQI" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTLab_SNKY">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTLab_SNKY">
+        <MappingFragment StoreEntitySet="Access_LZTLab_SNKY">
+          <ScalarProperty Name="ExpFacility" ColumnName="ExpFacility" />
+          <ScalarProperty Name="IntervalTime" ColumnName="IntervalTime" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="SampleAge" ColumnName="SampleAge" />
+          <ScalarProperty Name="SampleSize" ColumnName="SampleSize" />
+          <ScalarProperty Name="StrengthGrid" ColumnName="StrengthGrid" />
+          <ScalarProperty Name="SampleKind" ColumnName="SampleKind" />
+          <ScalarProperty Name="TestNo" ColumnName="TestNo" />
+          <ScalarProperty Name="KNRes" ColumnName="KNRes" />
+          <ScalarProperty Name="MPaRes" ColumnName="MPaRes" />
+          <ScalarProperty Name="TestTime" ColumnName="TestTime" />
+          <ScalarProperty Name="TestDate" ColumnName="TestDate" />
+          <ScalarProperty Name="SerialNO" ColumnName="SerialNO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTLab_SNKYResult">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTLab_SNKYResult">
+        <MappingFragment StoreEntitySet="Access_LZTLab_SNKYResult">
+          <ScalarProperty Name="CurveData" ColumnName="CurveData" />
+          <ScalarProperty Name="TestTime" ColumnName="TestTime" />
+          <ScalarProperty Name="TestDate" ColumnName="TestDate" />
+          <ScalarProperty Name="KN" ColumnName="KN" />
+          <ScalarProperty Name="MPa" ColumnName="MPa" />
+          <ScalarProperty Name="MPaIndex" ColumnName="MPaIndex" />
+          <ScalarProperty Name="TestSerialNo" ColumnName="TestSerialNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTLab_SNKZ">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTLab_SNKZ">
+        <MappingFragment StoreEntitySet="Access_LZTLab_SNKZ">
+          <ScalarProperty Name="ExpFacility" ColumnName="ExpFacility" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="IntervalTime" ColumnName="IntervalTime" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="SampleAge" ColumnName="SampleAge" />
+          <ScalarProperty Name="SpanLength" ColumnName="SpanLength" />
+          <ScalarProperty Name="SampleSize" ColumnName="SampleSize" />
+          <ScalarProperty Name="StrengthGrid" ColumnName="StrengthGrid" />
+          <ScalarProperty Name="SampleKind" ColumnName="SampleKind" />
+          <ScalarProperty Name="TestNo" ColumnName="TestNo" />
+          <ScalarProperty Name="KNRes" ColumnName="KNRes" />
+          <ScalarProperty Name="MPaRes" ColumnName="MPaRes" />
+          <ScalarProperty Name="TestTime" ColumnName="TestTime" />
+          <ScalarProperty Name="TestDate" ColumnName="TestDate" />
+          <ScalarProperty Name="SerialNO" ColumnName="SerialNO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTLab_SNKZResult">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTLab_SNKZResult">
+        <MappingFragment StoreEntitySet="Access_LZTLab_SNKZResult">
+          <ScalarProperty Name="CurveData" ColumnName="CurveData" />
+          <ScalarProperty Name="KN" ColumnName="KN" />
+          <ScalarProperty Name="MPa" ColumnName="MPa" />
+          <ScalarProperty Name="TestTime" ColumnName="TestTime" />
+          <ScalarProperty Name="TestDate" ColumnName="TestDate" />
+          <ScalarProperty Name="MPaIndex" ColumnName="MPaIndex" />
+          <ScalarProperty Name="TestSerialNo" ColumnName="TestSerialNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTSBLab_SNKY">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTSBLab_SNKY">
+        <MappingFragment StoreEntitySet="Access_LZTSBLab_SNKY">
+          <ScalarProperty Name="ExpFacility" ColumnName="ExpFacility" />
+          <ScalarProperty Name="SelectGroNum" ColumnName="SelectGroNum" />
+          <ScalarProperty Name="ExpCop" ColumnName="ExpCop" />
+          <ScalarProperty Name="ExpDate" ColumnName="ExpDate" />
+          <ScalarProperty Name="ExpMan" ColumnName="ExpMan" />
+          <ScalarProperty Name="GroMPa" ColumnName="GroMPa" />
+          <ScalarProperty Name="GroKN" ColumnName="GroKN" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="GroNum" ColumnName="GroNum" />
+          <ScalarProperty Name="LingQi" ColumnName="LingQi" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTSBLab_SNKYParm">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTSBLab_SNKYParm">
+        <MappingFragment StoreEntitySet="Access_LZTSBLab_SNKYParm">
+          <ScalarProperty Name="ShiYanDanWei" ColumnName="ShiYanDanWei" />
+          <ScalarProperty Name="XianChangZhuangHao" ColumnName="XianChangZhuangHao" />
+          <ScalarProperty Name="WeiTuiDanWei" ColumnName="WeiTuiDanWei" />
+          <ScalarProperty Name="HeTongHao" ColumnName="HeTongHao" />
+          <ScalarProperty Name="JianLi" ColumnName="JianLi" />
+          <ScalarProperty Name="ShuiNiBiaoHao" ColumnName="ShuiNiBiaoHao" />
+          <ScalarProperty Name="SelectGroNum" ColumnName="SelectGroNum" />
+          <ScalarProperty Name="YanShi" ColumnName="YanShi" />
+          <ScalarProperty Name="LoadType" ColumnName="LoadType" />
+          <ScalarProperty Name="GroNum" ColumnName="GroNum" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="GuiGe" ColumnName="GuiGe" />
+          <ScalarProperty Name="LingQi" ColumnName="LingQi" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTSBLab_SNKYResult">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTSBLab_SNKYResult">
+        <MappingFragment StoreEntitySet="Access_LZTSBLab_SNKYResult">
+          <ScalarProperty Name="CurveData" ColumnName="CurveData" />
+          <ScalarProperty Name="WidAv" ColumnName="WidAv" />
+          <ScalarProperty Name="LenAv" ColumnName="LenAv" />
+          <ScalarProperty Name="ShunXu" ColumnName="ShunXu" />
+          <ScalarProperty Name="OneKN" ColumnName="OneKN" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="LingQI" ColumnName="LingQI" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTSBLab_SNKZ">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTSBLab_SNKZ">
+        <MappingFragment StoreEntitySet="Access_LZTSBLab_SNKZ">
+          <ScalarProperty Name="ExpFacility" ColumnName="ExpFacility" />
+          <ScalarProperty Name="SelectGroNum" ColumnName="SelectGroNum" />
+          <ScalarProperty Name="ExpCop" ColumnName="ExpCop" />
+          <ScalarProperty Name="ExpDate" ColumnName="ExpDate" />
+          <ScalarProperty Name="ExpMan" ColumnName="ExpMan" />
+          <ScalarProperty Name="GroMPa" ColumnName="GroMPa" />
+          <ScalarProperty Name="GroKN" ColumnName="GroKN" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="GroNum" ColumnName="GroNum" />
+          <ScalarProperty Name="LingQi" ColumnName="LingQi" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTSBLab_SNKZParm">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTSBLab_SNKZParm">
+        <MappingFragment StoreEntitySet="Access_LZTSBLab_SNKZParm">
+          <ScalarProperty Name="ShuiNiBiaoHao" ColumnName="ShuiNiBiaoHao" />
+          <ScalarProperty Name="SelectGroNum" ColumnName="SelectGroNum" />
+          <ScalarProperty Name="YanShi" ColumnName="YanShi" />
+          <ScalarProperty Name="LoadType" ColumnName="LoadType" />
+          <ScalarProperty Name="GroNum" ColumnName="GroNum" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="GuiGe" ColumnName="GuiGe" />
+          <ScalarProperty Name="LingQi" ColumnName="LingQi" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTSBLab_SNKZResult">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTSBLab_SNKZResult">
+        <MappingFragment StoreEntitySet="Access_LZTSBLab_SNKZResult">
+          <ScalarProperty Name="CurveData" ColumnName="CurveData" />
+          <ScalarProperty Name="HeiAv" ColumnName="HeiAv" />
+          <ScalarProperty Name="LenAv" ColumnName="LenAv" />
+          <ScalarProperty Name="ShunXu" ColumnName="ShunXu" />
+          <ScalarProperty Name="OneKN" ColumnName="OneKN" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="LingQI" ColumnName="LingQI" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTSDBLab_SNKY">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTSDBLab_SNKY">
+        <MappingFragment StoreEntitySet="Access_LZTSDBLab_SNKY">
+          <ScalarProperty Name="ExpFacility" ColumnName="ExpFacility" />
+          <ScalarProperty Name="SelectGroNum" ColumnName="SelectGroNum" />
+          <ScalarProperty Name="ExpCop" ColumnName="ExpCop" />
+          <ScalarProperty Name="ExpDate" ColumnName="ExpDate" />
+          <ScalarProperty Name="ExpMan" ColumnName="ExpMan" />
+          <ScalarProperty Name="GroMPa" ColumnName="GroMPa" />
+          <ScalarProperty Name="GroKN" ColumnName="GroKN" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="GroNum" ColumnName="GroNum" />
+          <ScalarProperty Name="LingQi" ColumnName="LingQi" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTSDBLab_SNKYParm">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTSDBLab_SNKYParm">
+        <MappingFragment StoreEntitySet="Access_LZTSDBLab_SNKYParm">
+          <ScalarProperty Name="ShiYanDanWei" ColumnName="ShiYanDanWei" />
+          <ScalarProperty Name="XianChangZhuangHao" ColumnName="XianChangZhuangHao" />
+          <ScalarProperty Name="WeiTuiDanWei" ColumnName="WeiTuiDanWei" />
+          <ScalarProperty Name="HeTongHao" ColumnName="HeTongHao" />
+          <ScalarProperty Name="JianLi" ColumnName="JianLi" />
+          <ScalarProperty Name="ShuiNiBiaoHao" ColumnName="ShuiNiBiaoHao" />
+          <ScalarProperty Name="SelectGroNum" ColumnName="SelectGroNum" />
+          <ScalarProperty Name="YanShi" ColumnName="YanShi" />
+          <ScalarProperty Name="LoadType" ColumnName="LoadType" />
+          <ScalarProperty Name="GroNum" ColumnName="GroNum" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="GuiGe" ColumnName="GuiGe" />
+          <ScalarProperty Name="LingQi" ColumnName="LingQi" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTSDBLab_SNKYResult">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTSDBLab_SNKYResult">
+        <MappingFragment StoreEntitySet="Access_LZTSDBLab_SNKYResult">
+          <ScalarProperty Name="CurveData" ColumnName="CurveData" />
+          <ScalarProperty Name="WidAv" ColumnName="WidAv" />
+          <ScalarProperty Name="LenAv" ColumnName="LenAv" />
+          <ScalarProperty Name="ShunXu" ColumnName="ShunXu" />
+          <ScalarProperty Name="OneKN" ColumnName="OneKN" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="LingQI" ColumnName="LingQI" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTSDBLab_SNKZ">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTSDBLab_SNKZ">
+        <MappingFragment StoreEntitySet="Access_LZTSDBLab_SNKZ">
+          <ScalarProperty Name="ExpFacility" ColumnName="ExpFacility" />
+          <ScalarProperty Name="SelectGroNum" ColumnName="SelectGroNum" />
+          <ScalarProperty Name="ExpCop" ColumnName="ExpCop" />
+          <ScalarProperty Name="ExpDate" ColumnName="ExpDate" />
+          <ScalarProperty Name="ExpMan" ColumnName="ExpMan" />
+          <ScalarProperty Name="GroMPa" ColumnName="GroMPa" />
+          <ScalarProperty Name="GroKN" ColumnName="GroKN" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="GroNum" ColumnName="GroNum" />
+          <ScalarProperty Name="LingQi" ColumnName="LingQi" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTSDBLab_SNKZParm">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTSDBLab_SNKZParm">
+        <MappingFragment StoreEntitySet="Access_LZTSDBLab_SNKZParm">
+          <ScalarProperty Name="ShuiNiBiaoHao" ColumnName="ShuiNiBiaoHao" />
+          <ScalarProperty Name="SelectGroNum" ColumnName="SelectGroNum" />
+          <ScalarProperty Name="YanShi" ColumnName="YanShi" />
+          <ScalarProperty Name="LoadType" ColumnName="LoadType" />
+          <ScalarProperty Name="GroNum" ColumnName="GroNum" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="GuiGe" ColumnName="GuiGe" />
+          <ScalarProperty Name="LingQi" ColumnName="LingQi" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTSDBLab_SNKZResult">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTSDBLab_SNKZResult">
+        <MappingFragment StoreEntitySet="Access_LZTSDBLab_SNKZResult">
+          <ScalarProperty Name="CurveData" ColumnName="CurveData" />
+          <ScalarProperty Name="HeiAv" ColumnName="HeiAv" />
+          <ScalarProperty Name="LenAv" ColumnName="LenAv" />
+          <ScalarProperty Name="ShunXu" ColumnName="ShunXu" />
+          <ScalarProperty Name="OneKN" ColumnName="OneKN" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="LingQI" ColumnName="LingQI" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTYBLab_SNKY">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTYBLab_SNKY">
+        <MappingFragment StoreEntitySet="Access_LZTYBLab_SNKY">
+          <ScalarProperty Name="ExpFacility" ColumnName="ExpFacility" />
+          <ScalarProperty Name="SelectGroNum" ColumnName="SelectGroNum" />
+          <ScalarProperty Name="ExpCop" ColumnName="ExpCop" />
+          <ScalarProperty Name="ExpDate" ColumnName="ExpDate" />
+          <ScalarProperty Name="ExpMan" ColumnName="ExpMan" />
+          <ScalarProperty Name="GroMPa" ColumnName="GroMPa" />
+          <ScalarProperty Name="GroKN" ColumnName="GroKN" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="GroNum" ColumnName="GroNum" />
+          <ScalarProperty Name="LingQi" ColumnName="LingQi" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTYBLab_SNKYParm">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTYBLab_SNKYParm">
+        <MappingFragment StoreEntitySet="Access_LZTYBLab_SNKYParm">
+          <ScalarProperty Name="ShiYanDanWei" ColumnName="ShiYanDanWei" />
+          <ScalarProperty Name="XianChangZhuangHao" ColumnName="XianChangZhuangHao" />
+          <ScalarProperty Name="WeiTuiDanWei" ColumnName="WeiTuiDanWei" />
+          <ScalarProperty Name="HeTongHao" ColumnName="HeTongHao" />
+          <ScalarProperty Name="JianLi" ColumnName="JianLi" />
+          <ScalarProperty Name="ShuiNiBiaoHao" ColumnName="ShuiNiBiaoHao" />
+          <ScalarProperty Name="SelectGroNum" ColumnName="SelectGroNum" />
+          <ScalarProperty Name="YanShi" ColumnName="YanShi" />
+          <ScalarProperty Name="LoadType" ColumnName="LoadType" />
+          <ScalarProperty Name="GroNum" ColumnName="GroNum" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="GuiGe" ColumnName="GuiGe" />
+          <ScalarProperty Name="LingQi" ColumnName="LingQi" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTYBLab_SNKYResult">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTYBLab_SNKYResult">
+        <MappingFragment StoreEntitySet="Access_LZTYBLab_SNKYResult">
+          <ScalarProperty Name="CurveData" ColumnName="CurveData" />
+          <ScalarProperty Name="WidAv" ColumnName="WidAv" />
+          <ScalarProperty Name="LenAv" ColumnName="LenAv" />
+          <ScalarProperty Name="ShunXu" ColumnName="ShunXu" />
+          <ScalarProperty Name="OneKN" ColumnName="OneKN" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="LingQI" ColumnName="LingQI" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTYBLab_SNKZ">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTYBLab_SNKZ">
+        <MappingFragment StoreEntitySet="Access_LZTYBLab_SNKZ">
+          <ScalarProperty Name="ExpFacility" ColumnName="ExpFacility" />
+          <ScalarProperty Name="SelectGroNum" ColumnName="SelectGroNum" />
+          <ScalarProperty Name="ExpCop" ColumnName="ExpCop" />
+          <ScalarProperty Name="ExpDate" ColumnName="ExpDate" />
+          <ScalarProperty Name="ExpMan" ColumnName="ExpMan" />
+          <ScalarProperty Name="GroMPa" ColumnName="GroMPa" />
+          <ScalarProperty Name="GroKN" ColumnName="GroKN" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="GroNum" ColumnName="GroNum" />
+          <ScalarProperty Name="LingQi" ColumnName="LingQi" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTYBLab_SNKZParm">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTYBLab_SNKZParm">
+        <MappingFragment StoreEntitySet="Access_LZTYBLab_SNKZParm">
+          <ScalarProperty Name="ShuiNiBiaoHao" ColumnName="ShuiNiBiaoHao" />
+          <ScalarProperty Name="SelectGroNum" ColumnName="SelectGroNum" />
+          <ScalarProperty Name="YanShi" ColumnName="YanShi" />
+          <ScalarProperty Name="LoadType" ColumnName="LoadType" />
+          <ScalarProperty Name="GroNum" ColumnName="GroNum" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="GuiGe" ColumnName="GuiGe" />
+          <ScalarProperty Name="LingQi" ColumnName="LingQi" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_LZTYBLab_SNKZResult">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_LZTYBLab_SNKZResult">
+        <MappingFragment StoreEntitySet="Access_LZTYBLab_SNKZResult">
+          <ScalarProperty Name="CurveData" ColumnName="CurveData" />
+          <ScalarProperty Name="HeiAv" ColumnName="HeiAv" />
+          <ScalarProperty Name="LenAv" ColumnName="LenAv" />
+          <ScalarProperty Name="ShunXu" ColumnName="ShunXu" />
+          <ScalarProperty Name="OneKN" ColumnName="OneKN" />
+          <ScalarProperty Name="PingZhong" ColumnName="PingZhong" />
+          <ScalarProperty Name="LingQI" ColumnName="LingQI" />
+          <ScalarProperty Name="ZuHao" ColumnName="ZuHao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_MixingPlant_228RoadYB">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_MixingPlant_228RoadYB">
+        <MappingFragment StoreEntitySet="Access_MixingPlant_228RoadYB">
+          <ScalarProperty Name="CLZ_FLA1" ColumnName="CLZ_FLA1" />
+          <ScalarProperty Name="MBZ_FLA1" ColumnName="MBZ_FLA1" />
+          <ScalarProperty Name="NAM_FLA1" ColumnName="NAM_FLA1" />
+          <ScalarProperty Name="CLZ_Shui2" ColumnName="CLZ_Shui2" />
+          <ScalarProperty Name="MBZ_Shui2" ColumnName="MBZ_Shui2" />
+          <ScalarProperty Name="NAM_Shui2" ColumnName="NAM_Shui2" />
+          <ScalarProperty Name="CLZ_WJA2" ColumnName="CLZ_WJA2" />
+          <ScalarProperty Name="MBZ_WJA2" ColumnName="MBZ_WJA2" />
+          <ScalarProperty Name="NAM_WJA2" ColumnName="NAM_WJA2" />
+          <ScalarProperty Name="CLZ_FLA3" ColumnName="CLZ_FLA3" />
+          <ScalarProperty Name="MBZ_FLA3" ColumnName="MBZ_FLA3" />
+          <ScalarProperty Name="NAM_FLA3" ColumnName="NAM_FLA3" />
+          <ScalarProperty Name="Const_Unit" ColumnName="Const_Unit" />
+          <ScalarProperty Name="Strength" ColumnName="Strength" />
+          <ScalarProperty Name="Contr_No" ColumnName="Contr_No" />
+          <ScalarProperty Name="Site_No" ColumnName="Site_No" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Proj_Nm" ColumnName="Proj_Nm" />
+          <ScalarProperty Name="Cust_Nm" ColumnName="Cust_Nm" />
+          <ScalarProperty Name="Prop_No" ColumnName="Prop_No" />
+          <ScalarProperty Name="Job_No" ColumnName="Job_No" />
+          <ScalarProperty Name="CLZ_Shui1" ColumnName="CLZ_Shui1" />
+          <ScalarProperty Name="MBZ_Shui1" ColumnName="MBZ_Shui1" />
+          <ScalarProperty Name="NAM_Shui1" ColumnName="NAM_Shui1" />
+          <ScalarProperty Name="JDZ_WJC4" ColumnName="JDZ_WJC4" />
+          <ScalarProperty Name="CLZ_WJA1" ColumnName="CLZ_WJA1" />
+          <ScalarProperty Name="MBZ_WJA1" ColumnName="MBZ_WJA1" />
+          <ScalarProperty Name="NAM_WJA1" ColumnName="NAM_WJA1" />
+          <ScalarProperty Name="CLZ_FLA2" ColumnName="CLZ_FLA2" />
+          <ScalarProperty Name="MBZ_FLA2" ColumnName="MBZ_FLA2" />
+          <ScalarProperty Name="NAM_FLA2" ColumnName="NAM_FLA2" />
+          <ScalarProperty Name="CLZ_GL3" ColumnName="CLZ_GL3" />
+          <ScalarProperty Name="MBZ_GL3" ColumnName="MBZ_GL3" />
+          <ScalarProperty Name="NAM_GL3" ColumnName="NAM_GL3" />
+          <ScalarProperty Name="CLZ_GL2" ColumnName="CLZ_GL2" />
+          <ScalarProperty Name="MBZ_GL2" ColumnName="MBZ_GL2" />
+          <ScalarProperty Name="NAM_GL2" ColumnName="NAM_GL2" />
+          <ScalarProperty Name="CLZ_GL1" ColumnName="CLZ_GL1" />
+          <ScalarProperty Name="MBZ_GL1" ColumnName="MBZ_GL1" />
+          <ScalarProperty Name="NAM_GL1" ColumnName="NAM_GL1" />
+          <ScalarProperty Name="Output_vol" ColumnName="Output_vol" />
+          <ScalarProperty Name="ScTime" ColumnName="ScTime" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_MixingPlant_228RoadYBPeiHeBi">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_MixingPlant_228RoadYBPeiHeBi">
+        <MappingFragment StoreEntitySet="Access_MixingPlant_228RoadYBPeiHeBi">
+          <ScalarProperty Name="MixTime1" ColumnName="MixTime1" />
+          <ScalarProperty Name="BPB_Shui2" ColumnName="BPB_Shui2" />
+          <ScalarProperty Name="NAM_Shui2" ColumnName="NAM_Shui2" />
+          <ScalarProperty Name="BPB_Shui1" ColumnName="BPB_Shui1" />
+          <ScalarProperty Name="NAM_Shui1" ColumnName="NAM_Shui1" />
+          <ScalarProperty Name="BPB_WJA2" ColumnName="BPB_WJA2" />
+          <ScalarProperty Name="NAM_WJA2" ColumnName="NAM_WJA2" />
+          <ScalarProperty Name="BPB_WJA1" ColumnName="BPB_WJA1" />
+          <ScalarProperty Name="NAM_WJA1" ColumnName="NAM_WJA1" />
+          <ScalarProperty Name="BPB_FLA3" ColumnName="BPB_FLA3" />
+          <ScalarProperty Name="NAM_FLA3" ColumnName="NAM_FLA3" />
+          <ScalarProperty Name="BPB_FLA2" ColumnName="BPB_FLA2" />
+          <ScalarProperty Name="NAM_FLA2" ColumnName="NAM_FLA2" />
+          <ScalarProperty Name="BPB_FLA1" ColumnName="BPB_FLA1" />
+          <ScalarProperty Name="NAM_FLA1" ColumnName="NAM_FLA1" />
+          <ScalarProperty Name="BPB_GL3" ColumnName="BPB_GL3" />
+          <ScalarProperty Name="NAM_GL3" ColumnName="NAM_GL3" />
+          <ScalarProperty Name="BPB_GL2" ColumnName="BPB_GL2" />
+          <ScalarProperty Name="NAM_GL2" ColumnName="NAM_GL2" />
+          <ScalarProperty Name="BPB_GL1" ColumnName="BPB_GL1" />
+          <ScalarProperty Name="NAM_GL1" ColumnName="NAM_GL1" />
+          <ScalarProperty Name="Strength" ColumnName="Strength" />
+          <ScalarProperty Name="Prop_No" ColumnName="Prop_No" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_MixingPlant_Intensity">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_MixingPlant_Intensity">
+        <MappingFragment StoreEntitySet="Access_MixingPlant_Intensity">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_MixingPlant_Parm">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_MixingPlant_Parm">
+        <MappingFragment StoreEntitySet="Access_MixingPlant_Parm">
+          <ScalarProperty Name="timeEnd" ColumnName="timeEnd" />
+          <ScalarProperty Name="timeBegin" ColumnName="timeBegin" />
+          <ScalarProperty Name="timeLen" ColumnName="timeLen" />
+          <ScalarProperty Name="parm" ColumnName="parm" />
+          <ScalarProperty Name="idParm" ColumnName="idParm" />
+          <ScalarProperty Name="gc" ColumnName="gc" />
+          <ScalarProperty Name="pc" ColumnName="pc" />
+          <ScalarProperty Name="xh" ColumnName="xh" />
+          <ScalarProperty Name="rdate" ColumnName="rdate" />
+          <ScalarProperty Name="rd" ColumnName="rd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_MixingPlant_Parm2">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_MixingPlant_Parm2">
+        <MappingFragment StoreEntitySet="Access_MixingPlant_Parm2">
+          <ScalarProperty Name="timeEnd" ColumnName="timeEnd" />
+          <ScalarProperty Name="timeBegin" ColumnName="timeBegin" />
+          <ScalarProperty Name="timeLen" ColumnName="timeLen" />
+          <ScalarProperty Name="parm" ColumnName="parm" />
+          <ScalarProperty Name="idParm" ColumnName="idParm" />
+          <ScalarProperty Name="gc" ColumnName="gc" />
+          <ScalarProperty Name="pc" ColumnName="pc" />
+          <ScalarProperty Name="xh" ColumnName="xh" />
+          <ScalarProperty Name="rdate" ColumnName="rdate" />
+          <ScalarProperty Name="rd" ColumnName="rd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_MixingPlant_tScsjAll">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_MixingPlant_tScsjAll">
+        <MappingFragment StoreEntitySet="Access_MixingPlant_tScsjAll">
+          <ScalarProperty Name="flag" ColumnName="flag" />
+          <ScalarProperty Name="operateMode" ColumnName="operateMode" />
+          <ScalarProperty Name="Driver" ColumnName="Driver" />
+          <ScalarProperty Name="Part" ColumnName="Part" />
+          <ScalarProperty Name="CarNo" ColumnName="CarNo" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="Client" ColumnName="Client" />
+          <ScalarProperty Name="per" ColumnName="per" />
+          <ScalarProperty Name="accumulativeTotal" ColumnName="accumulativeTotal" />
+          <ScalarProperty Name="humidity" ColumnName="humidity" />
+          <ScalarProperty Name="intensityGrade" ColumnName="intensityGrade" />
+          <ScalarProperty Name="slump" ColumnName="slump" />
+          <ScalarProperty Name="formuName" ColumnName="formuName" />
+          <ScalarProperty Name="formuID" ColumnName="formuID" />
+          <ScalarProperty Name="orderName" ColumnName="orderName" />
+          <ScalarProperty Name="orderID" ColumnName="orderID" />
+          <ScalarProperty Name="rdate" ColumnName="rdate" />
+          <ScalarProperty Name="xh" ColumnName="xh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_MixingPlant_tScsjAll2">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_MixingPlant_tScsjAll2">
+        <MappingFragment StoreEntitySet="Access_MixingPlant_tScsjAll2">
+          <ScalarProperty Name="flag" ColumnName="flag" />
+          <ScalarProperty Name="operateMode" ColumnName="operateMode" />
+          <ScalarProperty Name="Driver" ColumnName="Driver" />
+          <ScalarProperty Name="Part" ColumnName="Part" />
+          <ScalarProperty Name="CarNo" ColumnName="CarNo" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="Client" ColumnName="Client" />
+          <ScalarProperty Name="per" ColumnName="per" />
+          <ScalarProperty Name="accumulativeTotal" ColumnName="accumulativeTotal" />
+          <ScalarProperty Name="humidity" ColumnName="humidity" />
+          <ScalarProperty Name="intensityGrade" ColumnName="intensityGrade" />
+          <ScalarProperty Name="slump" ColumnName="slump" />
+          <ScalarProperty Name="formuName" ColumnName="formuName" />
+          <ScalarProperty Name="formuID" ColumnName="formuID" />
+          <ScalarProperty Name="orderName" ColumnName="orderName" />
+          <ScalarProperty Name="orderID" ColumnName="orderID" />
+          <ScalarProperty Name="rdate" ColumnName="rdate" />
+          <ScalarProperty Name="xh" ColumnName="xh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_MixingPlant_tScsjAllBody">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_MixingPlant_tScsjAllBody">
+        <MappingFragment StoreEntitySet="Access_MixingPlant_tScsjAllBody">
+          <ScalarProperty Name="flag" ColumnName="flag" />
+          <ScalarProperty Name="margin" ColumnName="margin" />
+          <ScalarProperty Name="fact" ColumnName="fact" />
+          <ScalarProperty Name="goal" ColumnName="goal" />
+          <ScalarProperty Name="material" ColumnName="material" />
+          <ScalarProperty Name="idMaterial" ColumnName="idMaterial" />
+          <ScalarProperty Name="gc" ColumnName="gc" />
+          <ScalarProperty Name="pc" ColumnName="pc" />
+          <ScalarProperty Name="xh" ColumnName="xh" />
+          <ScalarProperty Name="rdate" ColumnName="rdate" />
+          <ScalarProperty Name="rd" ColumnName="rd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Access_MixingPlant_tScsjAllBody2">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Access_MixingPlant_tScsjAllBody2">
+        <MappingFragment StoreEntitySet="Access_MixingPlant_tScsjAllBody2">
+          <ScalarProperty Name="flag" ColumnName="flag" />
+          <ScalarProperty Name="margin" ColumnName="margin" />
+          <ScalarProperty Name="fact" ColumnName="fact" />
+          <ScalarProperty Name="goal" ColumnName="goal" />
+          <ScalarProperty Name="material" ColumnName="material" />
+          <ScalarProperty Name="idMaterial" ColumnName="idMaterial" />
+          <ScalarProperty Name="gc" ColumnName="gc" />
+          <ScalarProperty Name="pc" ColumnName="pc" />
+          <ScalarProperty Name="xh" ColumnName="xh" />
+          <ScalarProperty Name="rdate" ColumnName="rdate" />
+          <ScalarProperty Name="rd" ColumnName="rd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sdf_LZT_SD_MixingPlant">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Sdf_LZT_SD_MixingPlant">
+        <MappingFragment StoreEntitySet="Sdf_LZT_SD_MixingPlant">
+          <ScalarProperty Name="搅拌时间" ColumnName="搅拌时间" />
+          <ScalarProperty Name="塌落度" ColumnName="塌落度" />
+          <ScalarProperty Name="施工地址" ColumnName="施工地址" />
+          <ScalarProperty Name="添加剂二实际值" ColumnName="添加剂二实际值" />
+          <ScalarProperty Name="添加剂二当前值" ColumnName="添加剂二当前值" />
+          <ScalarProperty Name="添加剂二配方值" ColumnName="添加剂二配方值" />
+          <ScalarProperty Name="添加剂一实际值" ColumnName="添加剂一实际值" />
+          <ScalarProperty Name="添加剂一当前值" ColumnName="添加剂一当前值" />
+          <ScalarProperty Name="添加剂一配方值" ColumnName="添加剂一配方值" />
+          <ScalarProperty Name="附加剂实际值" ColumnName="附加剂实际值" />
+          <ScalarProperty Name="附加剂当前值" ColumnName="附加剂当前值" />
+          <ScalarProperty Name="附加剂配方值" ColumnName="附加剂配方值" />
+          <ScalarProperty Name="水实际值" ColumnName="水实际值" />
+          <ScalarProperty Name="水当前值" ColumnName="水当前值" />
+          <ScalarProperty Name="水配方值" ColumnName="水配方值" />
+          <ScalarProperty Name="粉煤灰二实际值" ColumnName="粉煤灰二实际值" />
+          <ScalarProperty Name="粉煤灰二当前值" ColumnName="粉煤灰二当前值" />
+          <ScalarProperty Name="粉煤灰二配方值" ColumnName="粉煤灰二配方值" />
+          <ScalarProperty Name="粉煤灰一实际值" ColumnName="粉煤灰一实际值" />
+          <ScalarProperty Name="粉煤灰一当前值" ColumnName="粉煤灰一当前值" />
+          <ScalarProperty Name="粉煤灰一配方值" ColumnName="粉煤灰一配方值" />
+          <ScalarProperty Name="水泥三实际值" ColumnName="水泥三实际值" />
+          <ScalarProperty Name="水泥三当前值" ColumnName="水泥三当前值" />
+          <ScalarProperty Name="水泥三配方值" ColumnName="水泥三配方值" />
+          <ScalarProperty Name="水泥二实际值" ColumnName="水泥二实际值" />
+          <ScalarProperty Name="水泥二当前值" ColumnName="水泥二当前值" />
+          <ScalarProperty Name="水泥二配方值" ColumnName="水泥二配方值" />
+          <ScalarProperty Name="水泥一实际值" ColumnName="水泥一实际值" />
+          <ScalarProperty Name="水泥一当前值" ColumnName="水泥一当前值" />
+          <ScalarProperty Name="水泥一配方值" ColumnName="水泥一配方值" />
+          <ScalarProperty Name="骨料四含水率" ColumnName="骨料四含水率" />
+          <ScalarProperty Name="骨料四实际值" ColumnName="骨料四实际值" />
+          <ScalarProperty Name="骨料四当前值" ColumnName="骨料四当前值" />
+          <ScalarProperty Name="骨料四配方值" ColumnName="骨料四配方值" />
+          <ScalarProperty Name="骨料三含水率" ColumnName="骨料三含水率" />
+          <ScalarProperty Name="骨料三实际值" ColumnName="骨料三实际值" />
+          <ScalarProperty Name="骨料三当前值" ColumnName="骨料三当前值" />
+          <ScalarProperty Name="骨料三配方值" ColumnName="骨料三配方值" />
+          <ScalarProperty Name="骨料二含水率" ColumnName="骨料二含水率" />
+          <ScalarProperty Name="骨料二实际值" ColumnName="骨料二实际值" />
+          <ScalarProperty Name="骨料二当前值" ColumnName="骨料二当前值" />
+          <ScalarProperty Name="骨料二配方值" ColumnName="骨料二配方值" />
+          <ScalarProperty Name="骨料一含水率" ColumnName="骨料一含水率" />
+          <ScalarProperty Name="骨料一实际值" ColumnName="骨料一实际值" />
+          <ScalarProperty Name="骨料一当前值" ColumnName="骨料一当前值" />
+          <ScalarProperty Name="骨料一配方值" ColumnName="骨料一配方值" />
+          <ScalarProperty Name="本次时间" ColumnName="本次时间" />
+          <ScalarProperty Name="运输车号" ColumnName="运输车号" />
+          <ScalarProperty Name="调水量" ColumnName="调水量" />
+          <ScalarProperty Name="本次方量" ColumnName="本次方量" />
+          <ScalarProperty Name="施工部位" ColumnName="施工部位" />
+          <ScalarProperty Name="工程名称" ColumnName="工程名称" />
+          <ScalarProperty Name="客户名称" ColumnName="客户名称" />
+          <ScalarProperty Name="操作员" ColumnName="操作员" />
+          <ScalarProperty Name="砼标号" ColumnName="砼标号" />
+          <ScalarProperty Name="任务单号" ColumnName="任务单号" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sdf_LZT_SD_MixingPlant_2">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Sdf_LZT_SD_MixingPlant_2">
+        <MappingFragment StoreEntitySet="Sdf_LZT_SD_MixingPlant_2">
+          <ScalarProperty Name="搅拌时间" ColumnName="搅拌时间" />
+          <ScalarProperty Name="塌落度" ColumnName="塌落度" />
+          <ScalarProperty Name="施工地址" ColumnName="施工地址" />
+          <ScalarProperty Name="添加剂二实际值" ColumnName="添加剂二实际值" />
+          <ScalarProperty Name="添加剂二当前值" ColumnName="添加剂二当前值" />
+          <ScalarProperty Name="添加剂二配方值" ColumnName="添加剂二配方值" />
+          <ScalarProperty Name="添加剂一实际值" ColumnName="添加剂一实际值" />
+          <ScalarProperty Name="添加剂一当前值" ColumnName="添加剂一当前值" />
+          <ScalarProperty Name="添加剂一配方值" ColumnName="添加剂一配方值" />
+          <ScalarProperty Name="附加剂实际值" ColumnName="附加剂实际值" />
+          <ScalarProperty Name="附加剂当前值" ColumnName="附加剂当前值" />
+          <ScalarProperty Name="附加剂配方值" ColumnName="附加剂配方值" />
+          <ScalarProperty Name="水实际值" ColumnName="水实际值" />
+          <ScalarProperty Name="水当前值" ColumnName="水当前值" />
+          <ScalarProperty Name="水配方值" ColumnName="水配方值" />
+          <ScalarProperty Name="粉煤灰二实际值" ColumnName="粉煤灰二实际值" />
+          <ScalarProperty Name="粉煤灰二当前值" ColumnName="粉煤灰二当前值" />
+          <ScalarProperty Name="粉煤灰二配方值" ColumnName="粉煤灰二配方值" />
+          <ScalarProperty Name="粉煤灰一实际值" ColumnName="粉煤灰一实际值" />
+          <ScalarProperty Name="粉煤灰一当前值" ColumnName="粉煤灰一当前值" />
+          <ScalarProperty Name="粉煤灰一配方值" ColumnName="粉煤灰一配方值" />
+          <ScalarProperty Name="水泥三实际值" ColumnName="水泥三实际值" />
+          <ScalarProperty Name="水泥三当前值" ColumnName="水泥三当前值" />
+          <ScalarProperty Name="水泥三配方值" ColumnName="水泥三配方值" />
+          <ScalarProperty Name="水泥二实际值" ColumnName="水泥二实际值" />
+          <ScalarProperty Name="水泥二当前值" ColumnName="水泥二当前值" />
+          <ScalarProperty Name="水泥二配方值" ColumnName="水泥二配方值" />
+          <ScalarProperty Name="水泥一实际值" ColumnName="水泥一实际值" />
+          <ScalarProperty Name="水泥一当前值" ColumnName="水泥一当前值" />
+          <ScalarProperty Name="水泥一配方值" ColumnName="水泥一配方值" />
+          <ScalarProperty Name="骨料四含水率" ColumnName="骨料四含水率" />
+          <ScalarProperty Name="骨料四实际值" ColumnName="骨料四实际值" />
+          <ScalarProperty Name="骨料四当前值" ColumnName="骨料四当前值" />
+          <ScalarProperty Name="骨料四配方值" ColumnName="骨料四配方值" />
+          <ScalarProperty Name="骨料三含水率" ColumnName="骨料三含水率" />
+          <ScalarProperty Name="骨料三实际值" ColumnName="骨料三实际值" />
+          <ScalarProperty Name="骨料三当前值" ColumnName="骨料三当前值" />
+          <ScalarProperty Name="骨料三配方值" ColumnName="骨料三配方值" />
+          <ScalarProperty Name="骨料二含水率" ColumnName="骨料二含水率" />
+          <ScalarProperty Name="骨料二实际值" ColumnName="骨料二实际值" />
+          <ScalarProperty Name="骨料二当前值" ColumnName="骨料二当前值" />
+          <ScalarProperty Name="骨料二配方值" ColumnName="骨料二配方值" />
+          <ScalarProperty Name="骨料一含水率" ColumnName="骨料一含水率" />
+          <ScalarProperty Name="骨料一实际值" ColumnName="骨料一实际值" />
+          <ScalarProperty Name="骨料一当前值" ColumnName="骨料一当前值" />
+          <ScalarProperty Name="骨料一配方值" ColumnName="骨料一配方值" />
+          <ScalarProperty Name="本次时间" ColumnName="本次时间" />
+          <ScalarProperty Name="运输车号" ColumnName="运输车号" />
+          <ScalarProperty Name="调水量" ColumnName="调水量" />
+          <ScalarProperty Name="本次方量" ColumnName="本次方量" />
+          <ScalarProperty Name="施工部位" ColumnName="施工部位" />
+          <ScalarProperty Name="工程名称" ColumnName="工程名称" />
+          <ScalarProperty Name="客户名称" ColumnName="客户名称" />
+          <ScalarProperty Name="操作员" ColumnName="操作员" />
+          <ScalarProperty Name="砼标号" ColumnName="砼标号" />
+          <ScalarProperty Name="任务单号" ColumnName="任务单号" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Service_Config">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Service_Config">
+        <MappingFragment StoreEntitySet="Service_Config">
+          <ScalarProperty Name="ErrorHandler" ColumnName="ErrorHandler" />
+          <ScalarProperty Name="IsMoniter" ColumnName="IsMoniter" />
+          <ScalarProperty Name="ScanTime" ColumnName="ScanTime" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+          <ScalarProperty Name="ServiceDesc" ColumnName="ServiceDesc" />
+          <ScalarProperty Name="ServiceAddress" ColumnName="ServiceAddress" />
+          <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Service_Status">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Service_Status">
+        <MappingFragment StoreEntitySet="Service_Status">
+          <ScalarProperty Name="UpateTime" ColumnName="UpateTime" />
+          <ScalarProperty Name="ServiceStatus" ColumnName="ServiceStatus" />
+          <ScalarProperty Name="IsMoniter" ColumnName="IsMoniter" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+          <ScalarProperty Name="ServiceDesc" ColumnName="ServiceDesc" />
+          <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_ZhangLa1_Curve">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa1_Curve">
+        <MappingFragment StoreEntitySet="Tb_ZhangLa1_Curve">
+          <ScalarProperty Name="CurveTime" ColumnName="CurveTime" />
+          <ScalarProperty Name="Gang4Extend" ColumnName="Gang4Extend" />
+          <ScalarProperty Name="Gang4Kn" ColumnName="Gang4Kn" />
+          <ScalarProperty Name="Gang3Extend" ColumnName="Gang3Extend" />
+          <ScalarProperty Name="Gang3Kn" ColumnName="Gang3Kn" />
+          <ScalarProperty Name="Gang2Extend" ColumnName="Gang2Extend" />
+          <ScalarProperty Name="Gang2Kn" ColumnName="Gang2Kn" />
+          <ScalarProperty Name="Gang1Extend" ColumnName="Gang1Extend" />
+          <ScalarProperty Name="Gang1Kn" ColumnName="Gang1Kn" />
+          <ScalarProperty Name="ZLDataId" ColumnName="ZLDataId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_ZhangLa1_Data">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa1_Data">
+        <MappingFragment StoreEntitySet="Tb_ZhangLa1_Data">
+          <ScalarProperty Name="DingHuiSuo" ColumnName="DingHuiSuo" />
+          <ScalarProperty Name="JiaPianHuiSuo" ColumnName="JiaPianHuiSuo" />
+          <ScalarProperty Name="Per100Extend4" ColumnName="Per100Extend4" />
+          <ScalarProperty Name="Per50Extend4" ColumnName="Per50Extend4" />
+          <ScalarProperty Name="Per20Extend4" ColumnName="Per20Extend4" />
+          <ScalarProperty Name="Per10Extend4" ColumnName="Per10Extend4" />
+          <ScalarProperty Name="Per100Extend3" ColumnName="Per100Extend3" />
+          <ScalarProperty Name="Per50Extend3" ColumnName="Per50Extend3" />
+          <ScalarProperty Name="Per20Extend3" ColumnName="Per20Extend3" />
+          <ScalarProperty Name="Per10Extend3" ColumnName="Per10Extend3" />
+          <ScalarProperty Name="Per100Extend2" ColumnName="Per100Extend2" />
+          <ScalarProperty Name="Per50Extend2" ColumnName="Per50Extend2" />
+          <ScalarProperty Name="Per20Extend2" ColumnName="Per20Extend2" />
+          <ScalarProperty Name="Per10Extend2" ColumnName="Per10Extend2" />
+          <ScalarProperty Name="Per100Extend1" ColumnName="Per100Extend1" />
+          <ScalarProperty Name="Per50Extend1" ColumnName="Per50Extend1" />
+          <ScalarProperty Name="Per20Extend1" ColumnName="Per20Extend1" />
+          <ScalarProperty Name="Per10Extend1" ColumnName="Per10Extend1" />
+          <ScalarProperty Name="ExtendError4" ColumnName="ExtendError4" />
+          <ScalarProperty Name="ExtendError3" ColumnName="ExtendError3" />
+          <ScalarProperty Name="ExtendError2" ColumnName="ExtendError2" />
+          <ScalarProperty Name="ExtendError1" ColumnName="ExtendError1" />
+          <ScalarProperty Name="Gang4Flag" ColumnName="Gang4Flag" />
+          <ScalarProperty Name="RealExtend4" ColumnName="RealExtend4" />
+          <ScalarProperty Name="Extend4" ColumnName="Extend4" />
+          <ScalarProperty Name="Per100Kn4" ColumnName="Per100Kn4" />
+          <ScalarProperty Name="Per50Kn4" ColumnName="Per50Kn4" />
+          <ScalarProperty Name="Per20Kn4" ColumnName="Per20Kn4" />
+          <ScalarProperty Name="Per10Kn4" ColumnName="Per10Kn4" />
+          <ScalarProperty Name="Gang3Flag" ColumnName="Gang3Flag" />
+          <ScalarProperty Name="RealExtend3" ColumnName="RealExtend3" />
+          <ScalarProperty Name="Extend3" ColumnName="Extend3" />
+          <ScalarProperty Name="Per100Kn3" ColumnName="Per100Kn3" />
+          <ScalarProperty Name="Per50Kn3" ColumnName="Per50Kn3" />
+          <ScalarProperty Name="Per20Kn3" ColumnName="Per20Kn3" />
+          <ScalarProperty Name="Per10Kn3" ColumnName="Per10Kn3" />
+          <ScalarProperty Name="Gang2Flag" ColumnName="Gang2Flag" />
+          <ScalarProperty Name="RealExtend2" ColumnName="RealExtend2" />
+          <ScalarProperty Name="Extend2" ColumnName="Extend2" />
+          <ScalarProperty Name="Per100Kn2" ColumnName="Per100Kn2" />
+          <ScalarProperty Name="Per50Kn2" ColumnName="Per50Kn2" />
+          <ScalarProperty Name="Per20Kn2" ColumnName="Per20Kn2" />
+          <ScalarProperty Name="Per10Kn2" ColumnName="Per10Kn2" />
+          <ScalarProperty Name="Gang1Flag" ColumnName="Gang1Flag" />
+          <ScalarProperty Name="RealExtend1" ColumnName="RealExtend1" />
+          <ScalarProperty Name="Extend1" ColumnName="Extend1" />
+          <ScalarProperty Name="Per100Kn1" ColumnName="Per100Kn1" />
+          <ScalarProperty Name="Per50Kn1" ColumnName="Per50Kn1" />
+          <ScalarProperty Name="Per20Kn1" ColumnName="Per20Kn1" />
+          <ScalarProperty Name="Per10Kn1" ColumnName="Per10Kn1" />
+          <ScalarProperty Name="ZLDate" ColumnName="ZLDate" />
+          <ScalarProperty Name="HuiSuo" ColumnName="HuiSuo" />
+          <ScalarProperty Name="BaoYaTime" ColumnName="BaoYaTime" />
+          <ScalarProperty Name="ExtendError" ColumnName="ExtendError" />
+          <ScalarProperty Name="RealExtend" ColumnName="RealExtend" />
+          <ScalarProperty Name="Extend" ColumnName="Extend" />
+          <ScalarProperty Name="InitKn" ColumnName="InitKn" />
+          <ScalarProperty Name="Per100Kn" ColumnName="Per100Kn" />
+          <ScalarProperty Name="KongCount" ColumnName="KongCount" />
+          <ScalarProperty Name="ZLType" ColumnName="ZLType" />
+          <ScalarProperty Name="ZhangLaCount" ColumnName="ZhangLaCount" />
+          <ScalarProperty Name="KongNo" ColumnName="KongNo" />
+          <ScalarProperty Name="LiangNo" ColumnName="LiangNo" />
+          <ScalarProperty Name="LiangType" ColumnName="LiangType" />
+          <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_ZhangLa1_Device">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa1_Device">
+        <MappingFragment StoreEntitySet="Tb_ZhangLa1_Device">
+          <ScalarProperty Name="geom" ColumnName="geom" />
+          <ScalarProperty Name="DeviceCode" ColumnName="DeviceCode" />
+          <ScalarProperty Name="DeviceName" ColumnName="DeviceName" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="LiangFactory" ColumnName="LiangFactory" />
+          <ScalarProperty Name="Vender" ColumnName="Vender" />
+          <ScalarProperty Name="UnitType" ColumnName="UnitType" />
+          <ScalarProperty Name="DeviceNo" ColumnName="DeviceNo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_ZhangLa1_Project">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa1_Project">
+        <MappingFragment StoreEntitySet="Tb_ZhangLa1_Project">
+          <ScalarProperty Name="DotName" ColumnName="DotName" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_YaJiang1_Curve">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_YaJiang1_Curve">
+        <MappingFragment StoreEntitySet="Tb_YaJiang1_Curve">
+          <ScalarProperty Name="CurveDate" ColumnName="CurveDate" />
+          <ScalarProperty Name="ZhenKongPress" ColumnName="ZhenKongPress" />
+          <ScalarProperty Name="InputPress" ColumnName="InputPress" />
+          <ScalarProperty Name="YJDataId" ColumnName="YJDataId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_YaJiang1_Data">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_YaJiang1_Data">
+        <MappingFragment StoreEntitySet="Tb_YaJiang1_Data">
+          <ScalarProperty Name="YaJiangDate" ColumnName="YaJiangDate" />
+          <ScalarProperty Name="OutputKong2" ColumnName="OutputKong2" />
+          <ScalarProperty Name="OutputKong1" ColumnName="OutputKong1" />
+          <ScalarProperty Name="InputKong2" ColumnName="InputKong2" />
+          <ScalarProperty Name="InputKong1" ColumnName="InputKong1" />
+          <ScalarProperty Name="RealCycleTime" ColumnName="RealCycleTime" />
+          <ScalarProperty Name="SetCycleTime" ColumnName="SetCycleTime" />
+          <ScalarProperty Name="RealWenYaTime" ColumnName="RealWenYaTime" />
+          <ScalarProperty Name="SetWenYaTime" ColumnName="SetWenYaTime" />
+          <ScalarProperty Name="RealJiaoBanTime" ColumnName="RealJiaoBanTime" />
+          <ScalarProperty Name="SetJiaoBanTime" ColumnName="SetJiaoBanTime" />
+          <ScalarProperty Name="RealZhenKongDu" ColumnName="RealZhenKongDu" />
+          <ScalarProperty Name="SetZhenKongDu" ColumnName="SetZhenKongDu" />
+          <ScalarProperty Name="RealPress" ColumnName="RealPress" />
+          <ScalarProperty Name="SetPress" ColumnName="SetPress" />
+          <ScalarProperty Name="RealShuiJiao" ColumnName="RealShuiJiao" />
+          <ScalarProperty Name="SetShuiJiao" ColumnName="SetShuiJiao" />
+          <ScalarProperty Name="KongNo" ColumnName="KongNo" />
+          <ScalarProperty Name="LiangNo" ColumnName="LiangNo" />
+          <ScalarProperty Name="LiangType" ColumnName="LiangType" />
+          <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_YaJiang1_Device">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_YaJiang1_Device">
+        <MappingFragment StoreEntitySet="Tb_YaJiang1_Device">
+          <ScalarProperty Name="geom" ColumnName="geom" />
+          <ScalarProperty Name="DeviceCode" ColumnName="DeviceCode" />
+          <ScalarProperty Name="DeviceName" ColumnName="DeviceName" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="Vender" ColumnName="Vender" />
+          <ScalarProperty Name="UnitType" ColumnName="UnitType" />
+          <ScalarProperty Name="DeviceNo" ColumnName="DeviceNo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_YaJiang1_Project">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_YaJiang1_Project">
+        <MappingFragment StoreEntitySet="Tb_YaJiang1_Project">
+          <ScalarProperty Name="DotName" ColumnName="DotName" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Lab_Curve">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_Lab_Curve">
+        <MappingFragment StoreEntitySet="Tb_Lab_Curve">
+          <ScalarProperty Name="Datas" ColumnName="Datas" />
+          <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+          <ScalarProperty Name="TestId" ColumnName="TestId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Lab_Type">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Tb_Lab_Type">
+        <MappingFragment StoreEntitySet="Tb_Lab_Type">
+          <ScalarProperty Name="CurveName" ColumnName="CurveName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Yanghu_SourceData">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Yanghu_SourceData">
+        <MappingFragment StoreEntitySet="Yanghu_SourceData">
+          <ScalarProperty Name="YhStatus" ColumnName="YhStatus" />
+          <ScalarProperty Name="ValveStatus" ColumnName="ValveStatus" />
+          <ScalarProperty Name="CurrentTime" ColumnName="CurrentTime" />
+          <ScalarProperty Name="ByTimes" ColumnName="ByTimes" />
+          <ScalarProperty Name="IsManually" ColumnName="IsManually" />
+          <ScalarProperty Name="Pressure" ColumnName="Pressure" />
+          <ScalarProperty Name="Humidity" ColumnName="Humidity" />
+          <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+          <ScalarProperty Name="TaiId" ColumnName="TaiId" />
+          <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
+          <ScalarProperty Name="BeamType" ColumnName="BeamType" />
+          <ScalarProperty Name="BridgePart" ColumnName="BridgePart" />
+          <ScalarProperty Name="FactoryCode" ColumnName="FactoryCode" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Yanghu_StatData">
+      <EntityTypeMapping TypeName="YuHuan_TrafficConstructionMISModel.Yanghu_StatData">
+        <MappingFragment StoreEntitySet="Yanghu_StatData">
+          <ScalarProperty Name="LastTime" ColumnName="LastTime" />
+          <ScalarProperty Name="LastValveStatus" ColumnName="LastValveStatus" />
+          <ScalarProperty Name="YhStatus" ColumnName="YhStatus" />
+          <ScalarProperty Name="PengMinutes" ColumnName="PengMinutes" />
+          <ScalarProperty Name="PengCount" ColumnName="PengCount" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="ByTimes" ColumnName="ByTimes" />
+          <ScalarProperty Name="IsManually" ColumnName="IsManually" />
+          <ScalarProperty Name="Pressure" ColumnName="Pressure" />
+          <ScalarProperty Name="Humidity" ColumnName="Humidity" />
+          <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+          <ScalarProperty Name="TaiId" ColumnName="TaiId" />
+          <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
+          <ScalarProperty Name="BeamType" ColumnName="BeamType" />
+          <ScalarProperty Name="BridgePart" ColumnName="BridgePart" />
+          <ScalarProperty Name="FactoryName" ColumnName="FactoryName" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

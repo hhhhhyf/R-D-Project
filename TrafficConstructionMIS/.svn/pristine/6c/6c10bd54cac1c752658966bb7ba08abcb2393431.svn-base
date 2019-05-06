@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+
+  <object  type="WebUI.Controllers.MixingPlantController, WebUI" singleton="false" >
+    <property name="MixingPlantBLL" ref="MixingPlantBLL" />
+  </object>
+
+  <object  type="WebUI.Controllers.LoginController, WebUI" singleton="false" >
+    <property name="LoginBLL" ref="LoginBLL" />
+  </object>
+
+  <object  type="WebUI.Controllers.MainController, WebUI" singleton="false" >
+    <property name="MainBLL" ref="MainBLL" />
+  </object>
+
+  <object  type="WebUI.Controllers.XuanPenJi_ActualTimeController, WebUI" singleton="false" >
+    <property name="XuanPenJi_ActualTimeBLL" ref="XuanPenJi_ActualTimeBLL" />
+  </object>
+
+  <object  type="WebUI.Controllers.XuanPenJi_StatisticController, WebUI" singleton="false" >
+    <property name="XuanPenJi_StatisticBLL" ref="XuanPenJi_StatisticBLL" />
+  </object>
+  <object  type="WebUI.Controllers.LabController, WebUI" singleton="false" >
+    <property name="LabBLL" ref="LabBLL" />
+  </object>
+  <object  type="WebUI.Controllers.WeiXin_APIController, WebUI" singleton="false" >
+    <property name="WeiXin_APIBLL" ref="WeiXin_APIBLL" />
+  </object>
+  <object  type="WebUI.Controllers.ZhangLaAPIController, WebUI" singleton="false" >
+    <property name="ZhangLaAPIBLL" ref="ZhangLaAPIBLL" />
+  </object>
+  <object  type="WebUI.Controllers.ZhangLaController, WebUI" singleton="false" >
+    <property name="ZhangLaBLL" ref="ZhangLaBLL" />
+  </object>
+  <object  type="WebUI.Controllers.YaJiangAPIController, WebUI" singleton="false" >
+    <property name="YaJiangAPIBLL" ref="YaJiangAPIBLL" />
+  </object>
+  <object  type="WebUI.Controllers.Envionment_ActualTimeController, WebUI" singleton="false" >
+    <property name="Envionment_ActualTimeBLL" ref="Envionment_ActualTimeBLL" />
+  </object>
+  <object  type="WebUI.Controllers.Envionment_StatisticController, WebUI" singleton="false" >
+    <property name="Envionment_StatisticBLL" ref="Envionment_StatisticBLL" />
+  </object>
+  <object  type="WebUI.Controllers.EnvironmentController, WebUI" singleton="false" >
+    <property name="Envionment_StatisticBLL" ref="Envionment_StatisticBLL" />
+    <property name="Envionment_ActualTimeBLL" ref="Envionment_ActualTimeBLL" />
+  </object>
+  <object  type="WebUI.Controllers.FlowController, WebUI" singleton="false" >
+    <property name="FlowBLL" ref="FlowBLL" />
+  </object>
+  <object  type="WebUI.Controllers.MixingPlant_StatisticController, WebUI" singleton="false" >
+    <property name="MixingPlant_StatisticBLL" ref="MixingPlant_StatisticBLL" />
+  </object>
+  <object  type="WebUI.Controllers.YaJiangController, WebUI" singleton="false" >
+    <property name="YaJiangBLL" ref="YaJiangBLL" />
+  </object>
+
+  <object  type="WebUI.Controllers.ZhangLaDataAPIController, WebUI" singleton="false" >
+    <property name="ZhangLa1APIBLL" ref="ZhangLa1APIBLL" />
+  </object>
+  <object  type="WebUI.Controllers.YaJiangDataAPIController, WebUI" singleton="false" >
+    <property name="YaJiang1APIBLL" ref="YaJiang1APIBLL" />
+  </object>
+
+  <object  type="WebUI.Controllers.ZhangLa1Controller, WebUI" singleton="false" >
+    <property name="ZhangLa1BLL" ref="ZhangLa1BLL" />
+  </object>
+  <object  type="WebUI.Controllers.YaJiang1Controller, WebUI" singleton="false" >
+    <property name="YaJiang1BLL" ref="YaJiang1BLL" />
+  </object>
+  <object  type="WebUI.Controllers.YangHuController, WebUI" singleton="false" >
+    <property name="Yanghu_StatDataBLL" ref="Yanghu_StatDataBLL" />
+  </object>
+</objects>

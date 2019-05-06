@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "DeviationChartPanel";
+}
+
+@section JS{
+    <script src="~/Assets/H+4.9/js/plugins/echarts/echarts-all.js"></script>
+    <script src="~/Scripts/MyTool.js"></script>
+    <script src="~/Scripts/MixingPlant_DeviationChartPanel.js?v=20180715"></script>
+}
+
+@section Body{
+   <body>
+       <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+        <div id="main"   style="width: 800px;height:400px; margin-left:auto; margin-right:auto; "></div>
+   </body>
+  
+}

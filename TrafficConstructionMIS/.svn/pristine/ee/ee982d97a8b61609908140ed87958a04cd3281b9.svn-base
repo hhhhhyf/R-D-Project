@@ -1,0 +1,2732 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="YuHuan_TrafficConstructionMISModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="YuHuan_TrafficConstructionMISModelStoreContainer">
+    <EntitySet Name="Access_Lab_GJLS" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_Lab_GJLS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_Lab_GJLSParm" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_Lab_GJLSParm" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_Lab_GJLSResult" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_Lab_GJLSResult" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_Lab_HNTKY" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_Lab_HNTKY" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_Lab_HNTKYParm" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_Lab_HNTKYParm" store:Type="Tables" store:Schema="dbo" store:Name="Access_Lab_HNTKYParm">
+      <DefiningQuery>SELECT 
+      [Access_Lab_HNTKYParm].[ZuHao] AS [ZuHao], 
+      [Access_Lab_HNTKYParm].[PingZhong] AS [PingZhong], 
+      [Access_Lab_HNTKYParm].[LingQi] AS [LingQi], 
+      [Access_Lab_HNTKYParm].[GuiGe] AS [GuiGe], 
+      [Access_Lab_HNTKYParm].[XiShu] AS [XiShu], 
+      [Access_Lab_HNTKYParm].[Speed] AS [Speed], 
+      [Access_Lab_HNTKYParm].[GroNum] AS [GroNum], 
+      [Access_Lab_HNTKYParm].[LoadType] AS [LoadType], 
+      [Access_Lab_HNTKYParm].[YanShi] AS [YanShi], 
+      [Access_Lab_HNTKYParm].[SelectGroNum] AS [SelectGroNum]
+      FROM [dbo].[Access_Lab_HNTKYParm] AS [Access_Lab_HNTKYParm]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Access_Lab_HNTKYResult" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_Lab_HNTKYResult" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_Lab_SNKY" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_Lab_SNKY" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_Lab_SNKYParm" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_Lab_SNKYParm" store:Type="Tables" store:Schema="dbo" store:Name="Access_Lab_SNKYParm">
+      <DefiningQuery>SELECT 
+      [Access_Lab_SNKYParm].[ZuHao] AS [ZuHao], 
+      [Access_Lab_SNKYParm].[PingZhong] AS [PingZhong], 
+      [Access_Lab_SNKYParm].[LingQi] AS [LingQi], 
+      [Access_Lab_SNKYParm].[GuiGe] AS [GuiGe], 
+      [Access_Lab_SNKYParm].[Speed] AS [Speed], 
+      [Access_Lab_SNKYParm].[GroNum] AS [GroNum], 
+      [Access_Lab_SNKYParm].[LoadType] AS [LoadType], 
+      [Access_Lab_SNKYParm].[YanShi] AS [YanShi], 
+      [Access_Lab_SNKYParm].[SelectGroNum] AS [SelectGroNum], 
+      [Access_Lab_SNKYParm].[ShuiNiBiaoHao] AS [ShuiNiBiaoHao]
+      FROM [dbo].[Access_Lab_SNKYParm] AS [Access_Lab_SNKYParm]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Access_Lab_SNKYResult" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_Lab_SNKYResult" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_Lab_SNKZ" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_Lab_SNKZ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_Lab_SNKZParm" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_Lab_SNKZParm" store:Type="Tables" store:Schema="dbo" store:Name="Access_Lab_SNKZParm">
+      <DefiningQuery>SELECT 
+      [Access_Lab_SNKZParm].[ZuHao] AS [ZuHao], 
+      [Access_Lab_SNKZParm].[PingZhong] AS [PingZhong], 
+      [Access_Lab_SNKZParm].[LingQi] AS [LingQi], 
+      [Access_Lab_SNKZParm].[GuiGe] AS [GuiGe], 
+      [Access_Lab_SNKZParm].[Speed] AS [Speed], 
+      [Access_Lab_SNKZParm].[GroNum] AS [GroNum], 
+      [Access_Lab_SNKZParm].[LoadType] AS [LoadType], 
+      [Access_Lab_SNKZParm].[YanShi] AS [YanShi], 
+      [Access_Lab_SNKZParm].[SelectGroNum] AS [SelectGroNum], 
+      [Access_Lab_SNKZParm].[ShuiNiBiaoHao] AS [ShuiNiBiaoHao]
+      FROM [dbo].[Access_Lab_SNKZParm] AS [Access_Lab_SNKZParm]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Access_Lab_SNKZResult" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_Lab_SNKZResult" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_LZT_WL_SB_MixingPlant" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZT_WL_SB_MixingPlant" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_LZT_WL_SB_MixingPlant_Dosage" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZT_WL_SB_MixingPlant_Dosage" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_LZT_WL_SB_MixingPlant_Piece" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZT_WL_SB_MixingPlant_Piece" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_LZT_WL_SB_MixingPlant_Produce" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZT_WL_SB_MixingPlant_Produce" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_LZTEBLab_SNKY" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTEBLab_SNKY" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_LZTEBLab_SNKYParm" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTEBLab_SNKYParm" store:Type="Tables" store:Schema="dbo" store:Name="Access_LZTEBLab_SNKYParm">
+      <DefiningQuery>SELECT 
+      [Access_LZTEBLab_SNKYParm].[ZuHao] AS [ZuHao], 
+      [Access_LZTEBLab_SNKYParm].[PingZhong] AS [PingZhong], 
+      [Access_LZTEBLab_SNKYParm].[LingQi] AS [LingQi], 
+      [Access_LZTEBLab_SNKYParm].[GuiGe] AS [GuiGe], 
+      [Access_LZTEBLab_SNKYParm].[Speed] AS [Speed], 
+      [Access_LZTEBLab_SNKYParm].[GroNum] AS [GroNum], 
+      [Access_LZTEBLab_SNKYParm].[LoadType] AS [LoadType], 
+      [Access_LZTEBLab_SNKYParm].[YanShi] AS [YanShi], 
+      [Access_LZTEBLab_SNKYParm].[SelectGroNum] AS [SelectGroNum], 
+      [Access_LZTEBLab_SNKYParm].[ShuiNiBiaoHao] AS [ShuiNiBiaoHao], 
+      [Access_LZTEBLab_SNKYParm].[JianLi] AS [JianLi], 
+      [Access_LZTEBLab_SNKYParm].[HeTongHao] AS [HeTongHao], 
+      [Access_LZTEBLab_SNKYParm].[WeiTuiDanWei] AS [WeiTuiDanWei], 
+      [Access_LZTEBLab_SNKYParm].[XianChangZhuangHao] AS [XianChangZhuangHao], 
+      [Access_LZTEBLab_SNKYParm].[ShiYanDanWei] AS [ShiYanDanWei]
+      FROM [dbo].[Access_LZTEBLab_SNKYParm] AS [Access_LZTEBLab_SNKYParm]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Access_LZTEBLab_SNKYResult" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTEBLab_SNKYResult" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_LZTEBLab_SNKZ" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTEBLab_SNKZ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_LZTEBLab_SNKZParm" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTEBLab_SNKZParm" store:Type="Tables" store:Schema="dbo" store:Name="Access_LZTEBLab_SNKZParm">
+      <DefiningQuery>SELECT 
+      [Access_LZTEBLab_SNKZParm].[ZuHao] AS [ZuHao], 
+      [Access_LZTEBLab_SNKZParm].[PingZhong] AS [PingZhong], 
+      [Access_LZTEBLab_SNKZParm].[LingQi] AS [LingQi], 
+      [Access_LZTEBLab_SNKZParm].[GuiGe] AS [GuiGe], 
+      [Access_LZTEBLab_SNKZParm].[Speed] AS [Speed], 
+      [Access_LZTEBLab_SNKZParm].[GroNum] AS [GroNum], 
+      [Access_LZTEBLab_SNKZParm].[LoadType] AS [LoadType], 
+      [Access_LZTEBLab_SNKZParm].[YanShi] AS [YanShi], 
+      [Access_LZTEBLab_SNKZParm].[SelectGroNum] AS [SelectGroNum], 
+      [Access_LZTEBLab_SNKZParm].[ShuiNiBiaoHao] AS [ShuiNiBiaoHao]
+      FROM [dbo].[Access_LZTEBLab_SNKZParm] AS [Access_LZTEBLab_SNKZParm]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Access_LZTEBLab_SNKZResult" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTEBLab_SNKZResult" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_LZTJL2Lab_SNKY" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTJL2Lab_SNKY" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_LZTJL2Lab_SNKYParm" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTJL2Lab_SNKYParm" store:Type="Tables" store:Schema="dbo" store:Name="Access_LZTJL2Lab_SNKYParm">
+      <DefiningQuery>SELECT 
+      [Access_LZTJL2Lab_SNKYParm].[ZuHao] AS [ZuHao], 
+      [Access_LZTJL2Lab_SNKYParm].[PingZhong] AS [PingZhong], 
+      [Access_LZTJL2Lab_SNKYParm].[LingQi] AS [LingQi], 
+      [Access_LZTJL2Lab_SNKYParm].[GuiGe] AS [GuiGe], 
+      [Access_LZTJL2Lab_SNKYParm].[Speed] AS [Speed], 
+      [Access_LZTJL2Lab_SNKYParm].[GroNum] AS [GroNum], 
+      [Access_LZTJL2Lab_SNKYParm].[LoadType] AS [LoadType], 
+      [Access_LZTJL2Lab_SNKYParm].[YanShi] AS [YanShi], 
+      [Access_LZTJL2Lab_SNKYParm].[SelectGroNum] AS [SelectGroNum], 
+      [Access_LZTJL2Lab_SNKYParm].[ShuiNiBiaoHao] AS [ShuiNiBiaoHao], 
+      [Access_LZTJL2Lab_SNKYParm].[JianLi] AS [JianLi], 
+      [Access_LZTJL2Lab_SNKYParm].[HeTongHao] AS [HeTongHao], 
+      [Access_LZTJL2Lab_SNKYParm].[WeiTuiDanWei] AS [WeiTuiDanWei], 
+      [Access_LZTJL2Lab_SNKYParm].[XianChangZhuangHao] AS [XianChangZhuangHao], 
+      [Access_LZTJL2Lab_SNKYParm].[ShiYanDanWei] AS [ShiYanDanWei]
+      FROM [dbo].[Access_LZTJL2Lab_SNKYParm] AS [Access_LZTJL2Lab_SNKYParm]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Access_LZTJL2Lab_SNKYResult" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTJL2Lab_SNKYResult" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_LZTJL2Lab_SNKZ" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTJL2Lab_SNKZ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_LZTJL2Lab_SNKZParm" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTJL2Lab_SNKZParm" store:Type="Tables" store:Schema="dbo" store:Name="Access_LZTJL2Lab_SNKZParm">
+      <DefiningQuery>SELECT 
+      [Access_LZTJL2Lab_SNKZParm].[ZuHao] AS [ZuHao], 
+      [Access_LZTJL2Lab_SNKZParm].[PingZhong] AS [PingZhong], 
+      [Access_LZTJL2Lab_SNKZParm].[LingQi] AS [LingQi], 
+      [Access_LZTJL2Lab_SNKZParm].[GuiGe] AS [GuiGe], 
+      [Access_LZTJL2Lab_SNKZParm].[Speed] AS [Speed], 
+      [Access_LZTJL2Lab_SNKZParm].[GroNum] AS [GroNum], 
+      [Access_LZTJL2Lab_SNKZParm].[LoadType] AS [LoadType], 
+      [Access_LZTJL2Lab_SNKZParm].[YanShi] AS [YanShi], 
+      [Access_LZTJL2Lab_SNKZParm].[SelectGroNum] AS [SelectGroNum], 
+      [Access_LZTJL2Lab_SNKZParm].[ShuiNiBiaoHao] AS [ShuiNiBiaoHao]
+      FROM [dbo].[Access_LZTJL2Lab_SNKZParm] AS [Access_LZTJL2Lab_SNKZParm]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Access_LZTJL2Lab_SNKZResult" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTJL2Lab_SNKZResult" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_LZTLab_SNKY" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTLab_SNKY" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_LZTLab_SNKYResult" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTLab_SNKYResult" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_LZTLab_SNKZ" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTLab_SNKZ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_LZTLab_SNKZResult" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTLab_SNKZResult" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_LZTSBLab_SNKY" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTSBLab_SNKY" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_LZTSBLab_SNKYParm" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTSBLab_SNKYParm" store:Type="Tables" store:Schema="dbo" store:Name="Access_LZTSBLab_SNKYParm">
+      <DefiningQuery>SELECT 
+      [Access_LZTSBLab_SNKYParm].[ZuHao] AS [ZuHao], 
+      [Access_LZTSBLab_SNKYParm].[PingZhong] AS [PingZhong], 
+      [Access_LZTSBLab_SNKYParm].[LingQi] AS [LingQi], 
+      [Access_LZTSBLab_SNKYParm].[GuiGe] AS [GuiGe], 
+      [Access_LZTSBLab_SNKYParm].[Speed] AS [Speed], 
+      [Access_LZTSBLab_SNKYParm].[GroNum] AS [GroNum], 
+      [Access_LZTSBLab_SNKYParm].[LoadType] AS [LoadType], 
+      [Access_LZTSBLab_SNKYParm].[YanShi] AS [YanShi], 
+      [Access_LZTSBLab_SNKYParm].[SelectGroNum] AS [SelectGroNum], 
+      [Access_LZTSBLab_SNKYParm].[ShuiNiBiaoHao] AS [ShuiNiBiaoHao], 
+      [Access_LZTSBLab_SNKYParm].[JianLi] AS [JianLi], 
+      [Access_LZTSBLab_SNKYParm].[HeTongHao] AS [HeTongHao], 
+      [Access_LZTSBLab_SNKYParm].[WeiTuiDanWei] AS [WeiTuiDanWei], 
+      [Access_LZTSBLab_SNKYParm].[XianChangZhuangHao] AS [XianChangZhuangHao], 
+      [Access_LZTSBLab_SNKYParm].[ShiYanDanWei] AS [ShiYanDanWei]
+      FROM [dbo].[Access_LZTSBLab_SNKYParm] AS [Access_LZTSBLab_SNKYParm]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Access_LZTSBLab_SNKYResult" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTSBLab_SNKYResult" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_LZTSBLab_SNKZ" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTSBLab_SNKZ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_LZTSBLab_SNKZParm" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTSBLab_SNKZParm" store:Type="Tables" store:Schema="dbo" store:Name="Access_LZTSBLab_SNKZParm">
+      <DefiningQuery>SELECT 
+      [Access_LZTSBLab_SNKZParm].[ZuHao] AS [ZuHao], 
+      [Access_LZTSBLab_SNKZParm].[PingZhong] AS [PingZhong], 
+      [Access_LZTSBLab_SNKZParm].[LingQi] AS [LingQi], 
+      [Access_LZTSBLab_SNKZParm].[GuiGe] AS [GuiGe], 
+      [Access_LZTSBLab_SNKZParm].[Speed] AS [Speed], 
+      [Access_LZTSBLab_SNKZParm].[GroNum] AS [GroNum], 
+      [Access_LZTSBLab_SNKZParm].[LoadType] AS [LoadType], 
+      [Access_LZTSBLab_SNKZParm].[YanShi] AS [YanShi], 
+      [Access_LZTSBLab_SNKZParm].[SelectGroNum] AS [SelectGroNum], 
+      [Access_LZTSBLab_SNKZParm].[ShuiNiBiaoHao] AS [ShuiNiBiaoHao]
+      FROM [dbo].[Access_LZTSBLab_SNKZParm] AS [Access_LZTSBLab_SNKZParm]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Access_LZTSBLab_SNKZResult" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTSBLab_SNKZResult" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_LZTSDBLab_SNKY" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTSDBLab_SNKY" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_LZTSDBLab_SNKYParm" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTSDBLab_SNKYParm" store:Type="Tables" store:Schema="dbo" store:Name="Access_LZTSDBLab_SNKYParm">
+      <DefiningQuery>SELECT 
+      [Access_LZTSDBLab_SNKYParm].[ZuHao] AS [ZuHao], 
+      [Access_LZTSDBLab_SNKYParm].[PingZhong] AS [PingZhong], 
+      [Access_LZTSDBLab_SNKYParm].[LingQi] AS [LingQi], 
+      [Access_LZTSDBLab_SNKYParm].[GuiGe] AS [GuiGe], 
+      [Access_LZTSDBLab_SNKYParm].[Speed] AS [Speed], 
+      [Access_LZTSDBLab_SNKYParm].[GroNum] AS [GroNum], 
+      [Access_LZTSDBLab_SNKYParm].[LoadType] AS [LoadType], 
+      [Access_LZTSDBLab_SNKYParm].[YanShi] AS [YanShi], 
+      [Access_LZTSDBLab_SNKYParm].[SelectGroNum] AS [SelectGroNum], 
+      [Access_LZTSDBLab_SNKYParm].[ShuiNiBiaoHao] AS [ShuiNiBiaoHao], 
+      [Access_LZTSDBLab_SNKYParm].[JianLi] AS [JianLi], 
+      [Access_LZTSDBLab_SNKYParm].[HeTongHao] AS [HeTongHao], 
+      [Access_LZTSDBLab_SNKYParm].[WeiTuiDanWei] AS [WeiTuiDanWei], 
+      [Access_LZTSDBLab_SNKYParm].[XianChangZhuangHao] AS [XianChangZhuangHao], 
+      [Access_LZTSDBLab_SNKYParm].[ShiYanDanWei] AS [ShiYanDanWei]
+      FROM [dbo].[Access_LZTSDBLab_SNKYParm] AS [Access_LZTSDBLab_SNKYParm]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Access_LZTSDBLab_SNKYResult" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTSDBLab_SNKYResult" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_LZTSDBLab_SNKZ" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTSDBLab_SNKZ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_LZTSDBLab_SNKZParm" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTSDBLab_SNKZParm" store:Type="Tables" store:Schema="dbo" store:Name="Access_LZTSDBLab_SNKZParm">
+      <DefiningQuery>SELECT 
+      [Access_LZTSDBLab_SNKZParm].[ZuHao] AS [ZuHao], 
+      [Access_LZTSDBLab_SNKZParm].[PingZhong] AS [PingZhong], 
+      [Access_LZTSDBLab_SNKZParm].[LingQi] AS [LingQi], 
+      [Access_LZTSDBLab_SNKZParm].[GuiGe] AS [GuiGe], 
+      [Access_LZTSDBLab_SNKZParm].[Speed] AS [Speed], 
+      [Access_LZTSDBLab_SNKZParm].[GroNum] AS [GroNum], 
+      [Access_LZTSDBLab_SNKZParm].[LoadType] AS [LoadType], 
+      [Access_LZTSDBLab_SNKZParm].[YanShi] AS [YanShi], 
+      [Access_LZTSDBLab_SNKZParm].[SelectGroNum] AS [SelectGroNum], 
+      [Access_LZTSDBLab_SNKZParm].[ShuiNiBiaoHao] AS [ShuiNiBiaoHao]
+      FROM [dbo].[Access_LZTSDBLab_SNKZParm] AS [Access_LZTSDBLab_SNKZParm]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Access_LZTSDBLab_SNKZResult" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTSDBLab_SNKZResult" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_LZTYBLab_SNKY" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTYBLab_SNKY" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_LZTYBLab_SNKYParm" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTYBLab_SNKYParm" store:Type="Tables" store:Schema="dbo" store:Name="Access_LZTYBLab_SNKYParm">
+      <DefiningQuery>SELECT 
+      [Access_LZTYBLab_SNKYParm].[ZuHao] AS [ZuHao], 
+      [Access_LZTYBLab_SNKYParm].[PingZhong] AS [PingZhong], 
+      [Access_LZTYBLab_SNKYParm].[LingQi] AS [LingQi], 
+      [Access_LZTYBLab_SNKYParm].[GuiGe] AS [GuiGe], 
+      [Access_LZTYBLab_SNKYParm].[Speed] AS [Speed], 
+      [Access_LZTYBLab_SNKYParm].[GroNum] AS [GroNum], 
+      [Access_LZTYBLab_SNKYParm].[LoadType] AS [LoadType], 
+      [Access_LZTYBLab_SNKYParm].[YanShi] AS [YanShi], 
+      [Access_LZTYBLab_SNKYParm].[SelectGroNum] AS [SelectGroNum], 
+      [Access_LZTYBLab_SNKYParm].[ShuiNiBiaoHao] AS [ShuiNiBiaoHao], 
+      [Access_LZTYBLab_SNKYParm].[JianLi] AS [JianLi], 
+      [Access_LZTYBLab_SNKYParm].[HeTongHao] AS [HeTongHao], 
+      [Access_LZTYBLab_SNKYParm].[WeiTuiDanWei] AS [WeiTuiDanWei], 
+      [Access_LZTYBLab_SNKYParm].[XianChangZhuangHao] AS [XianChangZhuangHao], 
+      [Access_LZTYBLab_SNKYParm].[ShiYanDanWei] AS [ShiYanDanWei]
+      FROM [dbo].[Access_LZTYBLab_SNKYParm] AS [Access_LZTYBLab_SNKYParm]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Access_LZTYBLab_SNKYResult" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTYBLab_SNKYResult" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_LZTYBLab_SNKZ" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTYBLab_SNKZ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_LZTYBLab_SNKZParm" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTYBLab_SNKZParm" store:Type="Tables" store:Schema="dbo" store:Name="Access_LZTYBLab_SNKZParm">
+      <DefiningQuery>SELECT 
+      [Access_LZTYBLab_SNKZParm].[ZuHao] AS [ZuHao], 
+      [Access_LZTYBLab_SNKZParm].[PingZhong] AS [PingZhong], 
+      [Access_LZTYBLab_SNKZParm].[LingQi] AS [LingQi], 
+      [Access_LZTYBLab_SNKZParm].[GuiGe] AS [GuiGe], 
+      [Access_LZTYBLab_SNKZParm].[Speed] AS [Speed], 
+      [Access_LZTYBLab_SNKZParm].[GroNum] AS [GroNum], 
+      [Access_LZTYBLab_SNKZParm].[LoadType] AS [LoadType], 
+      [Access_LZTYBLab_SNKZParm].[YanShi] AS [YanShi], 
+      [Access_LZTYBLab_SNKZParm].[SelectGroNum] AS [SelectGroNum], 
+      [Access_LZTYBLab_SNKZParm].[ShuiNiBiaoHao] AS [ShuiNiBiaoHao]
+      FROM [dbo].[Access_LZTYBLab_SNKZParm] AS [Access_LZTYBLab_SNKZParm]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Access_LZTYBLab_SNKZResult" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_LZTYBLab_SNKZResult" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_MixingPlant_228RoadYB" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_MixingPlant_228RoadYB" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_MixingPlant_228RoadYBPeiHeBi" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_MixingPlant_228RoadYBPeiHeBi" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_MixingPlant_Intensity" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_MixingPlant_Intensity" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_MixingPlant_Parm" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_MixingPlant_Parm" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_MixingPlant_Parm2" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_MixingPlant_Parm2" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_MixingPlant_tScsjAll" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_MixingPlant_tScsjAll" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_MixingPlant_tScsjAll2" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_MixingPlant_tScsjAll2" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_MixingPlant_tScsjAllBody" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_MixingPlant_tScsjAllBody" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Access_MixingPlant_tScsjAllBody2" EntityType="YuHuan_TrafficConstructionMISModel.Store.Access_MixingPlant_tScsjAllBody2" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Envionment_Data" EntityType="YuHuan_TrafficConstructionMISModel.Store.Envionment_Data" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Envionment_DeviceProject" EntityType="YuHuan_TrafficConstructionMISModel.Store.Envionment_DeviceProject" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Envionment_ProjectInfo" EntityType="YuHuan_TrafficConstructionMISModel.Store.Envionment_ProjectInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Gyxp" EntityType="YuHuan_TrafficConstructionMISModel.Store.Gyxp" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Gyxp_Stat" EntityType="YuHuan_TrafficConstructionMISModel.Store.Gyxp_Stat" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sdf_LZT_SD_MixingPlant" EntityType="YuHuan_TrafficConstructionMISModel.Store.Sdf_LZT_SD_MixingPlant" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sdf_LZT_SD_MixingPlant_2" EntityType="YuHuan_TrafficConstructionMISModel.Store.Sdf_LZT_SD_MixingPlant_2" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Service_Config" EntityType="YuHuan_TrafficConstructionMISModel.Store.Service_Config" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Service_Status" EntityType="YuHuan_TrafficConstructionMISModel.Store.Service_Status" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="YuHuan_TrafficConstructionMISModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_Flow_Page" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_Flow_Page" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_Flow_Statistics" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_Flow_Statistics" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_Flow_Visit" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_Flow_Visit" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_Lab_Curve" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_Lab_Curve" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_Lab_Department" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_Lab_Department" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_Lab_ProjectName" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_Lab_ProjectName" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_Lab_Test" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_Lab_Test" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_Lab_TestItem" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_Lab_TestItem" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_Lab_Type" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_Lab_Type" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_Login" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_Login" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_Main_Menu" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_Main_Menu" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_MixingPlant_Device" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_MixingPlant_Device" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_MixingPlant_Dosage" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_MixingPlant_Dosage" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_MixingPlant_Material" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_MixingPlant_Material" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_MixingPlant_Piece" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_MixingPlant_Piece" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_MixingPlant_Produce" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_MixingPlant_Produce" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_MixingPlant_Recipe" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_MixingPlant_Recipe" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_MixingPlant_RecipeList" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_MixingPlant_RecipeList" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_YaJiang_CurrentMonitor" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_YaJiang_CurrentMonitor" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_YaJiang_Curve" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_YaJiang_Curve" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_YaJiang_Data" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_YaJiang_Data" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_YaJiang_Project" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_YaJiang_Project" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_YaJiang_ProjectInfo" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_YaJiang_ProjectInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_YaJiang1_Curve" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_YaJiang1_Curve" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_YaJiang1_Data" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_YaJiang1_Data" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_YaJiang1_Device" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_YaJiang1_Device" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_YaJiang1_Project" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_YaJiang1_Project" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_ZhangLa_CurrentMonitor" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_ZhangLa_CurrentMonitor" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_ZhangLa_Curve" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_ZhangLa_Curve" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_ZhangLa_Data" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_ZhangLa_Data" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_ZhangLa_Project" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_ZhangLa_Project" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_ZhangLa_ProjectInfo" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_ZhangLa_ProjectInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_ZhangLa1_Curve" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_ZhangLa1_Curve" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_ZhangLa1_Data" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_ZhangLa1_Data" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_ZhangLa1_Device" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_ZhangLa1_Device" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tb_ZhangLa1_Project" EntityType="YuHuan_TrafficConstructionMISModel.Store.Tb_ZhangLa1_Project" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Yanghu_SourceData" EntityType="YuHuan_TrafficConstructionMISModel.Store.Yanghu_SourceData" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Yanghu_StatData" EntityType="YuHuan_TrafficConstructionMISModel.Store.Yanghu_StatData" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Envionment_Data_Envionment_ProjectInfo" Association="YuHuan_TrafficConstructionMISModel.Store.FK_Envionment_Data_Envionment_ProjectInfo">
+      <End Role="Envionment_ProjectInfo" EntitySet="Envionment_ProjectInfo" />
+      <End Role="Envionment_Data" EntitySet="Envionment_Data" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_Flow_Statistics_Tb_Flow_Page" Association="YuHuan_TrafficConstructionMISModel.Store.FK_Tb_Flow_Statistics_Tb_Flow_Page">
+      <End Role="Tb_Flow_Page" EntitySet="Tb_Flow_Page" />
+      <End Role="Tb_Flow_Statistics" EntitySet="Tb_Flow_Statistics" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_Flow_Visit_Tb_Flow_Page" Association="YuHuan_TrafficConstructionMISModel.Store.FK_Tb_Flow_Visit_Tb_Flow_Page">
+      <End Role="Tb_Flow_Page" EntitySet="Tb_Flow_Page" />
+      <End Role="Tb_Flow_Visit" EntitySet="Tb_Flow_Visit" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_Lab_Curve_Tb_Lab_Test" Association="YuHuan_TrafficConstructionMISModel.Store.FK_Tb_Lab_Curve_Tb_Lab_Test">
+      <End Role="Tb_Lab_Test" EntitySet="Tb_Lab_Test" />
+      <End Role="Tb_Lab_Curve" EntitySet="Tb_Lab_Curve" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_Lab_Curve_Tb_Lab_Type" Association="YuHuan_TrafficConstructionMISModel.Store.FK_Tb_Lab_Curve_Tb_Lab_Type">
+      <End Role="Tb_Lab_Type" EntitySet="Tb_Lab_Type" />
+      <End Role="Tb_Lab_Curve" EntitySet="Tb_Lab_Curve" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_Lab_Test_Tb_Lab_Department" Association="YuHuan_TrafficConstructionMISModel.Store.FK_Tb_Lab_Test_Tb_Lab_Department">
+      <End Role="Tb_Lab_Department" EntitySet="Tb_Lab_Department" />
+      <End Role="Tb_Lab_Test" EntitySet="Tb_Lab_Test" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_Lab_Test_Tb_Lab_ProjectName" Association="YuHuan_TrafficConstructionMISModel.Store.FK_Tb_Lab_Test_Tb_Lab_ProjectName">
+      <End Role="Tb_Lab_ProjectName" EntitySet="Tb_Lab_ProjectName" />
+      <End Role="Tb_Lab_Test" EntitySet="Tb_Lab_Test" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_Lab_TestItem_Tb_Lab_Test" Association="YuHuan_TrafficConstructionMISModel.Store.FK_Tb_Lab_TestItem_Tb_Lab_Test">
+      <End Role="Tb_Lab_Test" EntitySet="Tb_Lab_Test" />
+      <End Role="Tb_Lab_TestItem" EntitySet="Tb_Lab_TestItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_MixingPlant_Dosage_Tb_MixingPlant_Material" Association="YuHuan_TrafficConstructionMISModel.Store.FK_Tb_MixingPlant_Dosage_Tb_MixingPlant_Material">
+      <End Role="Tb_MixingPlant_Material" EntitySet="Tb_MixingPlant_Material" />
+      <End Role="Tb_MixingPlant_Dosage" EntitySet="Tb_MixingPlant_Dosage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_MixingPlant_Dosage_Tb_MixingPlant_Piece" Association="YuHuan_TrafficConstructionMISModel.Store.FK_Tb_MixingPlant_Dosage_Tb_MixingPlant_Piece">
+      <End Role="Tb_MixingPlant_Piece" EntitySet="Tb_MixingPlant_Piece" />
+      <End Role="Tb_MixingPlant_Dosage" EntitySet="Tb_MixingPlant_Dosage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_MixingPlant_Piece_Tb_MixingPlant_Produce" Association="YuHuan_TrafficConstructionMISModel.Store.FK_Tb_MixingPlant_Piece_Tb_MixingPlant_Produce">
+      <End Role="Tb_MixingPlant_Produce" EntitySet="Tb_MixingPlant_Produce" />
+      <End Role="Tb_MixingPlant_Piece" EntitySet="Tb_MixingPlant_Piece" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_MixingPlant_Produce_Tb_MixingPlant_Recipe" Association="YuHuan_TrafficConstructionMISModel.Store.FK_Tb_MixingPlant_Produce_Tb_MixingPlant_Recipe">
+      <End Role="Tb_MixingPlant_Recipe" EntitySet="Tb_MixingPlant_Recipe" />
+      <End Role="Tb_MixingPlant_Produce" EntitySet="Tb_MixingPlant_Produce" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_MixingPlant_RecipeList_Tb_MixingPlant_Material" Association="YuHuan_TrafficConstructionMISModel.Store.FK_Tb_MixingPlant_RecipeList_Tb_MixingPlant_Material">
+      <End Role="Tb_MixingPlant_Material" EntitySet="Tb_MixingPlant_Material" />
+      <End Role="Tb_MixingPlant_RecipeList" EntitySet="Tb_MixingPlant_RecipeList" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_MixingPlant_RecipeList_Tb_MixingPlant_Recipe" Association="YuHuan_TrafficConstructionMISModel.Store.FK_Tb_MixingPlant_RecipeList_Tb_MixingPlant_Recipe">
+      <End Role="Tb_MixingPlant_Recipe" EntitySet="Tb_MixingPlant_Recipe" />
+      <End Role="Tb_MixingPlant_RecipeList" EntitySet="Tb_MixingPlant_RecipeList" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_YaJiang_Curve_Tb_YaJiang_Data" Association="YuHuan_TrafficConstructionMISModel.Store.FK_Tb_YaJiang_Curve_Tb_YaJiang_Data">
+      <End Role="Tb_YaJiang_Data" EntitySet="Tb_YaJiang_Data" />
+      <End Role="Tb_YaJiang_Curve" EntitySet="Tb_YaJiang_Curve" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_YaJiang_Data_Tb_YaJiang_ProjectInfo" Association="YuHuan_TrafficConstructionMISModel.Store.FK_Tb_YaJiang_Data_Tb_YaJiang_ProjectInfo">
+      <End Role="Tb_YaJiang_ProjectInfo" EntitySet="Tb_YaJiang_ProjectInfo" />
+      <End Role="Tb_YaJiang_Data" EntitySet="Tb_YaJiang_Data" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_YaJiang1_Curve_Tb_YaJiang1_Data" Association="YuHuan_TrafficConstructionMISModel.Store.FK_Tb_YaJiang1_Curve_Tb_YaJiang1_Data">
+      <End Role="Tb_YaJiang1_Data" EntitySet="Tb_YaJiang1_Data" />
+      <End Role="Tb_YaJiang1_Curve" EntitySet="Tb_YaJiang1_Curve" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_YaJiang1_Data_Tb_YaJiang1_Device" Association="YuHuan_TrafficConstructionMISModel.Store.FK_Tb_YaJiang1_Data_Tb_YaJiang1_Device">
+      <End Role="Tb_YaJiang1_Device" EntitySet="Tb_YaJiang1_Device" />
+      <End Role="Tb_YaJiang1_Data" EntitySet="Tb_YaJiang1_Data" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_YaJiang1_Device_Tb_YaJiang1_Project" Association="YuHuan_TrafficConstructionMISModel.Store.FK_Tb_YaJiang1_Device_Tb_YaJiang1_Project">
+      <End Role="Tb_YaJiang1_Project" EntitySet="Tb_YaJiang1_Project" />
+      <End Role="Tb_YaJiang1_Device" EntitySet="Tb_YaJiang1_Device" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_ZhangLa_Curve_Tb_ZhangLa_Data" Association="YuHuan_TrafficConstructionMISModel.Store.FK_Tb_ZhangLa_Curve_Tb_ZhangLa_Data">
+      <End Role="Tb_ZhangLa_Data" EntitySet="Tb_ZhangLa_Data" />
+      <End Role="Tb_ZhangLa_Curve" EntitySet="Tb_ZhangLa_Curve" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_ZhangLa1_Curve_Tb_ZhangLa1_Data" Association="YuHuan_TrafficConstructionMISModel.Store.FK_Tb_ZhangLa1_Curve_Tb_ZhangLa1_Data">
+      <End Role="Tb_ZhangLa1_Data" EntitySet="Tb_ZhangLa1_Data" />
+      <End Role="Tb_ZhangLa1_Curve" EntitySet="Tb_ZhangLa1_Curve" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_ZhangLa1_Data_Tb_ZhangLa1_Device" Association="YuHuan_TrafficConstructionMISModel.Store.FK_Tb_ZhangLa1_Data_Tb_ZhangLa1_Device">
+      <End Role="Tb_ZhangLa1_Device" EntitySet="Tb_ZhangLa1_Device" />
+      <End Role="Tb_ZhangLa1_Data" EntitySet="Tb_ZhangLa1_Data" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_ZhangLa1_Device_Tb_ZhangLa1_Project" Association="YuHuan_TrafficConstructionMISModel.Store.FK_Tb_ZhangLa1_Device_Tb_ZhangLa1_Project">
+      <End Role="Tb_ZhangLa1_Project" EntitySet="Tb_ZhangLa1_Project" />
+      <End Role="Tb_ZhangLa1_Device" EntitySet="Tb_ZhangLa1_Device" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Access_Lab_GJLS">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="TestDate" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GroupID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GroupName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Shape" Type="varchar" MaxLength="50" />
+    <Property Name="Tester" Type="varchar" MaxLength="50" />
+    <Property Name="TestDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="State" Type="int" />
+    <Property Name="SaveCount" Type="int" />
+    <Property Name="DeleteCount" Type="int" />
+    <Property Name="ExpFacility" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Access_Lab_GJLSParm">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GroupID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="TestID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ParamName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ParamValue" Type="varchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="Access_Lab_GJLSResult">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="TestDate" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ZuHao" Type="varchar" MaxLength="100" />
+    <Property Name="ShunXu" Type="varchar" MaxLength="50" />
+    <Property Name="Shape" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Tester" Type="varchar" MaxLength="50" />
+    <Property Name="TestDate" Type="datetime" Nullable="false" />
+    <Property Name="State" Type="int" />
+    <Property Name="MaxLoad" Type="int" />
+    <Property Name="Curvedata" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Access_Lab_HNTKY">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="ExpDate" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LingQi" Type="varchar" MaxLength="50" />
+    <Property Name="GroNum" Type="int" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="Speed" Type="varchar" MaxLength="50" />
+    <Property Name="GroKN" Type="varchar" MaxLength="50" />
+    <Property Name="GroMPa" Type="varchar" MaxLength="50" />
+    <Property Name="ExpMan" Type="varchar" MaxLength="50" />
+    <Property Name="ExpDate" Type="datetime" Nullable="false" />
+    <Property Name="ExpCop" Type="varchar" MaxLength="50" />
+    <Property Name="SpecialShape" Type="int" />
+    <Property Name="SelectGroNum" Type="int" />
+    <Property Name="ExpFacility" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“YuHuan_TrafficConstructionMIS.dbo.Access_Lab_HNTKYParm”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="Access_Lab_HNTKYParm">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="LingQi" Type="varchar" MaxLength="50" />
+    <Property Name="GuiGe" Type="int" />
+    <Property Name="XiShu" Type="varchar" MaxLength="50" />
+    <Property Name="Speed" Type="varchar" MaxLength="50" />
+    <Property Name="GroNum" Type="int" />
+    <Property Name="LoadType" Type="int" />
+    <Property Name="YanShi" Type="int" />
+    <Property Name="SelectGroNum" Type="int" />
+  </EntityType>
+  <EntityType Name="Access_Lab_HNTKYResult">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="LingQI" />
+      <PropertyRef Name="ShunXu" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LingQI" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="OneKN" Type="varchar" MaxLength="50" />
+    <Property Name="ShunXu" Type="int" Nullable="false" />
+    <Property Name="LenAv" Type="varchar" MaxLength="50" />
+    <Property Name="WidAv" Type="varchar" MaxLength="50" />
+    <Property Name="HeiAv" Type="varchar" MaxLength="50" />
+    <Property Name="DiameterAv" Type="varchar" MaxLength="50" />
+    <Property Name="XiShu" Type="varchar" MaxLength="50" />
+    <Property Name="CurveData" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Access_Lab_SNKY">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="ExpDate" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LingQi" Type="varchar" MaxLength="50" />
+    <Property Name="GroNum" Type="int" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="Speed" Type="varchar" MaxLength="50" />
+    <Property Name="GroKN" Type="varchar" MaxLength="50" />
+    <Property Name="GroMPa" Type="varchar" MaxLength="50" />
+    <Property Name="ExpMan" Type="varchar" MaxLength="50" />
+    <Property Name="ExpDate" Type="datetime" Nullable="false" />
+    <Property Name="ExpCop" Type="varchar" MaxLength="50" />
+    <Property Name="SelectGroNum" Type="int" />
+    <Property Name="ExpFacility" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“YuHuan_TrafficConstructionMIS.dbo.Access_Lab_SNKYParm”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="Access_Lab_SNKYParm">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="LingQi" Type="varchar" MaxLength="50" />
+    <Property Name="GuiGe" Type="varchar" MaxLength="50" />
+    <Property Name="Speed" Type="varchar" MaxLength="50" />
+    <Property Name="GroNum" Type="int" />
+    <Property Name="LoadType" Type="int" />
+    <Property Name="YanShi" Type="int" />
+    <Property Name="SelectGroNum" Type="int" />
+    <Property Name="ShuiNiBiaoHao" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Access_Lab_SNKYResult">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="LingQI" />
+      <PropertyRef Name="ShunXu" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LingQI" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="OneKN" Type="varchar" MaxLength="50" />
+    <Property Name="ShunXu" Type="int" Nullable="false" />
+    <Property Name="LenAv" Type="varchar" MaxLength="50" />
+    <Property Name="WidAv" Type="varchar" MaxLength="50" />
+    <Property Name="Curvedata" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Access_Lab_SNKZ">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="ExpDate" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LingQi" Type="varchar" MaxLength="50" />
+    <Property Name="GroNum" Type="int" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="Speed" Type="varchar" MaxLength="50" />
+    <Property Name="GroKN" Type="varchar" MaxLength="50" />
+    <Property Name="GroMPa" Type="varchar" MaxLength="50" />
+    <Property Name="ExpMan" Type="varchar" MaxLength="50" />
+    <Property Name="ExpDate" Type="datetime" Nullable="false" />
+    <Property Name="ExpCop" Type="varchar" MaxLength="50" />
+    <Property Name="SelectGroNum" Type="int" />
+    <Property Name="ExpFacility" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“YuHuan_TrafficConstructionMIS.dbo.Access_Lab_SNKZParm”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="Access_Lab_SNKZParm">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="LingQi" Type="varchar" MaxLength="50" />
+    <Property Name="GuiGe" Type="varchar" MaxLength="50" />
+    <Property Name="Speed" Type="varchar" MaxLength="50" />
+    <Property Name="GroNum" Type="int" />
+    <Property Name="LoadType" Type="int" />
+    <Property Name="YanShi" Type="int" />
+    <Property Name="SelectGroNum" Type="int" />
+    <Property Name="ShuiNiBiaoHao" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Access_Lab_SNKZResult">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="LingQI" />
+      <PropertyRef Name="ShunXu" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LingQI" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="OneKN" Type="varchar" MaxLength="50" />
+    <Property Name="ShunXu" Type="int" Nullable="false" />
+    <Property Name="LenAv" Type="varchar" MaxLength="50" />
+    <Property Name="HeiAv" Type="varchar" MaxLength="50" />
+    <Property Name="Curvedata" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Access_LZT_WL_SB_MixingPlant">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="50" />
+    <Property Name="Customer" Type="varchar" MaxLength="50" />
+    <Property Name="ProjName" Type="varchar" MaxLength="50" />
+    <Property Name="ConsPos" Type="varchar" MaxLength="50" />
+    <Property Name="PieCnt" Type="int" />
+    <Property Name="BetLev" Type="varchar" MaxLength="10" />
+    <Property Name="MixLast" Type="int" />
+    <Property Name="OperationTime" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="Access_LZT_WL_SB_MixingPlant_Dosage">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Piece" Type="int" Nullable="false" />
+    <Property Name="MaterID" Type="int" />
+    <Property Name="Material" Type="varchar" MaxLength="50" />
+    <Property Name="WatFull" Type="decimal" Precision="8" Scale="2" />
+    <Property Name="RecAmnt" Type="decimal" Precision="8" Scale="2" />
+    <Property Name="PlanAmnt" Type="decimal" Precision="8" Scale="2" />
+    <Property Name="FactAmnt" Type="decimal" Precision="8" Scale="2" />
+    <Property Name="OperationTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Access_LZT_WL_SB_MixingPlant_Piece">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Produce" Type="int" Nullable="false" />
+    <Property Name="Serial" Type="varchar" MaxLength="50" />
+    <Property Name="StartTim" Type="smalldatetime" />
+    <Property Name="BldTim" Type="nvarchar" MaxLength="100" />
+    <Property Name="PieAmnt" Type="float" />
+  </EntityType>
+  <EntityType Name="Access_LZT_WL_SB_MixingPlant_Produce">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="50" />
+    <Property Name="Customer" Type="varchar" MaxLength="50" />
+    <Property Name="ProjName" Type="varchar" MaxLength="50" />
+    <Property Name="ConsPos" Type="varchar" MaxLength="50" />
+    <Property Name="PieCnt" Type="int" />
+    <Property Name="BetLev" Type="varchar" MaxLength="10" />
+    <Property Name="MixLast" Type="int" />
+    <Property Name="OperationTime" Type="smalldatetime" />
+    <Property Name="Vehicle" Type="int" />
+    <Property Name="Driver" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Access_LZTEBLab_SNKY">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="ExpDate" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LingQi" Type="varchar" MaxLength="50" />
+    <Property Name="GroNum" Type="int" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="Speed" Type="varchar" MaxLength="50" />
+    <Property Name="GroKN" Type="varchar" MaxLength="50" />
+    <Property Name="GroMPa" Type="varchar" MaxLength="50" />
+    <Property Name="ExpMan" Type="varchar" MaxLength="50" />
+    <Property Name="ExpDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="ExpCop" Type="varchar" MaxLength="50" />
+    <Property Name="SelectGroNum" Type="int" />
+    <Property Name="ExpFacility" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“YuHuan_TrafficConstructionMIS.dbo.Access_LZTEBLab_SNKYParm”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="Access_LZTEBLab_SNKYParm">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="LingQi" Type="varchar" MaxLength="50" />
+    <Property Name="GuiGe" Type="varchar" MaxLength="50" />
+    <Property Name="Speed" Type="varchar" MaxLength="50" />
+    <Property Name="GroNum" Type="int" />
+    <Property Name="LoadType" Type="int" />
+    <Property Name="YanShi" Type="int" />
+    <Property Name="SelectGroNum" Type="int" />
+    <Property Name="ShuiNiBiaoHao" Type="varchar" MaxLength="50" />
+    <Property Name="JianLi" Type="varchar" MaxLength="50" />
+    <Property Name="HeTongHao" Type="varchar" MaxLength="50" />
+    <Property Name="WeiTuiDanWei" Type="varchar" MaxLength="50" />
+    <Property Name="XianChangZhuangHao" Type="varchar" MaxLength="50" />
+    <Property Name="ShiYanDanWei" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Access_LZTEBLab_SNKYResult">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="LingQI" />
+      <PropertyRef Name="ShunXu" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LingQI" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="OneKN" Type="varchar" MaxLength="50" />
+    <Property Name="ShunXu" Type="int" Nullable="false" />
+    <Property Name="LenAv" Type="varchar" MaxLength="50" />
+    <Property Name="WidAv" Type="varchar" MaxLength="50" />
+    <Property Name="CurveData" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Access_LZTEBLab_SNKZ">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="ExpDate" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LingQi" Type="varchar" MaxLength="50" />
+    <Property Name="GroNum" Type="int" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="Speed" Type="varchar" MaxLength="50" />
+    <Property Name="GroKN" Type="varchar" MaxLength="50" />
+    <Property Name="GroMPa" Type="varchar" MaxLength="50" />
+    <Property Name="ExpMan" Type="varchar" MaxLength="50" />
+    <Property Name="ExpDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="ExpCop" Type="varchar" MaxLength="50" />
+    <Property Name="SelectGroNum" Type="int" />
+    <Property Name="ExpFacility" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“YuHuan_TrafficConstructionMIS.dbo.Access_LZTEBLab_SNKZParm”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="Access_LZTEBLab_SNKZParm">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="LingQi" Type="varchar" MaxLength="50" />
+    <Property Name="GuiGe" Type="varchar" MaxLength="50" />
+    <Property Name="Speed" Type="varchar" MaxLength="50" />
+    <Property Name="GroNum" Type="int" />
+    <Property Name="LoadType" Type="int" />
+    <Property Name="YanShi" Type="int" />
+    <Property Name="SelectGroNum" Type="int" />
+    <Property Name="ShuiNiBiaoHao" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Access_LZTEBLab_SNKZResult">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="LingQI" />
+      <PropertyRef Name="ShunXu" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LingQI" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="OneKN" Type="varchar" MaxLength="50" />
+    <Property Name="ShunXu" Type="int" Nullable="false" />
+    <Property Name="LenAv" Type="varchar" MaxLength="50" />
+    <Property Name="HeiAv" Type="varchar" MaxLength="50" />
+    <Property Name="CurveData" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Access_LZTJL2Lab_SNKY">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="ExpDate" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LingQi" Type="varchar" MaxLength="50" />
+    <Property Name="GroNum" Type="int" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="Speed" Type="varchar" MaxLength="50" />
+    <Property Name="GroKN" Type="varchar" MaxLength="50" />
+    <Property Name="GroMPa" Type="varchar" MaxLength="50" />
+    <Property Name="ExpMan" Type="varchar" MaxLength="50" />
+    <Property Name="ExpDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="ExpCop" Type="varchar" MaxLength="50" />
+    <Property Name="SelectGroNum" Type="int" />
+    <Property Name="ExpFacility" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“YuHuan_TrafficConstructionMIS.dbo.Access_LZTJL2Lab_SNKYParm”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="Access_LZTJL2Lab_SNKYParm">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="LingQi" Type="varchar" MaxLength="50" />
+    <Property Name="GuiGe" Type="varchar" MaxLength="50" />
+    <Property Name="Speed" Type="varchar" MaxLength="50" />
+    <Property Name="GroNum" Type="int" />
+    <Property Name="LoadType" Type="int" />
+    <Property Name="YanShi" Type="int" />
+    <Property Name="SelectGroNum" Type="int" />
+    <Property Name="ShuiNiBiaoHao" Type="varchar" MaxLength="50" />
+    <Property Name="JianLi" Type="varchar" MaxLength="50" />
+    <Property Name="HeTongHao" Type="varchar" MaxLength="50" />
+    <Property Name="WeiTuiDanWei" Type="varchar" MaxLength="50" />
+    <Property Name="XianChangZhuangHao" Type="varchar" MaxLength="50" />
+    <Property Name="ShiYanDanWei" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Access_LZTJL2Lab_SNKYResult">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="LingQI" />
+      <PropertyRef Name="ShunXu" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LingQI" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="OneKN" Type="varchar" MaxLength="50" />
+    <Property Name="ShunXu" Type="int" Nullable="false" />
+    <Property Name="LenAv" Type="varchar" MaxLength="50" />
+    <Property Name="WidAv" Type="varchar" MaxLength="50" />
+    <Property Name="CurveData" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Access_LZTJL2Lab_SNKZ">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="ExpDate" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LingQi" Type="varchar" MaxLength="50" />
+    <Property Name="GroNum" Type="int" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="Speed" Type="varchar" MaxLength="50" />
+    <Property Name="GroKN" Type="varchar" MaxLength="50" />
+    <Property Name="GroMPa" Type="varchar" MaxLength="50" />
+    <Property Name="ExpMan" Type="varchar" MaxLength="50" />
+    <Property Name="ExpDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="ExpCop" Type="varchar" MaxLength="50" />
+    <Property Name="SelectGroNum" Type="int" />
+    <Property Name="ExpFacility" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“YuHuan_TrafficConstructionMIS.dbo.Access_LZTJL2Lab_SNKZParm”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="Access_LZTJL2Lab_SNKZParm">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="LingQi" Type="varchar" MaxLength="50" />
+    <Property Name="GuiGe" Type="varchar" MaxLength="50" />
+    <Property Name="Speed" Type="varchar" MaxLength="50" />
+    <Property Name="GroNum" Type="int" />
+    <Property Name="LoadType" Type="int" />
+    <Property Name="YanShi" Type="int" />
+    <Property Name="SelectGroNum" Type="int" />
+    <Property Name="ShuiNiBiaoHao" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Access_LZTJL2Lab_SNKZResult">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="LingQI" />
+      <PropertyRef Name="ShunXu" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LingQI" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="OneKN" Type="varchar" MaxLength="50" />
+    <Property Name="ShunXu" Type="int" Nullable="false" />
+    <Property Name="LenAv" Type="varchar" MaxLength="50" />
+    <Property Name="HeiAv" Type="varchar" MaxLength="50" />
+    <Property Name="CurveData" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Access_LZTLab_SNKY">
+    <Key>
+      <PropertyRef Name="SerialNO" />
+    </Key>
+    <Property Name="SerialNO" Type="int" Nullable="false" />
+    <Property Name="TestDate" Type="smalldatetime" />
+    <Property Name="TestTime" Type="varchar" MaxLength="20" />
+    <Property Name="MPaRes" Type="varchar" MaxLength="20" />
+    <Property Name="KNRes" Type="varchar" MaxLength="20" />
+    <Property Name="TestNo" Type="varchar" MaxLength="50" />
+    <Property Name="SampleKind" Type="varchar" MaxLength="10" />
+    <Property Name="StrengthGrid" Type="varchar" MaxLength="10" />
+    <Property Name="SampleSize" Type="varchar" MaxLength="20" />
+    <Property Name="SampleAge" Type="varchar" MaxLength="10" />
+    <Property Name="Speed" Type="varchar" MaxLength="10" />
+    <Property Name="IntervalTime" Type="varchar" MaxLength="20" />
+    <Property Name="ExpFacility" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Access_LZTLab_SNKYResult">
+    <Key>
+      <PropertyRef Name="TestSerialNo" />
+      <PropertyRef Name="MPaIndex" />
+      <PropertyRef Name="TestDate" />
+    </Key>
+    <Property Name="TestSerialNo" Type="int" Nullable="false" />
+    <Property Name="MPaIndex" Type="int" Nullable="false" />
+    <Property Name="MPa" Type="varchar" MaxLength="20" />
+    <Property Name="KN" Type="varchar" MaxLength="50" />
+    <Property Name="TestDate" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="TestTime" Type="varchar" MaxLength="20" />
+    <Property Name="CurveData" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Access_LZTLab_SNKZ">
+    <Key>
+      <PropertyRef Name="SerialNO" />
+    </Key>
+    <Property Name="SerialNO" Type="int" Nullable="false" />
+    <Property Name="TestDate" Type="smalldatetime" />
+    <Property Name="TestTime" Type="varchar" MaxLength="20" />
+    <Property Name="MPaRes" Type="varchar" MaxLength="20" />
+    <Property Name="KNRes" Type="varchar" MaxLength="20" />
+    <Property Name="TestNo" Type="varchar" MaxLength="50" />
+    <Property Name="SampleKind" Type="varchar" MaxLength="10" />
+    <Property Name="StrengthGrid" Type="varchar" MaxLength="10" />
+    <Property Name="SampleSize" Type="varchar" MaxLength="20" />
+    <Property Name="SpanLength" Type="varchar" MaxLength="10" />
+    <Property Name="SampleAge" Type="varchar" MaxLength="10" />
+    <Property Name="Speed" Type="varchar" MaxLength="10" />
+    <Property Name="IntervalTime" Type="varchar" MaxLength="20" />
+    <Property Name="UserName" Type="varchar" MaxLength="20" />
+    <Property Name="ExpFacility" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Access_LZTLab_SNKZResult">
+    <Key>
+      <PropertyRef Name="TestSerialNo" />
+      <PropertyRef Name="MPaIndex" />
+      <PropertyRef Name="TestDate" />
+    </Key>
+    <Property Name="TestSerialNo" Type="int" Nullable="false" />
+    <Property Name="MPaIndex" Type="int" Nullable="false" />
+    <Property Name="TestDate" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="TestTime" Type="varchar" MaxLength="20" />
+    <Property Name="MPa" Type="varchar" MaxLength="20" />
+    <Property Name="KN" Type="varchar" MaxLength="50" />
+    <Property Name="CurveData" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Access_LZTSBLab_SNKY">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="ExpDate" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LingQi" Type="varchar" MaxLength="50" />
+    <Property Name="GroNum" Type="int" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="Speed" Type="varchar" MaxLength="50" />
+    <Property Name="GroKN" Type="varchar" MaxLength="50" />
+    <Property Name="GroMPa" Type="varchar" MaxLength="50" />
+    <Property Name="ExpMan" Type="varchar" MaxLength="50" />
+    <Property Name="ExpDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="ExpCop" Type="varchar" MaxLength="50" />
+    <Property Name="SelectGroNum" Type="int" />
+    <Property Name="ExpFacility" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“YuHuan_TrafficConstructionMIS.dbo.Access_LZTSBLab_SNKYParm”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="Access_LZTSBLab_SNKYParm">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="LingQi" Type="varchar" MaxLength="50" />
+    <Property Name="GuiGe" Type="varchar" MaxLength="50" />
+    <Property Name="Speed" Type="varchar" MaxLength="50" />
+    <Property Name="GroNum" Type="int" />
+    <Property Name="LoadType" Type="int" />
+    <Property Name="YanShi" Type="int" />
+    <Property Name="SelectGroNum" Type="int" />
+    <Property Name="ShuiNiBiaoHao" Type="varchar" MaxLength="50" />
+    <Property Name="JianLi" Type="varchar" MaxLength="50" />
+    <Property Name="HeTongHao" Type="varchar" MaxLength="50" />
+    <Property Name="WeiTuiDanWei" Type="varchar" MaxLength="50" />
+    <Property Name="XianChangZhuangHao" Type="varchar" MaxLength="50" />
+    <Property Name="ShiYanDanWei" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Access_LZTSBLab_SNKYResult">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="LingQI" />
+      <PropertyRef Name="ShunXu" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LingQI" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="OneKN" Type="varchar" MaxLength="50" />
+    <Property Name="ShunXu" Type="int" Nullable="false" />
+    <Property Name="LenAv" Type="varchar" MaxLength="50" />
+    <Property Name="WidAv" Type="varchar" MaxLength="50" />
+    <Property Name="CurveData" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Access_LZTSBLab_SNKZ">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="ExpDate" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LingQi" Type="varchar" MaxLength="50" />
+    <Property Name="GroNum" Type="int" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="Speed" Type="varchar" MaxLength="50" />
+    <Property Name="GroKN" Type="varchar" MaxLength="50" />
+    <Property Name="GroMPa" Type="varchar" MaxLength="50" />
+    <Property Name="ExpMan" Type="varchar" MaxLength="50" />
+    <Property Name="ExpDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="ExpCop" Type="varchar" MaxLength="50" />
+    <Property Name="SelectGroNum" Type="int" />
+    <Property Name="ExpFacility" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“YuHuan_TrafficConstructionMIS.dbo.Access_LZTSBLab_SNKZParm”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="Access_LZTSBLab_SNKZParm">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="LingQi" Type="varchar" MaxLength="50" />
+    <Property Name="GuiGe" Type="varchar" MaxLength="50" />
+    <Property Name="Speed" Type="varchar" MaxLength="50" />
+    <Property Name="GroNum" Type="int" />
+    <Property Name="LoadType" Type="int" />
+    <Property Name="YanShi" Type="int" />
+    <Property Name="SelectGroNum" Type="int" />
+    <Property Name="ShuiNiBiaoHao" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Access_LZTSBLab_SNKZResult">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="LingQI" />
+      <PropertyRef Name="ShunXu" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LingQI" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="OneKN" Type="varchar" MaxLength="50" />
+    <Property Name="ShunXu" Type="int" Nullable="false" />
+    <Property Name="LenAv" Type="varchar" MaxLength="50" />
+    <Property Name="HeiAv" Type="varchar" MaxLength="50" />
+    <Property Name="CurveData" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Access_LZTSDBLab_SNKY">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="ExpDate" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LingQi" Type="varchar" MaxLength="50" />
+    <Property Name="GroNum" Type="int" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="Speed" Type="varchar" MaxLength="50" />
+    <Property Name="GroKN" Type="varchar" MaxLength="50" />
+    <Property Name="GroMPa" Type="varchar" MaxLength="50" />
+    <Property Name="ExpMan" Type="varchar" MaxLength="50" />
+    <Property Name="ExpDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="ExpCop" Type="varchar" MaxLength="50" />
+    <Property Name="SelectGroNum" Type="int" />
+    <Property Name="ExpFacility" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“YuHuan_TrafficConstructionMIS.dbo.Access_LZTSDBLab_SNKYParm”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="Access_LZTSDBLab_SNKYParm">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="LingQi" Type="varchar" MaxLength="50" />
+    <Property Name="GuiGe" Type="varchar" MaxLength="50" />
+    <Property Name="Speed" Type="varchar" MaxLength="50" />
+    <Property Name="GroNum" Type="int" />
+    <Property Name="LoadType" Type="int" />
+    <Property Name="YanShi" Type="int" />
+    <Property Name="SelectGroNum" Type="int" />
+    <Property Name="ShuiNiBiaoHao" Type="varchar" MaxLength="50" />
+    <Property Name="JianLi" Type="varchar" MaxLength="50" />
+    <Property Name="HeTongHao" Type="varchar" MaxLength="50" />
+    <Property Name="WeiTuiDanWei" Type="varchar" MaxLength="50" />
+    <Property Name="XianChangZhuangHao" Type="varchar" MaxLength="50" />
+    <Property Name="ShiYanDanWei" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Access_LZTSDBLab_SNKYResult">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="LingQI" />
+      <PropertyRef Name="ShunXu" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LingQI" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="OneKN" Type="varchar" MaxLength="50" />
+    <Property Name="ShunXu" Type="int" Nullable="false" />
+    <Property Name="LenAv" Type="varchar" MaxLength="50" />
+    <Property Name="WidAv" Type="varchar" MaxLength="50" />
+    <Property Name="CurveData" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Access_LZTSDBLab_SNKZ">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="ExpDate" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LingQi" Type="varchar" MaxLength="50" />
+    <Property Name="GroNum" Type="int" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="Speed" Type="varchar" MaxLength="50" />
+    <Property Name="GroKN" Type="varchar" MaxLength="50" />
+    <Property Name="GroMPa" Type="varchar" MaxLength="50" />
+    <Property Name="ExpMan" Type="varchar" MaxLength="50" />
+    <Property Name="ExpDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="ExpCop" Type="varchar" MaxLength="50" />
+    <Property Name="SelectGroNum" Type="int" />
+    <Property Name="ExpFacility" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“YuHuan_TrafficConstructionMIS.dbo.Access_LZTSDBLab_SNKZParm”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="Access_LZTSDBLab_SNKZParm">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="LingQi" Type="varchar" MaxLength="50" />
+    <Property Name="GuiGe" Type="varchar" MaxLength="50" />
+    <Property Name="Speed" Type="varchar" MaxLength="50" />
+    <Property Name="GroNum" Type="int" />
+    <Property Name="LoadType" Type="int" />
+    <Property Name="YanShi" Type="int" />
+    <Property Name="SelectGroNum" Type="int" />
+    <Property Name="ShuiNiBiaoHao" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Access_LZTSDBLab_SNKZResult">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="LingQI" />
+      <PropertyRef Name="ShunXu" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LingQI" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="OneKN" Type="varchar" MaxLength="50" />
+    <Property Name="ShunXu" Type="int" Nullable="false" />
+    <Property Name="LenAv" Type="varchar" MaxLength="50" />
+    <Property Name="HeiAv" Type="varchar" MaxLength="50" />
+    <Property Name="CurveData" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Access_LZTYBLab_SNKY">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="ExpDate" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LingQi" Type="varchar" MaxLength="50" />
+    <Property Name="GroNum" Type="int" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="Speed" Type="varchar" MaxLength="50" />
+    <Property Name="GroKN" Type="varchar" MaxLength="50" />
+    <Property Name="GroMPa" Type="varchar" MaxLength="50" />
+    <Property Name="ExpMan" Type="varchar" MaxLength="50" />
+    <Property Name="ExpDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="ExpCop" Type="varchar" MaxLength="50" />
+    <Property Name="SelectGroNum" Type="int" />
+    <Property Name="ExpFacility" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“YuHuan_TrafficConstructionMIS.dbo.Access_LZTYBLab_SNKYParm”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="Access_LZTYBLab_SNKYParm">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="LingQi" Type="varchar" MaxLength="50" />
+    <Property Name="GuiGe" Type="varchar" MaxLength="50" />
+    <Property Name="Speed" Type="varchar" MaxLength="50" />
+    <Property Name="GroNum" Type="int" />
+    <Property Name="LoadType" Type="int" />
+    <Property Name="YanShi" Type="int" />
+    <Property Name="SelectGroNum" Type="int" />
+    <Property Name="ShuiNiBiaoHao" Type="varchar" MaxLength="50" />
+    <Property Name="JianLi" Type="varchar" MaxLength="50" />
+    <Property Name="HeTongHao" Type="varchar" MaxLength="50" />
+    <Property Name="WeiTuiDanWei" Type="varchar" MaxLength="50" />
+    <Property Name="XianChangZhuangHao" Type="varchar" MaxLength="50" />
+    <Property Name="ShiYanDanWei" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Access_LZTYBLab_SNKYResult">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="LingQI" />
+      <PropertyRef Name="ShunXu" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LingQI" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="OneKN" Type="varchar" MaxLength="50" />
+    <Property Name="ShunXu" Type="int" Nullable="false" />
+    <Property Name="LenAv" Type="varchar" MaxLength="50" />
+    <Property Name="WidAv" Type="varchar" MaxLength="50" />
+    <Property Name="CurveData" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Access_LZTYBLab_SNKZ">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="ExpDate" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LingQi" Type="varchar" MaxLength="50" />
+    <Property Name="GroNum" Type="int" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="Speed" Type="varchar" MaxLength="50" />
+    <Property Name="GroKN" Type="varchar" MaxLength="50" />
+    <Property Name="GroMPa" Type="varchar" MaxLength="50" />
+    <Property Name="ExpMan" Type="varchar" MaxLength="50" />
+    <Property Name="ExpDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="ExpCop" Type="varchar" MaxLength="50" />
+    <Property Name="SelectGroNum" Type="int" />
+    <Property Name="ExpFacility" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“YuHuan_TrafficConstructionMIS.dbo.Access_LZTYBLab_SNKZParm”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="Access_LZTYBLab_SNKZParm">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="LingQi" Type="varchar" MaxLength="50" />
+    <Property Name="GuiGe" Type="varchar" MaxLength="50" />
+    <Property Name="Speed" Type="varchar" MaxLength="50" />
+    <Property Name="GroNum" Type="int" />
+    <Property Name="LoadType" Type="int" />
+    <Property Name="YanShi" Type="int" />
+    <Property Name="SelectGroNum" Type="int" />
+    <Property Name="ShuiNiBiaoHao" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Access_LZTYBLab_SNKZResult">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="LingQI" />
+      <PropertyRef Name="ShunXu" />
+    </Key>
+    <Property Name="ZuHao" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LingQI" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PingZhong" Type="varchar" MaxLength="50" />
+    <Property Name="OneKN" Type="varchar" MaxLength="50" />
+    <Property Name="ShunXu" Type="int" Nullable="false" />
+    <Property Name="LenAv" Type="varchar" MaxLength="50" />
+    <Property Name="HeiAv" Type="varchar" MaxLength="50" />
+    <Property Name="CurveData" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Access_MixingPlant_228RoadYB">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="ScTime" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="ScTime" Type="smalldatetime" Nullable="false" />
+    <Property Name="Output_vol" Type="float" />
+    <Property Name="NAM_GL1" Type="varchar" MaxLength="20" />
+    <Property Name="MBZ_GL1" Type="int" />
+    <Property Name="CLZ_GL1" Type="int" />
+    <Property Name="NAM_GL2" Type="varchar" MaxLength="20" />
+    <Property Name="MBZ_GL2" Type="int" />
+    <Property Name="CLZ_GL2" Type="int" />
+    <Property Name="NAM_GL3" Type="varchar" MaxLength="20" />
+    <Property Name="MBZ_GL3" Type="int" />
+    <Property Name="CLZ_GL3" Type="int" />
+    <Property Name="NAM_FLA2" Type="varchar" MaxLength="20" />
+    <Property Name="MBZ_FLA2" Type="int" />
+    <Property Name="CLZ_FLA2" Type="int" />
+    <Property Name="NAM_WJA1" Type="varchar" MaxLength="20" />
+    <Property Name="MBZ_WJA1" Type="float" />
+    <Property Name="CLZ_WJA1" Type="float" />
+    <Property Name="JDZ_WJC4" Type="int" />
+    <Property Name="NAM_Shui1" Type="varchar" MaxLength="20" />
+    <Property Name="MBZ_Shui1" Type="float" />
+    <Property Name="CLZ_Shui1" Type="float" />
+    <Property Name="Job_No" Type="varchar" MaxLength="50" />
+    <Property Name="Prop_No" Type="varchar" MaxLength="50" />
+    <Property Name="Cust_Nm" Type="varchar" MaxLength="50" />
+    <Property Name="Proj_Nm" Type="varchar" MaxLength="50" />
+    <Property Name="Location" Type="varchar" MaxLength="50" />
+    <Property Name="Site_No" Type="varchar" MaxLength="50" />
+    <Property Name="Contr_No" Type="varchar" MaxLength="50" />
+    <Property Name="Strength" Type="varchar" MaxLength="50" />
+    <Property Name="Const_Unit" Type="varchar" MaxLength="50" />
+    <Property Name="NAM_FLA3" Type="varchar" MaxLength="20" />
+    <Property Name="MBZ_FLA3" Type="int" />
+    <Property Name="CLZ_FLA3" Type="int" />
+    <Property Name="NAM_WJA2" Type="varchar" MaxLength="20" />
+    <Property Name="MBZ_WJA2" Type="int" />
+    <Property Name="CLZ_WJA2" Type="int" />
+    <Property Name="NAM_Shui2" Type="varchar" MaxLength="20" />
+    <Property Name="MBZ_Shui2" Type="float" />
+    <Property Name="CLZ_Shui2" Type="float" />
+    <Property Name="NAM_FLA1" Type="varchar" MaxLength="20" />
+    <Property Name="MBZ_FLA1" Type="int" />
+    <Property Name="CLZ_FLA1" Type="int" />
+  </EntityType>
+  <EntityType Name="Access_MixingPlant_228RoadYBPeiHeBi">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="CreateTime" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="CreateTime" Type="smalldatetime" Nullable="false" />
+    <Property Name="Prop_No" Type="varchar" MaxLength="50" />
+    <Property Name="Strength" Type="varchar" MaxLength="20" />
+    <Property Name="NAM_GL1" Type="varchar" MaxLength="20" />
+    <Property Name="BPB_GL1" Type="int" />
+    <Property Name="NAM_GL2" Type="varchar" MaxLength="20" />
+    <Property Name="BPB_GL2" Type="int" />
+    <Property Name="NAM_GL3" Type="varchar" MaxLength="20" />
+    <Property Name="BPB_GL3" Type="int" />
+    <Property Name="NAM_FLA1" Type="varchar" MaxLength="20" />
+    <Property Name="BPB_FLA1" Type="int" />
+    <Property Name="NAM_FLA2" Type="varchar" MaxLength="20" />
+    <Property Name="BPB_FLA2" Type="int" />
+    <Property Name="NAM_FLA3" Type="varchar" MaxLength="20" />
+    <Property Name="BPB_FLA3" Type="int" />
+    <Property Name="NAM_WJA1" Type="varchar" MaxLength="20" />
+    <Property Name="BPB_WJA1" Type="float" />
+    <Property Name="NAM_WJA2" Type="varchar" MaxLength="20" />
+    <Property Name="BPB_WJA2" Type="int" />
+    <Property Name="NAM_Shui1" Type="varchar" MaxLength="20" />
+    <Property Name="BPB_Shui1" Type="float" />
+    <Property Name="NAM_Shui2" Type="varchar" MaxLength="20" />
+    <Property Name="BPB_Shui2" Type="float" />
+    <Property Name="MixTime1" Type="int" />
+  </EntityType>
+  <EntityType Name="Access_MixingPlant_Intensity">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Access_MixingPlant_Parm">
+    <Key>
+      <PropertyRef Name="rd" />
+      <PropertyRef Name="rdate" />
+    </Key>
+    <Property Name="rd" Type="int" Nullable="false" />
+    <Property Name="rdate" Type="datetime" Nullable="false" />
+    <Property Name="xh" Type="int" />
+    <Property Name="pc" Type="int" />
+    <Property Name="gc" Type="int" Nullable="false" />
+    <Property Name="idParm" Type="int" />
+    <Property Name="parm" Type="varchar" MaxLength="50" />
+    <Property Name="timeLen" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="timeBegin" Type="datetime" />
+    <Property Name="timeEnd" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Access_MixingPlant_Parm2">
+    <Key>
+      <PropertyRef Name="rd" />
+      <PropertyRef Name="rdate" />
+    </Key>
+    <Property Name="rd" Type="int" Nullable="false" />
+    <Property Name="rdate" Type="datetime" Nullable="false" />
+    <Property Name="xh" Type="int" />
+    <Property Name="pc" Type="int" />
+    <Property Name="gc" Type="int" Nullable="false" />
+    <Property Name="idParm" Type="int" />
+    <Property Name="parm" Type="varchar" MaxLength="50" />
+    <Property Name="timeLen" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="timeBegin" Type="datetime" />
+    <Property Name="timeEnd" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Access_MixingPlant_tScsjAll">
+    <Key>
+      <PropertyRef Name="xh" />
+      <PropertyRef Name="rdate" />
+    </Key>
+    <Property Name="xh" Type="int" Nullable="false" />
+    <Property Name="rdate" Type="datetime" Nullable="false" />
+    <Property Name="orderID" Type="int" />
+    <Property Name="orderName" Type="varchar" MaxLength="50" />
+    <Property Name="formuID" Type="int" />
+    <Property Name="formuName" Type="varchar" MaxLength="50" />
+    <Property Name="slump" Type="varchar" MaxLength="50" />
+    <Property Name="intensityGrade" Type="varchar" MaxLength="50" />
+    <Property Name="humidity" Type="varchar" MaxLength="50" />
+    <Property Name="accumulativeTotal" Type="float" />
+    <Property Name="per" Type="float" />
+    <Property Name="Client" Type="varchar" MaxLength="50" />
+    <Property Name="Site" Type="varchar" MaxLength="50" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="CarNo" Type="varchar" MaxLength="50" />
+    <Property Name="Part" Type="varchar" MaxLength="50" />
+    <Property Name="Driver" Type="varchar" MaxLength="50" />
+    <Property Name="operateMode" Type="varchar" MaxLength="50" />
+    <Property Name="flag" Type="smallint" />
+  </EntityType>
+  <EntityType Name="Access_MixingPlant_tScsjAll2">
+    <Key>
+      <PropertyRef Name="xh" />
+      <PropertyRef Name="rdate" />
+    </Key>
+    <Property Name="xh" Type="int" Nullable="false" />
+    <Property Name="rdate" Type="datetime" Nullable="false" />
+    <Property Name="orderID" Type="int" />
+    <Property Name="orderName" Type="varchar" MaxLength="50" />
+    <Property Name="formuID" Type="int" />
+    <Property Name="formuName" Type="varchar" MaxLength="50" />
+    <Property Name="slump" Type="varchar" MaxLength="50" />
+    <Property Name="intensityGrade" Type="varchar" MaxLength="50" />
+    <Property Name="humidity" Type="varchar" MaxLength="50" />
+    <Property Name="accumulativeTotal" Type="float" />
+    <Property Name="per" Type="float" />
+    <Property Name="Client" Type="varchar" MaxLength="50" />
+    <Property Name="Site" Type="varchar" MaxLength="50" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="CarNo" Type="varchar" MaxLength="50" />
+    <Property Name="Part" Type="varchar" MaxLength="50" />
+    <Property Name="Driver" Type="varchar" MaxLength="50" />
+    <Property Name="operateMode" Type="varchar" MaxLength="50" />
+    <Property Name="flag" Type="smallint" />
+  </EntityType>
+  <EntityType Name="Access_MixingPlant_tScsjAllBody">
+    <Key>
+      <PropertyRef Name="rd" />
+      <PropertyRef Name="rdate" />
+    </Key>
+    <Property Name="rd" Type="int" Nullable="false" />
+    <Property Name="rdate" Type="datetime" Nullable="false" />
+    <Property Name="xh" Type="int" />
+    <Property Name="pc" Type="int" />
+    <Property Name="gc" Type="int" />
+    <Property Name="idMaterial" Type="int" />
+    <Property Name="material" Type="varchar" MaxLength="50" />
+    <Property Name="goal" Type="float" />
+    <Property Name="fact" Type="float" />
+    <Property Name="margin" Type="float" />
+    <Property Name="flag" Type="smallint" />
+  </EntityType>
+  <EntityType Name="Access_MixingPlant_tScsjAllBody2">
+    <Key>
+      <PropertyRef Name="rd" />
+      <PropertyRef Name="rdate" />
+    </Key>
+    <Property Name="rd" Type="int" Nullable="false" />
+    <Property Name="rdate" Type="datetime" Nullable="false" />
+    <Property Name="xh" Type="int" />
+    <Property Name="pc" Type="int" />
+    <Property Name="gc" Type="int" />
+    <Property Name="idMaterial" Type="int" />
+    <Property Name="material" Type="varchar" MaxLength="50" />
+    <Property Name="goal" Type="float" />
+    <Property Name="fact" Type="float" />
+    <Property Name="margin" Type="float" />
+    <Property Name="flag" Type="smallint" />
+  </EntityType>
+  <EntityType Name="Envionment_Data">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DeviceCode" Type="varchar" MaxLength="200" />
+    <Property Name="Temperature" Type="float" />
+    <Property Name="Humidity" Type="float" />
+    <Property Name="UploadTime" Type="datetime" />
+    <Property Name="ProjectId" Type="int" />
+  </EntityType>
+  <EntityType Name="Envionment_DeviceProject">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DeviceCode" Type="varchar" MaxLength="200" />
+    <Property Name="ProjectId" Type="int" />
+    <Property Name="DeviceName" Type="nvarchar" MaxLength="50" />
+    <Property Name="geom" Type="geometry" />
+  </EntityType>
+  <EntityType Name="Envionment_ProjectInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ConstructionDepartment" Type="nvarchar" MaxLength="50" />
+    <Property Name="BiaoDuan" Type="nvarchar" MaxLength="50" />
+    <Property Name="JianLi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Position" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Gyxp">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Flag" Type="varchar" MaxLength="10" />
+    <Property Name="ProjectName" Type="varchar" MaxLength="200" />
+    <Property Name="PileSite" Type="varchar" MaxLength="200" />
+    <Property Name="DeviceCode" Type="varchar" MaxLength="200" />
+    <Property Name="Flow" Type="float" />
+    <Property Name="Pressure" Type="float" />
+    <Property Name="OperateTime" Type="datetime" />
+    <Property Name="UploadTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Gyxp_Stat">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectName" Type="varchar" MaxLength="200" />
+    <Property Name="PileSite" Type="varchar" MaxLength="200" />
+    <Property Name="DeviceCode" Type="varchar" MaxLength="200" />
+    <Property Name="Luo" Type="float" />
+    <Property Name="TotalTime" Type="int" />
+    <Property Name="TotalFlow" Type="float" />
+    <Property Name="TotalDust" Type="float" />
+    <Property Name="EndTime" Type="datetime" />
+    <Property Name="UploadTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Sdf_LZT_SD_MixingPlant">
+    <Key>
+      <PropertyRef Name="本次时间" />
+    </Key>
+    <Property Name="任务单号" Type="nvarchar" MaxLength="50" />
+    <Property Name="砼标号" Type="nvarchar" MaxLength="50" />
+    <Property Name="操作员" Type="nvarchar" MaxLength="50" />
+    <Property Name="客户名称" Type="nvarchar" MaxLength="50" />
+    <Property Name="工程名称" Type="nvarchar" MaxLength="50" />
+    <Property Name="施工部位" Type="nvarchar" MaxLength="50" />
+    <Property Name="本次方量" Type="nvarchar" MaxLength="50" />
+    <Property Name="调水量" Type="nvarchar" MaxLength="50" />
+    <Property Name="运输车号" Type="nvarchar" MaxLength="50" />
+    <Property Name="本次时间" Type="datetime" Nullable="false" />
+    <Property Name="骨料一配方值" Type="nvarchar" MaxLength="50" />
+    <Property Name="骨料一当前值" Type="nvarchar" MaxLength="50" />
+    <Property Name="骨料一实际值" Type="nvarchar" MaxLength="50" />
+    <Property Name="骨料一含水率" Type="nvarchar" MaxLength="50" />
+    <Property Name="骨料二配方值" Type="nvarchar" MaxLength="50" />
+    <Property Name="骨料二当前值" Type="nvarchar" MaxLength="50" />
+    <Property Name="骨料二实际值" Type="nvarchar" MaxLength="50" />
+    <Property Name="骨料二含水率" Type="nvarchar" MaxLength="50" />
+    <Property Name="骨料三配方值" Type="nvarchar" MaxLength="50" />
+    <Property Name="骨料三当前值" Type="nvarchar" MaxLength="50" />
+    <Property Name="骨料三实际值" Type="nvarchar" MaxLength="50" />
+    <Property Name="骨料三含水率" Type="nvarchar" MaxLength="50" />
+    <Property Name="骨料四配方值" Type="nvarchar" MaxLength="50" />
+    <Property Name="骨料四当前值" Type="nvarchar" MaxLength="50" />
+    <Property Name="骨料四实际值" Type="nvarchar" MaxLength="50" />
+    <Property Name="骨料四含水率" Type="nvarchar" MaxLength="50" />
+    <Property Name="水泥一配方值" Type="nvarchar" MaxLength="50" />
+    <Property Name="水泥一当前值" Type="nvarchar" MaxLength="50" />
+    <Property Name="水泥一实际值" Type="nvarchar" MaxLength="50" />
+    <Property Name="水泥二配方值" Type="nvarchar" MaxLength="50" />
+    <Property Name="水泥二当前值" Type="nvarchar" MaxLength="50" />
+    <Property Name="水泥二实际值" Type="nvarchar" MaxLength="50" />
+    <Property Name="水泥三配方值" Type="nvarchar" MaxLength="50" />
+    <Property Name="水泥三当前值" Type="nvarchar" MaxLength="50" />
+    <Property Name="水泥三实际值" Type="nvarchar" MaxLength="50" />
+    <Property Name="粉煤灰一配方值" Type="nvarchar" MaxLength="50" />
+    <Property Name="粉煤灰一当前值" Type="nvarchar" MaxLength="50" />
+    <Property Name="粉煤灰一实际值" Type="nvarchar" MaxLength="50" />
+    <Property Name="粉煤灰二配方值" Type="nvarchar" MaxLength="50" />
+    <Property Name="粉煤灰二当前值" Type="nvarchar" MaxLength="50" />
+    <Property Name="粉煤灰二实际值" Type="nvarchar" MaxLength="50" />
+    <Property Name="水配方值" Type="nvarchar" MaxLength="50" />
+    <Property Name="水当前值" Type="nvarchar" MaxLength="50" />
+    <Property Name="水实际值" Type="nvarchar" MaxLength="50" />
+    <Property Name="附加剂配方值" Type="nvarchar" MaxLength="50" />
+    <Property Name="附加剂当前值" Type="nvarchar" MaxLength="50" />
+    <Property Name="附加剂实际值" Type="nvarchar" MaxLength="50" />
+    <Property Name="添加剂一配方值" Type="nvarchar" MaxLength="50" />
+    <Property Name="添加剂一当前值" Type="nvarchar" MaxLength="50" />
+    <Property Name="添加剂一实际值" Type="nvarchar" MaxLength="50" />
+    <Property Name="添加剂二配方值" Type="nvarchar" MaxLength="50" />
+    <Property Name="添加剂二当前值" Type="nvarchar" MaxLength="50" />
+    <Property Name="添加剂二实际值" Type="nvarchar" MaxLength="50" />
+    <Property Name="施工地址" Type="nvarchar" MaxLength="50" />
+    <Property Name="塌落度" Type="nvarchar" MaxLength="50" />
+    <Property Name="搅拌时间" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sdf_LZT_SD_MixingPlant_2">
+    <Key>
+      <PropertyRef Name="本次时间" />
+    </Key>
+    <Property Name="任务单号" Type="nvarchar" MaxLength="50" />
+    <Property Name="砼标号" Type="nvarchar" MaxLength="50" />
+    <Property Name="操作员" Type="nvarchar" MaxLength="50" />
+    <Property Name="客户名称" Type="nvarchar" MaxLength="50" />
+    <Property Name="工程名称" Type="nvarchar" MaxLength="50" />
+    <Property Name="施工部位" Type="nvarchar" MaxLength="50" />
+    <Property Name="本次方量" Type="nvarchar" MaxLength="50" />
+    <Property Name="调水量" Type="nvarchar" MaxLength="50" />
+    <Property Name="运输车号" Type="nvarchar" MaxLength="50" />
+    <Property Name="本次时间" Type="datetime" Nullable="false" />
+    <Property Name="骨料一配方值" Type="nvarchar" MaxLength="50" />
+    <Property Name="骨料一当前值" Type="nvarchar" MaxLength="50" />
+    <Property Name="骨料一实际值" Type="nvarchar" MaxLength="50" />
+    <Property Name="骨料一含水率" Type="nvarchar" MaxLength="50" />
+    <Property Name="骨料二配方值" Type="nvarchar" MaxLength="50" />
+    <Property Name="骨料二当前值" Type="nvarchar" MaxLength="50" />
+    <Property Name="骨料二实际值" Type="nvarchar" MaxLength="50" />
+    <Property Name="骨料二含水率" Type="nvarchar" MaxLength="50" />
+    <Property Name="骨料三配方值" Type="nvarchar" MaxLength="50" />
+    <Property Name="骨料三当前值" Type="nvarchar" MaxLength="50" />
+    <Property Name="骨料三实际值" Type="nvarchar" MaxLength="50" />
+    <Property Name="骨料三含水率" Type="nvarchar" MaxLength="50" />
+    <Property Name="骨料四配方值" Type="nvarchar" MaxLength="50" />
+    <Property Name="骨料四当前值" Type="nvarchar" MaxLength="50" />
+    <Property Name="骨料四实际值" Type="nvarchar" MaxLength="50" />
+    <Property Name="骨料四含水率" Type="nvarchar" MaxLength="50" />
+    <Property Name="水泥一配方值" Type="nvarchar" MaxLength="50" />
+    <Property Name="水泥一当前值" Type="nvarchar" MaxLength="50" />
+    <Property Name="水泥一实际值" Type="nvarchar" MaxLength="50" />
+    <Property Name="水泥二配方值" Type="nvarchar" MaxLength="50" />
+    <Property Name="水泥二当前值" Type="nvarchar" MaxLength="50" />
+    <Property Name="水泥二实际值" Type="nvarchar" MaxLength="50" />
+    <Property Name="水泥三配方值" Type="nvarchar" MaxLength="50" />
+    <Property Name="水泥三当前值" Type="nvarchar" MaxLength="50" />
+    <Property Name="水泥三实际值" Type="nvarchar" MaxLength="50" />
+    <Property Name="粉煤灰一配方值" Type="nvarchar" MaxLength="50" />
+    <Property Name="粉煤灰一当前值" Type="nvarchar" MaxLength="50" />
+    <Property Name="粉煤灰一实际值" Type="nvarchar" MaxLength="50" />
+    <Property Name="粉煤灰二配方值" Type="nvarchar" MaxLength="50" />
+    <Property Name="粉煤灰二当前值" Type="nvarchar" MaxLength="50" />
+    <Property Name="粉煤灰二实际值" Type="nvarchar" MaxLength="50" />
+    <Property Name="水配方值" Type="nvarchar" MaxLength="50" />
+    <Property Name="水当前值" Type="nvarchar" MaxLength="50" />
+    <Property Name="水实际值" Type="nvarchar" MaxLength="50" />
+    <Property Name="附加剂配方值" Type="nvarchar" MaxLength="50" />
+    <Property Name="附加剂当前值" Type="nvarchar" MaxLength="50" />
+    <Property Name="附加剂实际值" Type="nvarchar" MaxLength="50" />
+    <Property Name="添加剂一配方值" Type="nvarchar" MaxLength="50" />
+    <Property Name="添加剂一当前值" Type="nvarchar" MaxLength="50" />
+    <Property Name="添加剂一实际值" Type="nvarchar" MaxLength="50" />
+    <Property Name="添加剂二配方值" Type="nvarchar" MaxLength="50" />
+    <Property Name="添加剂二当前值" Type="nvarchar" MaxLength="50" />
+    <Property Name="添加剂二实际值" Type="nvarchar" MaxLength="50" />
+    <Property Name="施工地址" Type="nvarchar" MaxLength="50" />
+    <Property Name="塌落度" Type="nvarchar" MaxLength="50" />
+    <Property Name="搅拌时间" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Service_Config">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ServiceName" Type="varchar" MaxLength="500" />
+    <Property Name="ServiceAddress" Type="varchar" MaxLength="1000" />
+    <Property Name="ServiceDesc" Type="varchar" MaxLength="1000" />
+    <Property Name="ServiceType" Type="int" />
+    <Property Name="ScanTime" Type="int" />
+    <Property Name="IsMoniter" Type="int" />
+    <Property Name="ErrorHandler" Type="int" />
+  </EntityType>
+  <EntityType Name="Service_Status">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ServiceName" Type="varchar" MaxLength="500" />
+    <Property Name="ServiceDesc" Type="varchar" MaxLength="1000" />
+    <Property Name="ServiceType" Type="int" />
+    <Property Name="IsMoniter" Type="int" />
+    <Property Name="ServiceStatus" Type="varchar" MaxLength="500" />
+    <Property Name="UpateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Tb_Flow_Page">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PageName" Type="nvarchar" MaxLength="50" />
+    <Property Name="URL" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="Tb_Flow_Statistics">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PageId" Type="int" />
+    <Property Name="TotalCount" Type="int" />
+  </EntityType>
+  <EntityType Name="Tb_Flow_Visit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PageId" Type="int" />
+    <Property Name="Count" Type="int" />
+    <Property Name="VisitTime" Type="date" />
+  </EntityType>
+  <EntityType Name="Tb_Lab_Curve">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TestId" Type="int" />
+    <Property Name="TypeId" Type="int" />
+    <Property Name="Datas" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Tb_Lab_Department">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DepartmentName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DepartmentCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="PlatformName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProjectName" Type="nvarchar" MaxLength="50" />
+    <Property Name="BiaoDuanName" Type="nvarchar" MaxLength="50" />
+    <Property Name="geom" Type="geometry" />
+  </EntityType>
+  <EntityType Name="Tb_Lab_ProjectName">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectName" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Tb_Lab_Test">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DepartmentId" Type="int" Nullable="false" />
+    <Property Name="TestItemId" Type="int" Nullable="false" />
+    <Property Name="TestNo" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="TestUser" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="TestDevice" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="ReworkCount" Type="int" Nullable="false" />
+    <Property Name="TestTime" Type="datetime" />
+    <Property Name="TestResult" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="Tb_Lab_TestItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TestId" Type="int" Nullable="false" />
+    <Property Name="ItemName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ItemResult" Type="varchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="Tb_Lab_Type">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="CurveName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Tb_Login">
+    <Key>
+      <PropertyRef Name="UserName" />
+    </Key>
+    <Property Name="UserName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Password" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="UserRight" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Main_Menu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Icon" Type="varchar" MaxLength="30" />
+    <Property Name="Name" Type="nvarchar" MaxLength="30" />
+    <Property Name="Url" Type="varchar" MaxLength="100" />
+    <Property Name="ParentId" Type="int" />
+    <Property Name="Position" Type="int" />
+    <Property Name="UserRight" Type="int" />
+    <Property Name="Target" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Tb_MixingPlant_Device">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="DeviceFacId" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="DeviceCode" Type="varchar" MaxLength="150" />
+    <Property Name="PlatformName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProjectName" Type="nvarchar" MaxLength="50" />
+    <Property Name="BiaoDuanName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProjectCode" Type="varchar" MaxLength="150" />
+    <Property Name="Factorycode" Type="varchar" MaxLength="150" />
+    <Property Name="Memo" Type="varchar" MaxLength="200" />
+    <Property Name="geom" Type="geometry" />
+  </EntityType>
+  <EntityType Name="Tb_MixingPlant_Dosage">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DeviceFacId" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="DeviceFacId" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="PieceId" Type="nvarchar" MaxLength="128" />
+    <Property Name="MaterialId" Type="nvarchar" MaxLength="128" />
+    <Property Name="Water" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="RecAmnt" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="PlanAmnt" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="FacAmnt" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="Deviation" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="OperationTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tb_MixingPlant_Material">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DeviceFacId" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="DeviceFacId" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="Name" Type="nvarchar" MaxLength="128" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="PError" Type="decimal" Scale="2" />
+  </EntityType>
+  <EntityType Name="Tb_MixingPlant_Piece">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DeviceFacId" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="DeviceFacId" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="BhzId" Type="nvarchar" MaxLength="128" />
+    <Property Name="ProduceId" Type="nvarchar" MaxLength="128" />
+    <Property Name="Serial" Type="nvarchar" MaxLength="128" />
+    <Property Name="DatTim" Type="datetime" />
+    <Property Name="BldTimStart" Type="datetime" />
+    <Property Name="BldTimEnd" Type="datetime" />
+    <Property Name="BldTim" Type="int" />
+    <Property Name="PieAmnt" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="DosageClass" Type="int" />
+  </EntityType>
+  <EntityType Name="Tb_MixingPlant_Produce">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DeviceFacId" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="DeviceFacId" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="RecipeId" Type="nvarchar" MaxLength="128" />
+    <Property Name="Code" Type="nvarchar" MaxLength="128" />
+    <Property Name="Customer" Type="nvarchar" MaxLength="128" />
+    <Property Name="ProjectName" Type="nvarchar" MaxLength="128" />
+    <Property Name="ConsPos" Type="nvarchar" MaxLength="1280" />
+    <Property Name="PieCnt" Type="int" />
+    <Property Name="BetLev" Type="nvarchar" MaxLength="128" />
+    <Property Name="OperationTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tb_MixingPlant_Recipe">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DeviceFacId" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="DeviceFacId" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="Code" Type="nvarchar" MaxLength="128" />
+    <Property Name="BetLev" Type="nvarchar" MaxLength="128" />
+    <Property Name="DatTim" Type="datetime" />
+    <Property Name="OperationTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tb_MixingPlant_RecipeList">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DeviceFacId" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="DeviceFacId" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="RecipeId" Type="nvarchar" MaxLength="128" />
+    <Property Name="MaterialId" Type="nvarchar" MaxLength="128" />
+    <Property Name="Amount" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="OperationTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tb_YaJiang_CurrentMonitor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DeviceNo" Type="int" />
+    <Property Name="DotId" Type="nvarchar" MaxLength="50" />
+    <Property Name="ConnState" Type="int" />
+    <Property Name="ZLState" Type="nvarchar" MaxLength="20" />
+    <Property Name="KongEx" Type="nvarchar" MaxLength="50" />
+    <Property Name="LiangType" Type="nvarchar" MaxLength="20" />
+    <Property Name="liangstr" Type="nvarchar" MaxLength="20" />
+    <Property Name="IType" Type="int" />
+    <Property Name="ShuiQ" Type="decimal" Scale="2" />
+    <Property Name="ShuiNiQ" Type="decimal" Scale="2" />
+    <Property Name="additiveQ" Type="decimal" Scale="2" />
+    <Property Name="AllQ" Type="decimal" Scale="2" />
+    <Property Name="JiaoBanTime" Type="int" />
+    <Property Name="EntrSpeed" Type="decimal" Scale="2" />
+    <Property Name="ExitSpeed" Type="decimal" Scale="2" />
+    <Property Name="EntrPree" Type="decimal" Scale="2" />
+    <Property Name="ExitPree" Type="decimal" Scale="2" />
+    <Property Name="Keeptime" Type="int" />
+    <Property Name="TotalSize" Type="decimal" Scale="2" />
+  </EntityType>
+  <EntityType Name="Tb_YaJiang_Curve">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DeviceNo" Type="int" />
+    <Property Name="DotId" Type="nvarchar" MaxLength="50" />
+    <Property Name="Kong" Type="int" />
+    <Property Name="KongEx" Type="varchar" MaxLength="50" />
+    <Property Name="Liang" Type="varchar" MaxLength="50" />
+    <Property Name="IDmx" Type="int" />
+    <Property Name="DataAry" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Tb_YaJiang_Data">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DeviceNo" Type="int" />
+    <Property Name="LiangType" Type="nvarchar" MaxLength="20" />
+    <Property Name="LiangStr" Type="varchar" MaxLength="50" />
+    <Property Name="KongEx" Type="varchar" MaxLength="50" />
+    <Property Name="DotId" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProjectNo" Type="int" />
+    <Property Name="ZLTime" Type="datetime" />
+    <Property Name="EndTime" Type="datetime" />
+    <Property Name="ZLNum" Type="int" />
+    <Property Name="Kong" Type="int" />
+    <Property Name="ZLType" Type="nvarchar" MaxLength="20" />
+    <Property Name="IType" Type="int" />
+    <Property Name="CycleTime" Type="int" />
+    <Property Name="ShuiQ" Type="decimal" Scale="2" />
+    <Property Name="ShuiNiQ" Type="decimal" Scale="2" />
+    <Property Name="AdditiveQ" Type="decimal" Scale="2" />
+    <Property Name="PressSX" Type="decimal" Scale="2" />
+    <Property Name="PressXX" Type="decimal" Scale="2" />
+    <Property Name="Keeptime" Type="int" />
+    <Property Name="ZhenKongPree" Type="decimal" Scale="2" />
+    <Property Name="TotalSize" Type="decimal" Scale="2" />
+    <Property Name="EntrPree" Type="decimal" Scale="2" />
+    <Property Name="ExitPree" Type="decimal" Scale="2" />
+    <Property Name="EntrAvgSpeed" Type="decimal" Scale="2" />
+    <Property Name="ExitMaxSpeed" Type="decimal" Scale="2" />
+    <Property Name="JiaoBanTime" Type="int" />
+    <Property Name="ShuiRatio" Type="decimal" Scale="2" />
+    <Property Name="JiangWendu" Type="int" />
+    <Property Name="HJWendu" Type="int" />
+    <Property Name="LLShuiQ" Type="decimal" Scale="2" />
+    <Property Name="LLShuiNiQ" Type="decimal" Scale="2" />
+    <Property Name="LLAdditiveQ" Type="decimal" Scale="2" />
+    <Property Name="Pass" Type="nvarchar" MaxLength="10" />
+    <Property Name="MaojiangQK" Type="nvarchar" MaxLength="50" />
+    <Property Name="ZJFangXiang" Type="nvarchar" MaxLength="20" />
+    <Property Name="JiangSize" Type="varchar" MaxLength="50" />
+    <Property Name="LiaoSize" Type="varchar" MaxLength="50" />
+    <Property Name="ShuiSize" Type="varchar" MaxLength="50" />
+    <Property Name="LLSize" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Tb_YaJiang_Project">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectName" Type="nvarchar" MaxLength="50" />
+    <Property Name="DotId" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Tb_YaJiang_ProjectInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DeviceNo" Type="int" />
+    <Property Name="DotId" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProjectName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShiGong" Type="nvarchar" MaxLength="100" />
+    <Property Name="JianLi" Type="nvarchar" MaxLength="100" />
+    <Property Name="HunNingTu" Type="nvarchar" MaxLength="50" />
+    <Property Name="ZiJianYiJian" Type="nvarchar" MaxLength="50" />
+    <Property Name="JianLiYiJian" Type="nvarchar" MaxLength="50" />
+    <Property Name="JianLiRen" Type="nvarchar" MaxLength="20" />
+    <Property Name="JiShuYuan" Type="nvarchar" MaxLength="20" />
+    <Property Name="ZhiJianRen" Type="nvarchar" MaxLength="20" />
+    <Property Name="SubProject" Type="nvarchar" MaxLength="50" />
+    <Property Name="ZJLiaoName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ZJFangXiang" Type="nvarchar" MaxLength="50" />
+    <Property Name="ZJIniSpeed" Type="decimal" Scale="2" />
+    <Property Name="JiangWendu" Type="nvarchar" MaxLength="20" />
+    <Property Name="HJWendu" Type="nvarchar" MaxLength="20" />
+    <Property Name="ZLDatetime" Type="datetime" />
+    <Property Name="SuHuaJiL" Type="nvarchar" MaxLength="20" />
+    <Property Name="PengHuaJiL" Type="nvarchar" MaxLength="20" />
+    <Property Name="ShuiNiYL" Type="nvarchar" MaxLength="20" />
+    <Property Name="QinShuiLv" Type="nvarchar" MaxLength="20" />
+    <Property Name="JiLuRen" Type="nvarchar" MaxLength="20" />
+    <Property Name="ZBJiShuYuan" Type="nvarchar" MaxLength="20" />
+    <Property Name="ShuiWendu" Type="nvarchar" MaxLength="20" />
+    <Property Name="JiangSize" Type="nvarchar" MaxLength="50" />
+    <Property Name="LiaoSize" Type="varchar" MaxLength="50" />
+    <Property Name="ShuiSize" Type="decimal" Scale="2" />
+    <Property Name="ShuiNiMD" Type="decimal" Scale="2" />
+    <Property Name="AdditiveMD" Type="decimal" Scale="2" />
+    <Property Name="LLSize" Type="varchar" MaxLength="50" />
+    <Property Name="TotalSize" Type="varchar" MaxLength="50" />
+    <Property Name="AdditiveXH" Type="nvarchar" MaxLength="50" />
+    <Property Name="BengXH" Type="varchar" MaxLength="50" />
+    <Property Name="ZhuangNo" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Tb_YaJiang1_Curve">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="YJDataId" Type="int" />
+    <Property Name="InputPress" Type="decimal" Scale="2" />
+    <Property Name="ZhenKongPress" Type="decimal" Scale="2" />
+    <Property Name="CurveDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tb_YaJiang1_Data">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DeviceId" Type="varchar" MaxLength="50" />
+    <Property Name="LiangType" Type="varchar" MaxLength="50" />
+    <Property Name="LiangNo" Type="varchar" MaxLength="50" />
+    <Property Name="KongNo" Type="varchar" MaxLength="50" />
+    <Property Name="SetShuiJiao" Type="decimal" Scale="2" />
+    <Property Name="RealShuiJiao" Type="decimal" Scale="2" />
+    <Property Name="SetPress" Type="decimal" Scale="2" />
+    <Property Name="RealPress" Type="decimal" Scale="2" />
+    <Property Name="SetZhenKongDu" Type="decimal" Scale="2" />
+    <Property Name="RealZhenKongDu" Type="decimal" Scale="2" />
+    <Property Name="SetJiaoBanTime" Type="int" />
+    <Property Name="RealJiaoBanTime" Type="int" />
+    <Property Name="SetWenYaTime" Type="int" />
+    <Property Name="RealWenYaTime" Type="int" />
+    <Property Name="SetCycleTime" Type="int" />
+    <Property Name="RealCycleTime" Type="int" />
+    <Property Name="InputKong1" Type="varchar" MaxLength="50" />
+    <Property Name="InputKong2" Type="varchar" MaxLength="50" />
+    <Property Name="OutputKong1" Type="varchar" MaxLength="50" />
+    <Property Name="OutputKong2" Type="varchar" MaxLength="50" />
+    <Property Name="YaJiangDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tb_YaJiang1_Device">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="DeviceNo" Type="int" />
+    <Property Name="DeviceName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UnitType" Type="nvarchar" MaxLength="50" />
+    <Property Name="Vender" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProjectId" Type="int" />
+    <Property Name="DeviceCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="geom" Type="geometry" />
+  </EntityType>
+  <EntityType Name="Tb_YaJiang1_Project">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="ProjectName" Type="nvarchar" MaxLength="50" />
+    <Property Name="DotName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Tb_ZhangLa_CurrentMonitor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DotId" Type="varchar" MaxLength="50" />
+    <Property Name="DeviceNo" Type="int" />
+    <Property Name="ConnState" Type="int" />
+    <Property Name="ZLState" Type="varchar" MaxLength="50" />
+    <Property Name="KongEx" Type="varchar" MaxLength="50" />
+    <Property Name="LiangType" Type="varchar" MaxLength="50" />
+    <Property Name="liangstr" Type="varchar" MaxLength="50" />
+    <Property Name="Per100Press" Type="decimal" Scale="2" />
+    <Property Name="InitPress" Type="int" />
+    <Property Name="Gang1State" Type="varchar" MaxLength="50" />
+    <Property Name="Gang2State" Type="varchar" MaxLength="50" />
+    <Property Name="Gang3State" Type="varchar" MaxLength="50" />
+    <Property Name="Gang4State" Type="varchar" MaxLength="50" />
+    <Property Name="Gang1Press" Type="decimal" Scale="2" />
+    <Property Name="Gang2Press" Type="decimal" Scale="2" />
+    <Property Name="Gang3Press" Type="decimal" Scale="2" />
+    <Property Name="Gang4Press" Type="decimal" Scale="2" />
+    <Property Name="Gang1Extend" Type="decimal" Scale="2" />
+    <Property Name="Gang2Extend" Type="decimal" Scale="2" />
+    <Property Name="Gang3Extend" Type="decimal" Scale="2" />
+    <Property Name="Gang4Extend" Type="decimal" Scale="2" />
+  </EntityType>
+  <EntityType Name="Tb_ZhangLa_Curve">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DeviceNo" Type="int" />
+    <Property Name="DotId" Type="varchar" MaxLength="50" />
+    <Property Name="Kong" Type="int" />
+    <Property Name="KongEx" Type="varchar" MaxLength="50" />
+    <Property Name="Liang" Type="varchar" MaxLength="50" />
+    <Property Name="IDmx" Type="int" />
+    <Property Name="DataAry" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Tb_ZhangLa_Data">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DeviceNo" Type="int" />
+    <Property Name="LiangType" Type="nvarchar" MaxLength="50" />
+    <Property Name="LiangStr" Type="varchar" MaxLength="50" />
+    <Property Name="KongNo" Type="int" />
+    <Property Name="KongEx" Type="varchar" MaxLength="50" />
+    <Property Name="ZhangLaCount" Type="int" />
+    <Property Name="DotId" Type="varchar" MaxLength="50" />
+    <Property Name="ProjectNo" Type="int" />
+    <Property Name="ZLTime" Type="datetime" />
+    <Property Name="ZLType" Type="varchar" MaxLength="20" />
+    <Property Name="DanShu" Type="int" />
+    <Property Name="ZLNum" Type="int" />
+    <Property Name="Kong" Type="int" />
+    <Property Name="Per100Press" Type="decimal" Scale="2" />
+    <Property Name="InitPress" Type="int" />
+    <Property Name="Extend" Type="decimal" Scale="2" />
+    <Property Name="Elasticity" Type="decimal" Scale="2" />
+    <Property Name="Per10Extend1" Type="decimal" Scale="2" />
+    <Property Name="Per10Mpa1" Type="decimal" Scale="2" />
+    <Property Name="Per20Extend1" Type="decimal" Scale="2" />
+    <Property Name="Per20Mpa1" Type="decimal" Scale="2" />
+    <Property Name="Per50Extend1" Type="decimal" Scale="2" />
+    <Property Name="Per50Mpa1" Type="decimal" Scale="2" />
+    <Property Name="Per100Extend1" Type="decimal" Scale="2" />
+    <Property Name="Per100Mpa1" Type="decimal" Scale="2" />
+    <Property Name="FixedExtend1" Type="decimal" Scale="2" />
+    <Property Name="RealExtend1" Type="decimal" Scale="2" />
+    <Property Name="Per10Extend2" Type="decimal" Scale="2" />
+    <Property Name="Per10Mpa2" Type="decimal" Scale="2" />
+    <Property Name="Per20Extend2" Type="decimal" Scale="2" />
+    <Property Name="Per20Mpa2" Type="decimal" Scale="2" />
+    <Property Name="Per50Extend2" Type="decimal" Scale="2" />
+    <Property Name="Per50Mpa2" Type="decimal" Scale="2" />
+    <Property Name="Per100Extend2" Type="decimal" Scale="2" />
+    <Property Name="Per100Mpa2" Type="decimal" Scale="2" />
+    <Property Name="FixedExtend2" Type="decimal" Scale="2" />
+    <Property Name="RealExtend2" Type="decimal" Scale="2" />
+    <Property Name="Per10Extend3" Type="decimal" Scale="2" />
+    <Property Name="Per10Mpa3" Type="decimal" Scale="2" />
+    <Property Name="Per20Extend3" Type="decimal" Scale="2" />
+    <Property Name="Per20Mpa3" Type="decimal" Scale="2" />
+    <Property Name="Per50Extend3" Type="decimal" Scale="2" />
+    <Property Name="Per50Mpa3" Type="decimal" Scale="2" />
+    <Property Name="Per100Extend3" Type="decimal" Scale="2" />
+    <Property Name="Per100Mpa3" Type="decimal" Scale="2" />
+    <Property Name="FixedExtend3" Type="decimal" Scale="2" />
+    <Property Name="RealExtend3" Type="decimal" Scale="2" />
+    <Property Name="Per10Extend4" Type="decimal" Scale="2" />
+    <Property Name="Per10Mpa4" Type="decimal" Scale="2" />
+    <Property Name="Per20Extend4" Type="decimal" Scale="2" />
+    <Property Name="Per20Mpa4" Type="decimal" Scale="2" />
+    <Property Name="Per50Extend4" Type="decimal" Scale="2" />
+    <Property Name="Per50Mpa4" Type="decimal" Scale="2" />
+    <Property Name="Per100Extend4" Type="decimal" Scale="2" />
+    <Property Name="Per100Mpa4" Type="decimal" Scale="2" />
+    <Property Name="FixedExtend4" Type="decimal" Scale="2" />
+    <Property Name="RealExtend4" Type="decimal" Scale="2" />
+    <Property Name="Extend2" Type="decimal" Scale="2" />
+    <Property Name="Elasticity2" Type="decimal" Scale="2" />
+    <Property Name="Extend3" Type="decimal" Scale="2" />
+    <Property Name="Elasticity3" Type="decimal" Scale="2" />
+    <Property Name="Extend4" Type="decimal" Scale="2" />
+    <Property Name="Elasticity4" Type="decimal" Scale="2" />
+    <Property Name="HuiSuoL" Type="int" />
+    <Property Name="ExtendError1" Type="decimal" Scale="2" />
+    <Property Name="ExtendError2" Type="decimal" Scale="2" />
+    <Property Name="ExtendError3" Type="decimal" Scale="2" />
+    <Property Name="ExtendError4" Type="decimal" Scale="2" />
+    <Property Name="ProjectName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ChaoZhFlag" Type="int" />
+    <Property Name="ChaoZhPer" Type="int" />
+    <Property Name="ChaoZhExtend1" Type="decimal" Scale="2" />
+    <Property Name="ChaoZhMpa1" Type="decimal" Scale="2" />
+    <Property Name="ChaoZhExtend2" Type="decimal" Scale="2" />
+    <Property Name="ChaoZhMpa2" Type="decimal" Scale="2" />
+    <Property Name="ChaoZhExtend3" Type="decimal" Scale="2" />
+    <Property Name="ChaoZhMpa3" Type="decimal" Scale="2" />
+    <Property Name="ChaoZhExtend4" Type="decimal" Scale="2" />
+    <Property Name="ChaoZhMpa4" Type="decimal" Scale="2" />
+    <Property Name="BaoYaTime1" Type="int" />
+    <Property Name="BaoYaTime2" Type="int" />
+    <Property Name="BaoYaTime3" Type="int" />
+    <Property Name="BaoYaTime4" Type="int" />
+    <Property Name="Per10JiaPian1" Type="decimal" Scale="2" />
+    <Property Name="Per20JiaPian1" Type="decimal" Scale="2" />
+    <Property Name="Per50JiaPian1" Type="decimal" Scale="2" />
+    <Property Name="Per100JiaPian1" Type="decimal" Scale="2" />
+    <Property Name="Per10JiaPian2" Type="decimal" Scale="2" />
+    <Property Name="Per20JiaPian2" Type="decimal" Scale="2" />
+    <Property Name="Per50JiaPian2" Type="decimal" Scale="2" />
+    <Property Name="Per100JiaPian2" Type="decimal" Scale="2" />
+    <Property Name="Per10JiaPian3" Type="decimal" Scale="2" />
+    <Property Name="Per20JiaPian3" Type="decimal" Scale="2" />
+    <Property Name="Per50JiaPian3" Type="decimal" Scale="2" />
+    <Property Name="Per100JiaPian3" Type="decimal" Scale="2" />
+    <Property Name="Per10JiaPian4" Type="decimal" Scale="2" />
+    <Property Name="Per20JiaPian4" Type="decimal" Scale="2" />
+    <Property Name="Per50JiaPian4" Type="decimal" Scale="2" />
+    <Property Name="Per100JiaPian4" Type="decimal" Scale="2" />
+    <Property Name="ZHMianJi1" Type="decimal" Scale="2" />
+    <Property Name="ZHMoZu1" Type="decimal" Scale="2" />
+    <Property Name="ZHMianJi2" Type="decimal" Scale="2" />
+    <Property Name="ZHMoZu2" Type="decimal" Scale="2" />
+    <Property Name="ZHMianJi3" Type="decimal" Scale="2" />
+    <Property Name="ZHMoZu3" Type="decimal" Scale="2" />
+    <Property Name="ZHMianJi4" Type="decimal" Scale="2" />
+    <Property Name="ZHMoZu4" Type="decimal" Scale="2" />
+    <Property Name="WorkLen" Type="decimal" Scale="2" />
+    <Property Name="Gang1Flag" Type="int" />
+    <Property Name="Gang2Flag" Type="int" />
+    <Property Name="Gang3Flag" Type="int" />
+    <Property Name="Gang4Flag" Type="int" />
+  </EntityType>
+  <EntityType Name="Tb_ZhangLa_Project">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectName" Type="nvarchar" MaxLength="50" />
+    <Property Name="DotId" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Tb_ZhangLa_ProjectInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DeviceNo" Type="int" />
+    <Property Name="DotId" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShiGong" Type="nvarchar" MaxLength="100" />
+    <Property Name="JianLi" Type="nvarchar" MaxLength="100" />
+    <Property Name="ProjectName" Type="nvarchar" MaxLength="50" />
+    <Property Name="HunNingTu" Type="varchar" MaxLength="50" />
+    <Property Name="GangJiaoXian" Type="varchar" MaxLength="50" />
+    <Property Name="ZhangLaStyle" Type="varchar" MaxLength="50" />
+    <Property Name="JiaoZhuDate" Type="date" />
+    <Property Name="YouBiao" Type="varchar" MaxLength="50" />
+    <Property Name="QianJinDing" Type="varchar" MaxLength="50" />
+    <Property Name="JianLiYiJian" Type="nvarchar" MaxLength="50" />
+    <Property Name="ZLFuZeRen" Type="nchar" MaxLength="10" />
+    <Property Name="JianCe" Type="nvarchar" MaxLength="50" />
+    <Property Name="JSFuZeRen" Type="nvarchar" MaxLength="50" />
+    <Property Name="JiLu" Type="nvarchar" MaxLength="50" />
+    <Property Name="FuHe" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubProject" Type="nvarchar" MaxLength="50" />
+    <Property Name="GouJianNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="ZLBH" Type="nvarchar" MaxLength="50" />
+    <Property Name="liangLen" Type="decimal" Scale="2" />
+    <Property Name="KongDaoNum" Type="int" />
+    <Property Name="DeviceVender" Type="nvarchar" MaxLength="50" />
+    <Property Name="DeviceZhuBH" Type="nvarchar" MaxLength="50" />
+    <Property Name="DeviceFuBH" Type="nvarchar" MaxLength="50" />
+    <Property Name="BiaoDingRQ" Type="date" />
+    <Property Name="QianJinDing1" Type="varchar" MaxLength="50" />
+    <Property Name="QianJinDing2" Type="varchar" MaxLength="50" />
+    <Property Name="BiaoDingRQ1" Type="varchar" MaxLength="50" />
+    <Property Name="BiaoDingRQ2" Type="varchar" MaxLength="50" />
+    <Property Name="ShiYongCS1" Type="int" />
+    <Property Name="ShiYongCS2" Type="int" />
+    <Property Name="GangJiaoXianJh" Type="nvarchar" MaxLength="50" />
+    <Property Name="GangJiaoXianQD" Type="nvarchar" MaxLength="50" />
+    <Property Name="GangJiaoXianZJ" Type="nvarchar" MaxLength="50" />
+    <Property Name="GangJiaoXianTX" Type="nvarchar" MaxLength="50" />
+    <Property Name="YuZhiLiangChang" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShiKuaiBH" Type="varchar" MaxLength="50" />
+    <Property Name="ShiKuaiQD" Type="varchar" MaxLength="50" />
+    <Property Name="ZhangLaQD" Type="varchar" MaxLength="50" />
+    <Property Name="GJXKZYL" Type="varchar" MaxLength="50" />
+    <Property Name="HJWendu" Type="varchar" MaxLength="50" />
+    <Property Name="MaoVender" Type="varchar" MaxLength="50" />
+    <Property Name="MaoXH" Type="varchar" MaxLength="50" />
+    <Property Name="QiGongdu" Type="varchar" MaxLength="50" />
+    <Property Name="HuaSiQK" Type="nvarchar" MaxLength="50" />
+    <Property Name="ChuLiQK" Type="varchar" MaxLength="50" />
+    <Property Name="ZhuangNo" Type="varchar" MaxLength="50" />
+    <Property Name="GJLIngQi" Type="varchar" MaxLength="50" />
+    <Property Name="DuanSiLv" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Tb_ZhangLa1_Curve">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ZLDataId" Type="int" />
+    <Property Name="Gang1Kn" Type="decimal" Scale="2" />
+    <Property Name="Gang1Extend" Type="decimal" Scale="2" />
+    <Property Name="Gang2Kn" Type="decimal" Scale="2" />
+    <Property Name="Gang2Extend" Type="decimal" Scale="2" />
+    <Property Name="Gang3Kn" Type="decimal" Scale="2" />
+    <Property Name="Gang3Extend" Type="decimal" Scale="2" />
+    <Property Name="Gang4Kn" Type="decimal" Scale="2" />
+    <Property Name="Gang4Extend" Type="decimal" Scale="2" />
+    <Property Name="CurveTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tb_ZhangLa1_Data">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DeviceId" Type="varchar" MaxLength="50" />
+    <Property Name="LiangType" Type="nvarchar" MaxLength="50" />
+    <Property Name="LiangNo" Type="varchar" MaxLength="50" />
+    <Property Name="KongNo" Type="varchar" MaxLength="50" />
+    <Property Name="ZhangLaCount" Type="int" />
+    <Property Name="ZLType" Type="nvarchar" MaxLength="50" />
+    <Property Name="KongCount" Type="int" />
+    <Property Name="Per100Kn" Type="decimal" Scale="2" />
+    <Property Name="InitKn" Type="decimal" Scale="2" />
+    <Property Name="Extend" Type="decimal" Scale="2" />
+    <Property Name="RealExtend" Type="decimal" Scale="2" />
+    <Property Name="ExtendError" Type="decimal" Scale="2" />
+    <Property Name="BaoYaTime" Type="int" />
+    <Property Name="HuiSuo" Type="decimal" Scale="2" />
+    <Property Name="JiaPianHuiSuo" Type="decimal" Scale="2" />
+    <Property Name="DingHuiSuo" Type="decimal" Scale="2" />
+    <Property Name="ZLDate" Type="datetime" />
+    <Property Name="Per10Kn1" Type="decimal" Scale="2" />
+    <Property Name="Per10Extend1" Type="decimal" Scale="2" />
+    <Property Name="Per20Kn1" Type="decimal" Scale="2" />
+    <Property Name="Per20Extend1" Type="decimal" Scale="2" />
+    <Property Name="Per50Kn1" Type="decimal" Scale="2" />
+    <Property Name="Per50Extend1" Type="decimal" Scale="2" />
+    <Property Name="Per100Kn1" Type="decimal" Scale="2" />
+    <Property Name="Per100Extend1" Type="decimal" Scale="2" />
+    <Property Name="Extend1" Type="decimal" Scale="2" />
+    <Property Name="RealExtend1" Type="decimal" Scale="2" />
+    <Property Name="ExtendError1" Type="decimal" Scale="2" />
+    <Property Name="Gang1Flag" Type="int" />
+    <Property Name="Per10Kn2" Type="decimal" Scale="2" />
+    <Property Name="Per10Extend2" Type="decimal" Scale="2" />
+    <Property Name="Per20Kn2" Type="decimal" Scale="2" />
+    <Property Name="Per20Extend2" Type="decimal" Scale="2" />
+    <Property Name="Per50Kn2" Type="decimal" Scale="2" />
+    <Property Name="Per50Extend2" Type="decimal" Scale="2" />
+    <Property Name="Per100Kn2" Type="decimal" Scale="2" />
+    <Property Name="Per100Extend2" Type="decimal" Scale="2" />
+    <Property Name="Extend2" Type="decimal" Scale="2" />
+    <Property Name="RealExtend2" Type="decimal" Scale="2" />
+    <Property Name="ExtendError2" Type="decimal" Scale="2" />
+    <Property Name="Gang2Flag" Type="int" />
+    <Property Name="Per10Kn3" Type="decimal" Scale="2" />
+    <Property Name="Per10Extend3" Type="decimal" Scale="2" />
+    <Property Name="Per20Kn3" Type="decimal" Scale="2" />
+    <Property Name="Per20Extend3" Type="decimal" Scale="2" />
+    <Property Name="Per50Kn3" Type="decimal" Scale="2" />
+    <Property Name="Per50Extend3" Type="decimal" Scale="2" />
+    <Property Name="Per100Kn3" Type="decimal" Scale="2" />
+    <Property Name="Per100Extend3" Type="decimal" Scale="2" />
+    <Property Name="Extend3" Type="decimal" Scale="2" />
+    <Property Name="RealExtend3" Type="decimal" Scale="2" />
+    <Property Name="ExtendError3" Type="decimal" Scale="2" />
+    <Property Name="Gang3Flag" Type="int" />
+    <Property Name="Per10Kn4" Type="decimal" Scale="2" />
+    <Property Name="Per10Extend4" Type="decimal" Scale="2" />
+    <Property Name="Per20Kn4" Type="decimal" Scale="2" />
+    <Property Name="Per20Extend4" Type="decimal" Scale="2" />
+    <Property Name="Per50Kn4" Type="decimal" Scale="2" />
+    <Property Name="Per50Extend4" Type="decimal" Scale="2" />
+    <Property Name="Per100Kn4" Type="decimal" Scale="2" />
+    <Property Name="Per100Extend4" Type="decimal" Scale="2" />
+    <Property Name="Extend4" Type="decimal" Scale="2" />
+    <Property Name="RealExtend4" Type="decimal" Scale="2" />
+    <Property Name="ExtendError4" Type="decimal" Scale="2" />
+    <Property Name="Gang4Flag" Type="int" />
+  </EntityType>
+  <EntityType Name="Tb_ZhangLa1_Device">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="DeviceNo" Type="int" />
+    <Property Name="DeviceName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UnitType" Type="nvarchar" MaxLength="50" />
+    <Property Name="Vender" Type="nvarchar" MaxLength="50" />
+    <Property Name="LiangFactory" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProjectId" Type="int" />
+    <Property Name="DeviceCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="geom" Type="geometry" />
+  </EntityType>
+  <EntityType Name="Tb_ZhangLa1_Project">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="ProjectName" Type="nvarchar" MaxLength="50" />
+    <Property Name="DotName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Yanghu_SourceData">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ItemId" Type="varchar" MaxLength="50" />
+    <Property Name="ProjectId" Type="varchar" MaxLength="50" />
+    <Property Name="FactoryCode" Type="varchar" MaxLength="50" />
+    <Property Name="BridgePart" Type="varchar" MaxLength="50" />
+    <Property Name="BeamType" Type="varchar" MaxLength="50" />
+    <Property Name="DeviceId" Type="varchar" MaxLength="50" />
+    <Property Name="TaiId" Type="varchar" MaxLength="50" />
+    <Property Name="Temperature" Type="float" />
+    <Property Name="Humidity" Type="float" />
+    <Property Name="Pressure" Type="float" />
+    <Property Name="IsManually" Type="int" />
+    <Property Name="ByTimes" Type="float" />
+    <Property Name="CurrentTime" Type="datetime" />
+    <Property Name="ValveStatus" Type="int" />
+    <Property Name="YhStatus" Type="int" />
+  </EntityType>
+  <EntityType Name="Yanghu_StatData">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ItemName" Type="varchar" MaxLength="50" />
+    <Property Name="ProjectName" Type="varchar" MaxLength="50" />
+    <Property Name="FactoryName" Type="varchar" MaxLength="50" />
+    <Property Name="BridgePart" Type="varchar" MaxLength="50" />
+    <Property Name="BeamType" Type="varchar" MaxLength="50" />
+    <Property Name="DeviceId" Type="varchar" MaxLength="50" />
+    <Property Name="TaiId" Type="varchar" MaxLength="50" />
+    <Property Name="Temperature" Type="float" />
+    <Property Name="Humidity" Type="float" />
+    <Property Name="Pressure" Type="float" />
+    <Property Name="IsManually" Type="int" />
+    <Property Name="ByTimes" Type="float" />
+    <Property Name="StartTime" Type="datetime" />
+    <Property Name="PengCount" Type="int" />
+    <Property Name="PengMinutes" Type="float" />
+    <Property Name="YhStatus" Type="int" />
+    <Property Name="LastValveStatus" Type="int" />
+    <Property Name="LastTime" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_Envionment_Data_Envionment_ProjectInfo">
+    <End Role="Envionment_ProjectInfo" Type="YuHuan_TrafficConstructionMISModel.Store.Envionment_ProjectInfo" Multiplicity="0..1" />
+    <End Role="Envionment_Data" Type="YuHuan_TrafficConstructionMISModel.Store.Envionment_Data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Envionment_ProjectInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Envionment_Data">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_Flow_Statistics_Tb_Flow_Page">
+    <End Role="Tb_Flow_Page" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_Flow_Page" Multiplicity="0..1" />
+    <End Role="Tb_Flow_Statistics" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_Flow_Statistics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Flow_Page">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_Flow_Statistics">
+        <PropertyRef Name="PageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_Flow_Visit_Tb_Flow_Page">
+    <End Role="Tb_Flow_Page" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_Flow_Page" Multiplicity="0..1" />
+    <End Role="Tb_Flow_Visit" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_Flow_Visit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Flow_Page">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_Flow_Visit">
+        <PropertyRef Name="PageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_Lab_Curve_Tb_Lab_Test">
+    <End Role="Tb_Lab_Test" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_Lab_Test" Multiplicity="0..1" />
+    <End Role="Tb_Lab_Curve" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_Lab_Curve" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Lab_Test">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_Lab_Curve">
+        <PropertyRef Name="TestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_Lab_Curve_Tb_Lab_Type">
+    <End Role="Tb_Lab_Type" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_Lab_Type" Multiplicity="0..1" />
+    <End Role="Tb_Lab_Curve" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_Lab_Curve" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Lab_Type">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_Lab_Curve">
+        <PropertyRef Name="TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_Lab_Test_Tb_Lab_Department">
+    <End Role="Tb_Lab_Department" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_Lab_Department" Multiplicity="1" />
+    <End Role="Tb_Lab_Test" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_Lab_Test" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Lab_Department">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_Lab_Test">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_Lab_Test_Tb_Lab_ProjectName">
+    <End Role="Tb_Lab_ProjectName" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_Lab_ProjectName" Multiplicity="1" />
+    <End Role="Tb_Lab_Test" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_Lab_Test" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Lab_ProjectName">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_Lab_Test">
+        <PropertyRef Name="TestItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_Lab_TestItem_Tb_Lab_Test">
+    <End Role="Tb_Lab_Test" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_Lab_Test" Multiplicity="1" />
+    <End Role="Tb_Lab_TestItem" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_Lab_TestItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Lab_Test">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_Lab_TestItem">
+        <PropertyRef Name="TestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_MixingPlant_Dosage_Tb_MixingPlant_Material">
+    <End Role="Tb_MixingPlant_Material" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_MixingPlant_Material" Multiplicity="0..1" />
+    <End Role="Tb_MixingPlant_Dosage" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_MixingPlant_Dosage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_MixingPlant_Material">
+        <PropertyRef Name="Id" />
+        <PropertyRef Name="DeviceFacId" />
+      </Principal>
+      <Dependent Role="Tb_MixingPlant_Dosage">
+        <PropertyRef Name="MaterialId" />
+        <PropertyRef Name="DeviceFacId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_MixingPlant_Dosage_Tb_MixingPlant_Piece">
+    <End Role="Tb_MixingPlant_Piece" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_MixingPlant_Piece" Multiplicity="0..1" />
+    <End Role="Tb_MixingPlant_Dosage" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_MixingPlant_Dosage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_MixingPlant_Piece">
+        <PropertyRef Name="Id" />
+        <PropertyRef Name="DeviceFacId" />
+      </Principal>
+      <Dependent Role="Tb_MixingPlant_Dosage">
+        <PropertyRef Name="PieceId" />
+        <PropertyRef Name="DeviceFacId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_MixingPlant_Piece_Tb_MixingPlant_Produce">
+    <End Role="Tb_MixingPlant_Produce" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_MixingPlant_Produce" Multiplicity="0..1" />
+    <End Role="Tb_MixingPlant_Piece" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_MixingPlant_Piece" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_MixingPlant_Produce">
+        <PropertyRef Name="Id" />
+        <PropertyRef Name="DeviceFacId" />
+      </Principal>
+      <Dependent Role="Tb_MixingPlant_Piece">
+        <PropertyRef Name="ProduceId" />
+        <PropertyRef Name="DeviceFacId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_MixingPlant_Produce_Tb_MixingPlant_Recipe">
+    <End Role="Tb_MixingPlant_Recipe" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_MixingPlant_Recipe" Multiplicity="0..1" />
+    <End Role="Tb_MixingPlant_Produce" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_MixingPlant_Produce" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_MixingPlant_Recipe">
+        <PropertyRef Name="Id" />
+        <PropertyRef Name="DeviceFacId" />
+      </Principal>
+      <Dependent Role="Tb_MixingPlant_Produce">
+        <PropertyRef Name="RecipeId" />
+        <PropertyRef Name="DeviceFacId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_MixingPlant_RecipeList_Tb_MixingPlant_Material">
+    <End Role="Tb_MixingPlant_Material" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_MixingPlant_Material" Multiplicity="0..1" />
+    <End Role="Tb_MixingPlant_RecipeList" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_MixingPlant_RecipeList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_MixingPlant_Material">
+        <PropertyRef Name="Id" />
+        <PropertyRef Name="DeviceFacId" />
+      </Principal>
+      <Dependent Role="Tb_MixingPlant_RecipeList">
+        <PropertyRef Name="MaterialId" />
+        <PropertyRef Name="DeviceFacId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_MixingPlant_RecipeList_Tb_MixingPlant_Recipe">
+    <End Role="Tb_MixingPlant_Recipe" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_MixingPlant_Recipe" Multiplicity="0..1" />
+    <End Role="Tb_MixingPlant_RecipeList" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_MixingPlant_RecipeList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_MixingPlant_Recipe">
+        <PropertyRef Name="Id" />
+        <PropertyRef Name="DeviceFacId" />
+      </Principal>
+      <Dependent Role="Tb_MixingPlant_RecipeList">
+        <PropertyRef Name="RecipeId" />
+        <PropertyRef Name="DeviceFacId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_YaJiang_Curve_Tb_YaJiang_Data">
+    <End Role="Tb_YaJiang_Data" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_YaJiang_Data" Multiplicity="0..1" />
+    <End Role="Tb_YaJiang_Curve" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_YaJiang_Curve" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_YaJiang_Data">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_YaJiang_Curve">
+        <PropertyRef Name="IDmx" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_YaJiang_Data_Tb_YaJiang_ProjectInfo">
+    <End Role="Tb_YaJiang_ProjectInfo" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_YaJiang_ProjectInfo" Multiplicity="0..1" />
+    <End Role="Tb_YaJiang_Data" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_YaJiang_Data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_YaJiang_ProjectInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_YaJiang_Data">
+        <PropertyRef Name="ProjectNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_YaJiang1_Curve_Tb_YaJiang1_Data">
+    <End Role="Tb_YaJiang1_Data" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_YaJiang1_Data" Multiplicity="0..1" />
+    <End Role="Tb_YaJiang1_Curve" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_YaJiang1_Curve" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_YaJiang1_Data">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_YaJiang1_Curve">
+        <PropertyRef Name="YJDataId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_YaJiang1_Data_Tb_YaJiang1_Device">
+    <End Role="Tb_YaJiang1_Device" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_YaJiang1_Device" Multiplicity="0..1" />
+    <End Role="Tb_YaJiang1_Data" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_YaJiang1_Data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_YaJiang1_Device">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_YaJiang1_Data">
+        <PropertyRef Name="DeviceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_YaJiang1_Device_Tb_YaJiang1_Project">
+    <End Role="Tb_YaJiang1_Project" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_YaJiang1_Project" Multiplicity="0..1" />
+    <End Role="Tb_YaJiang1_Device" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_YaJiang1_Device" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_YaJiang1_Project">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_YaJiang1_Device">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_ZhangLa_Curve_Tb_ZhangLa_Data">
+    <End Role="Tb_ZhangLa_Data" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_ZhangLa_Data" Multiplicity="0..1" />
+    <End Role="Tb_ZhangLa_Curve" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_ZhangLa_Curve" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_ZhangLa_Data">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_ZhangLa_Curve">
+        <PropertyRef Name="IDmx" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_ZhangLa1_Curve_Tb_ZhangLa1_Data">
+    <End Role="Tb_ZhangLa1_Data" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_ZhangLa1_Data" Multiplicity="0..1" />
+    <End Role="Tb_ZhangLa1_Curve" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_ZhangLa1_Curve" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_ZhangLa1_Data">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_ZhangLa1_Curve">
+        <PropertyRef Name="ZLDataId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_ZhangLa1_Data_Tb_ZhangLa1_Device">
+    <End Role="Tb_ZhangLa1_Device" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_ZhangLa1_Device" Multiplicity="0..1" />
+    <End Role="Tb_ZhangLa1_Data" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_ZhangLa1_Data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_ZhangLa1_Device">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_ZhangLa1_Data">
+        <PropertyRef Name="DeviceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_ZhangLa1_Device_Tb_ZhangLa1_Project">
+    <End Role="Tb_ZhangLa1_Project" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_ZhangLa1_Project" Multiplicity="0..1" />
+    <End Role="Tb_ZhangLa1_Device" Type="YuHuan_TrafficConstructionMISModel.Store.Tb_ZhangLa1_Device" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_ZhangLa1_Project">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_ZhangLa1_Device">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

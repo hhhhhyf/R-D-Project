@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8FBD668A-E31A-4C42-8F36-27B4F17DB188}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAL</RootNamespace>
+    <AssemblyName>DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseDAL.cs" />
+    <Compile Include="DBContextFactory.cs" />
+    <Compile Include="Envionment_DataDAL.cs" />
+    <Compile Include="Envionment_DeviceProjectDAL.cs" />
+    <Compile Include="Envionment_ProjectInfoDAL.cs" />
+    <Compile Include="Gyxp_StatDAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tb_Flow_PageDAL.cs" />
+    <Compile Include="Tb_Flow_StatisticsDAL.cs" />
+    <Compile Include="Tb_Flow_VisitDAL.cs" />
+    <Compile Include="Tb_Lab_CurveDAL.cs" />
+    <Compile Include="Tb_Lab_DepartmentDAL.cs" />
+    <Compile Include="Tb_Lab_ProjectNameDAL.cs" />
+    <Compile Include="Tb_Lab_TestDAL.cs" />
+    <Compile Include="Tb_Lab_TestItemDAL.cs" />
+    <Compile Include="Tb_Lab_TypeDAL.cs" />
+    <Compile Include="Tb_LoginDAL.cs" />
+    <Compile Include="Tb_Main_MenuDAL.cs" />
+    <Compile Include="Tb_MixingPlant_DeviceDAL.cs" />
+    <Compile Include="Tb_MixingPlant_DosageDAL.cs" />
+    <Compile Include="Tb_MixingPlant_MaterialDAL.cs" />
+    <Compile Include="Tb_MixingPlant_PieceDAL.cs" />
+    <Compile Include="Tb_MixingPlant_ProduceDAL.cs" />
+    <Compile Include="Tb_MixingPlant_RecipeDAL.cs" />
+    <Compile Include="Tb_MixingPlant_RecipeListDAL.cs" />
+    <Compile Include="GyxpDAL.cs" />
+    <Compile Include="Tb_YaJiang1_CurveDAL.cs" />
+    <Compile Include="Tb_YaJiang1_DataDAL.cs" />
+    <Compile Include="Tb_YaJiang1_DeviceDAL.cs" />
+    <Compile Include="Tb_YaJiang1_ProjectDAL.cs" />
+    <Compile Include="Tb_YaJiang_CurrentMonitorDAL.cs" />
+    <Compile Include="Tb_YaJiang_CurveDAL.cs" />
+    <Compile Include="Tb_YaJiang_DataDAL.cs" />
+    <Compile Include="Tb_YaJiang_ProjectDAL.cs" />
+    <Compile Include="Tb_YaJiang_ProjectInfoDAL.cs" />
+    <Compile Include="Tb_ZhangLa1_CurveDAL.cs" />
+    <Compile Include="Tb_ZhangLa1_DataDAL.cs" />
+    <Compile Include="Tb_ZhangLa1_DeviceDAL.cs" />
+    <Compile Include="Tb_ZhangLa1_ProjectDAL.cs" />
+    <Compile Include="Tb_ZhangLa_CurrentMonitorDAL.cs" />
+    <Compile Include="Tb_ZhangLa_CurveDAL.cs" />
+    <Compile Include="Tb_ZhangLa_DataDAL.cs" />
+    <Compile Include="Tb_ZhangLa_ProjectDAL.cs" />
+    <Compile Include="Tb_ZhangLa_ProjectInfoDAL.cs" />
+    <Compile Include="Yanghu_StatDataDAL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DbModel\DbModel.csproj">
+      <Project>{1cadd74a-2ee0-4617-909f-ac882c34343b}</Project>
+      <Name>DbModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IDAL\IDAL.csproj">
+      <Project>{3db00d1e-7df3-4d91-9f9d-d563f8752508}</Project>
+      <Name>IDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

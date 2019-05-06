@@ -1,0 +1,2131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{631E31EB-0FB5-4960-90B0-62D9505402BE}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebUI</RootNamespace>
+    <AssemblyName>WebUI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging">
+      <HintPath>..\Lib\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Commons">
+      <HintPath>..\Lib\Commons.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Spring.Core">
+      <HintPath>..\Lib\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Web">
+      <HintPath>..\Lib\Spring.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Web.Extensions">
+      <HintPath>..\Lib\Spring.Web.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Web.Mvc4">
+      <HintPath>..\Lib\Spring.Web.Mvc4.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\lib\net40\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.OAuth.2.0.20710.0\lib\net40\Microsoft.Web.WebPages.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.20710.0\lib\net40\WebMatrix.WebData.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.0.3.12153\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Assets\H+4.9\plugins\fullavatareditor\asp.net\c#\Upload.aspx.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controllers\MixingPlant_StatisticController.cs" />
+    <Compile Include="Controllers\Envionment_ActualTimeController.cs" />
+    <Compile Include="Controllers\Envionment_StatisticController.cs" />
+    <Compile Include="Controllers\EnvironmentController.cs" />
+    <Compile Include="Controllers\FlowController.cs" />
+    <Compile Include="Controllers\LabController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Controllers\MixingPlantController.cs" />
+    <Compile Include="Controllers\WeiXin_APIController.cs" />
+    <Compile Include="Controllers\XuanPenJi_StatisticController.cs" />
+    <Compile Include="Controllers\XuanPenJi_ActualTimeController.cs" />
+    <Compile Include="Controllers\YaJiang1Controller.cs" />
+    <Compile Include="Controllers\YaJiangAPIController.cs" />
+    <Compile Include="Controllers\YaJiangController.cs" />
+    <Compile Include="Controllers\YaJiangDataAPIController.cs" />
+    <Compile Include="Controllers\YangHuController.cs" />
+    <Compile Include="Controllers\ZhangLa1Controller.cs" />
+    <Compile Include="Controllers\ZhangLaAPIController.cs" />
+    <Compile Include="Controllers\ZhangLaController.cs" />
+    <Compile Include="Controllers\ZhangLaDataAPIController.cs" />
+    <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
+    <Compile Include="Filters\MyExceptionAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\H+4.9\.idea\modules.xml" />
+    <Content Include="Assets\H+4.9\.idea\workspace.xml" />
+    <Content Include="Assets\H+4.9\css\animate.css" />
+    <Content Include="Assets\H+4.9\css\bootstrap-rtl.css" />
+    <Content Include="Assets\H+4.9\css\bootstrap.min.css" />
+    <Content Include="Assets\H+4.9\css\demo\webuploader-demo.css" />
+    <Content Include="Assets\H+4.9\css\font-awesome.css" />
+    <Content Include="Assets\H+4.9\css\font-awesome.min.css" />
+    <Content Include="Assets\H+4.9\css\login.css" />
+    <Content Include="Assets\H+4.9\css\patterns\header-profile-skin-1.png" />
+    <Content Include="Assets\H+4.9\css\patterns\header-profile-skin-3.png" />
+    <Content Include="Assets\H+4.9\css\patterns\header-profile.png" />
+    <Content Include="Assets\H+4.9\css\patterns\shattered.png" />
+    <Content Include="Assets\H+4.9\css\plugins\awesome-bootstrap-checkbox\awesome-bootstrap-checkbox.css" />
+    <Content Include="Assets\H+4.9\css\plugins\blueimp\css\blueimp-gallery-indicator.css" />
+    <Content Include="Assets\H+4.9\css\plugins\blueimp\css\blueimp-gallery-video.css" />
+    <Content Include="Assets\H+4.9\css\plugins\blueimp\css\blueimp-gallery.css" />
+    <Content Include="Assets\H+4.9\css\plugins\blueimp\css\blueimp-gallery.min.css" />
+    <Content Include="Assets\H+4.9\css\plugins\blueimp\css\demo.css" />
+    <Content Include="Assets\H+4.9\css\plugins\blueimp\img\error.png" />
+    <Content Include="Assets\H+4.9\css\plugins\blueimp\img\error.svg" />
+    <Content Include="Assets\H+4.9\css\plugins\blueimp\img\loading.gif" />
+    <Content Include="Assets\H+4.9\css\plugins\blueimp\img\play-pause.png" />
+    <Content Include="Assets\H+4.9\css\plugins\blueimp\img\play-pause.svg" />
+    <Content Include="Assets\H+4.9\css\plugins\blueimp\img\video-play.png" />
+    <Content Include="Assets\H+4.9\css\plugins\blueimp\img\video-play.svg" />
+    <Content Include="Assets\H+4.9\css\plugins\bootstrap-table\bootstrap-table.min.css" />
+    <Content Include="Assets\H+4.9\css\plugins\chosen\chosen-sprite%402x.png" />
+    <Content Include="Assets\H+4.9\css\plugins\chosen\chosen-sprite.png" />
+    <Content Include="Assets\H+4.9\css\plugins\chosen\chosen.css" />
+    <Content Include="Assets\H+4.9\css\plugins\clockpicker\clockpicker.css" />
+    <Content Include="Assets\H+4.9\css\plugins\codemirror\ambiance.css" />
+    <Content Include="Assets\H+4.9\css\plugins\codemirror\codemirror.css" />
+    <Content Include="Assets\H+4.9\css\plugins\colorpicker\css\bootstrap-colorpicker.min.css" />
+    <Content Include="Assets\H+4.9\css\plugins\colorpicker\img\bootstrap-colorpicker\alpha-horizontal.png" />
+    <Content Include="Assets\H+4.9\css\plugins\colorpicker\img\bootstrap-colorpicker\alpha.png" />
+    <Content Include="Assets\H+4.9\css\plugins\colorpicker\img\bootstrap-colorpicker\hue-horizontal.png" />
+    <Content Include="Assets\H+4.9\css\plugins\colorpicker\img\bootstrap-colorpicker\hue.png" />
+    <Content Include="Assets\H+4.9\css\plugins\colorpicker\img\bootstrap-colorpicker\saturation.png" />
+    <Content Include="Assets\H+4.9\css\plugins\cropper\cropper.min.css" />
+    <Content Include="Assets\H+4.9\css\plugins\datapicker\datepicker3.css" />
+    <Content Include="Assets\H+4.9\css\plugins\dataTables\dataTables.bootstrap.css" />
+    <Content Include="Assets\H+4.9\css\plugins\dropzone\basic.css" />
+    <Content Include="Assets\H+4.9\css\plugins\dropzone\dropzone.css" />
+    <Content Include="Assets\H+4.9\css\plugins\duallistbox\bootstrap-duallistbox.css" />
+    <Content Include="Assets\H+4.9\css\plugins\footable\fonts\footable.svg" />
+    <Content Include="Assets\H+4.9\css\plugins\footable\footable.core.css" />
+    <Content Include="Assets\H+4.9\css\plugins\fullcalendar\fullcalendar.css" />
+    <Content Include="Assets\H+4.9\css\plugins\fullcalendar\fullcalendar.print.css" />
+    <Content Include="Assets\H+4.9\css\plugins\iCheck\custom.css" />
+    <Content Include="Assets\H+4.9\css\plugins\iCheck\green%402x.png" />
+    <Content Include="Assets\H+4.9\css\plugins\iCheck\green.png" />
+    <Content Include="Assets\H+4.9\css\plugins\images\sort_asc.png" />
+    <Content Include="Assets\H+4.9\css\plugins\images\sort_desc.png" />
+    <Content Include="Assets\H+4.9\css\plugins\images\sprite-skin-flat.png" />
+    <Content Include="Assets\H+4.9\css\plugins\images\spritemap%402x.png" />
+    <Content Include="Assets\H+4.9\css\plugins\images\spritemap.png" />
+    <Content Include="Assets\H+4.9\css\plugins\ionRangeSlider\ion.rangeSlider.css" />
+    <Content Include="Assets\H+4.9\css\plugins\ionRangeSlider\ion.rangeSlider.skinFlat.css" />
+    <Content Include="Assets\H+4.9\css\plugins\jasny\jasny-bootstrap.min.css" />
+    <Content Include="Assets\H+4.9\css\plugins\jqgrid\ui.jqgrid.css" />
+    <Content Include="Assets\H+4.9\css\plugins\jQueryUI\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Assets\H+4.9\css\plugins\jQueryUI\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Assets\H+4.9\css\plugins\jQueryUI\images\ui-icons_222222_256x240.png" />
+    <Content Include="Assets\H+4.9\css\plugins\jQueryUI\images\ui-icons_454545_256x240.png" />
+    <Content Include="Assets\H+4.9\css\plugins\jQueryUI\images\ui-icons_888888_256x240.png" />
+    <Content Include="Assets\H+4.9\css\plugins\jQueryUI\jquery-ui-1.10.4.custom.min.css" />
+    <Content Include="Assets\H+4.9\css\plugins\jsTree\32px.png" />
+    <Content Include="Assets\H+4.9\css\plugins\jsTree\style.min.css" />
+    <Content Include="Assets\H+4.9\css\plugins\jsTree\throbber.gif" />
+    <Content Include="Assets\H+4.9\css\plugins\markdown\bootstrap-markdown.min.css" />
+    <Content Include="Assets\H+4.9\css\plugins\morris\morris-0.4.3.min.css" />
+    <Content Include="Assets\H+4.9\css\plugins\multiselect\bootstrap-multiselect.css" />
+    <Content Include="Assets\H+4.9\css\plugins\nouslider\jquery.nouislider.css" />
+    <Content Include="Assets\H+4.9\css\plugins\plyr\plyr.css" />
+    <Content Include="Assets\H+4.9\css\plugins\plyr\sprite.svg" />
+    <Content Include="Assets\H+4.9\css\plugins\simditor\simditor.css" />
+    <Content Include="Assets\H+4.9\css\plugins\steps\jquery.steps.css" />
+    <Content Include="Assets\H+4.9\css\plugins\summernote\summernote-bs3.css" />
+    <Content Include="Assets\H+4.9\css\plugins\summernote\summernote.css" />
+    <Content Include="Assets\H+4.9\css\plugins\sweetalert\sweetalert.css" />
+    <Content Include="Assets\H+4.9\css\plugins\switchery\switchery.css" />
+    <Content Include="Assets\H+4.9\css\plugins\toastr\toastr.min.css" />
+    <Content Include="Assets\H+4.9\css\plugins\treeview\bootstrap-treeview.css" />
+    <Content Include="Assets\H+4.9\css\plugins\webuploader\webuploader.css" />
+    <Content Include="Assets\H+4.9\css\style.css" />
+    <Content Include="Assets\H+4.9\docs\img\index_4.png" />
+    <Content Include="Assets\H+4.9\docs\img\page.png" />
+    <Content Include="Assets\H+4.9\docs\img\preview.png" />
+    <Content Include="Assets\H+4.9\docs\img\rtl_support.png" />
+    <Content Include="Assets\H+4.9\docs\index.html" />
+    <Content Include="Assets\H+4.9\docs\js\prettify.css" />
+    <Content Include="Assets\H+4.9\docs\js\prettify.js" />
+    <Content Include="Assets\H+4.9\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\H+4.9\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Assets\H+4.9\img\a1.jpg" />
+    <Content Include="Assets\H+4.9\img\a2.jpg" />
+    <Content Include="Assets\H+4.9\img\a3.jpg" />
+    <Content Include="Assets\H+4.9\img\a4.jpg" />
+    <Content Include="Assets\H+4.9\img\a5.jpg" />
+    <Content Include="Assets\H+4.9\img\a6.jpg" />
+    <Content Include="Assets\H+4.9\img\a7.jpg" />
+    <Content Include="Assets\H+4.9\img\a8.jpg" />
+    <Content Include="Assets\H+4.9\img\a9.jpg" />
+    <Content Include="Assets\H+4.9\img\bg.png" />
+    <Content Include="Assets\H+4.9\img\browser.png" />
+    <Content Include="Assets\H+4.9\img\iconfont-logo.png" />
+    <Content Include="Assets\H+4.9\img\icons.png" />
+    <Content Include="Assets\H+4.9\img\index.jpg" />
+    <Content Include="Assets\H+4.9\img\index_4.jpg" />
+    <Content Include="Assets\H+4.9\img\loading-upload.gif" />
+    <Content Include="Assets\H+4.9\img\locked.png" />
+    <Content Include="Assets\H+4.9\img\login-background.jpg" />
+    <Content Include="Assets\H+4.9\img\p1.jpg" />
+    <Content Include="Assets\H+4.9\img\p2.jpg" />
+    <Content Include="Assets\H+4.9\img\p3.jpg" />
+    <Content Include="Assets\H+4.9\img\pay.png" />
+    <Content Include="Assets\H+4.9\img\profile.jpg" />
+    <Content Include="Assets\H+4.9\img\profile_big.jpg" />
+    <Content Include="Assets\H+4.9\img\profile_small.jpg" />
+    <Content Include="Assets\H+4.9\img\progress.png" />
+    <Content Include="Assets\H+4.9\img\p_big1.jpg" />
+    <Content Include="Assets\H+4.9\img\p_big2.jpg" />
+    <Content Include="Assets\H+4.9\img\p_big3.jpg" />
+    <Content Include="Assets\H+4.9\img\qr_code.png" />
+    <Content Include="Assets\H+4.9\img\sprite-skin-flat.png" />
+    <Content Include="Assets\H+4.9\img\success.png" />
+    <Content Include="Assets\H+4.9\img\user.png" />
+    <Content Include="Assets\H+4.9\img\webuploader.png" />
+    <Content Include="Assets\H+4.9\img\wenku_logo.png" />
+    <Content Include="Assets\H+4.9\js\bootstrap.min.js" />
+    <Content Include="Assets\H+4.9\js\contabs.js" />
+    <Content Include="Assets\H+4.9\js\content.js" />
+    <Content Include="Assets\H+4.9\js\demo\bootstrap-table-demo.js" />
+    <Content Include="Assets\H+4.9\js\demo\echarts-demo.js" />
+    <Content Include="Assets\H+4.9\js\demo\flot-demo.js" />
+    <Content Include="Assets\H+4.9\js\demo\form-advanced-demo.js" />
+    <Content Include="Assets\H+4.9\js\demo\form-validate-demo.js" />
+    <Content Include="Assets\H+4.9\js\demo\layer-demo.js" />
+    <Content Include="Assets\H+4.9\js\demo\morris-demo.js" />
+    <Content Include="Assets\H+4.9\js\demo\peity-demo.js" />
+    <Content Include="Assets\H+4.9\js\demo\rickshaw-demo.js" />
+    <Content Include="Assets\H+4.9\js\demo\sparkline-demo.js" />
+    <Content Include="Assets\H+4.9\js\demo\treeview-demo.js" />
+    <Content Include="Assets\H+4.9\js\demo\webuploader-demo.js" />
+    <Content Include="Assets\H+4.9\js\hplus.js" />
+    <Content Include="Assets\H+4.9\js\jquery-ui-1.10.4.min.js" />
+    <Content Include="Assets\H+4.9\js\jquery-ui.custom.min.js" />
+    <Content Include="Assets\H+4.9\js\jquery.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\beautifyhtml\beautifyhtml.js" />
+    <Content Include="Assets\H+4.9\js\plugins\blueimp\jquery.blueimp-gallery.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\bootstrap-table\bootstrap-table-mobile.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\bootstrap-table\bootstrap-table.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\bootstrap-table\locale\bootstrap-table-zh-CN.js" />
+    <Content Include="Assets\H+4.9\js\plugins\bootstrap-table\locale\bootstrap-table-zh-CN.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\chartJs\Chart.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\chosen\chosen.jquery.js" />
+    <Content Include="Assets\H+4.9\js\plugins\clockpicker\clockpicker.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\codemirror.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\apl\apl.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\apl\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\asterisk\asterisk.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\asterisk\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\clike\clike.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\clike\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\clike\scala.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\clojure\clojure.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\clojure\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\cobol\cobol.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\cobol\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\coffeescript\coffeescript.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\coffeescript\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\commonlisp\commonlisp.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\commonlisp\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\css\css.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\css\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\css\less.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\css\less_test.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\css\scss.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\css\scss_test.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\css\test.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\cypher\cypher.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\cypher\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\dart\dart.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\dart\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\diff\diff.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\diff\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\django\django.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\django\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\dockerfile\dockerfile.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\dockerfile\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\dtd\dtd.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\dtd\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\dylan\dylan.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\dylan\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\d\d.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\d\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\ebnf\ebnf.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\ebnf\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\ecl\ecl.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\ecl\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\eiffel\eiffel.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\eiffel\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\erlang\erlang.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\erlang\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\fortran\fortran.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\fortran\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\gas\gas.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\gas\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\gfm\gfm.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\gfm\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\gfm\test.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\gherkin\gherkin.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\gherkin\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\go\go.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\go\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\groovy\groovy.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\groovy\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\haml\haml.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\haml\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\haml\test.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\haskell\haskell.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\haskell\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\haxe\haxe.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\haxe\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\htmlembedded\htmlembedded.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\htmlembedded\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\htmlmixed\htmlmixed.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\htmlmixed\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\http\http.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\http\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\idl\idl.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\idl\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\jade\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\jade\jade.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\javascript\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\javascript\javascript.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\javascript\json-ld.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\javascript\test.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\javascript\typescript.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\jinja2\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\jinja2\jinja2.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\julia\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\julia\julia.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\kotlin\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\kotlin\kotlin.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\livescript\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\livescript\livescript.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\lua\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\lua\lua.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\markdown\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\markdown\markdown.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\markdown\test.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\meta.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\mirc\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\mirc\mirc.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\mllike\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\mllike\mllike.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\modelica\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\modelica\modelica.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\nginx\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\nginx\nginx.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\ntriples\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\ntriples\ntriples.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\octave\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\octave\octave.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\pascal\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\pascal\pascal.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\pegjs\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\pegjs\pegjs.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\perl\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\perl\perl.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\php\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\php\php.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\php\test.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\pig\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\pig\pig.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\properties\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\properties\properties.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\puppet\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\puppet\puppet.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\python\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\python\python.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\q\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\q\q.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\rpm\changes\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\rpm\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\rpm\rpm.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\rst\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\rst\rst.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\ruby\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\ruby\ruby.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\ruby\test.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\rust\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\rust\rust.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\r\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\r\r.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\sass\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\sass\sass.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\scheme\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\scheme\scheme.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\shell\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\shell\shell.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\shell\test.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\sieve\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\sieve\sieve.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\slim\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\slim\slim.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\slim\test.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\smalltalk\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\smalltalk\smalltalk.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\smartymixed\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\smartymixed\smartymixed.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\smarty\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\smarty\smarty.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\solr\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\solr\solr.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\soy\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\soy\soy.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\sparql\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\sparql\sparql.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\spreadsheet\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\spreadsheet\spreadsheet.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\sql\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\sql\sql.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\stex\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\stex\stex.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\stex\test.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\tcl\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\tcl\tcl.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\textile\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\textile\test.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\textile\textile.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\tiddlywiki\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\tiddlywiki\tiddlywiki.css" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\tiddlywiki\tiddlywiki.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\tiki\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\tiki\tiki.css" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\tiki\tiki.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\toml\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\toml\toml.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\tornado\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\tornado\tornado.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\turtle\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\turtle\turtle.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\vbscript\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\vbscript\vbscript.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\vb\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\vb\vb.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\velocity\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\velocity\velocity.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\verilog\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\verilog\test.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\verilog\verilog.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\xml\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\xml\test.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\xml\xml.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\xquery\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\xquery\test.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\xquery\xquery.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\yaml\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\yaml\yaml.js" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\z80\index.html" />
+    <Content Include="Assets\H+4.9\js\plugins\codemirror\mode\z80\z80.js" />
+    <Content Include="Assets\H+4.9\js\plugins\colorpicker\bootstrap-colorpicker.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\cropper\cropper.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\datapicker\bootstrap-datepicker.js" />
+    <Content Include="Assets\H+4.9\js\plugins\dataTables\dataTables.bootstrap.js" />
+    <Content Include="Assets\H+4.9\js\plugins\dataTables\jquery.dataTables.js" />
+    <Content Include="Assets\H+4.9\js\plugins\diff_match_patch\diff_match_patch.js" />
+    <Content Include="Assets\H+4.9\js\plugins\dropzone\dropzone.js" />
+    <Content Include="Assets\H+4.9\js\plugins\duallistbox\jquery.bootstrap-duallistbox.js" />
+    <Content Include="Assets\H+4.9\js\plugins\easypiechart\jquery.easypiechart.js" />
+    <Content Include="Assets\H+4.9\js\plugins\echarts\echarts-all.js" />
+    <Content Include="Assets\H+4.9\js\plugins\fancybox\blank.gif" />
+    <Content Include="Assets\H+4.9\js\plugins\fancybox\fancybox_loading%402x.gif" />
+    <Content Include="Assets\H+4.9\js\plugins\fancybox\fancybox_loading.gif" />
+    <Content Include="Assets\H+4.9\js\plugins\fancybox\fancybox_overlay.png" />
+    <Content Include="Assets\H+4.9\js\plugins\fancybox\fancybox_sprite%402x.png" />
+    <Content Include="Assets\H+4.9\js\plugins\fancybox\fancybox_sprite.png" />
+    <Content Include="Assets\H+4.9\js\plugins\fancybox\jquery.fancybox.css" />
+    <Content Include="Assets\H+4.9\js\plugins\fancybox\jquery.fancybox.js" />
+    <Content Include="Assets\H+4.9\js\plugins\flot\curvedLines.js" />
+    <Content Include="Assets\H+4.9\js\plugins\flot\jquery.flot.js" />
+    <Content Include="Assets\H+4.9\js\plugins\flot\jquery.flot.pie.js" />
+    <Content Include="Assets\H+4.9\js\plugins\flot\jquery.flot.resize.js" />
+    <Content Include="Assets\H+4.9\js\plugins\flot\jquery.flot.spline.js" />
+    <Content Include="Assets\H+4.9\js\plugins\flot\jquery.flot.symbol.js" />
+    <Content Include="Assets\H+4.9\js\plugins\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\footable\footable.all.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\fullcalendar\fullcalendar.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\fullcalendar\moment.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\gritter\images\gritter-light.png" />
+    <Content Include="Assets\H+4.9\js\plugins\gritter\images\gritter.png" />
+    <Content Include="Assets\H+4.9\js\plugins\gritter\images\ie-spacer.gif" />
+    <Content Include="Assets\H+4.9\js\plugins\gritter\jquery.gritter.css" />
+    <Content Include="Assets\H+4.9\js\plugins\gritter\jquery.gritter.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\iCheck\icheck.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\ionRangeSlider\ion.rangeSlider.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\ionRangeSlider\jasny\jasny-bootstrap.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\jasny\jasny-bootstrap.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\jeditable\jquery.jeditable.js" />
+    <Content Include="Assets\H+4.9\js\plugins\jqgrid\i18n\grid.locale-cn.js" />
+    <Content Include="Assets\H+4.9\js\plugins\jqgrid\jquery.jqGrid.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\jquery-ui\jquery-ui.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\jsKnob\jquery.knob.js" />
+    <Content Include="Assets\H+4.9\js\plugins\jsTree\jstree.js" />
+    <Content Include="Assets\H+4.9\js\plugins\jsTree\jstree.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\jvectormap\jquery-jvectormap-1.2.2.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\jvectormap\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\extend\layer.ext.js" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\laydate\laydate.js" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\laydate\need\laydate.css" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\laydate\skins\default\icon.png" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\laydate\skins\default\laydate.css" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\layer.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\layim\layim.css" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\layim\layim.js" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\layim\loading.gif" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\mobile\layer.js" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\mobile\need\layer.css" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\skin\default\icon-ext.png" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\skin\default\icon.png" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\skin\default\icon_ext.png" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\skin\default\loading-0.gif" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\skin\default\loading-1.gif" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\skin\default\loading-2.gif" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\skin\default\textbg.png" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\skin\default\xubox_ico0.png" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\skin\default\xubox_loading0.gif" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\skin\default\xubox_loading1.gif" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\skin\default\xubox_loading2.gif" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\skin\default\xubox_loading3.gif" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\skin\default\xubox_title0.png" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\skin\layer.css" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\skin\layer.ext.css" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\skin\moon\default.png" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\skin\moon\style.css" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\theme\default\icon-ext.png" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\theme\default\icon.png" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\theme\default\layer.css" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\theme\default\loading-0.gif" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\theme\default\loading-1.gif" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\theme\default\loading-2.gif" />
+    <Content Include="Assets\H+4.9\js\plugins\markdown\bootstrap-markdown.js" />
+    <Content Include="Assets\H+4.9\js\plugins\markdown\bootstrap-markdown.zh.js" />
+    <Content Include="Assets\H+4.9\js\plugins\markdown\markdown.js" />
+    <Content Include="Assets\H+4.9\js\plugins\markdown\to-markdown.js" />
+    <Content Include="Assets\H+4.9\js\plugins\metisMenu\jquery.metisMenu.js" />
+    <Content Include="Assets\H+4.9\js\plugins\morris\morris.js" />
+    <Content Include="Assets\H+4.9\js\plugins\morris\raphael-2.1.0.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\multiselect\bootstrap-multiselect.js" />
+    <Content Include="Assets\H+4.9\js\plugins\nestable\jquery.nestable.js" />
+    <Content Include="Assets\H+4.9\js\plugins\nouslider\jquery.nouislider.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\pace\pace.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\peity\jquery.peity.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\plyr\plyr.js" />
+    <Content Include="Assets\H+4.9\js\plugins\preetyTextDiff\jquery.pretty-text-diff.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\prettyfile\bootstrap-prettyfile.js" />
+    <Content Include="Assets\H+4.9\js\plugins\rickshaw\rickshaw.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\rickshaw\vendor\d3.v3.js" />
+    <Content Include="Assets\H+4.9\js\plugins\simditor\hotkeys.js" />
+    <Content Include="Assets\H+4.9\js\plugins\simditor\hotkeys.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\simditor\jquery.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\simditor\module.js" />
+    <Content Include="Assets\H+4.9\js\plugins\simditor\module.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\simditor\simditor.js" />
+    <Content Include="Assets\H+4.9\js\plugins\simditor\simditor.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\simditor\uploader.js" />
+    <Content Include="Assets\H+4.9\js\plugins\simditor\uploader.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\slimscroll\jquery.slimscroll.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\sparkline\jquery.sparkline.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\staps\jquery.steps.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\suggest\bootstrap-suggest.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\summernote\summernote-zh-CN.js" />
+    <Content Include="Assets\H+4.9\js\plugins\summernote\summernote.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\sweetalert\sweetalert.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\switchery\switchery.js" />
+    <Content Include="Assets\H+4.9\js\plugins\toastr\toastr.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\treeview\bootstrap-treeview.js" />
+    <Content Include="Assets\H+4.9\js\plugins\validate\additional-methods.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\validate\jquery.validate.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\validate\messages_zh.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\webuploader\Uploader.swf" />
+    <Content Include="Assets\H+4.9\js\plugins\webuploader\webuploader.css" />
+    <Content Include="Assets\H+4.9\js\plugins\webuploader\webuploader.custom.js" />
+    <Content Include="Assets\H+4.9\js\plugins\webuploader\webuploader.custom.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\webuploader\webuploader.fis.js" />
+    <Content Include="Assets\H+4.9\js\plugins\webuploader\webuploader.flashonly.js" />
+    <Content Include="Assets\H+4.9\js\plugins\webuploader\webuploader.flashonly.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\webuploader\webuploader.html5only.js" />
+    <Content Include="Assets\H+4.9\js\plugins\webuploader\webuploader.html5only.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\webuploader\webuploader.js" />
+    <Content Include="Assets\H+4.9\js\plugins\webuploader\webuploader.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\webuploader\webuploader.noimage.js" />
+    <Content Include="Assets\H+4.9\js\plugins\webuploader\webuploader.noimage.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\webuploader\webuploader.nolog.js" />
+    <Content Include="Assets\H+4.9\js\plugins\webuploader\webuploader.nolog.min.js" />
+    <Content Include="Assets\H+4.9\js\plugins\webuploader\webuploader.withoutimage.js" />
+    <Content Include="Assets\H+4.9\js\plugins\webuploader\webuploader.withoutimage.min.js" />
+    <Content Include="Assets\H+4.9\js\welcome.js" />
+    <Content Include="Assets\H+4.9\plugins\fullavatareditor\asp.net\c#\bin\Newtonsoft.Json.dll" />
+    <Content Include="Assets\H+4.9\plugins\fullavatareditor\asp.net\c#\Upload.aspx" />
+    <Content Include="Assets\H+4.9\plugins\fullavatareditor\asp.net\vb\bin\Newtonsoft.Json.dll" />
+    <Content Include="Assets\H+4.9\plugins\fullavatareditor\asp.net\vb\Upload.aspx" />
+    <Content Include="Assets\H+4.9\plugins\fullavatareditor\asp.net\vb\Upload.aspx.vb" />
+    <Content Include="Assets\H+4.9\plugins\fullavatareditor\asp\Upload.asp" />
+    <Content Include="Assets\H+4.9\plugins\fullavatareditor\asp\Upload.asp.cls" />
+    <Content Include="Assets\H+4.9\plugins\fullavatareditor\crossdomain.xml" />
+    <Content Include="Assets\H+4.9\plugins\fullavatareditor\expressInstall.swf" />
+    <Content Include="Assets\H+4.9\plugins\fullavatareditor\fullAvatarEditor.swf" />
+    <Content Include="Assets\H+4.9\plugins\fullavatareditor\jsp\WEB-INF\lib\commons-fileupload-1.3.jar" />
+    <Content Include="Assets\H+4.9\plugins\fullavatareditor\jsp\WEB-INF\lib\fastjson-1.1.9.jar" />
+    <Content Include="Assets\H+4.9\plugins\fullavatareditor\scripts\fullAvatarEditor.js" />
+    <Content Include="Assets\H+4.9\plugins\fullavatareditor\scripts\jQuery.Cookie.js" />
+    <Content Include="Assets\H+4.9\plugins\fullavatareditor\scripts\jQuery.dialog.js" />
+    <Content Include="Assets\H+4.9\plugins\fullavatareditor\scripts\jQuery.Drag.js" />
+    <Content Include="Assets\H+4.9\plugins\fullavatareditor\scripts\jQuery.Resize.js" />
+    <Content Include="Assets\H+4.9\plugins\fullavatareditor\scripts\swfobject.js" />
+    <Content Include="Assets\H+4.9\plugins\fullavatareditor\scripts\test.js" />
+    <Content Include="Assets\H+4.9\plugins\fullavatareditor\simpleDemo.html" />
+    <Content Include="Assets\H+4.9\__MACOSX\img\._pay.png" />
+    <Content Include="Assets\H+4.9\__MACOSX\js\plugins\echarts\._echarts-all.js" />
+    <Content Include="Assets\H+4.9\__MACOSX\js\plugins\layer\._layer.min.js" />
+    <Content Include="Assets\H+4.9\__MACOSX\js\plugins\layer\extend\._layer.ext.js" />
+    <Content Include="Assets\H+4.9\__MACOSX\js\plugins\suggest\._bootstrap-suggest.min.js" />
+    <Content Include="Assets\H+4.9\__MACOSX\js\plugins\webuploader\._Uploader.swf" />
+    <Content Include="Assets\H+4.9\__MACOSX\js\plugins\webuploader\._webuploader.css" />
+    <Content Include="Assets\H+4.9\__MACOSX\js\plugins\webuploader\._webuploader.custom.js" />
+    <Content Include="Assets\H+4.9\__MACOSX\js\plugins\webuploader\._webuploader.custom.min.js" />
+    <Content Include="Assets\H+4.9\__MACOSX\js\plugins\webuploader\._webuploader.fis.js" />
+    <Content Include="Assets\H+4.9\__MACOSX\js\plugins\webuploader\._webuploader.flashonly.js" />
+    <Content Include="Assets\H+4.9\__MACOSX\js\plugins\webuploader\._webuploader.flashonly.min.js" />
+    <Content Include="Assets\H+4.9\__MACOSX\js\plugins\webuploader\._webuploader.html5only.js" />
+    <Content Include="Assets\H+4.9\__MACOSX\js\plugins\webuploader\._webuploader.html5only.min.js" />
+    <Content Include="Assets\H+4.9\__MACOSX\js\plugins\webuploader\._webuploader.js" />
+    <Content Include="Assets\H+4.9\__MACOSX\js\plugins\webuploader\._webuploader.min.js" />
+    <Content Include="Assets\H+4.9\__MACOSX\js\plugins\webuploader\._webuploader.noimage.js" />
+    <Content Include="Assets\H+4.9\__MACOSX\js\plugins\webuploader\._webuploader.noimage.min.js" />
+    <Content Include="Assets\H+4.9\__MACOSX\js\plugins\webuploader\._webuploader.nolog.js" />
+    <Content Include="Assets\H+4.9\__MACOSX\js\plugins\webuploader\._webuploader.nolog.min.js" />
+    <Content Include="Assets\H+4.9\__MACOSX\js\plugins\webuploader\._webuploader.withoutimage.js" />
+    <Content Include="Assets\H+4.9\__MACOSX\js\plugins\webuploader\._webuploader.withoutimage.min.js" />
+    <Content Include="Assets\Infinity\assets\css\app.css" />
+    <Content Include="Assets\Infinity\assets\css\app.min.css" />
+    <Content Include="Assets\Infinity\assets\css\bootstrap.css" />
+    <Content Include="Assets\Infinity\assets\css\core.css" />
+    <Content Include="Assets\Infinity\assets\css\landing-page.css" />
+    <Content Include="Assets\Infinity\assets\css\misc-pages.css" />
+    <Content Include="Assets\Infinity\assets\fonts\bootstrap\glyphicons-halflings-regular.svg" />
+    <Content Include="Assets\Infinity\assets\images\001.jpg" />
+    <Content Include="Assets\Infinity\assets\images\002.jpg" />
+    <Content Include="Assets\Infinity\assets\images\003.jpg" />
+    <Content Include="Assets\Infinity\assets\images\101.jpg" />
+    <Content Include="Assets\Infinity\assets\images\102.jpg" />
+    <Content Include="Assets\Infinity\assets\images\103.jpg" />
+    <Content Include="Assets\Infinity\assets\images\104.jpg" />
+    <Content Include="Assets\Infinity\assets\images\105.jpg" />
+    <Content Include="Assets\Infinity\assets\images\201.jpg" />
+    <Content Include="Assets\Infinity\assets\images\202.jpg" />
+    <Content Include="Assets\Infinity\assets\images\203.jpg" />
+    <Content Include="Assets\Infinity\assets\images\204.jpg" />
+    <Content Include="Assets\Infinity\assets\images\205.jpg" />
+    <Content Include="Assets\Infinity\assets\images\206.jpg" />
+    <Content Include="Assets\Infinity\assets\images\207.jpg" />
+    <Content Include="Assets\Infinity\assets\images\208.jpg" />
+    <Content Include="Assets\Infinity\assets\images\209.jpg" />
+    <Content Include="Assets\Infinity\assets\images\210.jpg" />
+    <Content Include="Assets\Infinity\assets\images\211.jpg" />
+    <Content Include="Assets\Infinity\assets\images\212.jpg" />
+    <Content Include="Assets\Infinity\assets\images\213.jpg" />
+    <Content Include="Assets\Infinity\assets\images\214.jpg" />
+    <Content Include="Assets\Infinity\assets\images\215.jpg" />
+    <Content Include="Assets\Infinity\assets\images\216.jpg" />
+    <Content Include="Assets\Infinity\assets\images\217.jpg" />
+    <Content Include="Assets\Infinity\assets\images\218.jpg" />
+    <Content Include="Assets\Infinity\assets\images\219.jpg" />
+    <Content Include="Assets\Infinity\assets\images\220.jpg" />
+    <Content Include="Assets\Infinity\assets\images\221.jpg" />
+    <Content Include="Assets\Infinity\assets\images\222.jpg" />
+    <Content Include="Assets\Infinity\assets\images\223.jpg" />
+    <Content Include="Assets\Infinity\assets\images\flags\Afghanistan.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Albania.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Algeria.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Andorra.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Antigua-and-Barbuda.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Argentina.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Armenia.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Australia.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Austria.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Azerbaijan.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Bahamas.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Bahrain.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Bangladesh.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Barbados.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Belarus.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Belgium.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Belize.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Benin.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Bhutan.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Bolivia.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Bosnia-and-Herzegovina.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Botswana.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Brazil.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Brunei.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Bulgaria.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Burkina-Faso.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Burundi.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Cambodia.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Cameroon.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Canada.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Cape-Verde.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Central-African-Republic.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Chad.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Chile.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\China.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Colombia.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Comoros.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Congo-%28Democratic%29.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Congo-%28Republic%29.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Costa-Rica.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Cote-d%27Ivoire.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Croatia.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Cuba.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Cyprus.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Czech-Republic.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Denmark.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Djibouti.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Dominica.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Dominican-Republic.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\East-Timor.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Ecuador.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Egypt.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\El-Salvador.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Equatorial-Guinea.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Eritrea.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Estonia.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Ethiopia.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Fiji.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Finland.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\France.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Gabon.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Gambia.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Georgia.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Germany.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Ghana.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Grecee.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Grenada.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Guatemala.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Guinea-Bissau.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Guinea.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Guyana.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Haiti.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Honduras.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Hungary.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Iceland.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\India.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Indonesia.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Iran.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Iraq.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Ireland.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Israel.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Italy.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Jamaica.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Japan.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Jordan.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Kazakhstan.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Kenya.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Kiribati.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Korea,-North.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Korea,-South.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Kosovo.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Kuwait.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Kyrgyzstan.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Laos.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Latvia.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Lebanon.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Lesotho.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Liberia.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Libya.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Liechtenstein.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Lithuania.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Luxembourg.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Macedonia.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Madagascar.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Malawi.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Malaysia.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Maldives.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Mali.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Malta.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Marshall-Islands.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Mauritania.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Mauritius.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Mexico.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Micronesia-%28Federated%29.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Moldova.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Monaco.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Mongolia.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Montenegro.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Morocco.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Mozambique.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Myanmar.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Namibia.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Nauru.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Nepal.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Netherlands.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\New-Zealand.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Nicaragua.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Niger.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Nigeria.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Norway.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Oman.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Pakistan.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Palau.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Panama.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Papua-New-Guinea.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Paraguay.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Peru.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Philippines.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Poland.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Portugal.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Qatar.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Romania.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Russia.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Rwanda.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Saint-Kitts-and-Nevis.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Saint-Lucia.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Saint-Vincent-and-the-Grenadines.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Samoa.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\San-Marino.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Sao-Tome-and-Principe.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Saudi-Arabia.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Senegal.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Serbia.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Seychelles.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Sierra-Leone.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Singapore.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Slovakia.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Slovenia.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Solomon-Islands.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Somalia.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\South-Africa.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\South-Sudan.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Spain.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Sri-Lanka.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Sudan.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Suriname.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Swaziland.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Sweden.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Switzerland.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Syria.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Taiwan.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Tajikistan.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Tanzania.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Thailand.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Togo.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Tonga.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Trinidad-and-Tobago.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Tunisia.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Turkey.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Turkmenistan.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Tuvalu.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Uganda.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Ukraine.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\United-Arab-Emirates.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\United-Kingdom.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\United-States-of-America.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Uruguay.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Uzbekistan.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Vanuatu.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Vatican-City.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Venezuela.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Vietnam.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Yemen.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Zambia.png" />
+    <Content Include="Assets\Infinity\assets\images\flags\Zimbabwe.png" />
+    <Content Include="Assets\Infinity\assets\images\index\defalut-demo-3.png" />
+    <Content Include="Assets\Infinity\assets\images\index\default-demo-1.png" />
+    <Content Include="Assets\Infinity\assets\images\index\default-demo-2.png" />
+    <Content Include="Assets\Infinity\assets\images\index\default-demo-3.png" />
+    <Content Include="Assets\Infinity\assets\images\index\infinity-logo.png" />
+    <Content Include="Assets\Infinity\assets\images\index\landing-page-baner.png" />
+    <Content Include="Assets\Infinity\assets\images\index\topbar-demo-1.png" />
+    <Content Include="Assets\Infinity\assets\images\index\topbar-demo-2.png" />
+    <Content Include="Assets\Infinity\assets\images\index\topbar-demo-3.png" />
+    <Content Include="Assets\Infinity\assets\images\landing-page\header-bg.jpg" />
+    <Content Include="Assets\Infinity\assets\images\landing-page\img-1.jpg" />
+    <Content Include="Assets\Infinity\assets\images\landing-page\play-icon.png" />
+    <Content Include="Assets\Infinity\assets\images\landing-page\project-img.png" />
+    <Content Include="Assets\Infinity\assets\images\landing-page\puff.svg" />
+    <Content Include="Assets\Infinity\assets\images\landing-page\talk-bubble.png" />
+    <Content Include="Assets\Infinity\assets\images\landing-page\video-bg.png" />
+    <Content Include="Assets\Infinity\assets\images\landing-page\video.png" />
+    <Content Include="Assets\Infinity\assets\images\logo.png" />
+    <Content Include="Assets\Infinity\assets\images\original\001.jpg" />
+    <Content Include="Assets\Infinity\assets\images\original\002.jpg" />
+    <Content Include="Assets\Infinity\assets\images\original\003.jpg" />
+    <Content Include="Assets\Infinity\assets\images\original\101.jpg" />
+    <Content Include="Assets\Infinity\assets\images\original\102.jpg" />
+    <Content Include="Assets\Infinity\assets\images\original\103.jpg" />
+    <Content Include="Assets\Infinity\assets\images\original\104.jpg" />
+    <Content Include="Assets\Infinity\assets\images\original\105.jpg" />
+    <Content Include="Assets\Infinity\assets\images\original\201.jpg" />
+    <Content Include="Assets\Infinity\assets\images\original\202.jpg" />
+    <Content Include="Assets\Infinity\assets\images\original\203.jpg" />
+    <Content Include="Assets\Infinity\assets\images\original\204.jpg" />
+    <Content Include="Assets\Infinity\assets\images\original\205.jpg" />
+    <Content Include="Assets\Infinity\assets\images\original\206.jpg" />
+    <Content Include="Assets\Infinity\assets\images\original\207.jpg" />
+    <Content Include="Assets\Infinity\assets\images\original\208.jpg" />
+    <Content Include="Assets\Infinity\assets\images\original\209.jpg" />
+    <Content Include="Assets\Infinity\assets\images\original\210.jpg" />
+    <Content Include="Assets\Infinity\assets\images\original\211.jpg" />
+    <Content Include="Assets\Infinity\assets\images\original\212.jpg" />
+    <Content Include="Assets\Infinity\assets\images\original\213.jpg" />
+    <Content Include="Assets\Infinity\assets\images\original\214.jpg" />
+    <Content Include="Assets\Infinity\assets\images\original\215.jpg" />
+    <Content Include="Assets\Infinity\assets\images\original\216.jpg" />
+    <Content Include="Assets\Infinity\assets\images\original\217.jpg" />
+    <Content Include="Assets\Infinity\assets\images\original\218.jpg" />
+    <Content Include="Assets\Infinity\assets\images\original\219.jpg" />
+    <Content Include="Assets\Infinity\assets\images\original\220.jpg" />
+    <Content Include="Assets\Infinity\assets\images\original\221.jpg" />
+    <Content Include="Assets\Infinity\assets\images\original\222.jpg" />
+    <Content Include="Assets\Infinity\assets\images\original\223.jpg" />
+    <Content Include="Assets\Infinity\assets\images\original\712.gif" />
+    <Content Include="Assets\Infinity\assets\images\product-1.jpg" />
+    <Content Include="Assets\Infinity\assets\images\product-2.jpg" />
+    <Content Include="Assets\Infinity\assets\images\product-3.jpg" />
+    <Content Include="Assets\Infinity\assets\images\product-4.jpg" />
+    <Content Include="Assets\Infinity\assets\js\app.js" />
+    <Content Include="Assets\Infinity\assets\js\app.min.js" />
+    <Content Include="Assets\Infinity\assets\js\core.min.js" />
+    <Content Include="Assets\Infinity\assets\js\fullcalendar.js" />
+    <Content Include="Assets\Infinity\assets\js\library.js" />
+    <Content Include="Assets\Infinity\assets\js\plugins.js" />
+    <Content Include="Assets\Infinity\assets\svg\check.svg" />
+    <Content Include="Assets\Infinity\assets\svg\email.svg" />
+    <Content Include="Assets\Infinity\assets\svg\pig.svg" />
+    <Content Include="Assets\Infinity\assets\svg\pointer.svg" />
+    <Content Include="Assets\Infinity\assets\svg\remove.svg" />
+    <Content Include="Assets\Infinity\assets\svg\tie.svg" />
+    <Content Include="Assets\Infinity\assets\svg\users.svg" />
+    <Content Include="Assets\Infinity\assets\svg\video-play.svg" />
+    <Content Include="Assets\Infinity\Gruntfile.js" />
+    <Content Include="Assets\Infinity\libs\bower\animate.css\animate.min.css" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\css\bootstrap-datepicker.css" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\css\bootstrap-datepicker.min.css" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\css\bootstrap-datepicker.standalone.css" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\css\bootstrap-datepicker.standalone.min.css" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\css\bootstrap-datepicker3.css" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\css\bootstrap-datepicker3.min.css" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\css\bootstrap-datepicker3.standalone.css" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\css\bootstrap-datepicker3.standalone.min.css" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\js\bootstrap-datepicker.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\js\bootstrap-datepicker.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.ar.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.az.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.bg.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.bs.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.ca.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.cs.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.cy.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.da.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.de.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.el.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.en-AU.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.en-GB.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.eo.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.es.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.et.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.eu.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.fa.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.fi.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.fo.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.fr-CH.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.fr.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.gl.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.he.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.hr.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.hu.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.hy.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.id.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.is.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.it-CH.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.it.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.ja.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.ka.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.kh.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.kk.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.ko.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.kr.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.lt.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.lv.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.me.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.mk.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.mn.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.ms.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.nb.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.nl-BE.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.nl.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.no.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.pl.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.pt-BR.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.pt.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.ro.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.rs-latin.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.rs.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.ru.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.sk.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.sl.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.sq.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.sr-latin.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.sr.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.sv.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.sw.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.th.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.tr.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.uk.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.vi.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.zh-CN.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\locales\bootstrap-datepicker.zh-TW.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-daterangepicker\daterangepicker.css" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-daterangepicker\daterangepicker.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-filestyle\src\bootstrap-filestyle.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-maxlength\src\bootstrap-maxlength.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-sass\assets\javascripts\bootstrap.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\css\bootstrap-select.css" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\css\bootstrap-select.min.css" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\bootstrap-select.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\bootstrap-select.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-ar_AR.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-ar_AR.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-bg_BG.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-bg_BG.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-cro_CRO.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-cro_CRO.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-cs_CZ.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-cs_CZ.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-da_DK.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-da_DK.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-de_DE.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-de_DE.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-en_US.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-en_US.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-es_CL.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-es_CL.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-eu.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-eu.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-fa_IR.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-fa_IR.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-fi_FI.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-fi_FI.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-fr_FR.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-fr_FR.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-hu_HU.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-hu_HU.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-id_ID.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-id_ID.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-it_IT.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-it_IT.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-ko_KR.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-ko_KR.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-lt_LT.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-lt_LT.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-nb_NO.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-nb_NO.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-nl_NL.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-nl_NL.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-pl_PL.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-pl_PL.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-pt_BR.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-pt_BR.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-pt_PT.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-pt_PT.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-ro_RO.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-ro_RO.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-ru_RU.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-ru_RU.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-sk_SK.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-sk_SK.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-sl_SI.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-sl_SI.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-sv_SE.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-sv_SE.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-tr_TR.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-tr_TR.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-ua_UA.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-ua_UA.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-zh_CN.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-zh_CN.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-zh_TW.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\i18n\defaults-zh_TW.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-tagsinput\dist\bootstrap-tagsinput-angular.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-tagsinput\dist\bootstrap-tagsinput-angular.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-tagsinput\dist\bootstrap-tagsinput-typeahead.css" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-tagsinput\dist\bootstrap-tagsinput.css" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-tagsinput\dist\bootstrap-tagsinput.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-tagsinput\dist\bootstrap-tagsinput.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-timepicker\js\bootstrap-timepicker.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-touchspin\dist\jquery.bootstrap-touchspin.css" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-touchspin\dist\jquery.bootstrap-touchspin.js" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-touchspin\dist\jquery.bootstrap-touchspin.min.css" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-touchspin\dist\jquery.bootstrap-touchspin.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\breakpoints.js\dist\breakpoints.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\counterup\jquery.counterup.js" />
+    <Content Include="Assets\Infinity\libs\bower\counterup\jquery.counterup.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\css-hamburgers\dist\hamburgers.css" />
+    <Content Include="Assets\Infinity\libs\bower\dropzone\dist\min\dropzone.min.css" />
+    <Content Include="Assets\Infinity\libs\bower\dropzone\dist\min\dropzone.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\eonasdan-bootstrap-datetimepicker\build\css\bootstrap-datetimepicker-standalone.css" />
+    <Content Include="Assets\Infinity\libs\bower\eonasdan-bootstrap-datetimepicker\build\css\bootstrap-datetimepicker.css" />
+    <Content Include="Assets\Infinity\libs\bower\eonasdan-bootstrap-datetimepicker\build\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="Assets\Infinity\libs\bower\eonasdan-bootstrap-datetimepicker\build\js\bootstrap-datetimepicker.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\fastclick\lib\fastclick.js" />
+    <Content Include="Assets\Infinity\libs\bower\font-awesome\css\font-awesome.css" />
+    <Content Include="Assets\Infinity\libs\bower\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Assets\Infinity\libs\bower\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\fullcalendar.css" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\fullcalendar.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\fullcalendar.min.css" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\fullcalendar.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\fullcalendar.print.css" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\gcal.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang-all.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\ar-ma.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\ar-sa.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\ar-tn.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\ar.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\bg.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\ca.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\cs.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\da.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\de-at.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\de.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\el.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\en-au.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\en-ca.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\en-gb.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\en-ie.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\en-nz.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\es.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\eu.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\fa.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\fi.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\fr-ca.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\fr-ch.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\fr.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\gl.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\he.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\hi.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\hr.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\hu.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\id.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\is.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\it.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\ja.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\ko.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\lb.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\lt.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\lv.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\nb.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\nl.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\pl.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\pt-br.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\pt.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\ro.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\ru.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\sk.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\sl.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\sr-cyrl.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\sr.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\sv.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\th.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\tr.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\uk.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\vi.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\zh-cn.js" />
+    <Content Include="Assets\Infinity\libs\bower\fullcalendar\dist\lang\zh-tw.js" />
+    <Content Include="Assets\Infinity\libs\bower\jquery-circle-progress\dist\circle-progress.js" />
+    <Content Include="Assets\Infinity\libs\bower\jquery-knob\dist\jquery.knob.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\jquery-slimscroll\jquery.slimscroll.js" />
+    <Content Include="Assets\Infinity\libs\bower\jQuery-Storage-API\jquery.storageapi.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\jquery-ui\jquery-ui.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\jquery\dist\jquery.js" />
+    <Content Include="Assets\Infinity\libs\bower\lightbox2\dist\css\lightbox.css" />
+    <Content Include="Assets\Infinity\libs\bower\lightbox2\dist\css\lightbox.min.css" />
+    <Content Include="Assets\Infinity\libs\bower\lightbox2\dist\images\close.png" />
+    <Content Include="Assets\Infinity\libs\bower\lightbox2\dist\images\loading.gif" />
+    <Content Include="Assets\Infinity\libs\bower\lightbox2\dist\images\next.png" />
+    <Content Include="Assets\Infinity\libs\bower\lightbox2\dist\images\prev.png" />
+    <Content Include="Assets\Infinity\libs\bower\lightbox2\dist\js\lightbox-plus-jquery.js" />
+    <Content Include="Assets\Infinity\libs\bower\lightbox2\dist\js\lightbox-plus-jquery.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\lightbox2\dist\js\lightbox.js" />
+    <Content Include="Assets\Infinity\libs\bower\lightbox2\dist\js\lightbox.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\material-design-iconic-font\dist\css\material-design-iconic-font.css" />
+    <Content Include="Assets\Infinity\libs\bower\material-design-iconic-font\dist\css\material-design-iconic-font.min.css" />
+    <Content Include="Assets\Infinity\libs\bower\material-design-iconic-font\dist\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\af.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\ar-ma.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\ar-sa.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\ar-tn.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\ar.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\az.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\be.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\bg.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\bn.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\bo.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\br.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\bs.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\ca.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\cs.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\cv.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\cy.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\da.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\de-at.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\de.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\el.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\en-au.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\en-ca.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\en-gb.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\eo.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\es.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\et.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\eu.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\fa.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\fi.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\fo.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\fr-ca.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\fr.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\fy.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\gl.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\he.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\hi.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\hr.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\hu.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\hy-am.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\id.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\is.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\it.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\ja.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\ka.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\km.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\ko.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\lb.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\lt.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\lv.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\mk.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\ml.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\mr.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\ms-my.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\my.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\nb.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\ne.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\nl.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\nn.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\pl.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\pt-br.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\pt.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\ro.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\ru.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\sk.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\sl.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\sq.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\sr-cyrl.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\sr.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\sv.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\ta.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\th.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\tl-ph.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\tr.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\tzm-latn.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\tzm.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\uk.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\uz.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\vi.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\zh-cn.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\locale\zh-tw.js" />
+    <Content Include="Assets\Infinity\libs\bower\moment\moment.js" />
+    <Content Include="Assets\Infinity\libs\bower\PACE\pace.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\perfect-scrollbar\css\perfect-scrollbar.css" />
+    <Content Include="Assets\Infinity\libs\bower\perfect-scrollbar\js\perfect-scrollbar.jquery.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\css\select2.css" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\css\select2.min.css" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\ar.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\az.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\bg.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\ca.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\cs.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\da.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\de.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\el.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\en.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\es.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\et.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\eu.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\fa.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\fi.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\fr.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\gl.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\he.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\hi.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\hr.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\hu.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\id.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\is.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\it.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\ja.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\km.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\ko.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\lt.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\lv.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\mk.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\ms.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\nb.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\nl.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\pl.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\pt-BR.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\pt.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\ro.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\ru.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\sk.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\sr-Cyrl.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\sr.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\sv.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\th.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\tr.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\uk.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\vi.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\zh-CN.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\i18n\zh-TW.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\select2.full.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\select2.full.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\select2.js" />
+    <Content Include="Assets\Infinity\libs\bower\select2\dist\js\select2.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\smooth-scroll\dist\js\smooth-scroll.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-ar-AR.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-ar-AR.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-bg-BG.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-bg-BG.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-ca-ES.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-ca-ES.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-cs-CZ.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-cs-CZ.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-da-DK.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-da-DK.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-de-DE.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-de-DE.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-es-ES.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-es-ES.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-es-EU.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-es-EU.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-fa-IR.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-fa-IR.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-fi-FI.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-fi-FI.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-fr-FR.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-fr-FR.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-he-IL.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-he-IL.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-hu-HU.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-hu-HU.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-id-ID.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-id-ID.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-it-IT.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-it-IT.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-ja-JP.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-ja-JP.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-ko-KR.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-ko-KR.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-lt-LT.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-lt-LT.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-nb-NO.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-nb-NO.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-nl-NL.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-nl-NL.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-pl-PL.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-pl-PL.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-pt-BR.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-pt-BR.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-pt-PT.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-pt-PT.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-ro-RO.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-ro-RO.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-ru-RU.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-ru-RU.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-sk-SK.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-sk-SK.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-sl-SI.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-sl-SI.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-sr-RS-Latin.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-sr-RS-Latin.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-sr-RS.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-sr-RS.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-sv-SE.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-sv-SE.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-th-TH.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-th-TH.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-tr-TR.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-tr-TR.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-uk-UA.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-uk-UA.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-vi-VN.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-vi-VN.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-zh-CN.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-zh-CN.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-zh-TW.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\lang\summernote-zh-TW.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\summernote.css" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\summernote.js" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\summernote.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\switchery\dist\switchery.css" />
+    <Content Include="Assets\Infinity\libs\bower\switchery\dist\switchery.js" />
+    <Content Include="Assets\Infinity\libs\bower\switchery\dist\switchery.min.css" />
+    <Content Include="Assets\Infinity\libs\bower\switchery\dist\switchery.min.js" />
+    <Content Include="Assets\Infinity\libs\bower\underscore\underscore-min.js" />
+    <Content Include="Assets\Infinity\libs\bower\waypoints\lib\jquery.waypoints.min.js" />
+    <Content Include="Assets\Infinity\libs\misc\datatables\datatables.min.css" />
+    <Content Include="Assets\Infinity\libs\misc\datatables\datatables.min.js" />
+    <Content Include="Assets\Infinity\libs\misc\echarts\build\dist\echarts-all.js" />
+    <Content Include="Assets\Infinity\libs\misc\echarts\build\dist\jquery.echarts.js" />
+    <Content Include="Assets\Infinity\libs\misc\echarts\build\dist\theme.js" />
+    <Content Include="Assets\Infinity\libs\misc\flot\excanvas.min.js" />
+    <Content Include="Assets\Infinity\libs\misc\flot\jquery.colorhelpers.min.js" />
+    <Content Include="Assets\Infinity\libs\misc\flot\jquery.flot.canvas.min.js" />
+    <Content Include="Assets\Infinity\libs\misc\flot\jquery.flot.categories.min.js" />
+    <Content Include="Assets\Infinity\libs\misc\flot\jquery.flot.crosshair.min.js" />
+    <Content Include="Assets\Infinity\libs\misc\flot\jquery.flot.curvedLines.js" />
+    <Content Include="Assets\Infinity\libs\misc\flot\jquery.flot.errorbars.min.js" />
+    <Content Include="Assets\Infinity\libs\misc\flot\jquery.flot.fillbetween.min.js" />
+    <Content Include="Assets\Infinity\libs\misc\flot\jquery.flot.image.min.js" />
+    <Content Include="Assets\Infinity\libs\misc\flot\jquery.flot.min.js" />
+    <Content Include="Assets\Infinity\libs\misc\flot\jquery.flot.navigate.min.js" />
+    <Content Include="Assets\Infinity\libs\misc\flot\jquery.flot.pie.min.js" />
+    <Content Include="Assets\Infinity\libs\misc\flot\jquery.flot.resize.min.js" />
+    <Content Include="Assets\Infinity\libs\misc\flot\jquery.flot.selection.min.js" />
+    <Content Include="Assets\Infinity\libs\misc\flot\jquery.flot.stack.min.js" />
+    <Content Include="Assets\Infinity\libs\misc\flot\jquery.flot.symbol.min.js" />
+    <Content Include="Assets\Infinity\libs\misc\flot\jquery.flot.threshold.min.js" />
+    <Content Include="Assets\Infinity\libs\misc\flot\jquery.flot.time.min.js" />
+    <Content Include="Assets\Infinity\libs\misc\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="Assets\Infinity\libs\misc\jquery.sparkline.min.js" />
+    <Content Include="Assets\Infinity\libs\misc\jvectormap\jquery-jvectormap.css" />
+    <Content Include="Assets\Infinity\libs\misc\jvectormap\jquery-jvectormap.min.js" />
+    <Content Include="Assets\Infinity\libs\misc\jvectormap\maps\jquery-jvectormap-africa-mill.js" />
+    <Content Include="Assets\Infinity\libs\misc\jvectormap\maps\jquery-jvectormap-us-mill.js" />
+    <Content Include="Assets\Infinity\libs\misc\jvectormap\maps\jquery-jvectormap-world-mill.js" />
+    <Content Include="Assets\Infinity\libs\misc\owl-carousel\owl.carousel.css" />
+    <Content Include="Assets\Infinity\libs\misc\owl-carousel\owl.carousel.min.js" />
+    <Content Include="Assets\Infinity\templates\apps\calendar.html" />
+    <Content Include="Assets\Infinity\templates\apps\contacts.html" />
+    <Content Include="Assets\Infinity\templates\apps\mailbox\compose.html" />
+    <Content Include="Assets\Infinity\templates\apps\mailbox\inbox.html" />
+    <Content Include="Assets\Infinity\templates\apps\mailbox\mail-view.html" />
+    <Content Include="Assets\Infinity\templates\charts\charts.chartjs.html" />
+    <Content Include="Assets\Infinity\templates\charts\charts.flot.html" />
+    <Content Include="Assets\Infinity\templates\charts\echarts.bar.html" />
+    <Content Include="Assets\Infinity\templates\charts\echarts.custom.html" />
+    <Content Include="Assets\Infinity\templates\charts\echarts.line.html" />
+    <Content Include="Assets\Infinity\templates\charts\echarts.map.html" />
+    <Content Include="Assets\Infinity\templates\charts\echarts.pie.html" />
+    <Content Include="Assets\Infinity\templates\charts\echarts.scatter.html" />
+    <Content Include="Assets\Infinity\templates\dashboard\dashboard.2.html" />
+    <Content Include="Assets\Infinity\templates\dashboard\dashboard.3.html" />
+    <Content Include="Assets\Infinity\templates\dashboard\index.html" />
+    <Content Include="Assets\Infinity\templates\forms\editors.html" />
+    <Content Include="Assets\Infinity\templates\forms\file-upload.html" />
+    <Content Include="Assets\Infinity\templates\forms\form.custom.html" />
+    <Content Include="Assets\Infinity\templates\forms\form.datetime.html" />
+    <Content Include="Assets\Infinity\templates\forms\form.elements.html" />
+    <Content Include="Assets\Infinity\templates\forms\form.layouts.html" />
+    <Content Include="Assets\Infinity\templates\forms\form.plugins.html" />
+    <Content Include="Assets\Infinity\templates\layouts\base.html" />
+    <Content Include="Assets\Infinity\templates\layouts\default.html" />
+    <Content Include="Assets\Infinity\templates\layouts\misc.layout.html" />
+    <Content Include="Assets\Infinity\templates\layouts\topbar.html" />
+    <Content Include="Assets\Infinity\templates\maps\map-google.html" />
+    <Content Include="Assets\Infinity\templates\maps\map-vector.html" />
+    <Content Include="Assets\Infinity\templates\misc\404.html" />
+    <Content Include="Assets\Infinity\templates\misc\login.html" />
+    <Content Include="Assets\Infinity\templates\misc\password-forget.html" />
+    <Content Include="Assets\Infinity\templates\misc\signup.html" />
+    <Content Include="Assets\Infinity\templates\misc\unlock.html" />
+    <Content Include="Assets\Infinity\templates\pages\documentation.html" />
+    <Content Include="Assets\Infinity\templates\pages\gallery.1.html" />
+    <Content Include="Assets\Infinity\templates\pages\gallery.2.html" />
+    <Content Include="Assets\Infinity\templates\pages\invoice.html" />
+    <Content Include="Assets\Infinity\templates\pages\price.html" />
+    <Content Include="Assets\Infinity\templates\pages\profile.html" />
+    <Content Include="Assets\Infinity\templates\pages\support.html" />
+    <Content Include="Assets\Infinity\templates\search\search.images.html" />
+    <Content Include="Assets\Infinity\templates\search\search.users.html" />
+    <Content Include="Assets\Infinity\templates\search\search.video.html" />
+    <Content Include="Assets\Infinity\templates\search\search.web.html" />
+    <Content Include="Assets\Infinity\templates\tables\datatables.html" />
+    <Content Include="Assets\Infinity\templates\tables\tables.basic.html" />
+    <Content Include="Assets\Infinity\templates\uikit\alerts.html" />
+    <Content Include="Assets\Infinity\templates\uikit\buttons.html" />
+    <Content Include="Assets\Infinity\templates\uikit\icons.html" />
+    <Content Include="Assets\Infinity\templates\uikit\lists.html" />
+    <Content Include="Assets\Infinity\templates\uikit\media.html" />
+    <Content Include="Assets\Infinity\templates\uikit\panels.html" />
+    <Content Include="Assets\Infinity\templates\uikit\progress.html" />
+    <Content Include="Assets\Infinity\templates\uikit\tabs.html" />
+    <Content Include="Assets\Infinity\templates\uikit\widgets.html" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Assets\H+4.9\.idea\H+4.5正版源码.iml" />
+    <Content Include="Assets\H+4.9\css\plugins\footable\fonts\footable.eot" />
+    <Content Include="Assets\H+4.9\css\plugins\footable\fonts\footable.ttf" />
+    <Content Include="Assets\H+4.9\css\plugins\footable\fonts\footable.woff" />
+    <Content Include="Assets\H+4.9\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\H+4.9\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\H+4.9\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\H+4.9\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Assets\H+4.9\fonts\FontAwesome.otf" />
+    <Content Include="Assets\H+4.9\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\H+4.9\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\H+4.9\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Assets\H+4.9\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Assets\H+4.9\img\browser.psd" />
+    <Content Include="Assets\H+4.9\js\demo\bootstrap_table_test.json" />
+    <Content Include="Assets\H+4.9\js\demo\bootstrap_table_test2.json" />
+    <Content Include="Assets\H+4.9\js\demo\photos.json" />
+    <Content Include="Assets\H+4.9\js\demo\table_base.json" />
+    <Content Include="Assets\H+4.9\js\jquery.min.map" />
+    <Content Include="Assets\H+4.9\js\plugins\suggest\data.json" />
+    <Content Include="Assets\H+4.9\js\plugins\webuploader\README.md" />
+    <Content Include="Assets\H+4.9\plugins\fullavatareditor\jsp\upload.jsp" />
+    <Content Include="Assets\H+4.9\plugins\fullavatareditor\php\upload.php" />
+    <Content Include="Assets\H+4.9\__MACOSX\js\plugins\layer\._extend" />
+    <Content Include="Assets\H+4.9\__MACOSX\js\plugins\suggest\._data.json" />
+    <Content Include="Assets\H+4.9\__MACOSX\js\plugins\webuploader\._README.md" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\layim\data\chatlog.json" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\layim\data\friend.json" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\layim\data\group.json" />
+    <Content Include="Assets\H+4.9\js\plugins\layer\layim\data\groups.json" />
+    <Content Include="Assets\Infinity\api\dropzone" />
+    <Content Include="Assets\Infinity\api\json\data.json" />
+    <Content Include="Assets\Infinity\api\json\dataTable.json" />
+    <Content Include="Assets\Infinity\assets\css\app.css.map" />
+    <Content Include="Assets\Infinity\assets\css\bootstrap.css.map" />
+    <Content Include="Assets\Infinity\assets\css\core.css.map" />
+    <Content Include="Assets\Infinity\assets\css\landing-page.css.map" />
+    <Content Include="Assets\Infinity\assets\css\misc-pages.css.map" />
+    <Content Include="Assets\Infinity\assets\fonts\bootstrap\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\Infinity\assets\fonts\bootstrap\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\Infinity\assets\fonts\bootstrap\glyphicons-halflings-regular.woff" />
+    <Content Include="Assets\Infinity\assets\fonts\bootstrap\glyphicons-halflings-regular.woff2" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\apps\_contacts.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\apps\_fullcalendar.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\apps\_mail-app.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\blocks\_action-panel.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\blocks\_customizer.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\blocks\_footer.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\blocks\_general.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\blocks\_main.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\blocks\_menubar.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\blocks\_navbar.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\blocks\_side-panel.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\core\_core-themes.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\core\_forms.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\core\_scaffolding.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\core\_tables.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\core\_type.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\core\_utilities.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\mixins\btn-variant.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\mixins\_badge-variant.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\mixins\_btn-outline-variant.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\mixins\_checkbox-radio-variant.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\mixins\_theme-variant.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\mixins\_transition.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\pages\_demos.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\pages\_gallery.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\pages\_invoice.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\pages\_prices.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\pages\_profile.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\pages\_search.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\pages\_support.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\ui-components\_alerts.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\ui-components\_avatars.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\ui-components\_badges.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\ui-components\_buttons.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\ui-components\_cards.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\ui-components\_charts.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\ui-components\_icons.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\ui-components\_labels.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\ui-components\_lists.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\ui-components\_modals.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\ui-components\_panels.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\ui-components\_progress.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\ui-components\_radios-checkboxes.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\ui-components\_tabs_accordions.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\ui-components\_widgets.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\_mixins.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\_themes.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app-sass\_variables.scss" />
+    <Content Include="Assets\Infinity\assets\sass\app.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\mixins\_alerts.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\mixins\_background-variant.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\mixins\_border-radius.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\mixins\_buttons.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\mixins\_center-block.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\mixins\_clearfix.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\mixins\_forms.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\mixins\_gradients.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\mixins\_grid.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\mixins\_hide-text.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\mixins\_image.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\mixins\_labels.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\mixins\_list-group.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\mixins\_nav-vertical-align.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\mixins\_opacity.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\mixins\_pagination.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\mixins\_panels.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\mixins\_progress-bar.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\mixins\_reset-filter.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\mixins\_reset-text.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\mixins\_resize.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\mixins\_responsive-visibility.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\mixins\_size.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\mixins\_tab-focus.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\mixins\_table-row.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\mixins\_text-overflow.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\mixins\_vendor-prefixes.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_alerts.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_badges.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_breadcrumbs.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_button-groups.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_buttons.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_carousel.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_close.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_code.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_component-animations.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_dropdowns.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_forms.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_glyphicons.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_grid.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_input-groups.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_jumbotron.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_labels.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_list-group.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_media.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_mixins.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_modals.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_navbar.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_navs.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_normalize.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_pager.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_pagination.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_panels.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_popovers.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_print.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_progress-bars.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_responsive-embed.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_responsive-utilities.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_scaffolding.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_tables.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_theme.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_thumbnails.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_tooltip.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_type.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_utilities.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_variables.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\bootstrap\_wells.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap-sass\_bootstrap.scss" />
+    <Content Include="Assets\Infinity\assets\sass\bootstrap.scss" />
+    <Content Include="Assets\Infinity\assets\sass\core.scss" />
+    <Content Include="Assets\Infinity\assets\sass\landing-page.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\awesome-bootstrap-checkboxes\awesome-bootstrap-checkbox.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\bootstrap-timepicker\_bootstrap-timepicker.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\dropzone\dropzone.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\hamburgers\hamburgers.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\hamburgers\types\_3dx-r.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\hamburgers\types\_3dx.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\hamburgers\types\_3dy-r.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\hamburgers\types\_3dy.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\hamburgers\types\_arrow-r.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\hamburgers\types\_arrow.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\hamburgers\types\_arrowalt-r.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\hamburgers\types\_arrowalt.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\hamburgers\types\_boring.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\hamburgers\types\_collapse-r.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\hamburgers\types\_collapse.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\hamburgers\types\_elastic-r.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\hamburgers\types\_elastic.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\hamburgers\types\_emphatic-r.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\hamburgers\types\_emphatic.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\hamburgers\types\_slider-r.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\hamburgers\types\_slider.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\hamburgers\types\_spin-r.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\hamburgers\types\_spin.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\hamburgers\types\_spring-r.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\hamburgers\types\_spring.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\hamburgers\types\_squeeze.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\hamburgers\types\_stand-r.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\hamburgers\types\_stand.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\hamburgers\types\_vortex-r.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\hamburgers\types\_vortex.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\hamburgers\_base.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\PACE\_default-theme.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\_libs-settings.scss" />
+    <Content Include="Assets\Infinity\assets\sass\libs-sass\_libs.scss" />
+    <Content Include="Assets\Infinity\assets\sass\misc-pages.scss" />
+    <Content Include="Assets\Infinity\bower.json" />
+    <Content Include="Assets\Infinity\CHANGELOG.md" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\css\bootstrap-datepicker.css.map" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\css\bootstrap-datepicker.min.css.map" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\css\bootstrap-datepicker.standalone.css.map" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\css\bootstrap-datepicker.standalone.min.css.map" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\css\bootstrap-datepicker3.css.map" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\css\bootstrap-datepicker3.min.css.map" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\css\bootstrap-datepicker3.standalone.css.map" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-datepicker\dist\css\bootstrap-datepicker3.standalone.min.css.map" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\css\bootstrap-select.css.map" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-select\dist\js\bootstrap-select.js.map" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-tagsinput\dist\bootstrap-tagsinput-angular.min.js.map" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-tagsinput\dist\bootstrap-tagsinput.less" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-tagsinput\dist\bootstrap-tagsinput.min.js.map" />
+    <Content Include="Assets\Infinity\libs\bower\bootstrap-tagsinput\dist\bootstrap-tagsinput.zip" />
+    <Content Include="Assets\Infinity\libs\bower\font-awesome\css\font-awesome.css.map" />
+    <Content Include="Assets\Infinity\libs\bower\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\Infinity\libs\bower\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\Infinity\libs\bower\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\Infinity\libs\bower\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Assets\Infinity\libs\bower\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Assets\Infinity\libs\bower\lightbox2\dist\js\lightbox-plus-jquery.min.map" />
+    <Content Include="Assets\Infinity\libs\bower\lightbox2\dist\js\lightbox.min.map" />
+    <Content Include="Assets\Infinity\libs\bower\material-design-iconic-font\dist\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="Assets\Infinity\libs\bower\material-design-iconic-font\dist\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="Assets\Infinity\libs\bower\material-design-iconic-font\dist\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="Assets\Infinity\libs\bower\material-design-iconic-font\dist\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\font\summernote.eot" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\font\summernote.ttf" />
+    <Content Include="Assets\Infinity\libs\bower\summernote\dist\font\summernote.woff" />
+    <Content Include="Assets\Infinity\package.json" />
+    <Content Include="Assets\Infinity\README.md" />
+    <None Include="Properties\PublishProfiles\TCMIS.pubxml" />
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Images\admin.png" />
+    <Content Include="Images\jbz5.png" />
+    <Content Include="Images\jpz1.png" />
+    <Content Include="Images\marker.png" />
+    <Content Include="Images\marker1.png" />
+    <Content Include="Images\marker2.png" />
+    <Content Include="Images\marker2_2.png" />
+    <Content Include="Images\marker3.jpg" />
+    <Content Include="Images\marker4.jpg" />
+    <Content Include="Images\marker5.jpg" />
+    <Content Include="Images\site.png" />
+    <Content Include="Images\site2.png" />
+    <Content Include="Images\switch_off.png" />
+    <Content Include="Images\switch_on.png" />
+    <Content Include="Images\user.png" />
+    <Content Include="Images\wait.jpg" />
+    <Content Include="js\BaiduLayer.js" />
+    <Content Include="js\jquery-3.3.1.min.js" />
+    <Content Include="js\jtgis.js" />
+    <Content Include="js\jtgis2.js" />
+    <Content Include="Scripts\BaiduLayer.js" />
+    <Content Include="Scripts\Envionment_ActualTime.js" />
+    <Content Include="Scripts\Envionment_Statistic.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jtgis.js" />
+    <Content Include="Scripts\knockout-2.1.0.debug.js" />
+    <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\Lab.js" />
+    <Content Include="Scripts\Lab_Curve.js" />
+    <Content Include="Scripts\Lab_DetailPanel.js" />
+    <Content Include="Scripts\Main.js" />
+    <Content Include="Scripts\MixingPlant.js" />
+    <Content Include="Scripts\MixingPlant_DeviationChartPanel.js" />
+    <Content Include="Scripts\MixingPlant_DosagePanel.js" />
+    <Content Include="Scripts\MixingPlant_SetPanel.js" />
+    <Content Include="Scripts\MixingPlant_Statistic.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\MyTool.js" />
+    <Content Include="Scripts\WeiXin_API_Environment.js" />
+    <Content Include="Scripts\WeiXin_API_MixingPlantDetailPanel.js" />
+    <Content Include="Scripts\WeiXin_API_TensionChart.js" />
+    <Content Include="Scripts\XuanPenJi_ActualTime.js" />
+    <Content Include="Scripts\XuanPenJi_ActualTime_Index1.js" />
+    <Content Include="Scripts\XuanPenJi_Statistic_ChartPanel.js" />
+    <Content Include="Scripts\XuanPenJi_Statistic.js" />
+    <Content Include="Scripts\YaJiang.js" />
+    <Content Include="Scripts\YaJiang1.js" />
+    <Content Include="Scripts\YaJiang1_CurveChartPanel.js" />
+    <Content Include="Scripts\YaJiang_CurveChartPanel.js" />
+    <Content Include="Scripts\YangHu.js" />
+    <Content Include="Scripts\ZhangLa.js" />
+    <Content Include="Scripts\ZhangLa1.js" />
+    <Content Include="Scripts\ZhangLa_CurveChartPanel.js" />
+    <Content Include="SpringConfig\BLL.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="SpringConfig\Controller.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="SpringConfig\DAL.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Main\Index1.cshtml" />
+    <Content Include="Views\MixingPlant\Index.cshtml" />
+    <Content Include="Views\Shared\_tableLayout.cshtml" />
+    <Content Include="Views\MixingPlant\DosagePanel.cshtml" />
+    <Content Include="Views\MixingPlant\DeviationChartPanel.cshtml" />
+    <Content Include="Views\Main\Index.cshtml" />
+    <Content Include="Views\XuanPenJi_ActualTime\Index.cshtml" />
+    <Content Include="Views\XuanPenJi_Statistic\Index.cshtml" />
+    <Content Include="Views\Main\Map.cshtml" />
+    <Content Include="Views\XuanPenJi_Statistic\ChartPanel.cshtml" />
+    <Content Include="Views\XuanPenJi_ActualTime\Index1.cshtml" />
+    <Content Include="Views\Lab\DetailDataPanel.cshtml" />
+    <Content Include="Views\Lab\Index.cshtml" />
+    <Content Include="Views\WeiXin_API\MixingPlantDetailPanel.cshtml" />
+    <Content Include="Views\WeiXin_API\LabDetailPanel.cshtml" />
+    <Content Include="Views\Envionment_ActualTime\Index.cshtml" />
+    <Content Include="Views\Envionment_Statistic\Index.cshtml" />
+    <Content Include="Views\Environment\Index.cshtml" />
+    <Content Include="Views\ZhangLa\Index.cshtml" />
+    <Content Include="Views\ZhangLa\DetailDataPanel.cshtml" />
+    <Content Include="Views\ZhangLa\CurveChartPanel.cshtml" />
+    <Content Include="Views\MixingPlant_Statistic\Index.cshtml" />
+    <Content Include="Views\YaJiang\CurveChartPanel.cshtml" />
+    <Content Include="Views\YaJiang\GetDetailChart.cshtml" />
+    <Content Include="Views\YaJiang\Index.cshtml" />
+    <Content Include="Views\MixingPlant\SetPanel.cshtml" />
+    <Content Include="Views\YaJiang1\CurveChartPanel.cshtml" />
+    <Content Include="Views\YaJiang1\GetDetailChart1.cshtml" />
+    <Content Include="Views\YaJiang1\GetDetailChart2.cshtml" />
+    <Content Include="Views\YaJiang1\Index.cshtml" />
+    <Content Include="Views\ZhangLa1\CurveChartPanel.cshtml" />
+    <Content Include="Views\ZhangLa1\DetailDataPanel.cshtml" />
+    <Content Include="Views\ZhangLa1\Index.cshtml" />
+    <Content Include="Views\WeiXin_API\TensionDetailPanel.cshtml" />
+    <Content Include="Views\WeiXin_API\MudjackDetailPanel.cshtml" />
+    <Content Include="Views\DetailDataPanel.cshtml" />
+    <Content Include="Views\YangHu\Index.cshtml" />
+    <Content Include="Views\WeiXin_API\EnvironmentPanel.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Assets\H+4.9\__MACOSX\css\" />
+    <Folder Include="Assets\H+4.9\__MACOSX\docs\" />
+    <Folder Include="Assets\H+4.9\__MACOSX\js\plugins\bootstrap-table\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{6c594fd5-7248-4903-865a-37acefb4ac03}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{8fbd668a-e31a-4c42-8f36-27b4f17db188}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DbModel\DbModel.csproj">
+      <Project>{1cadd74a-2ee0-4617-909f-ac882c34343b}</Project>
+      <Name>DbModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IBLL\IBLL.csproj">
+      <Project>{dacebf3c-9944-4943-961f-4db03af26f3a}</Project>
+      <Name>IBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyModel\MyModel.csproj">
+      <Project>{6bb3ddde-e3ad-4244-bb1c-8d4700d0619c}</Project>
+      <Name>MyModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyTool\MyTool.csproj">
+      <Project>{a3944e49-8c86-4936-8857-52208ea9f3a7}</Project>
+      <Name>MyTool</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:4498/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

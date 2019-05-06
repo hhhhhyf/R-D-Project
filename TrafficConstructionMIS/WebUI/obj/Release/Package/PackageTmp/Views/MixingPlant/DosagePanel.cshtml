@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "DosagePanel";
+    Layout = "~/Views/Shared/_tableLayout.cshtml";
+}
+
+@section CSS{
+    <style>
+     
+    </style>
+   
+}
+@section JS{
+    <script src="~/Scripts/MyTool.js"></script>
+    <script src="~/Scripts/MixingPlant_DosagePanel.js?v=20181128"></script>
+}
+
+
+<div class="wrapper wrapper-content  animated fadeInRight" style="padding:0px;">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox ">
+                <div class="ibox-content">
+                    <div class="jqGrid_wrapper">
+                        <table id="table_Dosage"></table>
+                        <div id="pager_MixingPlant"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

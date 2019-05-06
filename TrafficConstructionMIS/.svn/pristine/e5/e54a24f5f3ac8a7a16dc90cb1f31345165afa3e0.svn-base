@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+  <object type="BLL.MixingPlantBLL, BLL" singleton="true" name="MixingPlantBLL" >
+    <property name="Tb_MixingPlant_ProduceDAL" ref="Tb_MixingPlant_ProduceDAL" />
+    <property name="Tb_MixingPlant_PieceDAL" ref="Tb_MixingPlant_PieceDAL" />
+    <property name="Tb_MixingPlant_DosageDAL" ref="Tb_MixingPlant_DosageDAL" />
+    <property name="Tb_MixingPlant_MaterialDAL" ref="Tb_MixingPlant_MaterialDAL" />
+    <property name="Tb_MixingPlant_DeviceDAL" ref="Tb_MixingPlant_DeviceDAL" />
+  </object>
+  <object type="BLL.LoginBLL, BLL" singleton="true" name="LoginBLL" >
+    <property name="Tb_LoginDAL" ref="Tb_LoginDAL" />
+  </object>
+  <object type="BLL.MainBLL, BLL" singleton="true" name="MainBLL" >
+    <property name="Tb_Main_MenuDAL" ref="Tb_Main_MenuDAL" />
+  </object>
+  <object type="BLL.XuanPenJi_ActualTimeBLL, BLL" singleton="true" name="XuanPenJi_ActualTimeBLL" >
+    <property name="GyxpDAL" ref="GyxpDAL" />
+  </object>
+  <object type="BLL.XuanPenJi_StatisticBLL, BLL" singleton="true" name="XuanPenJi_StatisticBLL" >
+    <property name="Gyxp_StatDAL" ref="Gyxp_StatDAL" />
+  </object>
+  <object type="BLL.LabBLL, BLL" singleton="true" name="LabBLL" >
+    <property name="Tb_Lab_TestDAL" ref="Tb_Lab_TestDAL" />
+    <property name="Tb_Lab_TestItemDAL" ref="Tb_Lab_TestItemDAL" />
+    <property name="Tb_Lab_DepartmentDAL" ref="Tb_Lab_DepartmentDAL" />
+    <property name="Tb_Lab_ProjectNameDAL" ref="Tb_Lab_ProjectNameDAL" />
+    <property name="Tb_Lab_CurveDAL" ref="Tb_Lab_CurveDAL" />
+    <property name="Tb_Lab_TypeDAL" ref="Tb_Lab_TypeDAL" />
+  </object>
+  <object type="BLL.WeiXin_APIBLL, BLL" singleton="true" name="WeiXin_APIBLL" >
+    <property name="LoginBLL" ref="LoginBLL" />
+    <property name="MixingPlantBLL" ref="MixingPlantBLL" />
+    <property name="LabBLL" ref="LabBLL" />
+    <property name="ZhangLa1BLL" ref="ZhangLa1BLL" />
+    <property name="YaJiang1BLL" ref="YaJiang1BLL" />
+    <property name="Yanghu_StatDataBLL" ref="Yanghu_StatDataBLL" />
+    <property name="Envionment_ActualTimeBLL" ref="Envionment_ActualTimeBLL" />
+    <property name="Envionment_StatisticBLL" ref="Envionment_StatisticBLL" />
+    
+    <property name="Tb_MixingPlant_DeviceDAL" ref="Tb_MixingPlant_DeviceDAL" />
+    <property name="Tb_Lab_DepartmentDAL" ref="Tb_Lab_DepartmentDAL" />
+    <property name="Envionment_DeviceProjectDAL" ref="Envionment_DeviceProjectDAL" />
+    <property name="Tb_ZhangLa1_DeviceDAL" ref="Tb_ZhangLa1_DeviceDAL" />
+    <property name="Tb_YaJiang1_DeviceDAL" ref="Tb_YaJiang1_DeviceDAL" />
+  </object>
+  <object type="BLL.ZhangLaAPIBLL, BLL" singleton="true" name="ZhangLaAPIBLL" >
+    <property name="Tb_ZhangLa_CurrentMonitorDAL" ref="Tb_ZhangLa_CurrentMonitorDAL" />
+    <property name="Tb_ZhangLa_CurveDAL" ref="Tb_ZhangLa_CurveDAL" />
+    <property name="Tb_ZhangLa_DataDAL" ref="Tb_ZhangLa_DataDAL" />
+    <property name="Tb_ZhangLa_ProjectInfoDAL" ref="Tb_ZhangLa_ProjectInfoDAL" />
+  </object>
+  <object type="BLL.ZhangLa1APIBLL, BLL" singleton="true" name="ZhangLa1APIBLL" >
+    <property name="Tb_ZhangLa1_CurveDAL" ref="Tb_ZhangLa1_CurveDAL" />
+    <property name="Tb_ZhangLa1_DataDAL" ref="Tb_ZhangLa1_DataDAL" />
+  </object>
+  <object type="BLL.YaJiang1APIBLL, BLL" singleton="true" name="YaJiang1APIBLL" >
+    <property name="Tb_YaJiang1_CurveDAL" ref="Tb_YaJiang1_CurveDAL" />
+    <property name="Tb_YaJiang1_DataDAL" ref="Tb_YaJiang1_DataDAL" />
+  </object>
+  
+  <object type="BLL.ZhangLaBLL, BLL" singleton="true" name="ZhangLaBLL" >
+    <property name="Tb_ZhangLa_CurrentMonitorDAL" ref="Tb_ZhangLa_CurrentMonitorDAL" />
+    <property name="Tb_ZhangLa_CurveDAL" ref="Tb_ZhangLa_CurveDAL" />
+    <property name="Tb_ZhangLa_DataDAL" ref="Tb_ZhangLa_DataDAL" />
+    <property name="Tb_ZhangLa_ProjectInfoDAL" ref="Tb_ZhangLa_ProjectInfoDAL" />
+    <property name="Tb_ZhangLa_ProjectDAL" ref="Tb_ZhangLa_ProjectDAL" />
+  </object>
+
+  <object type="BLL.YaJiangAPIBLL, BLL" singleton="true" name="YaJiangAPIBLL" >
+    <property name="Tb_YaJiang_CurrentMonitorDAL" ref="Tb_YaJiang_CurrentMonitorDAL" />
+    <property name="Tb_YaJiang_CurveDAL" ref="Tb_YaJiang_CurveDAL" />
+    <property name="Tb_YaJiang_DataDAL" ref="Tb_YaJiang_DataDAL" />
+    <property name="Tb_YaJiang_ProjectInfoDAL" ref="Tb_YaJiang_ProjectInfoDAL" />
+  </object>
+  <object type="BLL.Envionment_StatisticBLL, BLL" singleton="true" name="Envionment_StatisticBLL" >
+    <property name="Envionment_DataDAL" ref="Envionment_DataDAL" />
+    <property name="Envionment_ProjectInfoDAL" ref="Envionment_ProjectInfoDAL" />
+  </object>
+  <object type="BLL.Envionment_ActualTimeBLL, BLL" singleton="true" name="Envionment_ActualTimeBLL" >
+    <property name="Envionment_DataDAL" ref="Envionment_DataDAL" />
+    <property name="Envionment_ProjectInfoDAL" ref="Envionment_ProjectInfoDAL" />
+  </object>
+  <object type="BLL.FlowBLL, BLL" singleton="true" name="FlowBLL" >
+    <property name="Tb_Flow_PageDAL" ref="Tb_Flow_PageDAL" />
+    <property name="Tb_Flow_StatisticsDAL" ref="Tb_Flow_StatisticsDAL" />
+    <property name="Tb_Flow_VisitDAL" ref="Tb_Flow_VisitDAL" />
+  </object>
+  <object type="BLL.MixingPlant_StatisticBLL, BLL" singleton="true" name="MixingPlant_StatisticBLL" >
+    <property name="Tb_MixingPlant_PieceDAL" ref="Tb_MixingPlant_PieceDAL" />
+    <property name="Tb_MixingPlant_DeviceDAL" ref="Tb_MixingPlant_DeviceDAL" />
+  </object>
+  <object type="BLL.YaJiangBLL, BLL" singleton="true" name="YaJiangBLL" >
+    <property name="Tb_YaJiang_ProjectDAL" ref="Tb_YaJiang_ProjectDAL" />
+    <property name="Tb_YaJiang_ProjectInfoDAL" ref="Tb_YaJiang_ProjectInfoDAL" />
+    <property name="Tb_YaJiang_DataDAL" ref="Tb_YaJiang_DataDAL" />
+  </object>
+  <object type="BLL.ZhangLa1BLL, BLL" singleton="true" name="ZhangLa1BLL" >
+    <property name="Tb_ZhangLa1_ProjectDAL" ref="Tb_ZhangLa1_ProjectDAL" />
+    <property name="Tb_ZhangLa1_DeviceDAL" ref="Tb_ZhangLa1_DeviceDAL" />
+    <property name="Tb_ZhangLa1_DataDAL" ref="Tb_ZhangLa1_DataDAL" />
+    <property name="Tb_ZhangLa1_CurveDAL" ref="Tb_ZhangLa1_CurveDAL" />
+  </object>
+  <object type="BLL.YaJiang1BLL, BLL" singleton="true" name="YaJiang1BLL" >
+    <property name="Tb_YaJiang1_ProjectDAL" ref="Tb_YaJiang1_ProjectDAL" />
+    <property name="Tb_YaJiang1_DeviceDAL" ref="Tb_YaJiang1_DeviceDAL" />
+    <property name="Tb_YaJiang1_DataDAL" ref="Tb_YaJiang1_DataDAL" />
+    <property name="Tb_YaJiang1_CurveDAL" ref="Tb_YaJiang1_CurveDAL" />
+  </object>
+
+
+  <object type="BLL.Yanghu_StatDataBLL, BLL" singleton="true" name="Yanghu_StatDataBLL" >
+    <property name="Yanghu_StatDataDAL" ref="Yanghu_StatDataDAL" />
+  </object>
+  
+  
+</objects>

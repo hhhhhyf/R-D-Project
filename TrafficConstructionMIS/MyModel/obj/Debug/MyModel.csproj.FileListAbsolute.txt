@@ -1,0 +1,15 @@
+F:\交通建设管理信息系统\项目\TrafficConstructionMIS\MyModel\bin\Debug\MyModel.dll
+F:\交通建设管理信息系统\项目\TrafficConstructionMIS\MyModel\bin\Debug\MyModel.pdb
+F:\交通建设管理信息系统\项目\TrafficConstructionMIS\MyModel\obj\Debug\MyModel.dll
+F:\交通建设管理信息系统\项目\TrafficConstructionMIS\MyModel\obj\Debug\MyModel.pdb
+J:\svn源码\TrafficConstructionMIS\MyModel\bin\Debug\MyModel.dll
+J:\svn源码\TrafficConstructionMIS\MyModel\bin\Debug\MyModel.pdb
+J:\svn源码\TrafficConstructionMIS\MyModel\obj\Debug\MyModel.dll
+J:\svn源码\TrafficConstructionMIS\MyModel\obj\Debug\MyModel.pdb
+J:\svn源码\TrafficConstructionMIS\MyModel\obj\Debug\MyModel.csprojResolveAssemblyReference.cache
+F:\交通建设管理信息系统\项目\TrafficConstructionMIS\MyModel\obj\Debug\MyModel.csprojResolveAssemblyReference.cache
+E:\TrafficConstructionMIS\MyModel\bin\Debug\MyModel.dll
+E:\TrafficConstructionMIS\MyModel\bin\Debug\MyModel.pdb
+E:\TrafficConstructionMIS\MyModel\obj\Debug\MyModel.csprojResolveAssemblyReference.cache
+E:\TrafficConstructionMIS\MyModel\obj\Debug\MyModel.dll
+E:\TrafficConstructionMIS\MyModel\obj\Debug\MyModel.pdb

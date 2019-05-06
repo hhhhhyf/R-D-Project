@@ -1,0 +1,96 @@
+﻿@{
+    ViewBag.Title = "工地试验室";
+    Layout = "~/Views/Shared/_tableLayout.cshtml";
+}
+@section CSS{
+    <style>
+        
+        .layui-layer-content {
+            position: absolute !important;
+            left: 0px !important;
+        }
+
+        .layui-layer-tabmain {
+            padding: 0px;
+        }
+
+        iframe {
+            width: 900px;
+            height: 400px;
+        }
+        .form-group {
+            margin-right:10px;
+            margin-bottom:15px;
+            margin-top:10px;
+            
+        }
+            .form-group label {
+                margin-right:10px;
+            }
+        #startTime,#endTime{
+            width:130px;
+        }
+    </style>
+}
+@section JS{
+    <script src="~/Assets/H+4.9/js/plugins/layer/laydate/laydate.js"></script>
+    <script src="~/Scripts/MyTool.js"></script>
+    <script src="~/Scripts/Lab.js"></script>
+}
+
+<div class="wrapper wrapper-content animated fadeInRight" style="padding-bottom:0px;padding:0px;">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox" style="margin-bottom:0px;">
+                <div class="ibox-title">
+                    <h5>工地试验室</h5>
+                </div>
+
+                <div class="ibox-content" style="padding-bottom:10px;">
+
+                    <form class="form-inline" id="searchForm">
+                        
+
+                        <div class="form-group">
+                            <label>试验项目：</label>
+                            <select class="form-control" id="ProjectName" name="testItemId">
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="TestNo">试验编号：</label>
+                            <input type="text" class="form-control" id="TestNo" name="TestNo" />
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="startTime">试验开始时间：</label>
+                            <input readonly class="form-control layer-date" placeholder="起始" id="startTime" name="startTime">
+                            <label class="laydate-icon inline demoicon" style="vertical-align:top;" 
+                                onclick="laydate({elem: '#startTime',istime: true,format: 'YYYY-MM-DD'});"></label>
+
+                        </div>
+
+                        <div class="form-group">
+                            <input readonly class="form-control layer-date" placeholder="结束"  style="margin-left:30px;" id="endTime" name="endTime">
+                            <label class="laydate-icon inline demoicon" style="vertical-align:top;" 
+                                onclick="laydate({elem: '#endTime',istime: true,format: 'YYYY-MM-DD'});"></label>
+
+                        </div>
+                        <div class="form-group">
+                             <button type="button" id="clearBtn" class="btn btn-w-m btn-info"  style="margin-left: 50px;">清空</button>
+                            <button id="searchBtn" type="button" class="btn btn-w-m btn-success" style="margin-left: 10px;">搜索</button>
+                        </div>
+                        
+                    </form>
+
+                    <div class="jqGrid_wrapper">
+                        <div style="font-weight:600;text-align:right;margin-top:5px;">双击每条记录显示数据和曲线</div>
+                        <table id="table_Lab"></table>
+                        <div id="pager_Lab"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

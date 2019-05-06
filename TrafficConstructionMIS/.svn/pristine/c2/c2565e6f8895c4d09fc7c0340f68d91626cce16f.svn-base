@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "SetPanel";
+    
+}
+@using DbModel
+@using System.Collections.Generic
+@section CSS{
+    <style>
+        .form-group {
+            margin-right:30px;
+            margin-bottom:20px !important;
+        }
+        .form-group input{
+            margin-left:10px;
+        }
+    </style>
+}
+
+@section JS{
+    <script src="~/Assets/H+4.9/js/plugins/echarts/echarts-all.js"></script>
+    <script src="~/Scripts/MyTool.js"></script>
+    <script src="~/Scripts/MixingPlant_SetPanel.js"></script>
+}
+
+@section Body{
+   <body style="padding:20px 0px 0px 20px;width:800px;">
+       <form class="form-inline" id="searchForm">
+           @{
+               List<Tb_MixingPlant_Material> materials = ViewBag.materials;
+           }
+           @foreach(Tb_MixingPlant_Material material in materials)
+           {
+               string id = "id_"+material.Id;
+                @:<div class="form-group">
+                   @:<label for="@id">@material.Name</label>
+                   @:<input type="text" class="form-control" id="@id" value="@material.PError">
+                @:</div>
+           }
+           <br/>
+           <div style="text-align:center;">
+               <button id="setBtn" type="button" class="btn btn-w-m btn-primary">保存设置</button>
+           </div>
+           
+       </form>
+   </body>
+}

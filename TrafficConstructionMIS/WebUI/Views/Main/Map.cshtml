@@ -1,0 +1,554 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+      
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!--没有这句话会中文乱码-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>地图</title>
+    <!--为什么用本地的css，图层控制的图标就出不来？-->
+    <link rel="stylesheet" href="https://js.arcgis.com/4.6/esri/css/main.css">
+    <!--<link rel="stylesheet" href="https://www.jtjsypt.com/arcgis_js_api/library/4.6/esri/css/main.css">-->
+    <style>
+        html,
+        body,
+        #viewDiv {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        #homeBtn {
+            background: white;
+            padding: 6px;
+            border: 1px solid #f2f2f2;
+            font-size: 0.9em;
+            font-family: "Avenir Next W01", "Arial", sans-serif;
+            position: fixed;
+            z-index: 100;
+            top: 15px;
+            right: 320px;
+            color: #4e4646;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        function home() {
+            window.location.href = 'http://720yun.com/t/qqw2m8og5di7rx6zh9?pano_id=R7RS5jexVSuC2JtH';
+        }
+    </script>
+
+    
+
+
+    <!-- <script src="https://js.arcgis.com/4.6/"></script>-->
+    <script src="https://www.jtjsypt.com/arcgis_js_api/library/4.6/dojo/dojo.js"></script>
+    <script src="~/js/jtgis.js"></script>
+    <script src="~/js/jquery-3.3.1.min.js"></script>	
+    <script>
+        function clickMenu(url) {
+            $("#myFrame").attr("src", url);
+        }
+        var height = window.innerHeight - 90;
+        $("#myFrame").css("height", height);
+    </script>
+    <script>
+        require([
+            "esri/Map",
+            "esri/config",
+            "esri/request",
+            "esri/Color",
+            "esri/views/SceneView",
+            "esri/views/MapView",
+            "esri/widgets/LayerList",           
+            "esri/tasks/Locator",
+            "esri/geometry/support/webMercatorUtils",
+            "esri/Graphic",
+            "esri/layers/GroupLayer",    
+            "esri/layers/TileLayer",
+            "dojo/domReady!"
+        ], function (
+            Map, esriConfig, esriRequest, Color,
+            SceneView, MapView, LayerList, Locator, webMercatorUtils, Graphic, GroupLayer, TileLayer
+        ) {
+                // Set up a locator task using the world geocoding service
+                var locatorTask = new Locator({
+                    url: "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer"
+                });
+
+                var baseLayerType = 1; //1谷歌地图 0.天地图
+                var xTiandi2Other = 0;
+                var yTiandi2Other = 0;
+                if (baseLayerType == 1) {
+                    xTiandi2Other = 0.004396141;
+                    yTiandi2Other = -0.00298885 - 0.000077;
+            }
+
+            xmw = new TileLayer({
+                url: "http://139.129.167.50:6080/arcgis/rest/services/plane/xmw/MapServer",
+                spatialReference: viewSpatialReference,
+                title: "漩门湾大桥影像"
+            });
+
+                // Create GroupLayer with the layers created above
+                //底图组
+                //特别注意：天地图、谷歌地图等底图不能放入group，否则不会自动缩放到指定基本以及定位到指定位置
+                //titleName = "天地图底图";
+                //var tdtGroupLayer = new GroupLayer({
+                //    title: titleName,
+                //    listMode: "show",
+                //    visible: true,
+                //    layers: [tdtImgLayer, tdtVecLayer, tdtAnnLayer],
+                //    opacity: 0.75
+                //});
+
+                // as children layers.
+                var titleName = "无人机影像";
+                var graphicGroupLayer = new GroupLayer({
+                    title: titleName,
+                    listMode: "show",
+                    visible: true,
+                    //visibilityMode: "exclusive",//单选还是多选
+                    // layers: [USALayer, censusLayer],
+                    //layers: [stamenTileLayer, plane0101, plane0102],
+                    //layers: [tdtLayer, tdtAnnLayer, plane0101, plane0102, plane0101_move, plane01xmb],
+                    //特别注意：天地图、谷歌地图等底图不能放入group，否则不会自动缩放到指定基本以及定位到指定位置
+                    //layers: [plane0303, plane0102, plane0101],
+                    layers: [plane0303, plane0302, plane0301, plane0203, plane0202, plane0201, plane0103, plane0102, plane0101, plane0100],
+                    opacity: 0.85
+                });
+
+                //项目部组
+                titleName = "项目部影像";
+                var xmbGroupLayer = new GroupLayer({
+                    title: titleName,
+                    listMode: "show",
+                    visible: true,
+                    //特别注意：天地图、谷歌地图等底图不能放入group，否则不会自动缩放到指定基本以及定位到指定位置
+                    layers: [plane03xmb, plane02xmb2, plane02xmb1, plane01xmb],
+                    opacity: 0.85
+                });
+
+
+
+
+
+                //设备图层矢量图层
+                titleName = "设备图层";
+                var deviceGroupLayer = new GroupLayer({
+                    title: titleName,
+                    listMode: "show",
+                    visible: true,
+                    layers: [jbzVectLayer],
+                    opacity: 0.85
+                });
+
+                // add the new instance of the custom tile layer the map
+                //var map = new Map({
+                //    layers: [satTileLayer, plane0101, plane0102, plane0101_move]
+            //});
+                googleMapTileLayer.visible = false;
+                var map = new Map({
+                    //layers: [tdtImgLayer, tdtVecLayer, tdtAnnLayer, xmbGroupLayer, graphicGroupLayer, S2_2CadExport]
+                    //layers: [tdtImgLayer, tdtVecLayer, tdtAnnLayer]
+                    //layers: [tdtImgLayer, tdtVecLayer, tdtAnnLayer, xmwdq1]
+                    //layers: [tdtImgLayer, tdtVecLayer, tdtAnnLayer, xmwdq1_1, deviceGroupLayer]
+                    layers: [googleSatTileLayer, googleMapTileLayer, xmw, deviceGroupLayer]
+                    //layers: [tdtGroupLayer, xmbGroupLayer, graphicGroupLayer, S2_2CadExport]
+                });
+
+                // create a new scene view and add the map
+                //var view = new SceneView({
+                //  container: "viewDiv",
+                //  map: map,
+                //  center: [121.396240, 28.572649],
+                //  zoom: 14
+                //});
+
+                var view = new MapView({
+                    center: [121.28371519314386, 28.180492],
+                    zoom: 14,
+                    container: "viewDiv",
+                    spatialReference: viewSpatialReference,
+                    map: map
+                });
+
+
+
+                //设置点的位置
+                var position = {
+                    type: 'point',
+                    longitude: 121.2824277328 + xTiandi2Other,
+                    latitude: 28.190109502 + yTiandi2Other,
+                };
+
+
+                //将点的样式和位置放在Graphic里面
+                var GraphicMaker = new Graphic({
+                    geometry: position,
+                    symbol: symbolMarker,
+                    popupTemplate: {
+                        title: "旋门湾大桥",
+                        content: ''
+                    }
+                });
+                GraphicMaker.attributes = {
+                    "name": "旋门湾大桥",
+                    "family": "Pinaceae",
+                    "count": 126,
+                    "url": "www.baidu.com"
+                };
+                //显示图标
+                view.graphics.add(GraphicMaker);
+
+
+            
+                var textProjectName = "漩门湾大桥主桥";
+            
+                var textSymbol = {
+                    type: "text",  // autocasts as new TextSymbol()
+                    color: "red",
+                    text: textProjectName,
+                    xoffset: '10px',
+                    yoffset: '60px',
+                    horizontalAlignment: 'left',//default center
+                    font: {  // autocast as new Font()
+                        size: 12,
+                        family: "sans-serif",
+                        weight: "bold"
+                    }
+                };
+            
+                        
+                var GraphicText = new Graphic({
+                    geometry: position,
+                    symbol: textSymbol
+                });
+            
+                        
+                view.graphics.add(GraphicText);
+
+
+                
+
+
+                // Creates actions in the LayerList.
+
+                function defineActions(event) {
+
+                    // The event object contains an item property.
+                    // is is a ListItem referencing the associated layer
+                    // and other properties. You can control the visibility of the
+                    // item, its title, and actions using this object.
+
+                    var item = event.item;
+
+                    if (item.title === titleName) {
+
+                        // An array of objects defining actions to place in the LayerList.
+                        // By making this array two-dimensional, you can separate similar
+                        // actions into separate groups with a breaking line.
+
+                        item.actionsSections = [
+                            //暂时先不用，后面继续完善 add by helm
+                            //[{
+                            //    title: "全图显示",//"Go to full extent",
+                            //    className: "esri-icon-zoom-out-fixed",
+                            //    id: "full-extent"
+                            //}, {
+                            //    title: "图层信息",//"Layer information",
+                            //    className: "esri-icon-description",
+                            //    id: "information"
+                            //}],
+                            [{
+                                title: "增加透明度",//"Increase opacity",
+                                className: "esri-icon-up",
+                                id: "increase-opacity"
+                            }, {
+                                title: "减少透明度",//"Decrease opacity",
+                                className: "esri-icon-down",
+                                id: "decrease-opacity"
+                            }]
+                        ];
+                    }
+                }
+
+                //// create a layer list widget
+                //var layerList = new LayerList({
+                //    view: view,
+                //});
+                view.when(function () {
+
+                    // Create the LayerList widget with the associated actions
+                    // and add it to the top-right corner of the view.
+
+                    var layerList = new LayerList({
+                        view: view,
+                        // executes for each ListItem in the LayerList
+                        listItemCreatedFunction: defineActions
+                    });
+
+                    // Event listener that fires each time an action is triggered
+
+                    layerList.on("trigger-action", function (event) {
+
+                        // The layer visible in the view at the time of the trigger.
+                        //var visibleLayer = USALayer.visible ?
+                        //    USALayer : censusLayer;
+
+                        // Capture the action id.
+                        var id = event.action.id;
+
+                        if (id === "full-extent") {
+
+                            // if the full-extent action is triggered then navigate
+                            // to the full extent of the visible layer
+                            //view.goTo(visibleLayer.fullExtent);
+                            //显示选中图层的全图
+                            view.goTo(plane01xmb.fullExtent);
+
+                        } else if (id === "information") {
+
+                            // if the information action is triggered, then
+                            // open the item details page of the service layer
+                            //这里要显示选中的图层信息
+                            //window.open(visibleLayer.url);
+                            //window.open(graphicGroupLayer.url);
+
+                        } else if (id === "increase-opacity") {
+
+                            // if the increase-opacity action is triggered, then
+                            // increase the opacity of the GroupLayer by 0.25
+
+                            if (graphicGroupLayer.opacity < 1) {
+                                graphicGroupLayer.opacity += 0.25;
+                            }
+                            if (xmbGroupLayer.opacity < 1) {
+                                xmbGroupLayer.opacity += 0.25;
+                            }
+                        } else if (id === "decrease-opacity") {
+
+                            // if the decrease-opacity action is triggered, then
+                            // decrease the opacity of the GroupLayer by 0.25
+                            if (graphicGroupLayer.opacity > 0) {
+                                graphicGroupLayer.opacity -= 0.25;
+                            }
+                            if (xmbGroupLayer.opacity > 0) {
+                                xmbGroupLayer.opacity -= 0.25;
+                            }
+                        }
+                    });
+
+                    var latLonType = 1; //1表示显示经纬度 其他表示显示 米
+                    //注意这里如果用click，那么点击标注的弹出功能会被屏蔽了
+                    //这里用double - click也不好，双击放大的功能被屏蔽了
+                    view.on("double-click", function (event) {
+                        event.stopPropagation(); // overwrite default click-for-popup behavior
+
+                        if (event.button != 2) //0表示左击，1表示中间，2表示右击
+                            return;
+
+                        // Get the coordinates of the click on the view
+                        //精确到小数点后3位
+                        //var lat = Math.round(event.mapPoint.latitude * 1000) / 1000;
+                        //var lon = Math.round(event.mapPoint.longitude * 1000) / 1000;
+                        var lat = 0;
+                        var lon = 0;
+
+                        //原始的经纬度
+                        if (latLonType === 1)//显示经纬度
+                        {
+                            lat = event.mapPoint.latitude;
+                            lon = event.mapPoint.longitude;
+                        }
+                        else {//显示投影坐标（米）
+
+                            lat = event.mapPoint.y;
+                            lon = event.mapPoint.x;
+                        }
+
+                        ////经纬度转墨卡托
+                        //目前不用
+                        //function lonlat2mercator(lon,lat) {
+                        //    var mercator = { x: 0, y: 0 };
+                        //    var x = lon * 20037508.34 / 180;
+                        //    var y = Math.log(Math.tan((90 + lat) * Math.PI / 360)) / (Math.PI / 180);
+                        //    y = y * 20037508.34 / 180;
+                        //    mercator.x = x;
+                        //    mercator.y = y;
+                        //    return mercator;
+                        //}
+                        //var mercator = lonlat2mercator(lon, lat);
+                        //lon = mercator.x;
+                        //lat = mercator.y;
+
+                        view.popup.open({
+                            // Set the popup's title to the coordinates of the location
+                            title: "投影坐标/经纬度: [" + lon + ", " + lat + "]",
+                            location: event.mapPoint // Set the location of the popup to the clicked location
+                        });
+
+                        // Display the popup
+                        // Execute a reverse geocode using the clicked location
+                        locatorTask.locationToAddress(event.mapPoint).then(function (
+                            response) {
+                            // If an address is successfully found, show it in the popup's content
+                            view.popup.content = response.address;
+                        }).otherwise(function (err) {
+                            // If the promise fails and no result is found, show a generic message
+                            view.popup.content =
+                                "该位置没有地址信息！";
+                        });
+                    });
+
+                    //helm 不起作用
+                    //显示地图坐标
+                    function showCoordinates(point) {
+                        ////the map is in web mercator but display coordinates in geographic (lat, long)
+                        //var mp = webMercatorUtils.webMercatorToGeographic(evt.po);
+                        ////display mouse coordinates
+                        //显示指定位置
+                        //dom.byId("info").innerHTML = mp.x.toFixed(3) + ", " + mp.y.toFixed(3);
+                        var dom = document.getElementById('info');
+                        dom.innerHTML = "坐标： " + point.x + ", " + point.y;
+                    }
+                    //特别注意：不像click事件，这里pointer-move事件没有event.mapPoint
+                    view.on('pointer-move', function (event) {
+                        //event.x是屏幕坐标,转换成地理坐标（米）
+                        var point = view.toMap({ x: event.x, y: event.y });
+                        //var normalizedVal = webMercatorUtils.xyToLngLat(42215329, 1321748);
+                        //console.log(normalizedVal);
+
+                        if (latLonType === 1)//显示经纬度
+                        {
+                            var result = webMercatorUtils.xyToLngLat(point.x, point.y);
+                            point.x = result[0];
+                            point.y = result[1];
+                        }
+
+
+                        //bufferPoint(point);
+                        //alert(evt.x,evt.y);
+                        showCoordinates(point);
+                    });
+
+                    //view.on("load", function () {
+                    //    //after map loads, connect to listen to mouse move & drag events
+                    //    map.on("mouse-move", showCoordinates);
+                    //    map.on("mouse-drag", showCoordinates);
+                    //});
+                    //helm
+
+                    view.ui.add(layerList, "top-right");
+
+                    //下面是把界面上的feature查找出来，再添加图标
+                    view.whenLayerView(jbzVectLayer).then(function (layerView) {
+                        layerView.watch("updating", function (val) {
+                            if (!val) {  // wait for the layer view to finish updating                               
+                                layerView.queryFeatures().then(function (results) {
+                                    for (var i = 0; i < results.length; i++) {
+                                        if (results[i].geometry != null) {
+                                            var textSymbol = {
+                                                type: "text",  // autocasts as new TextSymbol()
+                                                color: "red",
+                                                text: results[i].attributes.ShowName,
+                                                xoffset: '10px',
+                                                yoffset: '40px',
+                                                horizontalAlignment: 'left',//default center
+                                                font: {  // autocast as new Font()
+                                                    size: 12,
+                                                    family: "sans-serif",
+                                                    weight: "bold"
+                                                }
+                                            };
+
+                                            if ((i % 2) == 0)
+                                                textSymbol.yoffset = '60px';//避免很近的地方叠加一起
+
+                                            var position = {
+                                                type: 'point',
+                                                longitude: results[i].geometry.longitude,
+                                                latitude: results[i].geometry.latitude,
+                                            };
+
+                                            var GraphicText = new Graphic({
+                                                geometry: position,
+                                                symbol: textSymbol
+                                            });
+
+                                            //var GraphicMaker = new Graphic({
+                                            //    geometry: position,
+                                            //    symbol: symbolMarker,
+                                            //    popupTemplate: {
+                                            //        title: "旋门湾大桥",
+                                            //        content: ''
+                                            //    }
+                                            //});
+                                            //GraphicMaker.attributes = {
+                                            //    "name": "旋门湾大桥",
+                                            //    "family": "Pinaceae",
+                                            //    "count": 126,
+                                            //    "url": "www.baidu.com"
+                                            //};
+                                            //显示图标
+                                            //view.graphics.add(GraphicMaker);
+                                            view.graphics.add(GraphicText);
+                                        }
+                                    }
+                                });
+                            }
+                        });
+                    });
+
+                    //let graphics;
+                    //view.whenLayerView(jbzVectLayer).then(function (layerView) {
+                    //    layerView.watch("updating", function (value) {
+                    //        if (!value) { // wait for the layer view to finish updating                               
+                    //            // query all the features available for drawing.
+                    //            layerView.queryFeatures().then(function (results) {
+
+                    //                graphics = results.features;                                   
+                    //                const fragment = document.createDocumentFragment();
+
+                    //                graphics.forEach(function (result, index) {
+                    //                    const attributes = result.attributes;
+                    //                    const name = attributes.DeviceFacId;
+
+                    //                    // Create a list  codes in NY
+                    //                    const li = document.createElement("li");
+                    //                    li.classList.add("panel-result");
+                    //                    li.tabIndex = 0;
+                    //                    li.setAttribute("data-result-id", index);
+                    //                    li.textContent = name;
+
+                    //                    fragment.appendChild(li);
+                    //                });
+                    //                // Empty the current list
+                    //                listNode.innerHTML = "";
+                    //                listNode.appendChild(fragment);
+                    //            }).catch(function (error) {
+                    //                // console.error("query failed: ", error);
+                    //            });
+                    //        }
+                    //    });
+                    //});
+                });
+            });
+    </script>
+</head>
+
+<body>
+
+<!--<button type="button" id="homeBtn" onclick="home()">返回720全景图模式</button>-->
+
+  <div id="viewDiv">
+      <span id="info" style="position:absolute; left:750px; bottom:0px; color:#000; z-index:50; font-size:12px"></span>  
+  </div>
+</body>
+
+</html>

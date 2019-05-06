@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "GetDetailChart2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using MyModel
+@using System.Collections.Generic
+
+@section CSS{
+    <style>
+        body{
+            padding:20px 20px;
+            width:100%;
+            height:100%;
+        }
+        table,tr,td{
+            width: 100%;
+            border: 1px solid #B3B4BA;
+            padding-left: 5px;
+            font-size:12px;
+            font-weight:500;
+        }
+        tr {
+            height:40px;
+        }
+        td{
+            width:25%;
+            text-align:left;
+        }
+        td:nth-child(odd)
+        {
+            background:#f9f9f9;
+        }
+    </style>
+}
+@section JS{
+    <script src="~/Scripts/MyTool.js"></script>
+}
+
+@section Body{
+    <body>
+            <table id="form"  align="center" >
+                <tbody>
+                    @{
+                        YaJiang1_BaseInfo2 baseInfo = ViewBag.baseInfo;
+                     }
+                    <tr>
+                        <td>水胶比(%)设置值</td><td>@baseInfo.SetShuiJiao</td>
+                        <td>水胶比(%)真实值</td><td>@baseInfo.RealShuiJiao</td>
+                    </tr>
+                    <tr>
+                        <td>压浆压力(MPa)设置值</td><td>@baseInfo.SetPress</td>
+                        <td>压浆压力(MPa)真实值</td><td>@baseInfo.RealPress</td>
+                    </tr>
+                    <tr>
+                        <td>真空度(MPa)设置值</td><td>@baseInfo.SetZhenKongDu</td>
+                        <td>真空度(MPa)真实值</td><td>@baseInfo.RealZhenKongDu</td>
+                    </tr>
+                    <tr>
+                        <td>搅拌时间(S)设置值</td><td>@baseInfo.SetJiaoBanTime</td>
+                        <td>搅拌时间(S)真实值</td><td>@baseInfo.RealJiaoBanTime</td>
+                    </tr>
+                    <tr>
+                        <td>稳压时间(S)设置值</td><td>@baseInfo.SetWenYaTime</td>
+                        <td>稳压时间(S)真实值</td><td>@baseInfo.RealWenYaTime</td>
+                    </tr>
+                    <tr>
+                        <td>循环时间(S)设置值</td><td>@baseInfo.SetCycleTime</td>
+                        <td>循环时间(S)真实值</td><td>@baseInfo.RealCycleTime</td>
+                    </tr>
+
+                </tbody>
+           </table>
+
+    </body>
+}

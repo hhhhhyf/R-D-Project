@@ -1,0 +1,5 @@
+F:\交通建设管理信息系统\项目\TrafficConstructionMIS\MyModel\bin\Release\MyModel.dll
+F:\交通建设管理信息系统\项目\TrafficConstructionMIS\MyModel\bin\Release\MyModel.pdb
+F:\交通建设管理信息系统\项目\TrafficConstructionMIS\MyModel\obj\Release\MyModel.csprojResolveAssemblyReference.cache
+F:\交通建设管理信息系统\项目\TrafficConstructionMIS\MyModel\obj\Release\MyModel.dll
+F:\交通建设管理信息系统\项目\TrafficConstructionMIS\MyModel\obj\Release\MyModel.pdb

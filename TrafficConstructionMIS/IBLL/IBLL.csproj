@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DACEBF3C-9944-4943-961F-4DB03AF26F3A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IBLL</RootNamespace>
+    <AssemblyName>IBLL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IEnvionment_ActualTimeBLL.cs" />
+    <Compile Include="IEnvionment_StatisticBLL.cs" />
+    <Compile Include="IFlowBLL.cs" />
+    <Compile Include="ILabBLL.cs" />
+    <Compile Include="ILoginBLL.cs" />
+    <Compile Include="IMainBLL.cs" />
+    <Compile Include="IMixingPlantBLL.cs" />
+    <Compile Include="IMixingPlant_StatisticBLL.cs" />
+    <Compile Include="IWeiXin_APIBLL.cs" />
+    <Compile Include="IXuanPenJi_StatisticBLL.cs" />
+    <Compile Include="IXuanPenJi_ActualTimeBLL.cs" />
+    <Compile Include="IYaJiang1APIBLL.cs" />
+    <Compile Include="IYaJiang1BLL.cs" />
+    <Compile Include="IYaJiangAPIBLL.cs" />
+    <Compile Include="IYaJiangBLL.cs" />
+    <Compile Include="IYanghu_StatDataBLL.cs" />
+    <Compile Include="IZhangLa1APIBLL.cs" />
+    <Compile Include="IZhangLa1BLL.cs" />
+    <Compile Include="IZhangLaAPIBLL.cs" />
+    <Compile Include="IZhangLaBLL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DbModel\DbModel.csproj">
+      <Project>{1cadd74a-2ee0-4617-909f-ac882c34343b}</Project>
+      <Name>DbModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyModel\MyModel.csproj">
+      <Project>{6bb3ddde-e3ad-4244-bb1c-8d4700d0619c}</Project>
+      <Name>MyModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

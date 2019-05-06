@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+  <object type="DAL.Tb_MixingPlant_DosageDAL, DAL" singleton="true" name="Tb_MixingPlant_DosageDAL" >
+  </object>
+  <object type="DAL.Tb_MixingPlant_MaterialDAL, DAL" singleton="true" name="Tb_MixingPlant_MaterialDAL" >
+  </object>
+  <object type="DAL.Tb_MixingPlant_PieceDAL, DAL" singleton="true" name="Tb_MixingPlant_PieceDAL" >
+  </object>
+  <object type="DAL.Tb_MixingPlant_ProduceDAL, DAL" singleton="true" name="Tb_MixingPlant_ProduceDAL" >
+  </object>
+  <object type="DAL.Tb_MixingPlant_RecipeDAL, DAL" singleton="true" name="Tb_MixingPlant_RecipeDAL" >
+  </object>
+  <object type="DAL.Tb_MixingPlant_RecipeListDAL, DAL" singleton="true" name="Tb_MixingPlant_RecipeListDAL" >
+  </object>
+  <object type="DAL.Tb_LoginDAL, DAL" singleton="true" name="Tb_LoginDAL" >
+  </object>
+  <object type="DAL.Tb_Main_MenuDAL, DAL" singleton="true" name="Tb_Main_MenuDAL" >
+  </object>
+  
+  <object type="DAL.GyxpDAL, DAL" singleton="true" name="GyxpDAL" >
+  </object>
+  <object type="DAL.Gyxp_StatDAL, DAL" singleton="true" name="Gyxp_StatDAL" >
+  </object>
+  
+  <object type="DAL.Tb_Lab_TestDAL, DAL" singleton="true" name="Tb_Lab_TestDAL" >
+  </object>
+  <object type="DAL.Tb_Lab_TestItemDAL, DAL" singleton="true" name="Tb_Lab_TestItemDAL" >
+  </object>
+  <object type="DAL.Tb_Lab_DepartmentDAL, DAL" singleton="true" name="Tb_Lab_DepartmentDAL" >
+  </object>
+  <object type="DAL.Tb_Lab_ProjectNameDAL, DAL" singleton="true" name="Tb_Lab_ProjectNameDAL" >
+  </object>
+  <object type="DAL.Tb_Lab_CurveDAL, DAL" singleton="true" name="Tb_Lab_CurveDAL" >
+  </object>
+  <object type="DAL.Tb_Lab_TypeDAL, DAL" singleton="true" name="Tb_Lab_TypeDAL" >
+  </object>
+  
+  <object type="DAL.Tb_ZhangLa_CurrentMonitorDAL, DAL" singleton="true" name="Tb_ZhangLa_CurrentMonitorDAL" >
+  </object>
+  <object type="DAL.Tb_ZhangLa_CurveDAL, DAL" singleton="true" name="Tb_ZhangLa_CurveDAL" >
+  </object>
+  <object type="DAL.Tb_ZhangLa_DataDAL, DAL" singleton="true" name="Tb_ZhangLa_DataDAL" >
+  </object>
+  <object type="DAL.Tb_ZhangLa_ProjectInfoDAL, DAL" singleton="true" name="Tb_ZhangLa_ProjectInfoDAL" >
+  </object>
+
+  <object type="DAL.Tb_YaJiang_CurrentMonitorDAL, DAL" singleton="true" name="Tb_YaJiang_CurrentMonitorDAL" >
+  </object>
+  <object type="DAL.Tb_YaJiang_CurveDAL, DAL" singleton="true" name="Tb_YaJiang_CurveDAL" >
+  </object>
+  <object type="DAL.Tb_YaJiang_DataDAL, DAL" singleton="true" name="Tb_YaJiang_DataDAL" >
+  </object>
+  <object type="DAL.Tb_YaJiang_ProjectInfoDAL, DAL" singleton="true" name="Tb_YaJiang_ProjectInfoDAL" >
+  </object>
+  
+  <object type="DAL.Envionment_DataDAL, DAL" singleton="true" name="Envionment_DataDAL" >
+  </object>
+  <object type="DAL.Envionment_DeviceProjectDAL, DAL" singleton="true" name="Envionment_DeviceProjectDAL" >
+  </object>
+  <object type="DAL.Envionment_ProjectInfoDAL, DAL" singleton="true" name="Envionment_ProjectInfoDAL" >
+  </object>
+  
+  <object type="DAL.Tb_MixingPlant_DeviceDAL, DAL" singleton="true" name="Tb_MixingPlant_DeviceDAL" >
+  </object>
+  <object type="DAL.Tb_ZhangLa_ProjectDAL, DAL" singleton="true" name="Tb_ZhangLa_ProjectDAL" >
+  </object>
+  <object type="DAL.Tb_YaJiang_ProjectDAL, DAL" singleton="true" name="Tb_YaJiang_ProjectDAL" >
+  </object>
+  <object type="DAL.Tb_Flow_PageDAL, DAL" singleton="true" name="Tb_Flow_PageDAL" >
+  </object>
+  <object type="DAL.Tb_Flow_StatisticsDAL, DAL" singleton="true" name="Tb_Flow_StatisticsDAL" >
+  </object>
+  <object type="DAL.Tb_Flow_VisitDAL, DAL" singleton="true" name="Tb_Flow_VisitDAL" >
+  </object>
+
+  <object type="DAL.Tb_ZhangLa1_ProjectDAL, DAL" singleton="true" name="Tb_ZhangLa1_ProjectDAL" >
+  </object>
+  <object type="DAL.Tb_ZhangLa1_DeviceDAL, DAL" singleton="true" name="Tb_ZhangLa1_DeviceDAL" >
+  </object>
+  <object type="DAL.Tb_ZhangLa1_DataDAL, DAL" singleton="true" name="Tb_ZhangLa1_DataDAL" >
+  </object>
+  <object type="DAL.Tb_ZhangLa1_CurveDAL, DAL" singleton="true" name="Tb_ZhangLa1_CurveDAL" >
+  </object>
+
+
+  <object type="DAL.Tb_YaJiang1_ProjectDAL, DAL" singleton="true" name="Tb_YaJiang1_ProjectDAL" >
+  </object>
+  <object type="DAL.Tb_YaJiang1_DeviceDAL, DAL" singleton="true" name="Tb_YaJiang1_DeviceDAL" >
+  </object>
+  <object type="DAL.Tb_YaJiang1_DataDAL, DAL" singleton="true" name="Tb_YaJiang1_DataDAL" >
+  </object>
+  <object type="DAL.Tb_YaJiang1_CurveDAL, DAL" singleton="true" name="Tb_YaJiang1_CurveDAL" >
+  </object>
+  <object type="DAL.Yanghu_StatDataDAL, DAL" singleton="true" name="Yanghu_StatDataDAL" >
+  </object>
+  
+</objects>

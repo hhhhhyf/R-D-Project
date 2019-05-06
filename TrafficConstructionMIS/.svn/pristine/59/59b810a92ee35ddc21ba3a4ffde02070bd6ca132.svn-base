@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6BB3DDDE-E3AD-4244-BB1C-8D4700D0619C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyModel</RootNamespace>
+    <AssemblyName>MyModel</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Envionment_ActualTimeData.cs" />
+    <Compile Include="Envionment_StatisticTable.cs" />
+    <Compile Include="Flow_Daily.cs" />
+    <Compile Include="Flow_Total.cs" />
+    <Compile Include="JqGridTable.cs" />
+    <Compile Include="Lab_CurveChart.cs" />
+    <Compile Include="Lab_DetailTable.cs" />
+    <Compile Include="Lab_MainTable.cs" />
+    <Compile Include="Lab_PrintPoint.cs" />
+    <Compile Include="Lab_Print_Gjls.cs" />
+    <Compile Include="Lab_QuXian_1.cs" />
+    <Compile Include="Lab_QuXian_2.cs" />
+    <Compile Include="Lab_QuXian_3.cs" />
+    <Compile Include="Lab_QuXian_4.cs" />
+    <Compile Include="MixingPlant_DosageTable.cs" />
+    <Compile Include="MixingPlant_MainTable.cs" />
+    <Compile Include="MixingPlant_Set.cs" />
+    <Compile Include="MixingPlant_StatisticChart.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WeiXin_API_Device.cs" />
+    <Compile Include="XuanPenJi_ActualTimeData.cs" />
+    <Compile Include="XuanPenJi_ActualTimeTable.cs" />
+    <Compile Include="XuanPenJi_StatisticTable.cs" />
+    <Compile Include="YaJiang1_BaseInfo1.cs" />
+    <Compile Include="YaJiang1_BaseInfo2.cs" />
+    <Compile Include="YaJiang1_CurveChart.cs" />
+    <Compile Include="YaJiang1_Main.cs" />
+    <Compile Include="YaJiang_CurveChart.cs" />
+    <Compile Include="YaJiang_DetailChart.cs" />
+    <Compile Include="YaJiang_Main.cs" />
+    <Compile Include="YaJiang_QuXianDataAry.cs" />
+    <Compile Include="YangHu_MainTable.cs" />
+    <Compile Include="ZhangLa1_DetailData_BaseInfo.cs" />
+    <Compile Include="ZhangLa1_DetailData_Ding.cs" />
+    <Compile Include="ZhangLa1_Table.cs" />
+    <Compile Include="ZhangLa_CurveChart.cs" />
+    <Compile Include="ZhangLa_DetailData_BaseInfo.cs" />
+    <Compile Include="ZhangLa_DetailData_Ding.cs" />
+    <Compile Include="ZhangLa_QuXianDataAry.cs" />
+    <Compile Include="ZhangLa_ReceiveData.cs" />
+    <Compile Include="ZhangLa_ReturnData.cs" />
+    <Compile Include="YaJiang_ReceiveData.cs" />
+    <Compile Include="YaJiang_ReturnData.cs" />
+    <Compile Include="ZhangLa_Table.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

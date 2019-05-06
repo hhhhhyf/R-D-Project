@@ -1,0 +1,16 @@
+E:\智慧交通\workproject\Gyxp\GyxpSocketClient\GyxpSocketClient\obj\Debug\GyxpSocketClient.csproj.CoreCompileInputs.cache
+E:\智慧交通\workproject\Gyxp\GyxpSocketClient\GyxpSocketClient\obj\Debug\GyxpSocketClient.csprojAssemblyReference.cache
+E:\智慧交通\workproject\SocketClient\GyxpSocketClient\bin\Debug\GyxpSocketClient.exe
+E:\智慧交通\workproject\SocketClient\GyxpSocketClient\bin\Debug\GyxpSocketClient.pdb
+E:\智慧交通\workproject\SocketClient\GyxpSocketClient\obj\Debug\GyxpSocketClient.csprojAssemblyReference.cache
+E:\智慧交通\workproject\SocketClient\GyxpSocketClient\obj\Debug\GyxpSocketClient.csproj.CoreCompileInputs.cache
+E:\智慧交通\workproject\SocketClient\GyxpSocketClient\obj\Debug\GyxpSocketClient.exe
+E:\智慧交通\workproject\SocketClient\GyxpSocketClient\obj\Debug\GyxpSocketClient.pdb
+E:\智慧交通\wlwork\code\SocketClient\GyxpSocketClient\bin\Debug\GyxpSocketClient.exe
+E:\智慧交通\wlwork\code\SocketClient\GyxpSocketClient\bin\Debug\GyxpSocketClient.pdb
+E:\智慧交通\wlwork\code\SocketClient\GyxpSocketClient\obj\Debug\GyxpSocketClient.csprojAssemblyReference.cache
+E:\智慧交通\wlwork\code\SocketClient\GyxpSocketClient\obj\Debug\GyxpSocketClient.csproj.CoreCompileInputs.cache
+E:\智慧交通\wlwork\code\SocketClient\GyxpSocketClient\obj\Debug\GyxpSocketClient.exe
+E:\智慧交通\wlwork\code\SocketClient\GyxpSocketClient\obj\Debug\GyxpSocketClient.pdb
+E:\SocketClient\GyxpSocketClient\obj\Debug\GyxpSocketClient.exe
+E:\SocketClient\GyxpSocketClient\obj\Debug\GyxpSocketClient.pdb

@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8ed5f3338f104c6ebf771bc80f8db6c7" Name="关系图1" ZoomLevel="66" SnapToGrid="true">
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Gyxp" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Gyxp_Stat" Width="1.5" PointX="12.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_Lab_Department" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_Lab_ProjectName" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_Lab_Test" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_Lab_TestItem" Width="1.5" PointX="5.25" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_Login" Width="1.5" PointX="7.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_Main_Menu" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_Dosage" Width="1.5" PointX="12" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_Material" Width="1.5" PointX="9.75" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_Piece" Width="1.5" PointX="13.561553050956327" PointY="32.826704557384716" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_Produce" Width="1.5" PointX="7.5" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_Recipe" Width="1.5" PointX="5.25" PointY="31.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_RecipeList" Width="1.5" PointX="15" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_YaJiang_CurrentMonitor" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_YaJiang_Curve" Width="1.5" PointX="12.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_YaJiang_Data" Width="1.5" PointX="10" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_YaJiang_ProjectInfo" Width="1.5" PointX="7.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa_CurrentMonitor" Width="1.5" PointX="14.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa_Curve" Width="1.5" PointX="7.25" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa_Data" Width="1.5" PointX="5" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa_ProjectInfo" Width="1.5" PointX="2.75" PointY="12.75" IsExpanded="true" />
+        <AssociationConnector Association="YuHuan_TrafficConstructionMISModel.FK_Tb_Lab_Test_Tb_Lab_Department" ManuallyRouted="false" />
+        <AssociationConnector Association="YuHuan_TrafficConstructionMISModel.FK_Tb_Lab_Test_Tb_Lab_ProjectName" ManuallyRouted="false" />
+        <AssociationConnector Association="YuHuan_TrafficConstructionMISModel.FK_Tb_Lab_TestItem_Tb_Lab_Test" ManuallyRouted="false" />
+        <AssociationConnector Association="YuHuan_TrafficConstructionMISModel.FK_Tb_MixingPlant_Dosage_Tb_MixingPlant_Material" ManuallyRouted="false" />
+        <AssociationConnector Association="YuHuan_TrafficConstructionMISModel.FK_Tb_MixingPlant_Dosage_Tb_MixingPlant_Piece" ManuallyRouted="false" />
+        <AssociationConnector Association="YuHuan_TrafficConstructionMISModel.FK_Tb_MixingPlant_RecipeList_Tb_MixingPlant_Material" ManuallyRouted="false" />
+        <AssociationConnector Association="YuHuan_TrafficConstructionMISModel.FK_Tb_MixingPlant_Piece_Tb_MixingPlant_Produce" ManuallyRouted="false" />
+        <AssociationConnector Association="YuHuan_TrafficConstructionMISModel.FK_Tb_MixingPlant_Produce_Tb_MixingPlant_Recipe" ManuallyRouted="false" />
+        <AssociationConnector Association="YuHuan_TrafficConstructionMISModel.FK_Tb_MixingPlant_RecipeList_Tb_MixingPlant_Recipe" ManuallyRouted="false" />
+        <AssociationConnector Association="YuHuan_TrafficConstructionMISModel.FK_Tb_YaJiang_Curve_Tb_YaJiang_Data" ManuallyRouted="false" />
+        <AssociationConnector Association="YuHuan_TrafficConstructionMISModel.FK_Tb_YaJiang_Data_Tb_YaJiang_ProjectInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="YuHuan_TrafficConstructionMISModel.FK_Tb_ZhangLa_Curve_Tb_ZhangLa_Data" ManuallyRouted="false" />
+        <AssociationConnector Association="YuHuan_TrafficConstructionMISModel.FK_Tb_ZhangLa_Data_Tb_ZhangLa_ProjectInfo" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Envionment_Data" Width="1.5" PointX="1.0919353370982852" PointY="29.007514073051286" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Envionment_DeviceProject" Width="1.5" PointX="2.8228629281850823" PointY="12.190378358676275" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Envionment_ProjectInfo" Width="1.5" PointX="1.501895640744779" PointY="13.200596234388927" />
+        <AssociationConnector Association="YuHuan_TrafficConstructionMISModel.FK_Envionment_Data_Envionment_ProjectInfo" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_Device" Width="1.5" PointX="2.8210496990108163" PointY="18.519389980714482" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_YaJiang_Project" Width="1.5" PointX="11.283534720206417" PointY="27.108597037898654" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa_Project" Width="1.5" PointX="4.6778612326261868" PointY="30.65969306168132" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_Flow_Page" Width="1.5" PointX="4.3445751538242092" PointY="9.5116181864922957" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_Flow_Statistics" Width="1.5" PointX="11.633509168230699" PointY="23.045471798184082" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_Flow_Visit" Width="1.5" PointX="10.71983370497815" PointY="17.289839544002824" />
+        <AssociationConnector Association="YuHuan_TrafficConstructionMISModel.FK_Tb_Flow_Statistics_Tb_Flow_Page" />
+        <AssociationConnector Association="YuHuan_TrafficConstructionMISModel.FK_Tb_Flow_Visit_Tb_Flow_Page" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_Lab_GJLS" Width="1.5" PointX="8.3930049112034055" PointY="29.333636342237533" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_Lab_GJLSParm" Width="1.5" PointX="7.924003386834638" PointY="26.250254553859239" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_Lab_GJLSResult" Width="1.5" PointX="2.4479575317576332" PointY="12.858008658912969" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_Lab_HNTKY" Width="1.5" PointX="10.667480924477559" PointY="9.60228875726568" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_Lab_HNTKYParm" Width="1.5" PointX="3.5176217050839318" PointY="24.710432153525964" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_Lab_HNTKYResult" Width="1.5" PointX="4.9467936013577472" PointY="22.715817402450284" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_Lab_SNKY" Width="1.5" PointX="10.023463859233756" PointY="19.307041072895302" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_Lab_SNKYParm" Width="1.5" PointX="2.24812309176108" PointY="28.497017903484878" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_Lab_SNKYResult" Width="1.5" PointX="5.3021990309013987" PointY="6.5740051598167071" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_Lab_SNKZ" Width="1.5" PointX="9.6707604647012246" PointY="8.0198696740064168" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_Lab_SNKZParm" Width="1.5" PointX="10.92952763798159" PointY="11.058141668819888" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_Lab_SNKZResult" Width="1.5" PointX="9.6041346553732332" PointY="24.427506562521451" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZT_WL_SB_MixingPlant" Width="1.5" PointX="3.4845457596166738" PointY="21.016640926253348" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZT_WL_SB_MixingPlant_Dosage" Width="1.5" PointX="11.15979044845318" PointY="25.458379146390772" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZT_WL_SB_MixingPlant_Piece" Width="1.5" PointX="10.770664544203628" PointY="31.300238012941666" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZT_WL_SB_MixingPlant_Produce" Width="1.5" PointX="1.6761677515116369" PointY="3.198037551342527" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTEBLab_SNKY" Width="1.5" PointX="11.424976229399897" PointY="28.690220384248637" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTEBLab_SNKYParm" Width="1.5" PointX="7.6103831136647537" PointY="12.054658448349059" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTEBLab_SNKYResult" Width="1.5" PointX="4.0173904523334416" PointY="4.8958066724686917" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTEBLab_SNKZ" Width="1.5" PointX="4.9001397606451711" PointY="8.5777355472453571" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTEBLab_SNKZParm" Width="1.5" PointX="8.13284519320952" PointY="15.567307419873451" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTEBLab_SNKZResult" Width="1.5" PointX="11.559260878506704" PointY="0.85655827860187661" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTJL2Lab_SNKY" Width="1.5" PointX="7.6942015139824713" PointY="23.078806083220432" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTJL2Lab_SNKYParm" Width="1.5" PointX="5.1177816656966613" PointY="29.47621896745461" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTJL2Lab_SNKYResult" Width="1.5" PointX="10.241588316038991" PointY="23.152241807036216" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTJL2Lab_SNKZ" Width="1.5" PointX="0.56252521861462168" PointY="12.303431620962654" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTJL2Lab_SNKZParm" Width="1.5" PointX="3.9610226172772345" PointY="1.8764237472212053" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTJL2Lab_SNKZResult" Width="1.5" PointX="6.7393388984442408" PointY="11.323204761055859" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTLab_SNKY" Width="1.5" PointX="1.3959789729658416" PointY="28.70316913570425" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTLab_SNKYResult" Width="1.5" PointX="6.359299698080541" PointY="17.511245825100339" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTLab_SNKZ" Width="1.5" PointX="5.6619627986391832" PointY="2.9882366522160528" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTLab_SNKZResult" Width="1.5" PointX="4.8301937397710013" PointY="10.080086533948819" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTSBLab_SNKY" Width="1.5" PointX="7.5902443060605993" PointY="9.9934120522781331" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTSBLab_SNKYParm" Width="1.5" PointX="9.09345529651896" PointY="30.039016573708047" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTSBLab_SNKYResult" Width="1.5" PointX="11.629757288670986" PointY="25.940336463013821" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTSBLab_SNKZ" Width="1.5" PointX="6.6689912614733871" PointY="9.24339074326837" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTSBLab_SNKZParm" Width="1.5" PointX="9.5651121742860941" PointY="17.210959025291242" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTSBLab_SNKZResult" Width="1.5" PointX="6.8746059345428865" PointY="13.57809961474412" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTSDBLab_SNKY" Width="1.5" PointX="4.5875422473007541" PointY="24.754467469060081" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTSDBLab_SNKYParm" Width="1.5" PointX="1.4661134469630723" PointY="18.213315942424032" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTSDBLab_SNKYResult" Width="1.5" PointX="2.7634586816483449" PointY="0.28322222842053613" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTSDBLab_SNKZ" Width="1.5" PointX="11.305303863857549" PointY="5.5695303108401273" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTSDBLab_SNKZParm" Width="1.5" PointX="11.175064036238503" PointY="24.166349049735047" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTSDBLab_SNKZResult" Width="1.5" PointX="9.2382414644762125" PointY="28.590179531178521" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTYBLab_SNKY" Width="1.5" PointX="4.0194937456489974" PointY="8.971150208716816" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTYBLab_SNKYParm" Width="1.5" PointX="3.1245179451650555" PointY="14.009872070518263" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTYBLab_SNKYResult" Width="1.5" PointX="7.4766278040952177" PointY="27.555793536620119" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTYBLab_SNKZ" Width="1.5" PointX="9.5546880315778253" PointY="18.699350529676" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTYBLab_SNKZParm" Width="1.5" PointX="1.0075465426815424" PointY="20.744609142069056" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTYBLab_SNKZResult" Width="1.5" PointX="4.7309650484151042" PointY="10.524458651675126" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_MixingPlant_228RoadYB" Width="1.5" PointX="11.561096984688703" PointY="15.60840120148305" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_MixingPlant_228RoadYBPeiHeBi" Width="1.5" PointX="11.423824824124493" PointY="1.3705657130901543" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_MixingPlant_Intensity" Width="1.5" PointX="2.0130994161651934" PointY="24.256676506370621" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_MixingPlant_Parm" Width="1.5" PointX="7.0486746835749008" PointY="25.351767954114717" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_MixingPlant_Parm2" Width="1.5" PointX="5.8290529706650656" PointY="4.3934707811071867" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_MixingPlant_tScsjAll" Width="1.5" PointX="11.658659538095193" PointY="10.968143125515498" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_MixingPlant_tScsjAll2" Width="1.5" PointX="10.623106068046379" PointY="34.206439412668473" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_MixingPlant_tScsjAllBody" Width="1.5" PointX="3.8032585027642818" PointY="14.815345234617286" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Access_MixingPlant_tScsjAllBody2" Width="1.5" PointX="1.8152848807234712" PointY="7.3109863285492107" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Sdf_LZT_SD_MixingPlant" Width="1.5" PointX="4.6049684139923048" PointY="28.074302433093219" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Sdf_LZT_SD_MixingPlant_2" Width="1.5" PointX="6.5092880551280867" PointY="27.659034592872036" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Service_Config" Width="1.5" PointX="7.2451374694915192" PointY="22.041535894405811" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Service_Status" Width="1.5" PointX="6.6031082284651275" PointY="3.7741046267441032" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.sysdiagrams" Width="1.5" PointX="7.9896437246304206" PointY="29.951172261476131" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa1_Curve" Width="1.5" PointX="4.5002690891270847" PointY="13.73814568563278" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa1_Data" Width="1.5" PointX="9.3059233041973428" PointY="15.981750123194303" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa1_Device" Width="1.5" PointX="9.2657108554922569" PointY="4.9003788553645737" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa1_Project" Width="1.5" PointX="1.6535160605113561" PointY="18.280145787764408" />
+        <AssociationConnector Association="YuHuan_TrafficConstructionMISModel.FK_Tb_ZhangLa1_Curve_Tb_ZhangLa1_Data" />
+        <AssociationConnector Association="YuHuan_TrafficConstructionMISModel.FK_Tb_ZhangLa1_Data_Tb_ZhangLa1_Device" />
+        <AssociationConnector Association="YuHuan_TrafficConstructionMISModel.FK_Tb_ZhangLa1_Device_Tb_ZhangLa1_Project" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_YaJiang1_Curve" Width="1.5" PointX="3.6568941453736712" PointY="20.746209288363442" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_YaJiang1_Data" Width="1.5" PointX="3.5917597392535581" PointY="22.292559783110654" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_YaJiang1_Device" Width="1.5" PointX="11.837091039790348" PointY="19.825238102965635" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_YaJiang1_Project" Width="1.5" PointX="8.526976976789058" PointY="5.8190133449710038" />
+        <AssociationConnector Association="YuHuan_TrafficConstructionMISModel.FK_Tb_YaJiang1_Curve_Tb_YaJiang1_Data" />
+        <AssociationConnector Association="YuHuan_TrafficConstructionMISModel.FK_Tb_YaJiang1_Data_Tb_YaJiang1_Device" />
+        <AssociationConnector Association="YuHuan_TrafficConstructionMISModel.FK_Tb_YaJiang1_Device_Tb_YaJiang1_Project" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_Lab_Curve" Width="1.5" PointX="7.5322942414937053" PointY="2.1202124963142968" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Tb_Lab_Type" Width="1.5" PointX="9.8754910984428079" PointY="25.252730485635219" />
+        <AssociationConnector Association="YuHuan_TrafficConstructionMISModel.FK_Tb_Lab_Curve_Tb_Lab_Test" />
+        <AssociationConnector Association="YuHuan_TrafficConstructionMISModel.FK_Tb_Lab_Curve_Tb_Lab_Type" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Yanghu_SourceData" Width="1.5" PointX="13.297821980793307" PointY="28.821022727657571" />
+        <EntityTypeShape EntityType="YuHuan_TrafficConstructionMISModel.Yanghu_StatData" Width="1.5" PointX="6.6806279414708865" PointY="9.1494472963500062" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

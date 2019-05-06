@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3DB00D1E-7DF3-4D91-9F9D-D563F8752508}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IDAL</RootNamespace>
+    <AssemblyName>IDAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IBaseDAL.cs" />
+    <Compile Include="IEnvionment_DataDAL.cs" />
+    <Compile Include="IEnvionment_DeviceProjectDAL.cs" />
+    <Compile Include="IEnvionment_ProjectInfoDAL.cs" />
+    <Compile Include="IGyxp_StatDAL.cs" />
+    <Compile Include="ITb_Flow_PageDAL.cs" />
+    <Compile Include="ITb_Flow_StatisticsDAL.cs" />
+    <Compile Include="ITb_Flow_VisitDAL.cs" />
+    <Compile Include="ITb_Lab_CurveDAL.cs" />
+    <Compile Include="ITb_Lab_DepartmentDAL.cs" />
+    <Compile Include="ITb_Lab_ProjectNameDAL.cs" />
+    <Compile Include="ITb_Lab_TestDAL.cs" />
+    <Compile Include="ITb_Lab_TestItemDAL.cs" />
+    <Compile Include="ITb_Lab_TypeDAL.cs" />
+    <Compile Include="ITb_LoginDAL.cs" />
+    <Compile Include="ITb_Main_MenuDAL.cs" />
+    <Compile Include="ITb_MixingPlant_DeviceDAL.cs" />
+    <Compile Include="ITb_MixingPlant_DosageDAL.cs" />
+    <Compile Include="ITb_MixingPlant_MaterialDAL.cs" />
+    <Compile Include="ITb_MixingPlant_PieceDAL.cs" />
+    <Compile Include="ITb_MixingPlant_ProduceDAL.cs" />
+    <Compile Include="ITb_MixingPlant_RecipeDAL.cs" />
+    <Compile Include="ITb_MixingPlant_RecipeListDAL.cs" />
+    <Compile Include="IGyxpDAL.cs" />
+    <Compile Include="ITb_YaJiang1_CurveDAL.cs" />
+    <Compile Include="ITb_YaJiang1_DataDAL.cs" />
+    <Compile Include="ITb_YaJiang1_DeviceDAL.cs" />
+    <Compile Include="ITb_YaJiang1_ProjectDAL.cs" />
+    <Compile Include="ITb_YaJiang_CurrentMonitorDAL.cs" />
+    <Compile Include="ITb_YaJiang_CurveDAL.cs" />
+    <Compile Include="ITb_YaJiang_DataDAL.cs" />
+    <Compile Include="ITb_YaJiang_ProjectDAL.cs" />
+    <Compile Include="ITb_YaJiang_ProjectInfoDAL.cs" />
+    <Compile Include="ITb_ZhangLa1_CurveDAL.cs" />
+    <Compile Include="ITb_ZhangLa1_DataDAL.cs" />
+    <Compile Include="ITb_ZhangLa1_DeviceDAL.cs" />
+    <Compile Include="ITb_ZhangLa1_ProjectDAL.cs" />
+    <Compile Include="ITb_ZhangLa_CurrentMonitorDAL.cs" />
+    <Compile Include="ITb_ZhangLa_CurveDAL.cs" />
+    <Compile Include="ITb_ZhangLa_DataDAL.cs" />
+    <Compile Include="ITb_ZhangLa_ProjectDAL.cs" />
+    <Compile Include="ITb_ZhangLa_ProjectInfoDAL.cs" />
+    <Compile Include="IYanghu_StatDataDAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DbModel\DbModel.csproj">
+      <Project>{1cadd74a-2ee0-4617-909f-ac882c34343b}</Project>
+      <Name>DbModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

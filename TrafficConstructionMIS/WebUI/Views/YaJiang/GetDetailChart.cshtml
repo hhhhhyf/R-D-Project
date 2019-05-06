@@ -1,0 +1,87 @@
+﻿@{
+    ViewBag.Title = "GetDetailChart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using MyModel
+@using System.Collections.Generic
+
+@section CSS{
+    <style>
+        body{
+            padding:10px 20px;
+            width:100%;
+            height:100%;
+        }
+        table,tr,td{
+            width: 100%;
+            border: 1px solid #B3B4BA;
+            padding-left: 5px;
+            font-size:12px;
+            font-weight:500;
+        }
+        tr {
+            height:40px;
+        }
+        td{
+            width:25%;
+            text-align:left;
+        }
+        td:nth-child(odd)
+        {
+            background:#f9f9f9;
+        }
+    </style>
+}
+@section JS{
+    <script src="~/Scripts/MyTool.js"></script>
+}
+
+@section Body{
+    <body>
+            <table id="form"  align="center" >
+                <tbody>
+                    @{
+                        YaJiang_DetailChart baseInfo = ViewBag.baseInfo;
+                     }
+                    <tr>
+                        <td>梁型</td><td>@baseInfo.LiangType</td>
+                        <td>梁号</td><td>@baseInfo.LiangStr</td>
+                    </tr>
+                    <tr>
+                        <td>孔号</td><td>@baseInfo.KongEx</td>
+                        <td>业主标段号</td><td>@baseInfo.DotId</td>
+                    </tr>
+                    <tr>
+                        <td>注浆开始时间</td><td>@baseInfo.ZLTime</td>
+                        <td>注浆结束时间</td><td>@baseInfo.EndTime</td>
+                    </tr>
+                    <tr>
+                        <td>孔数量</td><td>@baseInfo.ZLNum</td>
+                        <td>孔序号</td><td>@baseInfo.Kong</td>
+                    </tr>
+                    <tr>
+                        <td>注浆类型</td><td>@baseInfo.ZLType</td>
+                        <td>循环时间(秒)</td><td>@baseInfo.CycleTime</td>
+                    </tr>
+                    <tr>
+                        <td>水质量（kg）</td><td>@baseInfo.ShuiQ</td>
+                        <td>水泥质量（kg）</td><td>@baseInfo.ShuiNiQ</td>
+                    </tr>
+                    <tr>
+                        <td>注浆压力上限（Mpa）</td><td>@baseInfo.PressSX</td>
+                        <td>注浆压力下限（Mpa）</td><td>@baseInfo.PressXX</td>
+                    </tr>
+                    <tr>
+                        <td>注浆保压时间(秒)</td><td>@baseInfo.Keeptime</td>
+                        <td>真空压力（Mpa）</td><td>@baseInfo.ZhenKongPree</td>
+                    </tr>
+                    <tr>
+                        <td>入口保压完成时的压力（Mpa）</td><td>@baseInfo.EnterPree</td>
+                        <td>搅拌时间（秒）</td><td>@baseInfo.JiaoBanTime</td>
+                    </tr>
+
+                </tbody>
+           </table>
+
+    </body>
+}

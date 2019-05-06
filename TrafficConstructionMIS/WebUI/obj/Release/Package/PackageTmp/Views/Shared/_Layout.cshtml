@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title </title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+
+        <link href="~/Assets/H+4.9/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="~/Assets/H+4.9/css/font-awesome.min.css" rel="stylesheet" />
+        <link href="~/Assets/H+4.9/css/animate.css" rel="stylesheet" />
+        <link href="~/Assets/H+4.9/css/style.css" rel="stylesheet" />
+
+   
+        @RenderSection("CSS", false)
+       
+    </head>
+    @RenderSection("Body", true)
+    
+
+     <!-- 全局js -->
+        <script src="~/Assets/H+4.9/js/jquery.min.js"></script>
+        <script src="~/Assets/H+4.9/js/bootstrap.min.js"></script>
+        <script src="~/Assets/H+4.9/js/plugins/layer/layer.min.js"></script>
+         @RenderSection("JS", false)
+     
+</html>
+
+     
+   

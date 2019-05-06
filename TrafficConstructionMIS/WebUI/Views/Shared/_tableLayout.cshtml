@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title </title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        <link href="~/Assets/H+4.9/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="~/Assets/H+4.9/css/font-awesome.min.css" rel="stylesheet" />
+        <link href="~/Assets/H+4.9/css/animate.css" rel="stylesheet" />
+        <link href="~/Assets/H+4.9/css/style.css" rel="stylesheet" />
+        <link href="~/Assets/H+4.9/css/plugins/jqgrid/ui.jqgrid.css?0820" rel="stylesheet">
+        <link href="~/Assets/H+4.9/js/plugins/layer/theme/default/layer.css" rel="stylesheet" />
+        @RenderSection("CSS", false)
+    </head>
+<body class="gray-bg">
+     @RenderBody()
+</body>
+</html>
+
+
+<!-- 全局js -->
+<script src="~/Assets/H+4.9/js/jquery.min.js"></script>
+<script src="~/Assets/H+4.9/js/plugins/layer/layer.min.js"></script>
+<script src="~/Assets/H+4.9/js/bootstrap.min.js"></script>
+<!-- jqGrid -->
+<script src="~/Assets/H+4.9/js/plugins/jqgrid/i18n/grid.locale-cn.js?0820"></script>
+<script src="~/Assets/H+4.9/js/plugins/jqgrid/jquery.jqGrid.min.js?0820"></script>
+@RenderSection("JS", false)

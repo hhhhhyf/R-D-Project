@@ -1,0 +1,12 @@
+F:\交通建设管理信息系统\项目\TrafficConstructionMIS\DbModel\bin\Release\DbModel.dll.config
+F:\交通建设管理信息系统\项目\TrafficConstructionMIS\DbModel\bin\Release\DbModel.dll
+F:\交通建设管理信息系统\项目\TrafficConstructionMIS\DbModel\bin\Release\DbModel.pdb
+F:\交通建设管理信息系统\项目\TrafficConstructionMIS\DbModel\bin\Release\EntityFramework.dll
+F:\交通建设管理信息系统\项目\TrafficConstructionMIS\DbModel\bin\Release\EntityFramework.SqlServer.dll
+F:\交通建设管理信息系统\项目\TrafficConstructionMIS\DbModel\bin\Release\EntityFramework.xml
+F:\交通建设管理信息系统\项目\TrafficConstructionMIS\DbModel\bin\Release\EntityFramework.SqlServer.xml
+F:\交通建设管理信息系统\项目\TrafficConstructionMIS\DbModel\bin\Release\zh-Hans\EntityFramework.resources.dll
+F:\交通建设管理信息系统\项目\TrafficConstructionMIS\DbModel\bin\Release\zh-Hans\EntityFramework.SqlServer.resources.dll
+F:\交通建设管理信息系统\项目\TrafficConstructionMIS\DbModel\obj\Release\DbModel.csprojResolveAssemblyReference.cache
+F:\交通建设管理信息系统\项目\TrafficConstructionMIS\DbModel\obj\Release\DbModel.dll
+F:\交通建设管理信息系统\项目\TrafficConstructionMIS\DbModel\obj\Release\DbModel.pdb

@@ -1,0 +1,1 @@
+{"serviceName":"EnvService","dbAddress":"127.0.0.1","dbPort":"12345","dbInstance":"Test_TrafficConstructionMIS","dbUserid":"jtjsypt","dbPwd":"Zjwlkj123","socketIps":"","socketPort":"6118","debugLevel":"1"}

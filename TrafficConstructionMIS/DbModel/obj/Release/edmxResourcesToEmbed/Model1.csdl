@@ -1,0 +1,2563 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="YuHuan_TrafficConstructionMISModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="YuHuan_TrafficConstructionMISEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Gyxps" EntityType="YuHuan_TrafficConstructionMISModel.Gyxp" />
+    <EntitySet Name="Gyxp_Stat" EntityType="YuHuan_TrafficConstructionMISModel.Gyxp_Stat" />
+    <EntitySet Name="Tb_Lab_Department" EntityType="YuHuan_TrafficConstructionMISModel.Tb_Lab_Department" />
+    <EntitySet Name="Tb_Lab_ProjectName" EntityType="YuHuan_TrafficConstructionMISModel.Tb_Lab_ProjectName" />
+    <EntitySet Name="Tb_Lab_Test" EntityType="YuHuan_TrafficConstructionMISModel.Tb_Lab_Test" />
+    <EntitySet Name="Tb_Lab_TestItem" EntityType="YuHuan_TrafficConstructionMISModel.Tb_Lab_TestItem" />
+    <EntitySet Name="Tb_Login" EntityType="YuHuan_TrafficConstructionMISModel.Tb_Login" />
+    <EntitySet Name="Tb_Main_Menu" EntityType="YuHuan_TrafficConstructionMISModel.Tb_Main_Menu" />
+    <EntitySet Name="Tb_MixingPlant_Dosage" EntityType="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_Dosage" />
+    <EntitySet Name="Tb_MixingPlant_Material" EntityType="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_Material" />
+    <EntitySet Name="Tb_MixingPlant_Piece" EntityType="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_Piece" />
+    <EntitySet Name="Tb_MixingPlant_Produce" EntityType="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_Produce" />
+    <EntitySet Name="Tb_MixingPlant_Recipe" EntityType="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_Recipe" />
+    <EntitySet Name="Tb_MixingPlant_RecipeList" EntityType="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_RecipeList" />
+    <EntitySet Name="Tb_YaJiang_CurrentMonitor" EntityType="YuHuan_TrafficConstructionMISModel.Tb_YaJiang_CurrentMonitor" />
+    <EntitySet Name="Tb_YaJiang_Curve" EntityType="YuHuan_TrafficConstructionMISModel.Tb_YaJiang_Curve" />
+    <EntitySet Name="Tb_YaJiang_Data" EntityType="YuHuan_TrafficConstructionMISModel.Tb_YaJiang_Data" />
+    <EntitySet Name="Tb_YaJiang_ProjectInfo" EntityType="YuHuan_TrafficConstructionMISModel.Tb_YaJiang_ProjectInfo" />
+    <EntitySet Name="Tb_ZhangLa_CurrentMonitor" EntityType="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa_CurrentMonitor" />
+    <EntitySet Name="Tb_ZhangLa_Curve" EntityType="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa_Curve" />
+    <EntitySet Name="Tb_ZhangLa_Data" EntityType="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa_Data" />
+    <EntitySet Name="Tb_ZhangLa_ProjectInfo" EntityType="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa_ProjectInfo" />
+    <AssociationSet Name="FK_Tb_Lab_Test_Tb_Lab_Department" Association="YuHuan_TrafficConstructionMISModel.FK_Tb_Lab_Test_Tb_Lab_Department">
+      <End Role="Tb_Lab_Department" EntitySet="Tb_Lab_Department" />
+      <End Role="Tb_Lab_Test" EntitySet="Tb_Lab_Test" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_Lab_Test_Tb_Lab_ProjectName" Association="YuHuan_TrafficConstructionMISModel.FK_Tb_Lab_Test_Tb_Lab_ProjectName">
+      <End Role="Tb_Lab_ProjectName" EntitySet="Tb_Lab_ProjectName" />
+      <End Role="Tb_Lab_Test" EntitySet="Tb_Lab_Test" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_Lab_TestItem_Tb_Lab_Test" Association="YuHuan_TrafficConstructionMISModel.FK_Tb_Lab_TestItem_Tb_Lab_Test">
+      <End Role="Tb_Lab_Test" EntitySet="Tb_Lab_Test" />
+      <End Role="Tb_Lab_TestItem" EntitySet="Tb_Lab_TestItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_MixingPlant_Dosage_Tb_MixingPlant_Material" Association="YuHuan_TrafficConstructionMISModel.FK_Tb_MixingPlant_Dosage_Tb_MixingPlant_Material">
+      <End Role="Tb_MixingPlant_Material" EntitySet="Tb_MixingPlant_Material" />
+      <End Role="Tb_MixingPlant_Dosage" EntitySet="Tb_MixingPlant_Dosage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_MixingPlant_Dosage_Tb_MixingPlant_Piece" Association="YuHuan_TrafficConstructionMISModel.FK_Tb_MixingPlant_Dosage_Tb_MixingPlant_Piece">
+      <End Role="Tb_MixingPlant_Piece" EntitySet="Tb_MixingPlant_Piece" />
+      <End Role="Tb_MixingPlant_Dosage" EntitySet="Tb_MixingPlant_Dosage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_MixingPlant_RecipeList_Tb_MixingPlant_Material" Association="YuHuan_TrafficConstructionMISModel.FK_Tb_MixingPlant_RecipeList_Tb_MixingPlant_Material">
+      <End Role="Tb_MixingPlant_Material" EntitySet="Tb_MixingPlant_Material" />
+      <End Role="Tb_MixingPlant_RecipeList" EntitySet="Tb_MixingPlant_RecipeList" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_MixingPlant_Piece_Tb_MixingPlant_Produce" Association="YuHuan_TrafficConstructionMISModel.FK_Tb_MixingPlant_Piece_Tb_MixingPlant_Produce">
+      <End Role="Tb_MixingPlant_Produce" EntitySet="Tb_MixingPlant_Produce" />
+      <End Role="Tb_MixingPlant_Piece" EntitySet="Tb_MixingPlant_Piece" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_MixingPlant_Produce_Tb_MixingPlant_Recipe" Association="YuHuan_TrafficConstructionMISModel.FK_Tb_MixingPlant_Produce_Tb_MixingPlant_Recipe">
+      <End Role="Tb_MixingPlant_Recipe" EntitySet="Tb_MixingPlant_Recipe" />
+      <End Role="Tb_MixingPlant_Produce" EntitySet="Tb_MixingPlant_Produce" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_MixingPlant_RecipeList_Tb_MixingPlant_Recipe" Association="YuHuan_TrafficConstructionMISModel.FK_Tb_MixingPlant_RecipeList_Tb_MixingPlant_Recipe">
+      <End Role="Tb_MixingPlant_Recipe" EntitySet="Tb_MixingPlant_Recipe" />
+      <End Role="Tb_MixingPlant_RecipeList" EntitySet="Tb_MixingPlant_RecipeList" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_YaJiang_Curve_Tb_YaJiang_Data" Association="YuHuan_TrafficConstructionMISModel.FK_Tb_YaJiang_Curve_Tb_YaJiang_Data">
+      <End Role="Tb_YaJiang_Data" EntitySet="Tb_YaJiang_Data" />
+      <End Role="Tb_YaJiang_Curve" EntitySet="Tb_YaJiang_Curve" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_YaJiang_Data_Tb_YaJiang_ProjectInfo" Association="YuHuan_TrafficConstructionMISModel.FK_Tb_YaJiang_Data_Tb_YaJiang_ProjectInfo">
+      <End Role="Tb_YaJiang_ProjectInfo" EntitySet="Tb_YaJiang_ProjectInfo" />
+      <End Role="Tb_YaJiang_Data" EntitySet="Tb_YaJiang_Data" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_ZhangLa_Curve_Tb_ZhangLa_Data" Association="YuHuan_TrafficConstructionMISModel.FK_Tb_ZhangLa_Curve_Tb_ZhangLa_Data">
+      <End Role="Tb_ZhangLa_Data" EntitySet="Tb_ZhangLa_Data" />
+      <End Role="Tb_ZhangLa_Curve" EntitySet="Tb_ZhangLa_Curve" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_ZhangLa_Data_Tb_ZhangLa_ProjectInfo" Association="YuHuan_TrafficConstructionMISModel.FK_Tb_ZhangLa_Data_Tb_ZhangLa_ProjectInfo">
+      <End Role="Tb_ZhangLa_ProjectInfo" EntitySet="Tb_ZhangLa_ProjectInfo" />
+      <End Role="Tb_ZhangLa_Data" EntitySet="Tb_ZhangLa_Data" />
+    </AssociationSet>
+    <EntitySet Name="Envionment_Data" EntityType="YuHuan_TrafficConstructionMISModel.Envionment_Data" />
+    <EntitySet Name="Envionment_DeviceProject" EntityType="YuHuan_TrafficConstructionMISModel.Envionment_DeviceProject" />
+    <EntitySet Name="Envionment_ProjectInfo" EntityType="YuHuan_TrafficConstructionMISModel.Envionment_ProjectInfo" />
+    <AssociationSet Name="FK_Envionment_Data_Envionment_ProjectInfo" Association="YuHuan_TrafficConstructionMISModel.FK_Envionment_Data_Envionment_ProjectInfo">
+      <End Role="Envionment_ProjectInfo" EntitySet="Envionment_ProjectInfo" />
+      <End Role="Envionment_Data" EntitySet="Envionment_Data" />
+    </AssociationSet>
+    <EntitySet Name="Tb_MixingPlant_Device" EntityType="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_Device" />
+    <EntitySet Name="Tb_YaJiang_Project" EntityType="YuHuan_TrafficConstructionMISModel.Tb_YaJiang_Project" />
+    <EntitySet Name="Tb_ZhangLa_Project" EntityType="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa_Project" />
+    <EntitySet Name="Tb_Flow_Page" EntityType="YuHuan_TrafficConstructionMISModel.Tb_Flow_Page" />
+    <EntitySet Name="Tb_Flow_Statistics" EntityType="YuHuan_TrafficConstructionMISModel.Tb_Flow_Statistics" />
+    <EntitySet Name="Tb_Flow_Visit" EntityType="YuHuan_TrafficConstructionMISModel.Tb_Flow_Visit" />
+    <AssociationSet Name="FK_Tb_Flow_Statistics_Tb_Flow_Page" Association="YuHuan_TrafficConstructionMISModel.FK_Tb_Flow_Statistics_Tb_Flow_Page">
+      <End Role="Tb_Flow_Page" EntitySet="Tb_Flow_Page" />
+      <End Role="Tb_Flow_Statistics" EntitySet="Tb_Flow_Statistics" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_Flow_Visit_Tb_Flow_Page" Association="YuHuan_TrafficConstructionMISModel.FK_Tb_Flow_Visit_Tb_Flow_Page">
+      <End Role="Tb_Flow_Page" EntitySet="Tb_Flow_Page" />
+      <End Role="Tb_Flow_Visit" EntitySet="Tb_Flow_Visit" />
+    </AssociationSet>
+    <EntitySet Name="Access_Lab_GJLS" EntityType="YuHuan_TrafficConstructionMISModel.Access_Lab_GJLS" />
+    <EntitySet Name="Access_Lab_GJLSParm" EntityType="YuHuan_TrafficConstructionMISModel.Access_Lab_GJLSParm" />
+    <EntitySet Name="Access_Lab_GJLSResult" EntityType="YuHuan_TrafficConstructionMISModel.Access_Lab_GJLSResult" />
+    <EntitySet Name="Access_Lab_HNTKY" EntityType="YuHuan_TrafficConstructionMISModel.Access_Lab_HNTKY" />
+    <EntitySet Name="Access_Lab_HNTKYParm" EntityType="YuHuan_TrafficConstructionMISModel.Access_Lab_HNTKYParm" />
+    <EntitySet Name="Access_Lab_HNTKYResult" EntityType="YuHuan_TrafficConstructionMISModel.Access_Lab_HNTKYResult" />
+    <EntitySet Name="Access_Lab_SNKY" EntityType="YuHuan_TrafficConstructionMISModel.Access_Lab_SNKY" />
+    <EntitySet Name="Access_Lab_SNKYParm" EntityType="YuHuan_TrafficConstructionMISModel.Access_Lab_SNKYParm" />
+    <EntitySet Name="Access_Lab_SNKYResult" EntityType="YuHuan_TrafficConstructionMISModel.Access_Lab_SNKYResult" />
+    <EntitySet Name="Access_Lab_SNKZ" EntityType="YuHuan_TrafficConstructionMISModel.Access_Lab_SNKZ" />
+    <EntitySet Name="Access_Lab_SNKZParm" EntityType="YuHuan_TrafficConstructionMISModel.Access_Lab_SNKZParm" />
+    <EntitySet Name="Access_Lab_SNKZResult" EntityType="YuHuan_TrafficConstructionMISModel.Access_Lab_SNKZResult" />
+    <EntitySet Name="Access_LZT_WL_SB_MixingPlant" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZT_WL_SB_MixingPlant" />
+    <EntitySet Name="Access_LZT_WL_SB_MixingPlant_Dosage" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZT_WL_SB_MixingPlant_Dosage" />
+    <EntitySet Name="Access_LZT_WL_SB_MixingPlant_Piece" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZT_WL_SB_MixingPlant_Piece" />
+    <EntitySet Name="Access_LZT_WL_SB_MixingPlant_Produce" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZT_WL_SB_MixingPlant_Produce" />
+    <EntitySet Name="Access_LZTEBLab_SNKY" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTEBLab_SNKY" />
+    <EntitySet Name="Access_LZTEBLab_SNKYParm" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTEBLab_SNKYParm" />
+    <EntitySet Name="Access_LZTEBLab_SNKYResult" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTEBLab_SNKYResult" />
+    <EntitySet Name="Access_LZTEBLab_SNKZ" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTEBLab_SNKZ" />
+    <EntitySet Name="Access_LZTEBLab_SNKZParm" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTEBLab_SNKZParm" />
+    <EntitySet Name="Access_LZTEBLab_SNKZResult" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTEBLab_SNKZResult" />
+    <EntitySet Name="Access_LZTJL2Lab_SNKY" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTJL2Lab_SNKY" />
+    <EntitySet Name="Access_LZTJL2Lab_SNKYParm" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTJL2Lab_SNKYParm" />
+    <EntitySet Name="Access_LZTJL2Lab_SNKYResult" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTJL2Lab_SNKYResult" />
+    <EntitySet Name="Access_LZTJL2Lab_SNKZ" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTJL2Lab_SNKZ" />
+    <EntitySet Name="Access_LZTJL2Lab_SNKZParm" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTJL2Lab_SNKZParm" />
+    <EntitySet Name="Access_LZTJL2Lab_SNKZResult" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTJL2Lab_SNKZResult" />
+    <EntitySet Name="Access_LZTLab_SNKY" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTLab_SNKY" />
+    <EntitySet Name="Access_LZTLab_SNKYResult" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTLab_SNKYResult" />
+    <EntitySet Name="Access_LZTLab_SNKZ" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTLab_SNKZ" />
+    <EntitySet Name="Access_LZTLab_SNKZResult" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTLab_SNKZResult" />
+    <EntitySet Name="Access_LZTSBLab_SNKY" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTSBLab_SNKY" />
+    <EntitySet Name="Access_LZTSBLab_SNKYParm" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTSBLab_SNKYParm" />
+    <EntitySet Name="Access_LZTSBLab_SNKYResult" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTSBLab_SNKYResult" />
+    <EntitySet Name="Access_LZTSBLab_SNKZ" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTSBLab_SNKZ" />
+    <EntitySet Name="Access_LZTSBLab_SNKZParm" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTSBLab_SNKZParm" />
+    <EntitySet Name="Access_LZTSBLab_SNKZResult" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTSBLab_SNKZResult" />
+    <EntitySet Name="Access_LZTSDBLab_SNKY" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTSDBLab_SNKY" />
+    <EntitySet Name="Access_LZTSDBLab_SNKYParm" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTSDBLab_SNKYParm" />
+    <EntitySet Name="Access_LZTSDBLab_SNKYResult" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTSDBLab_SNKYResult" />
+    <EntitySet Name="Access_LZTSDBLab_SNKZ" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTSDBLab_SNKZ" />
+    <EntitySet Name="Access_LZTSDBLab_SNKZParm" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTSDBLab_SNKZParm" />
+    <EntitySet Name="Access_LZTSDBLab_SNKZResult" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTSDBLab_SNKZResult" />
+    <EntitySet Name="Access_LZTYBLab_SNKY" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTYBLab_SNKY" />
+    <EntitySet Name="Access_LZTYBLab_SNKYParm" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTYBLab_SNKYParm" />
+    <EntitySet Name="Access_LZTYBLab_SNKYResult" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTYBLab_SNKYResult" />
+    <EntitySet Name="Access_LZTYBLab_SNKZ" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTYBLab_SNKZ" />
+    <EntitySet Name="Access_LZTYBLab_SNKZParm" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTYBLab_SNKZParm" />
+    <EntitySet Name="Access_LZTYBLab_SNKZResult" EntityType="YuHuan_TrafficConstructionMISModel.Access_LZTYBLab_SNKZResult" />
+    <EntitySet Name="Access_MixingPlant_228RoadYB" EntityType="YuHuan_TrafficConstructionMISModel.Access_MixingPlant_228RoadYB" />
+    <EntitySet Name="Access_MixingPlant_228RoadYBPeiHeBi" EntityType="YuHuan_TrafficConstructionMISModel.Access_MixingPlant_228RoadYBPeiHeBi" />
+    <EntitySet Name="Access_MixingPlant_Intensity" EntityType="YuHuan_TrafficConstructionMISModel.Access_MixingPlant_Intensity" />
+    <EntitySet Name="Access_MixingPlant_Parm" EntityType="YuHuan_TrafficConstructionMISModel.Access_MixingPlant_Parm" />
+    <EntitySet Name="Access_MixingPlant_Parm2" EntityType="YuHuan_TrafficConstructionMISModel.Access_MixingPlant_Parm2" />
+    <EntitySet Name="Access_MixingPlant_tScsjAll" EntityType="YuHuan_TrafficConstructionMISModel.Access_MixingPlant_tScsjAll" />
+    <EntitySet Name="Access_MixingPlant_tScsjAll2" EntityType="YuHuan_TrafficConstructionMISModel.Access_MixingPlant_tScsjAll2" />
+    <EntitySet Name="Access_MixingPlant_tScsjAllBody" EntityType="YuHuan_TrafficConstructionMISModel.Access_MixingPlant_tScsjAllBody" />
+    <EntitySet Name="Access_MixingPlant_tScsjAllBody2" EntityType="YuHuan_TrafficConstructionMISModel.Access_MixingPlant_tScsjAllBody2" />
+    <EntitySet Name="Sdf_LZT_SD_MixingPlant" EntityType="YuHuan_TrafficConstructionMISModel.Sdf_LZT_SD_MixingPlant" />
+    <EntitySet Name="Sdf_LZT_SD_MixingPlant_2" EntityType="YuHuan_TrafficConstructionMISModel.Sdf_LZT_SD_MixingPlant_2" />
+    <EntitySet Name="Service_Config" EntityType="YuHuan_TrafficConstructionMISModel.Service_Config" />
+    <EntitySet Name="Service_Status" EntityType="YuHuan_TrafficConstructionMISModel.Service_Status" />
+    <EntitySet Name="sysdiagrams" EntityType="YuHuan_TrafficConstructionMISModel.sysdiagrams" />
+    <EntitySet Name="Tb_ZhangLa1_Curve" EntityType="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa1_Curve" />
+    <EntitySet Name="Tb_ZhangLa1_Data" EntityType="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa1_Data" />
+    <EntitySet Name="Tb_ZhangLa1_Device" EntityType="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa1_Device" />
+    <EntitySet Name="Tb_ZhangLa1_Project" EntityType="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa1_Project" />
+    <AssociationSet Name="FK_Tb_ZhangLa1_Curve_Tb_ZhangLa1_Data" Association="YuHuan_TrafficConstructionMISModel.FK_Tb_ZhangLa1_Curve_Tb_ZhangLa1_Data">
+      <End Role="Tb_ZhangLa1_Data" EntitySet="Tb_ZhangLa1_Data" />
+      <End Role="Tb_ZhangLa1_Curve" EntitySet="Tb_ZhangLa1_Curve" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_ZhangLa1_Data_Tb_ZhangLa1_Device" Association="YuHuan_TrafficConstructionMISModel.FK_Tb_ZhangLa1_Data_Tb_ZhangLa1_Device">
+      <End Role="Tb_ZhangLa1_Device" EntitySet="Tb_ZhangLa1_Device" />
+      <End Role="Tb_ZhangLa1_Data" EntitySet="Tb_ZhangLa1_Data" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_ZhangLa1_Device_Tb_ZhangLa1_Project" Association="YuHuan_TrafficConstructionMISModel.FK_Tb_ZhangLa1_Device_Tb_ZhangLa1_Project">
+      <End Role="Tb_ZhangLa1_Project" EntitySet="Tb_ZhangLa1_Project" />
+      <End Role="Tb_ZhangLa1_Device" EntitySet="Tb_ZhangLa1_Device" />
+    </AssociationSet>
+    <EntitySet Name="Tb_YaJiang1_Curve" EntityType="YuHuan_TrafficConstructionMISModel.Tb_YaJiang1_Curve" />
+    <EntitySet Name="Tb_YaJiang1_Data" EntityType="YuHuan_TrafficConstructionMISModel.Tb_YaJiang1_Data" />
+    <EntitySet Name="Tb_YaJiang1_Device" EntityType="YuHuan_TrafficConstructionMISModel.Tb_YaJiang1_Device" />
+    <EntitySet Name="Tb_YaJiang1_Project" EntityType="YuHuan_TrafficConstructionMISModel.Tb_YaJiang1_Project" />
+    <AssociationSet Name="FK_Tb_YaJiang1_Curve_Tb_YaJiang1_Data" Association="YuHuan_TrafficConstructionMISModel.FK_Tb_YaJiang1_Curve_Tb_YaJiang1_Data">
+      <End Role="Tb_YaJiang1_Data" EntitySet="Tb_YaJiang1_Data" />
+      <End Role="Tb_YaJiang1_Curve" EntitySet="Tb_YaJiang1_Curve" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_YaJiang1_Data_Tb_YaJiang1_Device" Association="YuHuan_TrafficConstructionMISModel.FK_Tb_YaJiang1_Data_Tb_YaJiang1_Device">
+      <End Role="Tb_YaJiang1_Device" EntitySet="Tb_YaJiang1_Device" />
+      <End Role="Tb_YaJiang1_Data" EntitySet="Tb_YaJiang1_Data" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_YaJiang1_Device_Tb_YaJiang1_Project" Association="YuHuan_TrafficConstructionMISModel.FK_Tb_YaJiang1_Device_Tb_YaJiang1_Project">
+      <End Role="Tb_YaJiang1_Project" EntitySet="Tb_YaJiang1_Project" />
+      <End Role="Tb_YaJiang1_Device" EntitySet="Tb_YaJiang1_Device" />
+    </AssociationSet>
+    <EntitySet Name="Tb_Lab_Curve" EntityType="YuHuan_TrafficConstructionMISModel.Tb_Lab_Curve" />
+    <EntitySet Name="Tb_Lab_Type" EntityType="YuHuan_TrafficConstructionMISModel.Tb_Lab_Type" />
+    <AssociationSet Name="FK_Tb_Lab_Curve_Tb_Lab_Test" Association="YuHuan_TrafficConstructionMISModel.FK_Tb_Lab_Curve_Tb_Lab_Test">
+      <End Role="Tb_Lab_Test" EntitySet="Tb_Lab_Test" />
+      <End Role="Tb_Lab_Curve" EntitySet="Tb_Lab_Curve" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_Lab_Curve_Tb_Lab_Type" Association="YuHuan_TrafficConstructionMISModel.FK_Tb_Lab_Curve_Tb_Lab_Type">
+      <End Role="Tb_Lab_Type" EntitySet="Tb_Lab_Type" />
+      <End Role="Tb_Lab_Curve" EntitySet="Tb_Lab_Curve" />
+    </AssociationSet>
+    <EntitySet Name="Yanghu_SourceData" EntityType="YuHuan_TrafficConstructionMISModel.Yanghu_SourceData" />
+    <EntitySet Name="Yanghu_StatData" EntityType="YuHuan_TrafficConstructionMISModel.Yanghu_StatData" />
+  </EntityContainer>
+  <EntityType Name="Gyxp">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Flag" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="ProjectName" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="PileSite" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="DeviceCode" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Flow" Type="Double" />
+    <Property Name="Pressure" Type="Double" />
+    <Property Name="OperateTime" Type="DateTime" Precision="3" />
+    <Property Name="UploadTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Gyxp_Stat">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectName" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="PileSite" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="DeviceCode" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Luo" Type="Double" />
+    <Property Name="TotalTime" Type="Int32" />
+    <Property Name="TotalFlow" Type="Double" />
+    <Property Name="TotalDust" Type="Double" />
+    <Property Name="EndTime" Type="DateTime" Precision="3" />
+    <Property Name="UploadTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Tb_Lab_Department">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="DepartmentName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Tb_Lab_Test" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_Lab_Test_Tb_Lab_Department" FromRole="Tb_Lab_Department" ToRole="Tb_Lab_Test" />
+    <Property Type="String" Name="DepartmentCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PlatformName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProjectName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BiaoDuanName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Geometry" Name="geom" />
+  </EntityType>
+  <EntityType Name="Tb_Lab_ProjectName">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Tb_Lab_Test" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_Lab_Test_Tb_Lab_ProjectName" FromRole="Tb_Lab_ProjectName" ToRole="Tb_Lab_Test" />
+  </EntityType>
+  <EntityType Name="Tb_Lab_Test">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="DepartmentId" Type="Int32" Nullable="false" />
+    <Property Name="TestItemId" Type="Int32" Nullable="false" />
+    <Property Name="TestNo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="TestUser" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="TestDevice" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="ReworkCount" Type="Int32" Nullable="false" />
+    <Property Name="TestTime" Type="DateTime" Precision="3" />
+    <Property Name="TestResult" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Tb_Lab_Department" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_Lab_Test_Tb_Lab_Department" FromRole="Tb_Lab_Test" ToRole="Tb_Lab_Department" />
+    <NavigationProperty Name="Tb_Lab_ProjectName" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_Lab_Test_Tb_Lab_ProjectName" FromRole="Tb_Lab_Test" ToRole="Tb_Lab_ProjectName" />
+    <NavigationProperty Name="Tb_Lab_TestItem" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_Lab_TestItem_Tb_Lab_Test" FromRole="Tb_Lab_Test" ToRole="Tb_Lab_TestItem" />
+    <NavigationProperty Name="Tb_Lab_Curve" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_Lab_Curve_Tb_Lab_Test" FromRole="Tb_Lab_Test" ToRole="Tb_Lab_Curve" />
+  </EntityType>
+  <EntityType Name="Tb_Lab_TestItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TestId" Type="Int32" Nullable="false" />
+    <Property Name="ItemName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ItemResult" Type="String" MaxLength="80" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Tb_Lab_Test" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_Lab_TestItem_Tb_Lab_Test" FromRole="Tb_Lab_TestItem" ToRole="Tb_Lab_Test" />
+  </EntityType>
+  <EntityType Name="Tb_Login">
+    <Key>
+      <PropertyRef Name="UserName" />
+    </Key>
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="UserRight" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Main_Menu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Icon" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Name" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="Url" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="ParentId" Type="Int32" />
+    <Property Name="Position" Type="Int32" />
+    <Property Name="UserRight" Type="Int32" />
+    <Property Name="Target" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Tb_MixingPlant_Dosage">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DeviceFacId" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="DeviceFacId" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="PieceId" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="MaterialId" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="Water" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="RecAmnt" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="PlanAmnt" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="FacAmnt" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="Deviation" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Tb_MixingPlant_Material" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_MixingPlant_Dosage_Tb_MixingPlant_Material" FromRole="Tb_MixingPlant_Dosage" ToRole="Tb_MixingPlant_Material" />
+    <NavigationProperty Name="Tb_MixingPlant_Piece" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_MixingPlant_Dosage_Tb_MixingPlant_Piece" FromRole="Tb_MixingPlant_Dosage" ToRole="Tb_MixingPlant_Piece" />
+  </EntityType>
+  <EntityType Name="Tb_MixingPlant_Material">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DeviceFacId" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="DeviceFacId" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="Name" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Tb_MixingPlant_Dosage" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_MixingPlant_Dosage_Tb_MixingPlant_Material" FromRole="Tb_MixingPlant_Material" ToRole="Tb_MixingPlant_Dosage" />
+    <NavigationProperty Name="Tb_MixingPlant_RecipeList" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_MixingPlant_RecipeList_Tb_MixingPlant_Material" FromRole="Tb_MixingPlant_Material" ToRole="Tb_MixingPlant_RecipeList" />
+    <Property Type="Decimal" Name="PError" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="Tb_MixingPlant_Piece">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DeviceFacId" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="DeviceFacId" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="BhzId" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="ProduceId" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="Serial" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="DatTim" Type="DateTime" Precision="3" />
+    <Property Name="BldTimStart" Type="DateTime" Precision="3" />
+    <Property Name="BldTimEnd" Type="DateTime" Precision="3" />
+    <Property Name="BldTim" Type="Int32" />
+    <Property Name="PieAmnt" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="DosageClass" Type="Int32" />
+    <NavigationProperty Name="Tb_MixingPlant_Dosage" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_MixingPlant_Dosage_Tb_MixingPlant_Piece" FromRole="Tb_MixingPlant_Piece" ToRole="Tb_MixingPlant_Dosage" />
+    <NavigationProperty Name="Tb_MixingPlant_Produce" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_MixingPlant_Piece_Tb_MixingPlant_Produce" FromRole="Tb_MixingPlant_Piece" ToRole="Tb_MixingPlant_Produce" />
+  </EntityType>
+  <EntityType Name="Tb_MixingPlant_Produce">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DeviceFacId" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="DeviceFacId" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="RecipeId" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="Code" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="Customer" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="ProjectName" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="ConsPos" Type="String" MaxLength="1280" Unicode="true" FixedLength="false" />
+    <Property Name="PieCnt" Type="Int32" />
+    <Property Name="BetLev" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Tb_MixingPlant_Piece" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_MixingPlant_Piece_Tb_MixingPlant_Produce" FromRole="Tb_MixingPlant_Produce" ToRole="Tb_MixingPlant_Piece" />
+    <NavigationProperty Name="Tb_MixingPlant_Recipe" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_MixingPlant_Produce_Tb_MixingPlant_Recipe" FromRole="Tb_MixingPlant_Produce" ToRole="Tb_MixingPlant_Recipe" />
+  </EntityType>
+  <EntityType Name="Tb_MixingPlant_Recipe">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DeviceFacId" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="DeviceFacId" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="Code" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="BetLev" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="DatTim" Type="DateTime" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Tb_MixingPlant_Produce" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_MixingPlant_Produce_Tb_MixingPlant_Recipe" FromRole="Tb_MixingPlant_Recipe" ToRole="Tb_MixingPlant_Produce" />
+    <NavigationProperty Name="Tb_MixingPlant_RecipeList" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_MixingPlant_RecipeList_Tb_MixingPlant_Recipe" FromRole="Tb_MixingPlant_Recipe" ToRole="Tb_MixingPlant_RecipeList" />
+  </EntityType>
+  <EntityType Name="Tb_MixingPlant_RecipeList">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DeviceFacId" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="DeviceFacId" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="RecipeId" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="MaterialId" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="Amount" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Tb_MixingPlant_Material" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_MixingPlant_RecipeList_Tb_MixingPlant_Material" FromRole="Tb_MixingPlant_RecipeList" ToRole="Tb_MixingPlant_Material" />
+    <NavigationProperty Name="Tb_MixingPlant_Recipe" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_MixingPlant_RecipeList_Tb_MixingPlant_Recipe" FromRole="Tb_MixingPlant_RecipeList" ToRole="Tb_MixingPlant_Recipe" />
+  </EntityType>
+  <EntityType Name="Tb_YaJiang_CurrentMonitor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="DeviceNo" Type="Int32" />
+    <Property Name="DotId" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ConnState" Type="Int32" />
+    <Property Name="ZLState" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="KongEx" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="LiangType" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="liangstr" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="IType" Type="Int32" />
+    <Property Name="ShuiQ" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ShuiNiQ" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="additiveQ" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AllQ" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="JiaoBanTime" Type="Int32" />
+    <Property Name="EntrSpeed" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ExitSpeed" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="EntrPree" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ExitPree" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Keeptime" Type="Int32" />
+    <Property Name="TotalSize" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="Tb_YaJiang_Curve">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="DeviceNo" Type="Int32" />
+    <Property Name="DotId" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Kong" Type="Int32" />
+    <Property Name="KongEx" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Liang" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IDmx" Type="Int32" />
+    <Property Name="DataAry" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Tb_YaJiang_Data" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_YaJiang_Curve_Tb_YaJiang_Data" FromRole="Tb_YaJiang_Curve" ToRole="Tb_YaJiang_Data" />
+  </EntityType>
+  <EntityType Name="Tb_YaJiang_Data">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="DeviceNo" Type="Int32" />
+    <Property Name="LiangType" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="LiangStr" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="KongEx" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DotId" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ProjectNo" Type="Int32" />
+    <Property Name="ZLTime" Type="DateTime" Precision="3" />
+    <Property Name="EndTime" Type="DateTime" Precision="3" />
+    <Property Name="ZLNum" Type="Int32" />
+    <Property Name="Kong" Type="Int32" />
+    <Property Name="ZLType" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="IType" Type="Int32" />
+    <Property Name="CycleTime" Type="Int32" />
+    <Property Name="ShuiQ" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ShuiNiQ" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AdditiveQ" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PressSX" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PressXX" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Keeptime" Type="Int32" />
+    <Property Name="ZhenKongPree" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TotalSize" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="EntrPree" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ExitPree" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="EntrAvgSpeed" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ExitMaxSpeed" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="JiaoBanTime" Type="Int32" />
+    <Property Name="ShuiRatio" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="JiangWendu" Type="Int32" />
+    <Property Name="HJWendu" Type="Int32" />
+    <Property Name="LLShuiQ" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="LLShuiNiQ" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="LLAdditiveQ" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Pass" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="MaojiangQK" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ZJFangXiang" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="JiangSize" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="LiaoSize" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ShuiSize" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="LLSize" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Tb_YaJiang_Curve" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_YaJiang_Curve_Tb_YaJiang_Data" FromRole="Tb_YaJiang_Data" ToRole="Tb_YaJiang_Curve" />
+    <NavigationProperty Name="Tb_YaJiang_ProjectInfo" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_YaJiang_Data_Tb_YaJiang_ProjectInfo" FromRole="Tb_YaJiang_Data" ToRole="Tb_YaJiang_ProjectInfo" />
+  </EntityType>
+  <EntityType Name="Tb_YaJiang_ProjectInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="DeviceNo" Type="Int32" />
+    <Property Name="DotId" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ProjectName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ShiGong" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="JianLi" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="HunNingTu" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ZiJianYiJian" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="JianLiYiJian" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="JianLiRen" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="JiShuYuan" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="ZhiJianRen" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="SubProject" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ZJLiaoName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ZJFangXiang" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ZJIniSpeed" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="JiangWendu" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="HJWendu" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="ZLDatetime" Type="DateTime" Precision="3" />
+    <Property Name="SuHuaJiL" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="PengHuaJiL" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="ShuiNiYL" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="QinShuiLv" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="JiLuRen" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="ZBJiShuYuan" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="ShuiWendu" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="JiangSize" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="LiaoSize" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ShuiSize" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ShuiNiMD" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AdditiveMD" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="LLSize" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="TotalSize" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="AdditiveXH" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BengXH" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ZhuangNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Tb_YaJiang_Data" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_YaJiang_Data_Tb_YaJiang_ProjectInfo" FromRole="Tb_YaJiang_ProjectInfo" ToRole="Tb_YaJiang_Data" />
+  </EntityType>
+  <EntityType Name="Tb_ZhangLa_CurrentMonitor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="DotId" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DeviceNo" Type="Int32" />
+    <Property Name="ConnState" Type="Int32" />
+    <Property Name="ZLState" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="KongEx" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="LiangType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="liangstr" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Per100Press" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="InitPress" Type="Int32" />
+    <Property Name="Gang1State" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Gang2State" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Gang3State" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Gang4State" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Gang1Press" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Gang2Press" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Gang3Press" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Gang4Press" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Gang1Extend" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Gang2Extend" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Gang3Extend" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Gang4Extend" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="Tb_ZhangLa_Curve">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="DeviceNo" Type="Int32" />
+    <Property Name="DotId" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Kong" Type="Int32" />
+    <Property Name="KongEx" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Liang" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IDmx" Type="Int32" />
+    <Property Name="DataAry" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Tb_ZhangLa_Data" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_ZhangLa_Curve_Tb_ZhangLa_Data" FromRole="Tb_ZhangLa_Curve" ToRole="Tb_ZhangLa_Data" />
+  </EntityType>
+  <EntityType Name="Tb_ZhangLa_Data">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="DeviceNo" Type="Int32" />
+    <Property Name="LiangType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="LiangStr" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="KongNo" Type="Int32" />
+    <Property Name="KongEx" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ZhangLaCount" Type="Int32" />
+    <Property Name="DotId" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ProjectNo" Type="Int32" />
+    <Property Name="ZLTime" Type="DateTime" Precision="3" />
+    <Property Name="ZLType" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="DanShu" Type="Int32" />
+    <Property Name="ZLNum" Type="Int32" />
+    <Property Name="Kong" Type="Int32" />
+    <Property Name="Per100Press" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="InitPress" Type="Int32" />
+    <Property Name="Extend" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Elasticity" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per10Extend1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per10Mpa1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per20Extend1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per20Mpa1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per50Extend1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per50Mpa1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per100Extend1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per100Mpa1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FixedExtend1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="RealExtend1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per10Extend2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per10Mpa2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per20Extend2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per20Mpa2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per50Extend2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per50Mpa2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per100Extend2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per100Mpa2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FixedExtend2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="RealExtend2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per10Extend3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per10Mpa3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per20Extend3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per20Mpa3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per50Extend3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per50Mpa3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per100Extend3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per100Mpa3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FixedExtend3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="RealExtend3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per10Extend4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per10Mpa4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per20Extend4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per20Mpa4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per50Extend4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per50Mpa4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per100Extend4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per100Mpa4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FixedExtend4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="RealExtend4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Extend2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Elasticity2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Extend3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Elasticity3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Extend4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Elasticity4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="HuiSuoL" Type="Int32" />
+    <Property Name="ExtendError1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ExtendError2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ExtendError3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ExtendError4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ProjectName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ChaoZhFlag" Type="Int32" />
+    <Property Name="ChaoZhPer" Type="Int32" />
+    <Property Name="ChaoZhExtend1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ChaoZhMpa1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ChaoZhExtend2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ChaoZhMpa2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ChaoZhExtend3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ChaoZhMpa3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ChaoZhExtend4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ChaoZhMpa4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="BaoYaTime1" Type="Int32" />
+    <Property Name="BaoYaTime2" Type="Int32" />
+    <Property Name="BaoYaTime3" Type="Int32" />
+    <Property Name="BaoYaTime4" Type="Int32" />
+    <Property Name="Per10JiaPian1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per20JiaPian1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per50JiaPian1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per100JiaPian1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per10JiaPian2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per20JiaPian2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per50JiaPian2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per100JiaPian2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per10JiaPian3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per20JiaPian3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per50JiaPian3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per100JiaPian3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per10JiaPian4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per20JiaPian4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per50JiaPian4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Per100JiaPian4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ZHMianJi1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ZHMoZu1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ZHMianJi2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ZHMoZu2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ZHMianJi3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ZHMoZu3" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ZHMianJi4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ZHMoZu4" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="WorkLen" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Gang1Flag" Type="Int32" />
+    <Property Name="Gang2Flag" Type="Int32" />
+    <Property Name="Gang3Flag" Type="Int32" />
+    <Property Name="Gang4Flag" Type="Int32" />
+    <NavigationProperty Name="Tb_ZhangLa_Curve" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_ZhangLa_Curve_Tb_ZhangLa_Data" FromRole="Tb_ZhangLa_Data" ToRole="Tb_ZhangLa_Curve" />
+    <NavigationProperty Name="Tb_ZhangLa_ProjectInfo" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_ZhangLa_Data_Tb_ZhangLa_ProjectInfo" FromRole="Tb_ZhangLa_Data" ToRole="Tb_ZhangLa_ProjectInfo" />
+  </EntityType>
+  <EntityType Name="Tb_ZhangLa_ProjectInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="DeviceNo" Type="Int32" />
+    <Property Name="DotId" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ShiGong" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="JianLi" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="ProjectName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="HunNingTu" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="GangJiaoXian" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ZhangLaStyle" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="JiaoZhuDate" Type="DateTime" Precision="0" />
+    <Property Name="YouBiao" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="QianJinDing" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="JianLiYiJian" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ZLFuZeRen" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="JianCe" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="JSFuZeRen" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="JiLu" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="FuHe" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SubProject" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="GouJianNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ZLBH" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="liangLen" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="KongDaoNum" Type="Int32" />
+    <Property Name="DeviceVender" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DeviceZhuBH" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DeviceFuBH" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BiaoDingRQ" Type="DateTime" Precision="0" />
+    <Property Name="QianJinDing1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="QianJinDing2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="BiaoDingRQ1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="BiaoDingRQ2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ShiYongCS1" Type="Int32" />
+    <Property Name="ShiYongCS2" Type="Int32" />
+    <Property Name="GangJiaoXianJh" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="GangJiaoXianQD" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="GangJiaoXianZJ" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="GangJiaoXianTX" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="YuZhiLiangChang" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ShiKuaiBH" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ShiKuaiQD" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ZhangLaQD" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="GJXKZYL" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="HJWendu" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="MaoVender" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="MaoXH" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="QiGongdu" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="HuaSiQK" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ChuLiQK" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ZhuangNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="GJLIngQi" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DuanSiLv" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Tb_ZhangLa_Data" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_ZhangLa_Data_Tb_ZhangLa_ProjectInfo" FromRole="Tb_ZhangLa_ProjectInfo" ToRole="Tb_ZhangLa_Data" />
+  </EntityType>
+  <Association Name="FK_Tb_Lab_Test_Tb_Lab_Department">
+    <End Role="Tb_Lab_Department" Type="YuHuan_TrafficConstructionMISModel.Tb_Lab_Department" Multiplicity="1" />
+    <End Role="Tb_Lab_Test" Type="YuHuan_TrafficConstructionMISModel.Tb_Lab_Test" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Lab_Department">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_Lab_Test">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_Lab_Test_Tb_Lab_ProjectName">
+    <End Role="Tb_Lab_ProjectName" Type="YuHuan_TrafficConstructionMISModel.Tb_Lab_ProjectName" Multiplicity="1" />
+    <End Role="Tb_Lab_Test" Type="YuHuan_TrafficConstructionMISModel.Tb_Lab_Test" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Lab_ProjectName">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_Lab_Test">
+        <PropertyRef Name="TestItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_Lab_TestItem_Tb_Lab_Test">
+    <End Role="Tb_Lab_Test" Type="YuHuan_TrafficConstructionMISModel.Tb_Lab_Test" Multiplicity="1" />
+    <End Role="Tb_Lab_TestItem" Type="YuHuan_TrafficConstructionMISModel.Tb_Lab_TestItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Lab_Test">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_Lab_TestItem">
+        <PropertyRef Name="TestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_MixingPlant_Dosage_Tb_MixingPlant_Material">
+    <End Role="Tb_MixingPlant_Material" Type="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_Material" Multiplicity="0..1" />
+    <End Role="Tb_MixingPlant_Dosage" Type="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_Dosage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_MixingPlant_Material">
+        <PropertyRef Name="Id" />
+        <PropertyRef Name="DeviceFacId" />
+      </Principal>
+      <Dependent Role="Tb_MixingPlant_Dosage">
+        <PropertyRef Name="MaterialId" />
+        <PropertyRef Name="DeviceFacId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_MixingPlant_Dosage_Tb_MixingPlant_Piece">
+    <End Role="Tb_MixingPlant_Piece" Type="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_Piece" Multiplicity="0..1" />
+    <End Role="Tb_MixingPlant_Dosage" Type="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_Dosage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_MixingPlant_Piece">
+        <PropertyRef Name="Id" />
+        <PropertyRef Name="DeviceFacId" />
+      </Principal>
+      <Dependent Role="Tb_MixingPlant_Dosage">
+        <PropertyRef Name="PieceId" />
+        <PropertyRef Name="DeviceFacId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_MixingPlant_RecipeList_Tb_MixingPlant_Material">
+    <End Role="Tb_MixingPlant_Material" Type="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_Material" Multiplicity="0..1" />
+    <End Role="Tb_MixingPlant_RecipeList" Type="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_RecipeList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_MixingPlant_Material">
+        <PropertyRef Name="Id" />
+        <PropertyRef Name="DeviceFacId" />
+      </Principal>
+      <Dependent Role="Tb_MixingPlant_RecipeList">
+        <PropertyRef Name="MaterialId" />
+        <PropertyRef Name="DeviceFacId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_MixingPlant_Piece_Tb_MixingPlant_Produce">
+    <End Role="Tb_MixingPlant_Produce" Type="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_Produce" Multiplicity="0..1" />
+    <End Role="Tb_MixingPlant_Piece" Type="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_Piece" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_MixingPlant_Produce">
+        <PropertyRef Name="Id" />
+        <PropertyRef Name="DeviceFacId" />
+      </Principal>
+      <Dependent Role="Tb_MixingPlant_Piece">
+        <PropertyRef Name="ProduceId" />
+        <PropertyRef Name="DeviceFacId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_MixingPlant_Produce_Tb_MixingPlant_Recipe">
+    <End Role="Tb_MixingPlant_Recipe" Type="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_Recipe" Multiplicity="0..1" />
+    <End Role="Tb_MixingPlant_Produce" Type="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_Produce" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_MixingPlant_Recipe">
+        <PropertyRef Name="Id" />
+        <PropertyRef Name="DeviceFacId" />
+      </Principal>
+      <Dependent Role="Tb_MixingPlant_Produce">
+        <PropertyRef Name="RecipeId" />
+        <PropertyRef Name="DeviceFacId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_MixingPlant_RecipeList_Tb_MixingPlant_Recipe">
+    <End Role="Tb_MixingPlant_Recipe" Type="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_Recipe" Multiplicity="0..1" />
+    <End Role="Tb_MixingPlant_RecipeList" Type="YuHuan_TrafficConstructionMISModel.Tb_MixingPlant_RecipeList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_MixingPlant_Recipe">
+        <PropertyRef Name="Id" />
+        <PropertyRef Name="DeviceFacId" />
+      </Principal>
+      <Dependent Role="Tb_MixingPlant_RecipeList">
+        <PropertyRef Name="RecipeId" />
+        <PropertyRef Name="DeviceFacId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_YaJiang_Curve_Tb_YaJiang_Data">
+    <End Role="Tb_YaJiang_Data" Type="YuHuan_TrafficConstructionMISModel.Tb_YaJiang_Data" Multiplicity="0..1" />
+    <End Role="Tb_YaJiang_Curve" Type="YuHuan_TrafficConstructionMISModel.Tb_YaJiang_Curve" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_YaJiang_Data">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_YaJiang_Curve">
+        <PropertyRef Name="IDmx" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_YaJiang_Data_Tb_YaJiang_ProjectInfo">
+    <End Role="Tb_YaJiang_ProjectInfo" Type="YuHuan_TrafficConstructionMISModel.Tb_YaJiang_ProjectInfo" Multiplicity="0..1" />
+    <End Role="Tb_YaJiang_Data" Type="YuHuan_TrafficConstructionMISModel.Tb_YaJiang_Data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_YaJiang_ProjectInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_YaJiang_Data">
+        <PropertyRef Name="ProjectNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_ZhangLa_Curve_Tb_ZhangLa_Data">
+    <End Role="Tb_ZhangLa_Data" Type="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa_Data" Multiplicity="0..1" />
+    <End Role="Tb_ZhangLa_Curve" Type="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa_Curve" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_ZhangLa_Data">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_ZhangLa_Curve">
+        <PropertyRef Name="IDmx" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_ZhangLa_Data_Tb_ZhangLa_ProjectInfo">
+    <End Role="Tb_ZhangLa_ProjectInfo" Type="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa_ProjectInfo" Multiplicity="0..1" />
+    <End Role="Tb_ZhangLa_Data" Type="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa_Data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_ZhangLa_ProjectInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_ZhangLa_Data">
+        <PropertyRef Name="ProjectNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Envionment_Data">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="DeviceCode" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="Double" Name="Temperature" />
+    <Property Type="Double" Name="Humidity" />
+    <Property Type="DateTime" Name="UploadTime" Precision="3" />
+    <Property Type="Int32" Name="ProjectId" />
+    <NavigationProperty Name="Envionment_ProjectInfo" Relationship="YuHuan_TrafficConstructionMISModel.FK_Envionment_Data_Envionment_ProjectInfo" FromRole="Envionment_Data" ToRole="Envionment_ProjectInfo" />
+  </EntityType>
+  <EntityType Name="Envionment_DeviceProject">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="DeviceCode" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ProjectId" />
+    <Property Type="String" Name="DeviceName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Geometry" Name="geom" />
+  </EntityType>
+  <EntityType Name="Envionment_ProjectInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ProjectName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ConstructionDepartment" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BiaoDuan" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="JianLi" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Position" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Envionment_Data" Relationship="YuHuan_TrafficConstructionMISModel.FK_Envionment_Data_Envionment_ProjectInfo" FromRole="Envionment_ProjectInfo" ToRole="Envionment_Data" />
+  </EntityType>
+  <Association Name="FK_Envionment_Data_Envionment_ProjectInfo">
+    <End Type="YuHuan_TrafficConstructionMISModel.Envionment_ProjectInfo" Role="Envionment_ProjectInfo" Multiplicity="0..1" />
+    <End Type="YuHuan_TrafficConstructionMISModel.Envionment_Data" Role="Envionment_Data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Envionment_ProjectInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Envionment_Data">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Tb_MixingPlant_Device">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="DeviceFacId" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DeviceCode" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PlatformName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProjectName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BiaoDuanName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProjectCode" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Factorycode" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Memo" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="Geometry" Name="geom" />
+  </EntityType>
+  <EntityType Name="Tb_YaJiang_Project">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ProjectName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DotId" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tb_ZhangLa_Project">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ProjectName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DotId" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tb_Flow_Page">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="PageName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="URL" MaxLength="300" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Tb_Flow_Statistics" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_Flow_Statistics_Tb_Flow_Page" FromRole="Tb_Flow_Page" ToRole="Tb_Flow_Statistics" />
+    <NavigationProperty Name="Tb_Flow_Visit" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_Flow_Visit_Tb_Flow_Page" FromRole="Tb_Flow_Page" ToRole="Tb_Flow_Visit" />
+  </EntityType>
+  <EntityType Name="Tb_Flow_Statistics">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="PageId" />
+    <Property Type="Int32" Name="TotalCount" />
+    <NavigationProperty Name="Tb_Flow_Page" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_Flow_Statistics_Tb_Flow_Page" FromRole="Tb_Flow_Statistics" ToRole="Tb_Flow_Page" />
+  </EntityType>
+  <EntityType Name="Tb_Flow_Visit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="PageId" />
+    <Property Type="Int32" Name="Count" />
+    <Property Type="DateTime" Name="VisitTime" Precision="0" />
+    <NavigationProperty Name="Tb_Flow_Page" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_Flow_Visit_Tb_Flow_Page" FromRole="Tb_Flow_Visit" ToRole="Tb_Flow_Page" />
+  </EntityType>
+  <Association Name="FK_Tb_Flow_Statistics_Tb_Flow_Page">
+    <End Type="YuHuan_TrafficConstructionMISModel.Tb_Flow_Page" Role="Tb_Flow_Page" Multiplicity="0..1" />
+    <End Type="YuHuan_TrafficConstructionMISModel.Tb_Flow_Statistics" Role="Tb_Flow_Statistics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Flow_Page">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_Flow_Statistics">
+        <PropertyRef Name="PageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_Flow_Visit_Tb_Flow_Page">
+    <End Type="YuHuan_TrafficConstructionMISModel.Tb_Flow_Page" Role="Tb_Flow_Page" Multiplicity="0..1" />
+    <End Type="YuHuan_TrafficConstructionMISModel.Tb_Flow_Visit" Role="Tb_Flow_Visit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Flow_Page">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_Flow_Visit">
+        <PropertyRef Name="PageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Access_Lab_GJLS">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="TestDate" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="GroupID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GroupName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Shape" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Tester" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="TestDate" Nullable="false" Precision="0" />
+    <Property Type="Int32" Name="State" />
+    <Property Type="Int32" Name="SaveCount" />
+    <Property Type="Int32" Name="DeleteCount" />
+    <Property Type="String" Name="ExpFacility" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_Lab_GJLSParm">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="GroupID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TestID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ParamName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ParamValue" MaxLength="80" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_Lab_GJLSResult">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="TestDate" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ZuHao" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ShunXu" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Shape" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Tester" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="TestDate" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="State" />
+    <Property Type="Int32" Name="MaxLoad" />
+    <Property Type="String" Name="Curvedata" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_Lab_HNTKY">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="ExpDate" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQi" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="GroNum" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Speed" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GroKN" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GroMPa" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ExpMan" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ExpDate" Nullable="false" Precision="3" />
+    <Property Type="String" Name="ExpCop" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="SpecialShape" />
+    <Property Type="Int32" Name="SelectGroNum" />
+    <Property Type="String" Name="ExpFacility" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_Lab_HNTKYParm">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQi" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="GuiGe" />
+    <Property Type="String" Name="XiShu" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Speed" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="GroNum" />
+    <Property Type="Int32" Name="LoadType" />
+    <Property Type="Int32" Name="YanShi" />
+    <Property Type="Int32" Name="SelectGroNum" />
+  </EntityType>
+  <EntityType Name="Access_Lab_HNTKYResult">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="LingQI" />
+      <PropertyRef Name="ShunXu" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQI" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OneKN" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ShunXu" Nullable="false" />
+    <Property Type="String" Name="LenAv" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="WidAv" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HeiAv" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DiameterAv" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="XiShu" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CurveData" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_Lab_SNKY">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="ExpDate" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQi" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="GroNum" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Speed" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GroKN" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GroMPa" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ExpMan" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ExpDate" Nullable="false" Precision="3" />
+    <Property Type="String" Name="ExpCop" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="SelectGroNum" />
+    <Property Type="String" Name="ExpFacility" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_Lab_SNKYParm">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQi" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GuiGe" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Speed" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="GroNum" />
+    <Property Type="Int32" Name="LoadType" />
+    <Property Type="Int32" Name="YanShi" />
+    <Property Type="Int32" Name="SelectGroNum" />
+    <Property Type="String" Name="ShuiNiBiaoHao" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_Lab_SNKYResult">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="LingQI" />
+      <PropertyRef Name="ShunXu" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQI" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OneKN" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ShunXu" Nullable="false" />
+    <Property Type="String" Name="LenAv" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="WidAv" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Curvedata" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_Lab_SNKZ">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="ExpDate" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQi" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="GroNum" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Speed" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GroKN" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GroMPa" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ExpMan" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ExpDate" Nullable="false" Precision="3" />
+    <Property Type="String" Name="ExpCop" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="SelectGroNum" />
+    <Property Type="String" Name="ExpFacility" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_Lab_SNKZParm">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQi" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GuiGe" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Speed" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="GroNum" />
+    <Property Type="Int32" Name="LoadType" />
+    <Property Type="Int32" Name="YanShi" />
+    <Property Type="Int32" Name="SelectGroNum" />
+    <Property Type="String" Name="ShuiNiBiaoHao" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_Lab_SNKZResult">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="LingQI" />
+      <PropertyRef Name="ShunXu" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQI" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OneKN" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ShunXu" Nullable="false" />
+    <Property Type="String" Name="LenAv" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HeiAv" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Curvedata" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZT_WL_SB_MixingPlant">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Code" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Customer" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ProjName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ConsPos" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="PieCnt" />
+    <Property Type="String" Name="BetLev" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="MixLast" />
+    <Property Type="DateTime" Name="OperationTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="Access_LZT_WL_SB_MixingPlant_Dosage">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="Piece" Nullable="false" />
+    <Property Type="Int32" Name="MaterID" />
+    <Property Type="String" Name="Material" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="WatFull" Precision="8" Scale="2" />
+    <Property Type="Decimal" Name="RecAmnt" Precision="8" Scale="2" />
+    <Property Type="Decimal" Name="PlanAmnt" Precision="8" Scale="2" />
+    <Property Type="Decimal" Name="FactAmnt" Precision="8" Scale="2" />
+    <Property Type="DateTime" Name="OperationTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Access_LZT_WL_SB_MixingPlant_Piece">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="Produce" Nullable="false" />
+    <Property Type="String" Name="Serial" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="StartTim" Precision="0" />
+    <Property Type="String" Name="BldTim" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="PieAmnt" />
+  </EntityType>
+  <EntityType Name="Access_LZT_WL_SB_MixingPlant_Produce">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Code" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Customer" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ProjName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ConsPos" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="PieCnt" />
+    <Property Type="String" Name="BetLev" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="MixLast" />
+    <Property Type="DateTime" Name="OperationTime" Precision="0" />
+    <Property Type="Int32" Name="Vehicle" />
+    <Property Type="String" Name="Driver" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTEBLab_SNKY">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="ExpDate" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQi" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="GroNum" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Speed" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GroKN" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GroMPa" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ExpMan" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ExpDate" Nullable="false" Precision="0" />
+    <Property Type="String" Name="ExpCop" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="SelectGroNum" />
+    <Property Type="String" Name="ExpFacility" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTEBLab_SNKYParm">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQi" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GuiGe" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Speed" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="GroNum" />
+    <Property Type="Int32" Name="LoadType" />
+    <Property Type="Int32" Name="YanShi" />
+    <Property Type="Int32" Name="SelectGroNum" />
+    <Property Type="String" Name="ShuiNiBiaoHao" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="JianLi" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HeTongHao" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="WeiTuiDanWei" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="XianChangZhuangHao" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ShiYanDanWei" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTEBLab_SNKYResult">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="LingQI" />
+      <PropertyRef Name="ShunXu" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQI" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OneKN" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ShunXu" Nullable="false" />
+    <Property Type="String" Name="LenAv" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="WidAv" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CurveData" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTEBLab_SNKZ">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="ExpDate" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQi" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="GroNum" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Speed" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GroKN" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GroMPa" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ExpMan" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ExpDate" Nullable="false" Precision="0" />
+    <Property Type="String" Name="ExpCop" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="SelectGroNum" />
+    <Property Type="String" Name="ExpFacility" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTEBLab_SNKZParm">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQi" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GuiGe" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Speed" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="GroNum" />
+    <Property Type="Int32" Name="LoadType" />
+    <Property Type="Int32" Name="YanShi" />
+    <Property Type="Int32" Name="SelectGroNum" />
+    <Property Type="String" Name="ShuiNiBiaoHao" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTEBLab_SNKZResult">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="LingQI" />
+      <PropertyRef Name="ShunXu" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQI" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OneKN" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ShunXu" Nullable="false" />
+    <Property Type="String" Name="LenAv" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HeiAv" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CurveData" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTJL2Lab_SNKY">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="ExpDate" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQi" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="GroNum" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Speed" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GroKN" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GroMPa" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ExpMan" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ExpDate" Nullable="false" Precision="0" />
+    <Property Type="String" Name="ExpCop" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="SelectGroNum" />
+    <Property Type="String" Name="ExpFacility" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTJL2Lab_SNKYParm">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQi" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GuiGe" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Speed" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="GroNum" />
+    <Property Type="Int32" Name="LoadType" />
+    <Property Type="Int32" Name="YanShi" />
+    <Property Type="Int32" Name="SelectGroNum" />
+    <Property Type="String" Name="ShuiNiBiaoHao" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="JianLi" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HeTongHao" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="WeiTuiDanWei" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="XianChangZhuangHao" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ShiYanDanWei" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTJL2Lab_SNKYResult">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="LingQI" />
+      <PropertyRef Name="ShunXu" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQI" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OneKN" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ShunXu" Nullable="false" />
+    <Property Type="String" Name="LenAv" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="WidAv" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CurveData" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTJL2Lab_SNKZ">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="ExpDate" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQi" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="GroNum" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Speed" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GroKN" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GroMPa" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ExpMan" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ExpDate" Nullable="false" Precision="0" />
+    <Property Type="String" Name="ExpCop" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="SelectGroNum" />
+    <Property Type="String" Name="ExpFacility" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTJL2Lab_SNKZParm">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQi" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GuiGe" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Speed" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="GroNum" />
+    <Property Type="Int32" Name="LoadType" />
+    <Property Type="Int32" Name="YanShi" />
+    <Property Type="Int32" Name="SelectGroNum" />
+    <Property Type="String" Name="ShuiNiBiaoHao" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTJL2Lab_SNKZResult">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="LingQI" />
+      <PropertyRef Name="ShunXu" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQI" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OneKN" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ShunXu" Nullable="false" />
+    <Property Type="String" Name="LenAv" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HeiAv" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CurveData" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTLab_SNKY">
+    <Key>
+      <PropertyRef Name="SerialNO" />
+    </Key>
+    <Property Type="Int32" Name="SerialNO" Nullable="false" />
+    <Property Type="DateTime" Name="TestDate" Precision="0" />
+    <Property Type="String" Name="TestTime" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MPaRes" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="KNRes" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TestNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SampleKind" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="StrengthGrid" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SampleSize" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SampleAge" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Speed" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IntervalTime" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ExpFacility" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTLab_SNKYResult">
+    <Key>
+      <PropertyRef Name="TestSerialNo" />
+      <PropertyRef Name="MPaIndex" />
+      <PropertyRef Name="TestDate" />
+    </Key>
+    <Property Type="Int32" Name="TestSerialNo" Nullable="false" />
+    <Property Type="Int32" Name="MPaIndex" Nullable="false" />
+    <Property Type="String" Name="MPa" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="KN" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TestDate" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TestTime" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CurveData" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTLab_SNKZ">
+    <Key>
+      <PropertyRef Name="SerialNO" />
+    </Key>
+    <Property Type="Int32" Name="SerialNO" Nullable="false" />
+    <Property Type="DateTime" Name="TestDate" Precision="0" />
+    <Property Type="String" Name="TestTime" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MPaRes" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="KNRes" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TestNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SampleKind" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="StrengthGrid" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SampleSize" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SpanLength" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SampleAge" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Speed" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IntervalTime" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UserName" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ExpFacility" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTLab_SNKZResult">
+    <Key>
+      <PropertyRef Name="TestSerialNo" />
+      <PropertyRef Name="MPaIndex" />
+      <PropertyRef Name="TestDate" />
+    </Key>
+    <Property Type="Int32" Name="TestSerialNo" Nullable="false" />
+    <Property Type="Int32" Name="MPaIndex" Nullable="false" />
+    <Property Type="String" Name="TestDate" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TestTime" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MPa" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="KN" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CurveData" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTSBLab_SNKY">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="ExpDate" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQi" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="GroNum" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Speed" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GroKN" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GroMPa" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ExpMan" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ExpDate" Nullable="false" Precision="0" />
+    <Property Type="String" Name="ExpCop" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="SelectGroNum" />
+    <Property Type="String" Name="ExpFacility" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTSBLab_SNKYParm">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQi" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GuiGe" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Speed" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="GroNum" />
+    <Property Type="Int32" Name="LoadType" />
+    <Property Type="Int32" Name="YanShi" />
+    <Property Type="Int32" Name="SelectGroNum" />
+    <Property Type="String" Name="ShuiNiBiaoHao" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="JianLi" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HeTongHao" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="WeiTuiDanWei" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="XianChangZhuangHao" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ShiYanDanWei" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTSBLab_SNKYResult">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="LingQI" />
+      <PropertyRef Name="ShunXu" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQI" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OneKN" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ShunXu" Nullable="false" />
+    <Property Type="String" Name="LenAv" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="WidAv" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CurveData" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTSBLab_SNKZ">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="ExpDate" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQi" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="GroNum" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Speed" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GroKN" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GroMPa" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ExpMan" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ExpDate" Nullable="false" Precision="0" />
+    <Property Type="String" Name="ExpCop" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="SelectGroNum" />
+    <Property Type="String" Name="ExpFacility" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTSBLab_SNKZParm">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQi" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GuiGe" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Speed" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="GroNum" />
+    <Property Type="Int32" Name="LoadType" />
+    <Property Type="Int32" Name="YanShi" />
+    <Property Type="Int32" Name="SelectGroNum" />
+    <Property Type="String" Name="ShuiNiBiaoHao" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTSBLab_SNKZResult">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="LingQI" />
+      <PropertyRef Name="ShunXu" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQI" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OneKN" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ShunXu" Nullable="false" />
+    <Property Type="String" Name="LenAv" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HeiAv" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CurveData" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTSDBLab_SNKY">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="ExpDate" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQi" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="GroNum" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Speed" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GroKN" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GroMPa" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ExpMan" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ExpDate" Nullable="false" Precision="0" />
+    <Property Type="String" Name="ExpCop" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="SelectGroNum" />
+    <Property Type="String" Name="ExpFacility" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTSDBLab_SNKYParm">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQi" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GuiGe" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Speed" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="GroNum" />
+    <Property Type="Int32" Name="LoadType" />
+    <Property Type="Int32" Name="YanShi" />
+    <Property Type="Int32" Name="SelectGroNum" />
+    <Property Type="String" Name="ShuiNiBiaoHao" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="JianLi" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HeTongHao" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="WeiTuiDanWei" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="XianChangZhuangHao" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ShiYanDanWei" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTSDBLab_SNKYResult">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="LingQI" />
+      <PropertyRef Name="ShunXu" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQI" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OneKN" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ShunXu" Nullable="false" />
+    <Property Type="String" Name="LenAv" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="WidAv" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CurveData" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTSDBLab_SNKZ">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="ExpDate" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQi" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="GroNum" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Speed" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GroKN" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GroMPa" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ExpMan" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ExpDate" Nullable="false" Precision="0" />
+    <Property Type="String" Name="ExpCop" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="SelectGroNum" />
+    <Property Type="String" Name="ExpFacility" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTSDBLab_SNKZParm">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQi" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GuiGe" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Speed" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="GroNum" />
+    <Property Type="Int32" Name="LoadType" />
+    <Property Type="Int32" Name="YanShi" />
+    <Property Type="Int32" Name="SelectGroNum" />
+    <Property Type="String" Name="ShuiNiBiaoHao" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTSDBLab_SNKZResult">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="LingQI" />
+      <PropertyRef Name="ShunXu" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQI" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OneKN" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ShunXu" Nullable="false" />
+    <Property Type="String" Name="LenAv" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HeiAv" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CurveData" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTYBLab_SNKY">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="ExpDate" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQi" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="GroNum" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Speed" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GroKN" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GroMPa" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ExpMan" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ExpDate" Nullable="false" Precision="0" />
+    <Property Type="String" Name="ExpCop" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="SelectGroNum" />
+    <Property Type="String" Name="ExpFacility" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTYBLab_SNKYParm">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQi" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GuiGe" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Speed" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="GroNum" />
+    <Property Type="Int32" Name="LoadType" />
+    <Property Type="Int32" Name="YanShi" />
+    <Property Type="Int32" Name="SelectGroNum" />
+    <Property Type="String" Name="ShuiNiBiaoHao" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="JianLi" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HeTongHao" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="WeiTuiDanWei" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="XianChangZhuangHao" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ShiYanDanWei" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTYBLab_SNKYResult">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="LingQI" />
+      <PropertyRef Name="ShunXu" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQI" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OneKN" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ShunXu" Nullable="false" />
+    <Property Type="String" Name="LenAv" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="WidAv" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CurveData" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTYBLab_SNKZ">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="ExpDate" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQi" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="GroNum" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Speed" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GroKN" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GroMPa" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ExpMan" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ExpDate" Nullable="false" Precision="0" />
+    <Property Type="String" Name="ExpCop" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="SelectGroNum" />
+    <Property Type="String" Name="ExpFacility" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTYBLab_SNKZParm">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQi" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GuiGe" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Speed" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="GroNum" />
+    <Property Type="Int32" Name="LoadType" />
+    <Property Type="Int32" Name="YanShi" />
+    <Property Type="Int32" Name="SelectGroNum" />
+    <Property Type="String" Name="ShuiNiBiaoHao" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_LZTYBLab_SNKZResult">
+    <Key>
+      <PropertyRef Name="ZuHao" />
+      <PropertyRef Name="LingQI" />
+      <PropertyRef Name="ShunXu" />
+    </Key>
+    <Property Type="String" Name="ZuHao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LingQI" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PingZhong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OneKN" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ShunXu" Nullable="false" />
+    <Property Type="String" Name="LenAv" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HeiAv" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CurveData" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_MixingPlant_228RoadYB">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="ScTime" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="DateTime" Name="ScTime" Nullable="false" Precision="0" />
+    <Property Type="Double" Name="Output_vol" />
+    <Property Type="String" Name="NAM_GL1" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="MBZ_GL1" />
+    <Property Type="Int32" Name="CLZ_GL1" />
+    <Property Type="String" Name="NAM_GL2" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="MBZ_GL2" />
+    <Property Type="Int32" Name="CLZ_GL2" />
+    <Property Type="String" Name="NAM_GL3" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="MBZ_GL3" />
+    <Property Type="Int32" Name="CLZ_GL3" />
+    <Property Type="String" Name="NAM_FLA2" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="MBZ_FLA2" />
+    <Property Type="Int32" Name="CLZ_FLA2" />
+    <Property Type="String" Name="NAM_WJA1" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Double" Name="MBZ_WJA1" />
+    <Property Type="Double" Name="CLZ_WJA1" />
+    <Property Type="Int32" Name="JDZ_WJC4" />
+    <Property Type="String" Name="NAM_Shui1" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Double" Name="MBZ_Shui1" />
+    <Property Type="Double" Name="CLZ_Shui1" />
+    <Property Type="String" Name="Job_No" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Prop_No" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Cust_Nm" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Proj_Nm" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Location" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Site_No" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Contr_No" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Strength" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Const_Unit" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NAM_FLA3" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="MBZ_FLA3" />
+    <Property Type="Int32" Name="CLZ_FLA3" />
+    <Property Type="String" Name="NAM_WJA2" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="MBZ_WJA2" />
+    <Property Type="Int32" Name="CLZ_WJA2" />
+    <Property Type="String" Name="NAM_Shui2" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Double" Name="MBZ_Shui2" />
+    <Property Type="Double" Name="CLZ_Shui2" />
+    <Property Type="String" Name="NAM_FLA1" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="MBZ_FLA1" />
+    <Property Type="Int32" Name="CLZ_FLA1" />
+  </EntityType>
+  <EntityType Name="Access_MixingPlant_228RoadYBPeiHeBi">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="CreateTime" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="DateTime" Name="CreateTime" Nullable="false" Precision="0" />
+    <Property Type="String" Name="Prop_No" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Strength" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NAM_GL1" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="BPB_GL1" />
+    <Property Type="String" Name="NAM_GL2" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="BPB_GL2" />
+    <Property Type="String" Name="NAM_GL3" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="BPB_GL3" />
+    <Property Type="String" Name="NAM_FLA1" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="BPB_FLA1" />
+    <Property Type="String" Name="NAM_FLA2" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="BPB_FLA2" />
+    <Property Type="String" Name="NAM_FLA3" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="BPB_FLA3" />
+    <Property Type="String" Name="NAM_WJA1" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Double" Name="BPB_WJA1" />
+    <Property Type="String" Name="NAM_WJA2" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="BPB_WJA2" />
+    <Property Type="String" Name="NAM_Shui1" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Double" Name="BPB_Shui1" />
+    <Property Type="String" Name="NAM_Shui2" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Double" Name="BPB_Shui2" />
+    <Property Type="Int32" Name="MixTime1" />
+  </EntityType>
+  <EntityType Name="Access_MixingPlant_Intensity">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="String" Name="id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="name" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Access_MixingPlant_Parm">
+    <Key>
+      <PropertyRef Name="rd" />
+      <PropertyRef Name="rdate" />
+    </Key>
+    <Property Type="Int32" Name="rd" Nullable="false" />
+    <Property Type="DateTime" Name="rdate" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="xh" />
+    <Property Type="Int32" Name="pc" />
+    <Property Type="Int32" Name="gc" Nullable="false" />
+    <Property Type="Int32" Name="idParm" />
+    <Property Type="String" Name="parm" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="timeLen" Precision="12" Scale="2" />
+    <Property Type="DateTime" Name="timeBegin" Precision="3" />
+    <Property Type="DateTime" Name="timeEnd" Precision="3" />
+  </EntityType>
+  <EntityType Name="Access_MixingPlant_Parm2">
+    <Key>
+      <PropertyRef Name="rd" />
+      <PropertyRef Name="rdate" />
+    </Key>
+    <Property Type="Int32" Name="rd" Nullable="false" />
+    <Property Type="DateTime" Name="rdate" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="xh" />
+    <Property Type="Int32" Name="pc" />
+    <Property Type="Int32" Name="gc" Nullable="false" />
+    <Property Type="Int32" Name="idParm" />
+    <Property Type="String" Name="parm" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="timeLen" Precision="12" Scale="2" />
+    <Property Type="DateTime" Name="timeBegin" Precision="3" />
+    <Property Type="DateTime" Name="timeEnd" Precision="3" />
+  </EntityType>
+  <EntityType Name="Access_MixingPlant_tScsjAll">
+    <Key>
+      <PropertyRef Name="xh" />
+      <PropertyRef Name="rdate" />
+    </Key>
+    <Property Type="Int32" Name="xh" Nullable="false" />
+    <Property Type="DateTime" Name="rdate" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="orderID" />
+    <Property Type="String" Name="orderName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="formuID" />
+    <Property Type="String" Name="formuName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="slump" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="intensityGrade" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="humidity" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Double" Name="accumulativeTotal" />
+    <Property Type="Double" Name="per" />
+    <Property Type="String" Name="Client" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Site" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Operator" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CarNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Part" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Driver" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="operateMode" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="flag" />
+  </EntityType>
+  <EntityType Name="Access_MixingPlant_tScsjAll2">
+    <Key>
+      <PropertyRef Name="xh" />
+      <PropertyRef Name="rdate" />
+    </Key>
+    <Property Type="Int32" Name="xh" Nullable="false" />
+    <Property Type="DateTime" Name="rdate" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="orderID" />
+    <Property Type="String" Name="orderName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="formuID" />
+    <Property Type="String" Name="formuName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="slump" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="intensityGrade" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="humidity" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Double" Name="accumulativeTotal" />
+    <Property Type="Double" Name="per" />
+    <Property Type="String" Name="Client" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Site" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Operator" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CarNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Part" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Driver" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="operateMode" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="flag" />
+  </EntityType>
+  <EntityType Name="Access_MixingPlant_tScsjAllBody">
+    <Key>
+      <PropertyRef Name="rd" />
+      <PropertyRef Name="rdate" />
+    </Key>
+    <Property Type="Int32" Name="rd" Nullable="false" />
+    <Property Type="DateTime" Name="rdate" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="xh" />
+    <Property Type="Int32" Name="pc" />
+    <Property Type="Int32" Name="gc" />
+    <Property Type="Int32" Name="idMaterial" />
+    <Property Type="String" Name="material" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Double" Name="goal" />
+    <Property Type="Double" Name="fact" />
+    <Property Type="Double" Name="margin" />
+    <Property Type="Int16" Name="flag" />
+  </EntityType>
+  <EntityType Name="Access_MixingPlant_tScsjAllBody2">
+    <Key>
+      <PropertyRef Name="rd" />
+      <PropertyRef Name="rdate" />
+    </Key>
+    <Property Type="Int32" Name="rd" Nullable="false" />
+    <Property Type="DateTime" Name="rdate" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="xh" />
+    <Property Type="Int32" Name="pc" />
+    <Property Type="Int32" Name="gc" />
+    <Property Type="Int32" Name="idMaterial" />
+    <Property Type="String" Name="material" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Double" Name="goal" />
+    <Property Type="Double" Name="fact" />
+    <Property Type="Double" Name="margin" />
+    <Property Type="Int16" Name="flag" />
+  </EntityType>
+  <EntityType Name="Sdf_LZT_SD_MixingPlant">
+    <Key>
+      <PropertyRef Name="本次时间" />
+    </Key>
+    <Property Type="String" Name="任务单号" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="砼标号" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="操作员" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="客户名称" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="工程名称" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="施工部位" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="本次方量" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="调水量" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="运输车号" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="本次时间" Nullable="false" Precision="3" />
+    <Property Type="String" Name="骨料一配方值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="骨料一当前值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="骨料一实际值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="骨料一含水率" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="骨料二配方值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="骨料二当前值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="骨料二实际值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="骨料二含水率" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="骨料三配方值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="骨料三当前值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="骨料三实际值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="骨料三含水率" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="骨料四配方值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="骨料四当前值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="骨料四实际值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="骨料四含水率" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="水泥一配方值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="水泥一当前值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="水泥一实际值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="水泥二配方值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="水泥二当前值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="水泥二实际值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="水泥三配方值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="水泥三当前值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="水泥三实际值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="粉煤灰一配方值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="粉煤灰一当前值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="粉煤灰一实际值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="粉煤灰二配方值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="粉煤灰二当前值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="粉煤灰二实际值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="水配方值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="水当前值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="水实际值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="附加剂配方值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="附加剂当前值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="附加剂实际值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="添加剂一配方值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="添加剂一当前值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="添加剂一实际值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="添加剂二配方值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="添加剂二当前值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="添加剂二实际值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="施工地址" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="塌落度" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="搅拌时间" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Sdf_LZT_SD_MixingPlant_2">
+    <Key>
+      <PropertyRef Name="本次时间" />
+    </Key>
+    <Property Type="String" Name="任务单号" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="砼标号" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="操作员" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="客户名称" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="工程名称" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="施工部位" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="本次方量" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="调水量" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="运输车号" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="本次时间" Nullable="false" Precision="3" />
+    <Property Type="String" Name="骨料一配方值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="骨料一当前值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="骨料一实际值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="骨料一含水率" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="骨料二配方值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="骨料二当前值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="骨料二实际值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="骨料二含水率" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="骨料三配方值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="骨料三当前值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="骨料三实际值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="骨料三含水率" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="骨料四配方值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="骨料四当前值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="骨料四实际值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="骨料四含水率" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="水泥一配方值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="水泥一当前值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="水泥一实际值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="水泥二配方值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="水泥二当前值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="水泥二实际值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="水泥三配方值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="水泥三当前值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="水泥三实际值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="粉煤灰一配方值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="粉煤灰一当前值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="粉煤灰一实际值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="粉煤灰二配方值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="粉煤灰二当前值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="粉煤灰二实际值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="水配方值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="水当前值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="水实际值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="附加剂配方值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="附加剂当前值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="附加剂实际值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="添加剂一配方值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="添加剂一当前值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="添加剂一实际值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="添加剂二配方值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="添加剂二当前值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="添加剂二实际值" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="施工地址" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="塌落度" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="搅拌时间" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Service_Config">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ServiceName" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ServiceAddress" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ServiceDesc" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ServiceType" />
+    <Property Type="Int32" Name="ScanTime" />
+    <Property Type="Int32" Name="IsMoniter" />
+    <Property Type="Int32" Name="ErrorHandler" />
+  </EntityType>
+  <EntityType Name="Service_Status">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ServiceName" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ServiceDesc" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ServiceType" />
+    <Property Type="Int32" Name="IsMoniter" />
+    <Property Type="String" Name="ServiceStatus" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="UpateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="principal_id" Nullable="false" />
+    <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="version" />
+    <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Tb_ZhangLa1_Curve">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ZLDataId" />
+    <Property Type="Decimal" Name="Gang1Kn" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Gang1Extend" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Gang2Kn" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Gang2Extend" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Gang3Kn" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Gang3Extend" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Gang4Kn" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Gang4Extend" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="CurveTime" Precision="3" />
+    <NavigationProperty Name="Tb_ZhangLa1_Data" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_ZhangLa1_Curve_Tb_ZhangLa1_Data" FromRole="Tb_ZhangLa1_Curve" ToRole="Tb_ZhangLa1_Data" />
+  </EntityType>
+  <EntityType Name="Tb_ZhangLa1_Data">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="DeviceId" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LiangType" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LiangNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="KongNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ZhangLaCount" />
+    <Property Type="String" Name="ZLType" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="KongCount" />
+    <Property Type="Decimal" Name="Per100Kn" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="InitKn" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Extend" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="RealExtend" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ExtendError" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="BaoYaTime" />
+    <Property Type="Decimal" Name="HuiSuo" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="ZLDate" Precision="3" />
+    <Property Type="Decimal" Name="Per10Kn1" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Per20Kn1" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Per50Kn1" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Per100Kn1" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Extend1" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="RealExtend1" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="Gang1Flag" />
+    <Property Type="Decimal" Name="Per10Kn2" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Per20Kn2" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Per50Kn2" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Per100Kn2" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Extend2" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="RealExtend2" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="Gang2Flag" />
+    <Property Type="Decimal" Name="Per10Kn3" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Per20Kn3" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Per50Kn3" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Per100Kn3" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Extend3" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="RealExtend3" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="Gang3Flag" />
+    <Property Type="Decimal" Name="Per10Kn4" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Per20Kn4" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Per50Kn4" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Per100Kn4" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Extend4" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="RealExtend4" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="Gang4Flag" />
+    <NavigationProperty Name="Tb_ZhangLa1_Curve" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_ZhangLa1_Curve_Tb_ZhangLa1_Data" FromRole="Tb_ZhangLa1_Data" ToRole="Tb_ZhangLa1_Curve" />
+    <NavigationProperty Name="Tb_ZhangLa1_Device" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_ZhangLa1_Data_Tb_ZhangLa1_Device" FromRole="Tb_ZhangLa1_Data" ToRole="Tb_ZhangLa1_Device" />
+    <Property Type="Decimal" Name="ExtendError1" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ExtendError2" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ExtendError3" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ExtendError4" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Per10Extend1" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Per20Extend1" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Per50Extend1" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Per100Extend1" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Per10Extend2" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Per20Extend2" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Per50Extend2" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Per100Extend2" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Per10Extend3" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Per20Extend3" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Per50Extend3" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Per100Extend3" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Per10Extend4" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Per20Extend4" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Per50Extend4" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Per100Extend4" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="JiaPianHuiSuo" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="DingHuiSuo" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="Tb_ZhangLa1_Device">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="DeviceNo" />
+    <Property Type="String" Name="UnitType" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Vender" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LiangFactory" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="ProjectId" />
+    <NavigationProperty Name="Tb_ZhangLa1_Data" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_ZhangLa1_Data_Tb_ZhangLa1_Device" FromRole="Tb_ZhangLa1_Device" ToRole="Tb_ZhangLa1_Data" />
+    <NavigationProperty Name="Tb_ZhangLa1_Project" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_ZhangLa1_Device_Tb_ZhangLa1_Project" FromRole="Tb_ZhangLa1_Device" ToRole="Tb_ZhangLa1_Project" />
+    <Property Type="String" Name="DeviceName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DeviceCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Geometry" Name="geom" />
+  </EntityType>
+  <EntityType Name="Tb_ZhangLa1_Project">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="ProjectName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DotName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Tb_ZhangLa1_Device" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_ZhangLa1_Device_Tb_ZhangLa1_Project" FromRole="Tb_ZhangLa1_Project" ToRole="Tb_ZhangLa1_Device" />
+  </EntityType>
+  <Association Name="FK_Tb_ZhangLa1_Curve_Tb_ZhangLa1_Data">
+    <End Type="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa1_Data" Role="Tb_ZhangLa1_Data" Multiplicity="0..1" />
+    <End Type="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa1_Curve" Role="Tb_ZhangLa1_Curve" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_ZhangLa1_Data">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_ZhangLa1_Curve">
+        <PropertyRef Name="ZLDataId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_ZhangLa1_Data_Tb_ZhangLa1_Device">
+    <End Type="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa1_Device" Role="Tb_ZhangLa1_Device" Multiplicity="0..1" />
+    <End Type="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa1_Data" Role="Tb_ZhangLa1_Data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_ZhangLa1_Device">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_ZhangLa1_Data">
+        <PropertyRef Name="DeviceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_ZhangLa1_Device_Tb_ZhangLa1_Project">
+    <End Type="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa1_Project" Role="Tb_ZhangLa1_Project" Multiplicity="0..1" />
+    <End Type="YuHuan_TrafficConstructionMISModel.Tb_ZhangLa1_Device" Role="Tb_ZhangLa1_Device" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_ZhangLa1_Project">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_ZhangLa1_Device">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Tb_YaJiang1_Curve">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="YJDataId" />
+    <Property Type="Decimal" Name="InputPress" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ZhenKongPress" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="CurveDate" Precision="3" />
+    <NavigationProperty Name="Tb_YaJiang1_Data" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_YaJiang1_Curve_Tb_YaJiang1_Data" FromRole="Tb_YaJiang1_Curve" ToRole="Tb_YaJiang1_Data" />
+  </EntityType>
+  <EntityType Name="Tb_YaJiang1_Data">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="DeviceId" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LiangType" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LiangNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="KongNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="SetShuiJiao" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="RealShuiJiao" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="SetPress" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="RealPress" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="SetZhenKongDu" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="RealZhenKongDu" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="SetJiaoBanTime" />
+    <Property Type="Int32" Name="RealJiaoBanTime" />
+    <Property Type="Int32" Name="SetWenYaTime" />
+    <Property Type="Int32" Name="RealWenYaTime" />
+    <Property Type="Int32" Name="SetCycleTime" />
+    <Property Type="Int32" Name="RealCycleTime" />
+    <Property Type="String" Name="InputKong1" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="InputKong2" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OutputKong1" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OutputKong2" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="YaJiangDate" Precision="3" />
+    <NavigationProperty Name="Tb_YaJiang1_Curve" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_YaJiang1_Curve_Tb_YaJiang1_Data" FromRole="Tb_YaJiang1_Data" ToRole="Tb_YaJiang1_Curve" />
+    <NavigationProperty Name="Tb_YaJiang1_Device" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_YaJiang1_Data_Tb_YaJiang1_Device" FromRole="Tb_YaJiang1_Data" ToRole="Tb_YaJiang1_Device" />
+  </EntityType>
+  <EntityType Name="Tb_YaJiang1_Device">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="DeviceNo" />
+    <Property Type="String" Name="UnitType" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Vender" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="ProjectId" />
+    <NavigationProperty Name="Tb_YaJiang1_Data" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_YaJiang1_Data_Tb_YaJiang1_Device" FromRole="Tb_YaJiang1_Device" ToRole="Tb_YaJiang1_Data" />
+    <NavigationProperty Name="Tb_YaJiang1_Project" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_YaJiang1_Device_Tb_YaJiang1_Project" FromRole="Tb_YaJiang1_Device" ToRole="Tb_YaJiang1_Project" />
+    <Property Type="String" Name="DeviceName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DeviceCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Geometry" Name="geom" />
+  </EntityType>
+  <EntityType Name="Tb_YaJiang1_Project">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="ProjectName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DotName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Tb_YaJiang1_Device" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_YaJiang1_Device_Tb_YaJiang1_Project" FromRole="Tb_YaJiang1_Project" ToRole="Tb_YaJiang1_Device" />
+  </EntityType>
+  <Association Name="FK_Tb_YaJiang1_Curve_Tb_YaJiang1_Data">
+    <End Type="YuHuan_TrafficConstructionMISModel.Tb_YaJiang1_Data" Role="Tb_YaJiang1_Data" Multiplicity="0..1" />
+    <End Type="YuHuan_TrafficConstructionMISModel.Tb_YaJiang1_Curve" Role="Tb_YaJiang1_Curve" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_YaJiang1_Data">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_YaJiang1_Curve">
+        <PropertyRef Name="YJDataId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_YaJiang1_Data_Tb_YaJiang1_Device">
+    <End Type="YuHuan_TrafficConstructionMISModel.Tb_YaJiang1_Device" Role="Tb_YaJiang1_Device" Multiplicity="0..1" />
+    <End Type="YuHuan_TrafficConstructionMISModel.Tb_YaJiang1_Data" Role="Tb_YaJiang1_Data" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_YaJiang1_Device">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_YaJiang1_Data">
+        <PropertyRef Name="DeviceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_YaJiang1_Device_Tb_YaJiang1_Project">
+    <End Type="YuHuan_TrafficConstructionMISModel.Tb_YaJiang1_Project" Role="Tb_YaJiang1_Project" Multiplicity="0..1" />
+    <End Type="YuHuan_TrafficConstructionMISModel.Tb_YaJiang1_Device" Role="Tb_YaJiang1_Device" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_YaJiang1_Project">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_YaJiang1_Device">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Tb_Lab_Curve">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="TestId" />
+    <Property Type="Int32" Name="TypeId" />
+    <Property Type="String" Name="Datas" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Tb_Lab_Test" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_Lab_Curve_Tb_Lab_Test" FromRole="Tb_Lab_Curve" ToRole="Tb_Lab_Test" />
+    <NavigationProperty Name="Tb_Lab_Type" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_Lab_Curve_Tb_Lab_Type" FromRole="Tb_Lab_Curve" ToRole="Tb_Lab_Type" />
+  </EntityType>
+  <EntityType Name="Tb_Lab_Type">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="CurveName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Tb_Lab_Curve" Relationship="YuHuan_TrafficConstructionMISModel.FK_Tb_Lab_Curve_Tb_Lab_Type" FromRole="Tb_Lab_Type" ToRole="Tb_Lab_Curve" />
+  </EntityType>
+  <Association Name="FK_Tb_Lab_Curve_Tb_Lab_Test">
+    <End Type="YuHuan_TrafficConstructionMISModel.Tb_Lab_Test" Role="Tb_Lab_Test" Multiplicity="0..1" />
+    <End Type="YuHuan_TrafficConstructionMISModel.Tb_Lab_Curve" Role="Tb_Lab_Curve" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Lab_Test">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_Lab_Curve">
+        <PropertyRef Name="TestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_Lab_Curve_Tb_Lab_Type">
+    <End Type="YuHuan_TrafficConstructionMISModel.Tb_Lab_Type" Role="Tb_Lab_Type" Multiplicity="0..1" />
+    <End Type="YuHuan_TrafficConstructionMISModel.Tb_Lab_Curve" Role="Tb_Lab_Curve" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Lab_Type">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_Lab_Curve">
+        <PropertyRef Name="TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Yanghu_SourceData">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ItemId" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ProjectId" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FactoryCode" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BridgePart" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BeamType" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DeviceId" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TaiId" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Double" Name="Temperature" />
+    <Property Type="Double" Name="Humidity" />
+    <Property Type="Double" Name="Pressure" />
+    <Property Type="Int32" Name="IsManually" />
+    <Property Type="Double" Name="ByTimes" />
+    <Property Type="DateTime" Name="CurrentTime" Precision="3" />
+    <Property Type="Int32" Name="ValveStatus" />
+    <Property Type="Int32" Name="YhStatus" />
+  </EntityType>
+  <EntityType Name="Yanghu_StatData">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ItemName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ProjectName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FactoryName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BridgePart" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BeamType" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DeviceId" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TaiId" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Double" Name="Temperature" />
+    <Property Type="Double" Name="Humidity" />
+    <Property Type="Double" Name="Pressure" />
+    <Property Type="Int32" Name="IsManually" />
+    <Property Type="Double" Name="ByTimes" />
+    <Property Type="DateTime" Name="StartTime" Precision="3" />
+    <Property Type="Int32" Name="PengCount" />
+    <Property Type="Double" Name="PengMinutes" />
+    <Property Type="Int32" Name="YhStatus" />
+    <Property Type="Int32" Name="LastValveStatus" />
+    <Property Type="DateTime" Name="LastTime" Precision="3" />
+  </EntityType>
+</Schema>

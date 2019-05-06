@@ -1,0 +1,260 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+@using DbModel
+@using System.Collections.Generic
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+	<meta name="description" content="玉环漩门湾大桥及接线工程" />
+	<link rel="shortcut icon" sizes="196x196" href="../assets/images/logo.png">
+	<title>玉环漩门湾大桥及接线工程</title>
+
+    
+	<link rel="stylesheet" href="~/Assets/Infinity/libs/bower/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="~/Assets/Infinity/libs/bower/material-design-iconic-font/dist/css/material-design-iconic-font.css">
+	<!-- build:css ../assets/css/app.min.css -->
+	<link rel="stylesheet" href="~/Assets/Infinity/libs/bower/animate.css/animate.min.css">
+	<link rel="stylesheet" href="~/Assets/Infinity/libs/bower/fullcalendar/dist/fullcalendar.min.css">
+	<link rel="stylesheet" href="~/Assets/Infinity/libs/bower/perfect-scrollbar/css/perfect-scrollbar.css">
+	<link rel="stylesheet" href="~/Assets/Infinity/assets/css/bootstrap.css">
+	<link rel="stylesheet" href="~/Assets/Infinity/assets/css/core.css">
+	<link rel="stylesheet" href="~/Assets/Infinity/assets/css/app.css">
+	<!-- endbuild -->
+	<script src="~/Assets/Infinity/libs/bower/breakpoints.js/dist/breakpoints.min.js"></script>
+	<script>
+	    Breakpoints();
+	</script>
+</head>
+	
+<body class="menubar-left menubar-unfold menubar-light theme-primary" >
+<!--============= start main area -->
+
+<!-- APP NAVBAR ==========-->
+<nav id="app-navbar" class="navbar navbar-inverse navbar-fixed-top primary">
+  
+  <!-- navbar header -->
+  <div class="navbar-header">
+    <button type="button" id="menubar-toggle-btn" class="navbar-toggle visible-xs-inline-block navbar-toggle-left hamburger hamburger--collapse js-hamburger">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+    </button>
+
+    <button type="button" class="navbar-toggle navbar-toggle-right collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="zmdi zmdi-hc-lg zmdi-more"></span>
+    </button>
+
+    <button type="button" class="navbar-toggle navbar-toggle-right collapsed" data-toggle="collapse" data-target="#navbar-search" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="zmdi zmdi-hc-lg zmdi-search"></span>
+    </button>
+
+    <a href="http://www.zjwlxxkj.com/"  target="_blank"  class="navbar-brand">
+      <span class="brand-icon"><i class="fa fa-gg"></i></span>
+      <span class="brand-name">浙江悟联</span>
+    </a>
+  </div><!-- .navbar-header -->
+  
+  <div class="navbar-container container-fluid">
+    <div class="collapse navbar-collapse" id="app-navbar-collapse">
+      <ul class="nav navbar-toolbar navbar-toolbar-left navbar-left">
+        <li class="hidden-float hidden-menubar-top">
+          <a href="javascript:void(0)" role="button" id="menubar-fold-btn" class="hamburger hamburger--arrowalt is-active js-hamburger">
+            <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+          </a>
+        </li>
+        <li>
+          <h5 class="page-title hidden-menubar-top hidden-float">玉环漩门湾大桥及接线工程</h5>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-toolbar navbar-toolbar-right navbar-right">
+
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="zmdi zmdi-hc-lg zmdi-settings"></i></a>
+          <ul class="dropdown-menu animated flipInY">
+            <li><a href="javascript:void(0)"><i class="zmdi m-r-md zmdi-hc-lg zmdi-account-box"></i>账号信息</a></li>
+            <li><a href="javascript:void(0)"><i class="zmdi m-r-md zmdi-hc-lg zmdi-phone-msg"></i>联系我们</a></li>
+            <li><a href="javascript:void(0)"><i class="zmdi m-r-md zmdi-hc-lg zmdi-info"></i>系统信息</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="http://www.jtjsypt.com/" class="side-panel-toggle"  data-class="open" role="button"><i class="zmdi zmdi-hc-lg zmdi-power-off"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div><!-- navbar-container -->
+</nav>
+<!--========== END app navbar -->
+
+<!-- APP ASIDE ==========-->
+<aside id="menubar" class="menubar light">
+  <div class="app-user">
+    <div class="media">
+      <div class="media-left">
+        <div class="avatar avatar-md avatar-circle">
+          <a href="javascript:void(0)">
+              @{
+                  string imgUrl = "";
+                  string name = "";
+                  string role = "";
+              
+              }
+              @if (ViewBag.user != null)
+              {
+                  name = ViewBag.user.UserName;
+                  if (ViewBag.user.UserRight == 1)
+                  {
+
+                      role = "管理员";
+                      imgUrl = "../Images/admin.png";
+                  }
+                  else
+                  {
+                      role = "普通用户";
+                      imgUrl = "../Images/user.png";
+                  }
+
+              }
+              <img class="img-responsive alt="avatar"  src=@imgUrl />
+
+          </a>
+        </div><!-- .avatar -->
+      </div>
+      <div class="media-body">
+        <div class="foldable">
+          <h5><a href="javascript:void(0)" class="username">@name</a></h5>
+          <ul>
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropdown-toggle usertitle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <small>@role</small>
+             
+              </a>
+           
+            </li>
+          </ul>
+        </div>
+      </div><!-- .media-body -->
+    </div><!-- .media -->
+  </div><!-- .app-user -->
+
+    <div class="menubar-scroll">
+        <div class="menubar-scroll-inner">
+            <ul class="app-menu">
+                @{
+                    List<Tb_Main_Menu> parentMenu = ViewBag.parentMenu;
+                    List<List<Tb_Main_Menu>> childMenu = ViewBag.childMenu;
+                }
+
+                @for (int i = 0; i < parentMenu.Count; i++)
+                {
+                    string icon = "menu-icon " + parentMenu[i].Icon;
+                    @:<li class="has-submenu">
+                        if ("_blank".Equals(parentMenu[i].Target))
+                        {
+                              @:<a href="@parentMenu[i].Url" target="@parentMenu[i].Target" class="submenu-toggle">
+                        }
+                        else
+                        {
+                            if ("#".Equals(parentMenu[i].Url))
+                            {
+                                 @:<a href="#" target="@parentMenu[i].Target"   class="submenu-toggle">
+                            }
+                            else 
+                            { 
+                                @:<a href="#" target="@parentMenu[i].Target"  onclick="clickMenu('@parentMenu[i].Url')"  class="submenu-toggle">
+                            }
+                        }
+                            @:<i class="@icon"></i>
+                            @:<span class="menu-text">@parentMenu[i].Name</span>
+                            if (childMenu[i].Count != 0)
+                            { 
+                                 @:<i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
+                            }
+                           
+                    @: </a>
+                    @: <ul class="submenu">
+                        for (int j = 0; j < childMenu[i].Count; j++)
+                        {
+                            if ("_blank".Equals(childMenu[i][j].Target))
+                            {
+                              @:<li><a href="@childMenu[i][j].Url" target="@childMenu[i][j].Target" ><span class="menu-text">@childMenu[i][j].Name</span></a></li>
+                             }
+                            else
+                            {
+                                 @:<li><a href="#" target="@childMenu[i][j].Target" onclick="clickMenu('@childMenu[i][j].Url')"  ><span class="menu-text">@childMenu[i][j].Name</span></a></li>
+                            }
+                        }
+                        @:</ul>
+                   @: </li>
+                    }
+
+            </ul>
+            <!-- .app-menu -->
+        </div>
+        <!-- .menubar-scroll-inner -->
+    </div>
+    <!-- .menubar-scroll -->
+    </aside>
+<!--========== END app aside -->
+
+<!-- navbar search -->
+<div id="navbar-search" class="navbar-search collapse">
+  <div class="navbar-search-inner">
+    <form action="#">
+      <span class="search-icon"><i class="fa fa-search"></i></span>
+      <input class="search-field" type="search" placeholder="search..."/>
+    </form>
+    <button type="button" class="search-close" data-toggle="collapse" data-target="#navbar-search" aria-expanded="false">
+      <i class="fa fa-close"></i>
+    </button>
+  </div>
+  <div class="navbar-search-backdrop" data-toggle="collapse" data-target="#navbar-search" aria-expanded="false"></div>
+</div><!-- .navbar-search -->
+
+<!-- APP MAIN ==========-->
+<main id="app-main" class="app-main">
+  <div class="wrap" style="padding-left:20px; padding-top:20px;" >
+	<section class="app-content">
+		<iframe style="width:100%;" src="Map" id="myFrame"  frameborder="no" border="0" marginwidth="0" marginheight="0" allowtransparency="yes">
+            </iframe>
+	</section><!-- #dash-content -->
+</div><!-- .wrap -->
+</main>
+<!--========== END app main -->
+
+	
+
+	<!-- build:js ../assets/js/core.min.js -->
+	<script src="~/Assets/Infinity/libs/bower/jquery/dist/jquery.js"></script>
+	<script src="~/Assets/Infinity/libs/bower/jquery-ui/jquery-ui.min.js"></script>
+	<script src="~/Assets/Infinity/libs/bower/jQuery-Storage-API/jquery.storageapi.min.js"></script>
+	<script src="~/Assets/Infinity/libs/bower/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
+	<script src="~/Assets/Infinity/libs/bower/jquery-slimscroll/jquery.slimscroll.js"></script>
+	<script src="~/Assets/Infinity/libs/bower/perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script>
+	<script src="~/Assets/Infinity/libs/bower/PACE/pace.min.js"></script>
+	<!-- endbuild -->
+
+	<!-- build:js ../assets/js/app.min.js -->
+	<script src="~/Assets/Infinity/assets/js/library.js"></script>
+	<script src="~/Assets/Infinity/assets/js/plugins.js"></script>
+	<script src="~/Assets/Infinity/assets/js/app.js"></script>
+	<!-- endbuild -->
+	<script src="~/Assets/Infinity/libs/bower/moment/moment.js"></script>
+	<script src="~/Assets/Infinity/libs/bower/fullcalendar/dist/fullcalendar.min.js"></script>
+	<script src="~/Assets/Infinity/assets/js/fullcalendar.js"></script>
+    <script>
+        function clickMenu(url) {
+            $("#myFrame").attr("src", url);
+        }
+        var height = window.innerHeight - 90;
+        $("#myFrame").css("height", height);
+    </script>
+</body>
+</html>

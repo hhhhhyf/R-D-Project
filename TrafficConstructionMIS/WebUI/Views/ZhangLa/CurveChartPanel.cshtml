@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Curve";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section CSS{
+
+}
+@section JS{
+    <script src="~/Assets/H+4.9/js/plugins/echarts/echarts-all.js"></script>
+    <script src="~/Scripts/MyTool.js"></script>
+    <script src="~/Scripts/ZhangLa_CurveChartPanel.js"></script>
+}
+
+@section Body{
+   <body>
+       <div  style="margin-left:auto; margin-right:auto;">
+           <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+            <div id="gang1Kn"   style="width: 800px;height:240px; margin-left:auto; margin-right:auto; display:none;"></div>
+            <div id="gang1Extend"   style="width: 800px;height:240px; margin-left:auto; margin-right:auto; display:none;"></div>
+
+            <div id="gang2Kn"   style="width: 800px;height:240px; margin-left:auto; margin-right:auto; display:none;"></div>
+            <div id="gang2Extend"   style="width: 800px;height:240px; margin-left:auto; margin-right:auto; display:none;"></div> 
+           
+            <div id="gang3Kn"   style="width: 800px;height:240px; margin-left:auto; margin-right:auto; display:none;"></div>
+            <div id="gang3Extend"   style="width: 800px;height:240px; margin-left:auto; margin-right:auto; display:none;"></div>
+             
+            <div id="gang4Kn"   style="width: 800px;height:240px; margin-left:auto; margin-right:auto; display:none;"></div>
+            <div id="gang4Extend"   style="width: 800px;height:240px; margin-left:auto; margin-right:auto; display:none;"></div>
+       </div>
+       
+   </body>
+  
+}

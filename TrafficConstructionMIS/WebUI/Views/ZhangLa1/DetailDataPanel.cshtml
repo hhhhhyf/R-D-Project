@@ -1,0 +1,215 @@
+﻿@{
+    ViewBag.Title = "DetailData";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using MyModel
+@using System.Collections.Generic
+
+@section CSS{
+    <style>
+        body{
+            padding:10px 20px;
+            width:100%;
+            height:100%;
+        }
+        table,tr,td{
+            width: 100%;
+            border: 1px solid #B3B4BA;
+            padding-left: 5px;
+            font-size:12px;
+            font-weight:500;
+        }
+        tr {
+            height:40px;
+        }
+        td{
+            width:25%;
+            text-align:left;
+        }
+        td:nth-child(odd)
+        {
+            background:#f9f9f9;
+        }
+    </style>
+}
+@section JS{
+    <script src="~/Scripts/MyTool.js"></script>
+    <script src="~/Scripts/Lab_DetailPanel.js"></script>
+}
+
+@section Body{
+    <body>
+            <table id="form"  align="center" >
+                <tbody>
+                    @{
+                        ZhangLa1_DetailData_BaseInfo baseInfo = ViewBag.baseInfo;
+                        ZhangLa1_DetailData_Ding ding1 = ViewBag.ding1;
+                        ZhangLa1_DetailData_Ding ding2 = ViewBag.ding2;
+                        ZhangLa1_DetailData_Ding ding3 = ViewBag.ding3;
+                        ZhangLa1_DetailData_Ding ding4 = ViewBag.ding4;
+                     }
+                    <tr>
+                        <td>梁号</td><td>@baseInfo.LiangNo</td>
+                        <td>孔号</td><td>@baseInfo.KongNo</td>
+                    </tr>
+                    <tr>
+                        <td>张拉次数</td><td>@baseInfo.ZhangLaCount</td>
+                        <td>梁型</td><td>@baseInfo.LiangType</td>
+                    </tr>
+                    <tr>
+                        <td>张拉类型</td><td>@baseInfo.ZLType</td>
+                        <td>初始应力(KN)</td><td>@baseInfo.InitKn</td>
+                    </tr>
+                    <tr>
+                        <td>控制应力(KN)</td><td>@baseInfo.Per100Kn</td>
+                        <td>单端回缩(mm)</td><td>@baseInfo.HuiSuo</td>
+                    </tr>
+                    @if(baseInfo.ProjectId == 4)
+                    {
+                        @:<tr>
+                            @:<td>夹片回缩(mm)</td><td>@baseInfo.JiaPianHuiSuo</td>
+                            @:<td>顶内回缩(mm)</td><td>@baseInfo.DingHuiSuo</td>
+                        @:</tr>
+                    }
+                     <tr>
+                        <td>理论伸长(mm)</td><td>@baseInfo.Extend</td>
+                        <td>实际伸长(mm)</td><td>@baseInfo.RealExtend</td>
+                    </tr>
+                    <tr>
+                        <td>总误差率(%)</td><td>@baseInfo.ExtendError</td>
+                        <td>张拉时间</td><td>@baseInfo.ZLDate</td>
+                    </tr>
+                    <tr>
+                        <td>保压时间(s)</td><td>@baseInfo.BaoYaTime</td>
+                    </tr>
+                </tbody>
+           </table>
+        <table id="form"  align="center"  style="margin-top:10px;">
+            @if (ding1.Flag == 1)
+                     {
+                        @:<tr><td colspan="4" style="text-align:center;"><h4>A1顶</h4></td></tr>
+                        @:<tr>
+                            @:<td>10%控制应力(KN)</td><td>@ding1.Per10Kn</td>
+                            @:<td>10%伸长量(mm)</td><td>@ding1.Per10Extend</td>
+                        @:</tr>
+                        @:<tr>
+                            @:<td>20%控制应力(KN)</td><td>@ding1.Per20Kn</td>
+                            @:<td>20%伸长量(mm)</td><td>@ding1.Per20Extend</td>
+                       @: </tr>
+                        @:<tr>
+                            @:<td>50%控制应力(KN)</td><td>@ding1.Per50Kn</td>
+                            @:<td>50%伸长量(mm)</td><td>@ding1.Per50Extend</td>
+                       @: </tr>
+                        @:<tr>
+                            @:<td>100%控制应力(KN)</td><td>@ding1.Per100Kn</td>
+                            @:<td>100%伸长量(mm)</td><td>@ding1.Per100Extend</td>
+                        @:</tr>
+                        @:<tr>
+                            @:<td>理论伸长量(mm)</td><td>@ding1.Extend</td>
+                            @:<td>真实伸长量(mm)</td><td>@ding1.RealExtend</td>
+                        @:</tr>
+                        @:<tr>
+                            @:<td>相对误差率（%）</td><td>@ding1.ExtendError</td>
+                        @:</tr>
+                     }
+        </table>
+
+
+        <table id="form"  align="center"  style="margin-top:10px;">
+            @if (ding2.Flag == 1)
+                     {
+                        @:<tr><td colspan="4" style="text-align:center;"><h4>A2顶</h4></td></tr>
+                        @:<tr>
+                            @:<td>10%控制应力(KN)</td><td>@ding2.Per10Kn</td>
+                            @:<td>10%伸长量(mm)</td><td>@ding2.Per10Extend</td>
+                        @:</tr>
+                        @:<tr>
+                            @:<td>20%控制应力(KN)</td><td>@ding2.Per20Kn</td>
+                            @:<td>20%伸长量(mm)</td><td>@ding2.Per20Extend</td>
+                       @: </tr>
+                       @:<tr>
+                            @:<td>50%控制应力(KN)</td><td>@ding2.Per50Kn</td>
+                            @:<td>50%伸长量(mm)</td><td>@ding2.Per50Extend</td>
+                       @: </tr>
+                        @:<tr>
+                            @:<td>100%控制应力(KN)</td><td>@ding2.Per100Kn</td>
+                            @:<td>100%伸长量(mm)</td><td>@ding2.Per100Extend</td>
+                        @:</tr>
+                        @:<tr>
+                            @:<td>理论伸长量(mm)</td><td>@ding2.Extend</td>
+                            @:<td>真实伸长量(mm)</td><td>@ding2.RealExtend</td>
+                        @:</tr>
+                        @:<tr>
+                            @:<td>相对误差率（%）</td><td>@ding2.ExtendError</td>
+                        @:</tr>
+
+                           
+                     }
+        </table>
+
+        <table id="form"  align="center"  style="margin-top:10px;">
+            @if (ding3.Flag == 1)
+                     {
+                        @:<tr><td colspan="4" style="text-align:center;"><h4>A3顶</h4></td></tr>
+                        @:<tr>
+                            @:<td>10%控制应力(KN)</td><td>@ding3.Per10Kn</td>
+                            @:<td>10%伸长量(mm)</td><td>@ding3.Per10Extend</td>
+                        @:</tr>
+                        @:<tr>
+                            @:<td>20%控制应力(KN)</td><td>@ding3.Per20Kn</td>
+                            @:<td>20%伸长量(mm)</td><td>@ding3.Per20Extend</td>
+                       @: </tr>
+                       @:<tr>
+                            @:<td>50%控制应力(KN)</td><td>@ding3.Per50Kn</td>
+                            @:<td>50%伸长量(mm)</td><td>@ding3.Per50Extend</td>
+                       @: </tr>
+                        @:<tr>
+                            @:<td>100%控制应力(KN)</td><td>@ding3.Per100Kn</td>
+                            @:<td>100%伸长量(mm)</td><td>@ding3.Per100Extend</td>
+                        @:</tr>
+                        @:<tr>
+                            @:<td>理论伸长量(mm)</td><td>@ding3.Extend</td>
+                            @:<td>真实伸长量(mm)</td><td>@ding3.RealExtend</td>
+                        @:</tr>
+                        @:<tr>
+                            @:<td>相对误差率（%）</td><td>@ding3.ExtendError</td>
+                        @:</tr>
+                     }
+        </table>
+
+        <table id="form"  align="center"  style="margin-top:10px;">
+            @if (ding4.Flag == 1)
+                     {
+                        @:<tr><td colspan="4" style="text-align:center;"><h4>A4顶</h4></td></tr>
+                        @:<tr>
+                            @:<td>10%控制应力(KN)</td><td>@ding4.Per10Kn</td>
+                            @:<td>10%伸长量(mm)</td><td>@ding4.Per10Extend</td>
+                        @:</tr>
+                        @:<tr>
+                            @:<td>20%控制应力(KN)</td><td>@ding4.Per20Kn</td>
+                            @:<td>20%伸长量(mm)</td><td>@ding4.Per20Extend</td>
+                       @: </tr>
+                       @:<tr>
+                            @:<td>50%控制应力(KN)</td><td>@ding4.Per50Kn</td>
+                            @:<td>50%伸长量(mm)</td><td>@ding4.Per50Extend</td>
+                       @: </tr>
+                        @:<tr>
+                            @:<td>100%控制应力(KN)</td><td>@ding4.Per100Kn</td>
+                            @:<td>100%伸长量(mm)</td><td>@ding4.Per100Extend</td>
+                        @:</tr>
+                        @:<tr>
+                            @:<td>理论伸长量(mm)</td><td>@ding4.Extend</td>
+                            @:<td>真实伸长量(mm)</td><td>@ding4.RealExtend</td>
+                        @:</tr>
+                        @:<tr>
+                            @:<td>相对误差率（%）</td><td>@ding4.ExtendError</td>
+                        @:</tr>
+                     }
+        </table>
+
+
+
+
+
+    </body>
+}

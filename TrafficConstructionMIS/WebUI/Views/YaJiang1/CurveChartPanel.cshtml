@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Curve";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@section CSS{
+
+}
+
+
+@section JS{
+    <script src="~/Assets/H+4.9/js/plugins/echarts/echarts-all.js"></script>
+    <script src="~/Scripts/MyTool.js"></script>
+    <script src="~/Scripts/YaJiang1_CurveChartPanel.js?v=20180715"></script>    @*这里用'?v=20180715'来刷新js,v后面的内容随便写*@
+}
+
+@section Body{
+   <body>
+       <div  style="margin-left:auto; margin-right:auto;">
+            <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+            <div id="pressChart"   style="width: 800px;height:400px; margin-left:auto; margin-right:auto; "></div>
+       </div>
+       
+   </body>
+  
+}
+

@@ -1,0 +1,106 @@
+﻿@{
+    ViewBag.Title = "GetDetailData";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using DbModel
+@using System.Collections.Generic
+
+@section CSS{
+    <style>
+        body{
+            padding:10px 20px;
+            width:100%;
+            height:100%;
+        }
+        table,tr,td{
+            width: 100%;
+            border: 1px solid #B3B4BA;
+            padding-left: 5px;
+            font-size:12px;
+            font-weight:500;
+        }
+        tr {
+            height:40px;
+        }
+        td{
+            width:25%;
+            text-align:left;
+        }
+        td:nth-child(odd)
+        {
+            background:#f9f9f9;
+        }
+
+        /*div {
+            margin-left:0;
+            padding:0;
+        }*/
+
+    </style>
+}
+@section JS{
+    <script src="~/Assets/H+4.9/js/plugins/echarts/echarts-all.js"></script>
+    <script src="~/Scripts/MyTool.js"></script>
+    <script src="~/Scripts/Lab_DetailPanel.js?v=20190129"></script>
+}
+
+@section Body{
+    <body>
+         
+            <table id="form"  align="center" >
+                <tbody>
+                    @{
+                        List<Tb_Lab_TestItem> labTestItem = ViewBag.labTestItem;
+                        List<Tb_Lab_Test> labTest = ViewBag.labTest;
+                     }
+                    <a href="Print?Id=@labTest[0].Id" style="width:20px;height:20px; margin-left:800px;" >打印</a>
+                    <tr>
+                        <td>试验编号</td><td>@labTest[0].TestNo</td>
+                        <td>试验人</td><td>@labTest[0].TestUser</td>
+                    </tr>
+                    <tr>
+                        <td>试验日期</td><td>@labTest[0].TestTime</td>
+                        <td>试验设备</td><td>@labTest[0].TestDevice</td>
+                    </tr>
+                    
+                     @if (labTestItem.Count % 2 == 0)
+                     {
+                         for (int i = 0; i < labTestItem.Count; i += 2)
+                         {
+                            @:<tr>
+                            @:<td>@labTestItem[i].ItemName</td><td align="center">@labTestItem[i].ItemResult</td>
+                            @:<td>@labTestItem[i + 1].ItemName</td><td align="center">@labTestItem[i + 1].ItemResult</td></tr>
+                         }
+                     }
+                     else {
+                         for (int i = 0; i < labTestItem.Count - 2; i += 2)
+                         {
+                            @:<tr>
+                            @:<td>@labTestItem[i].ItemName</td><td align="center">@labTestItem[i].ItemResult</td>
+                            @:<td>@labTestItem[i + 1].ItemName</td><td align="center">@labTestItem[i + 1].ItemResult</td></tr>
+                         }
+                         @:<tr><td>@labTestItem[labTestItem.Count-1].ItemName</td><td align="center">@labTestItem[labTestItem.Count-1].ItemResult</td><td></td><td></td></tr>
+                     }
+                </tbody>
+
+             </table>
+        <div  style="margin-left:auto; margin-right:auto;">
+           <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+           
+            <div id="curve1"   style="width: 800px;height:240px; margin-left:auto; margin-right:auto; display:none;"></div>
+             
+             <div id="curve2"   style="width: 800px;height:240px; margin-left:auto; margin-right:auto; display:none;"></div>
+             
+             <div id="curve3"   style="width: 800px;height:240px; margin-left:auto; margin-right:auto; display:none;"></div>
+
+             <div id="curve4"   style="width: 800px;height:240px; margin-left:auto; margin-right:auto; display:none;"></div>
+             
+             <div id="curve5"   style="width: 800px;height:240px; margin-left:auto; margin-right:auto; display:none;"></div>
+             
+             <div id="curve6"   style="width: 800px;height:240px; margin-left:auto; margin-right:auto; display:none;"></div>
+             
+             
+       </div>
+             
+    </body>
+}

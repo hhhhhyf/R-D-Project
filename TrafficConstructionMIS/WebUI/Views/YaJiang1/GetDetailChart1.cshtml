@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "GetDetailChart1";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using MyModel
+@using System.Collections.Generic
+
+@section CSS{
+    <style>
+        body{
+            padding:20px 20px;
+            width:100%;
+            height:100%;
+        }
+        table,tr,td{
+            width: 100%;
+            border: 1px solid #B3B4BA;
+            padding-left: 10px;
+            font-size:12px;
+            font-weight:500;
+        }
+        tr {
+            height:40px;
+        }
+        td{
+            width:25%;
+            text-align:left;
+        }
+        td:nth-child(odd)
+        {
+            background:#f9f9f9;
+        }
+    </style>
+}
+@section JS{
+    <script src="~/Scripts/MyTool.js"></script>
+}
+
+@section Body{
+    <body>
+            <table id="form"  align="center" >
+                <tbody>
+                    @{
+                        YaJiang1_BaseInfo1 baseInfo = ViewBag.baseInfo;
+                     }
+                    <tr>
+                        <td>设备厂家</td><td>@baseInfo.Vender</td>
+                        <td>梁号</td><td>@baseInfo.LiangNo</td>
+                    </tr>
+                    <tr>
+                        <td>进浆孔道1</td><td>@baseInfo.InputKong1</td>
+                        <td>进浆孔道2</td><td>@baseInfo.InputKong2</td>
+                    </tr>
+                    <tr>
+                        <td>出浆孔道1</td><td>@baseInfo.OutputKong1</td>
+                        <td>出浆孔道2</td><td>@baseInfo.OutputKong2</td>
+                    </tr>
+
+                </tbody>
+           </table>
+
+    </body>
+}

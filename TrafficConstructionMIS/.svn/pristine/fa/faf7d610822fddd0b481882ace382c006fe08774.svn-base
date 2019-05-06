@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "温湿度实时数据监控";
+}
+@section CSS{
+    <style>
+        .form-inline div {
+            margin-bottom:10px;
+        }
+        .radio {
+            font-size:20px;
+            margin-left:10px;
+        }
+        
+    </style>
+
+}
+@section JS{
+    <script src="~/Assets/H+4.9/js/plugins/echarts/echarts-all.js"></script>
+    <script src="~/Scripts/MyTool.js"></script>
+    <script src="~/Scripts/Envionment_ActualTime.js"></script>
+}
+@section Body{
+    
+    <div class="wrapper wrapper-content  animated fadeInRight" style="padding-bottom:0px; padding:0px;">
+        <div class="row">
+            <div class="col-sm-12" >
+                <div class="ibox " style="margin-bottom:0px;">
+                    <div class="ibox-title">
+                        <h5>温湿度实时数据监控
+                        </h5>
+                        <div style="text-align:right;font-weight: 600;">
+                            工作状态:
+                            <img src="~/Images/switch_on.png" id="switch_on"  width="50px"/>
+                        </div>
+                        
+                    </div>
+
+                    <div class="ibox-content" style="padding-left:40px;padding-right:40px;">
+                        <div class="row form-inline">
+                            <div class="col-md-3">
+                                <label for="projectName">标段：</label>
+                                <input type="text" class="form-control" id="biaoDuan"  name="biaoDuan" readonly>
+                            </div>
+                           <div class="col-md-3">
+                                <label for="operateTime">时间：</label>
+                                <input type="text" class="form-control" id="uploadTime" name="uploadTime" readonly>
+                            </div>
+                        </div>
+                        <div class="row form-inline" style="height:400px;overflow:hidden;" >
+                            <div class="col-md-6" style="margin-bottom:0px;">
+                                <div id="temperatureChart" style="width:100%;height:500px;"></div>
+                            </div>
+                            <div class="col-md-6" style="margin-bottom:0px;">
+                                <div id="humidityChart" style="width:100%;height:500px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+

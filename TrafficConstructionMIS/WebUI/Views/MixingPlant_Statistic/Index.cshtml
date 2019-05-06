@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "工程进度和施工质量关键指标统计图表";
+}
+@section CSS{
+    <style>
+        .form-inline div {
+            margin-bottom:10px;
+            font-family:'Microsoft YaHei';
+            font-size:17px;
+        }
+        .radio {
+            font-size:20px;
+            margin-left:10px;
+        }
+        .form-group label {
+                margin-right:10px;
+        }
+        
+    </style>
+
+}
+@section JS{
+    <script src="~/Assets/H+4.9/js/plugins/echarts/echarts-all.js"></script>
+    <script src="~/Assets/H+4.9/js/plugins/layer/laydate/laydate.js"></script>
+    <script src="~/Scripts/MyTool.js"></script>
+    <script src="~/Scripts/MixingPlant_Statistic.js"></script>
+
+}
+@section Body{
+    
+    <div class="wrapper wrapper-content  animated fadeInRight" style="padding-bottom:0px; padding:0px;">
+        <div class="row">
+            <div class="col-sm-12" >
+                <div class="ibox " style="margin-bottom:0px;">
+                    <div class="ibox-title">
+                        <h1 style="text-align:center;font-weight:500">工程进度和施工质量关键指标统计图表</h1>
+                        
+                    </div>
+
+                    <div class="ibox-content" style="padding-left:40px;padding-right:40px; margin-left:50px;height:auto" >
+                        <div class="row form-inline">
+                           
+                            <form class="form-inline" style="margin-left:170px" id="searchForm"> 
+                            <div class="form-group">
+                            <label for="bldMonth">搅拌月份</label>
+                            <input readonly class="form-control layer-date" placeholder="请选择月份" id="month" name="month">
+                            <label class="laydate-icon inline demoicon" style="vertical-align:top;" 
+                                onclick="laydate({elem: '#month',type:'month',istime: true,format: 'YYYY-MM'});"></label>
+                            </div>
+
+                            <div class="form-group" style="margin-left:90px;">
+                            <label>拌合站</label>
+                            <select class="form-control" id="deviceId" name="deviceId">
+                            </select>
+                            </div>
+
+                            <div class="form-group">
+                            <button id="searchBtn" type="button" class="btn btn-w-m btn-success" style="margin-left: 10px;">搜索</button>
+                        </div>
+                                </form>
+                        </div>
+                        <div class="row form-inline" style="height:1000px;overflow:hidden;margin-left:100px;margin-top:20px;" >
+                          
+                                <div id="datachart" style="width:100%;height:800px;"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
